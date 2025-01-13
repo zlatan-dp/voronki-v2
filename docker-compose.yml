@@ -1,0 +1,16 @@
+services:
+  next-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    environment:
+      NODE_ENV: production
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+#  docker-compose down --volumes --remove-orphans
+#  docker system prune --all --volumes  # видаляє всі незапущері образи, контейнери і вольюми
+#  docker-compose up --build
