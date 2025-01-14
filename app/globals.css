@@ -51,6 +51,7 @@
 :root {
   font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
+  font-weight: 500;
   --bg-bar: rgba(255, 255, 255, .25);
   --bg-button: #E0A621;
   --bg-page: #84A3CF;

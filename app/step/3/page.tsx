@@ -4,13 +4,11 @@ import {useRouter} from "next/navigation";
 import {stepsAction} from "@/app/actions/steps.action";
 import {StepType} from "@/app/actions/actions.enums";
 import Image from "next/image";
-import pagePic from '../../static/img/ani_cartoon_18.png'
+import pagePic from '../../static/img/ani_cartoon_27.png'
 
 import '../styles.steps.css'
-import {useState} from "react";
-import Link from "next/link";
 
-export default function StepOnePage() {
+export default function StepThreePage() {
 
   const router = useRouter();
 
@@ -19,55 +17,46 @@ export default function StepOnePage() {
 
     if (e.target.classList.contains('question-button')) {
       const stepData = {
-        step: 1,
+        step: 3,
         type: StepType.Question,
-        question: "Сколько лет вашему ребенку",
+        question: "С какими из этих проблем вы сталкиваетесь",
         answer: e.target.innerText,
       }
       await stepsAction(stepData)
-      router.push("/step/2");
+      router.push("/step/4");
     }
   }
 
   return (
       <div className="step">
         <Image
-            className={'step-one-img'}
+            className={'step-three-img'}
             src={pagePic}
-            alt="KIVI first step"
+            alt="KIVI third step"
             priority={true}
         />
-        <div className="step-one-spacer"></div>
-        <h1>Сколько лет вашему<br/> ребенку?</h1>
+        <div className="step-three-spacer"></div>
+        <h1>С какими из этих проблем вы сталкиваетесь?</h1>
 
         <div className="question-block" onClick={goToNextStep}>
           <div className="question-button">
-            До 5 лет
+            Ребенок держит устройство близко к глазам
           </div>
           <div className="question-button">
-            От 5 до 7 лет
+            Ребенок долго держит устройство в руках
           </div>
           <div className="question-button">
-            От 8 до 10 лет
+            Ребенок смотрит на экран в темноте
           </div>
           <div className="question-button">
-            Старше 10 лет
+            Ребенок не держит осанку
           </div>
         </div>
 
-        <div className="license">
-          выбирая вариант ответа вы соглашаетесь с нашими &nbsp;
-          <Link href={'#'}>
-            Условиями использования
-          </Link> и &nbsp;
-          <Link href={'#'}>
-            Политикой конфиденциальности
-          </Link>
-        </div>
         <div className="progress-bars">
+          <div className="bar"></div>
+          <div className="bar"></div>
           <div className="bar filled"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
