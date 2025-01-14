@@ -27,7 +27,7 @@ export default function StepOnePage() {
       <>
         <Image className={'step-one-img'} src={pagePic} alt="KIVI first step"/>
         <div className="step-one-spacer"></div>
-        <h1>Какого возраста <br/> ваш ребенок</h1>
+        <h1>Сколько лет вашему<br/> ребенку</h1>
         <form className={'step-form'} action={stepsAction}>
           <label className={'step-label'}>
             <input type="radio" name="child-age" value="unter 5" onChange={handleChange}/>
@@ -44,6 +44,9 @@ export default function StepOnePage() {
           <input type="hidden" name="step" value="1"/>
           <button type={"submit"} onClick={nextStep}>Дальше →</button>
         </form>
+        <div className="lisense">
+        выбирая вариант ответа вы соглашаетесь с нашими Условиями использования и Политикой конфиденциальности 
+        </div>
         <div className="progress-bars">
           <div className="bar filled"></div>
           <div className="bar"></div>

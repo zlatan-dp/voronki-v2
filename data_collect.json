@@ -1,0 +1,55 @@
+{
+    "data": {
+        "campaign_internal_id": "123wer",
+        "campaign_external_id": "457dfgwer",
+        "first_time": true,
+        "date_start": "2025-01-15",
+        "steps": [
+            {
+                "step": 1,
+                "type": "question",
+                "question": "скіки років одороблу",
+                "answer": "3-5 years"
+            },
+            {
+                "step": 2,
+                "type": "question",
+                "question": "як воно дивиться контент",
+                "answer": "На своем планшете"
+            },
+            {
+                "step": 3,
+                "type": "question",
+                "question": "які в нього болячки",
+                "answer": "Ребенок не держит осанку"
+            },
+            {
+                "step": 4,
+                "type": "info",
+                "answer": "next"
+            },
+            {
+                "step": 5,
+                "type": "info",
+                "answer": "next"
+            },
+            {
+                "step": 6,
+                "type": "checkout",
+                "answer": {
+                    "name": "John",
+                    "email": "johndoe@mail.com",
+                    "phone": "+234343r34r",
+                    "city": "Warsaw",
+                    "zip": 234234
+                }
+            },
+            {
+                "step": 7,
+                "type": "question",
+                "question": "у якого з красавчиків пішов куплять",
+                "answer": "mediaexpert"
+            }
+        ]
+    }
+}
