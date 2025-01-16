@@ -3,3 +3,10 @@ export enum StepType {
   Info = 'info',
   Checkout = 'checkout',
 }
+
+export enum ProblemType {
+  CloseToEyes = 'closeToEyes',
+  ArmsLock = 'armsLock',
+  InTheDark = 'inTheDark',
+  CrookedBack = 'crookedBack',
+}

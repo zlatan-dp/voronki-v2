@@ -2,7 +2,7 @@
 
 import {useRouter} from "next/navigation";
 import {stepsAction} from "@/app/actions/steps.action";
-import {StepType} from "@/app/actions/actions.enums";
+import {ProblemType, StepType} from "@/app/actions/actions.enums";
 import Image from "next/image";
 import pagePic from '../../static/img/ani_cartoon_27.png'
 
@@ -22,8 +22,10 @@ export default function StepThreePage() {
         question: "С какими из этих проблем вы сталкиваетесь",
         answer: e.target.innerText,
       }
+      const problemType = e.target.dataset.problemType
       await stepsAction(stepData)
-      router.push("/step/4");
+      router.push(`/step/4?branch=${problemType}`);
+      // console.log(e.target.dataset.problemType)
     }
   }
 
@@ -39,16 +41,16 @@ export default function StepThreePage() {
         <h1>С какими из этих проблем вы сталкиваетесь?</h1>
 
         <div className="question-block" onClick={goToNextStep}>
-          <div className="question-button">
+          <div className="question-button" data-problem-type={ProblemType.CloseToEyes}>
             Ребенок держит устройство близко к глазам
           </div>
-          <div className="question-button">
+          <div className="question-button" data-problem-type={ProblemType.ArmsLock}>
             Ребенок долго держит устройство в руках
           </div>
-          <div className="question-button">
+          <div className="question-button" data-problem-type={ProblemType.InTheDark}>
             Ребенок смотрит на экран в темноте
           </div>
-          <div className="question-button">
+          <div className="question-button" data-problem-type={ProblemType.CrookedBack}>
             Ребенок не держит осанку
           </div>
         </div>

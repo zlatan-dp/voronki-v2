@@ -1,7 +1,7 @@
 import Image from "next/image";
 import pagePic from "@/app/static/img/ani_cartoon_22.png";
 
-export default function CloseEyes () {
+export default function CloseToEyes () {
   return(
     <>
       <Image

@@ -110,6 +110,28 @@
     height: 25rem;
 }
 
+.step-four-img3 {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 400px;
+    height: auto;
+    z-index: -1;
+}
+
+.step-four-spacer3 {
+    height: 22rem;
+}
+
+.step-four-img4 {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    width: 400px;
+    height: auto;
+    z-index: -1;
+}
+
 .info-block {
     margin-top: 1.5rem;
     color: var(--header);
