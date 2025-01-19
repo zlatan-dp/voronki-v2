@@ -2,7 +2,7 @@
 
 import {useRouter} from "next/navigation";
 import {stepsAction} from "@/app/actions/steps.action";
-import {StepType} from "@/app/actions/actions.enums";
+import {StepType} from "@/app/actions/actions.types";
 import Image from "next/image";
 import pagePic from '../../static/img/ani_in_tv.png'
 
@@ -13,6 +13,12 @@ export default function StepTwoPage() {
   const router = useRouter();
 
   const goToNextStep = async (e: React.MouseEvent<HTMLDivElement>) => {
+    const sessionId = localStorage.getItem("sessionId") || '';
+    const storedSteps = localStorage.getItem("steps")
+    let steps
+    if (storedSteps) steps = JSON.parse(storedSteps);
+    else steps = {data: []}
+
     if (!(e.target instanceof HTMLElement)) return;
 
     if (e.target.classList.contains('question-button')) {
@@ -22,7 +28,13 @@ export default function StepTwoPage() {
         question: "На чем ваш ребенок смотрит контент",
         answer: e.target.innerText,
       }
-      await stepsAction(stepData)
+
+      steps.data.push(stepData)
+      localStorage.setItem("steps", JSON.stringify(steps))
+
+      const id = await stepsAction(sessionId, steps.data)
+      if (id !== sessionId) localStorage.setItem("sessionId", id)
+
       router.push("/step/3");
     }
   }

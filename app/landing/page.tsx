@@ -1,42 +1,27 @@
 "use client"
 
 import {useRouter} from "next/navigation";
-import {stepsAction} from "@/app/actions/steps.action";
 import {ProblemType, StepType} from "@/app/actions/actions.types";
+import {stepsAction} from "@/app/actions/steps.action";
 import Image from "next/image";
-import pagePic from '../../static/img/ani_cartoon_27.png'
+import pagePic from "@/app/static/img/landing/ani_cartoon_38.png";
 
-import '../styles.steps.css'
-
-export default function StepThreePage() {
+export default function StepFivePage () {
 
   const router = useRouter();
 
   const goToNextStep = async (e: React.MouseEvent<HTMLDivElement>) => {
     const sessionId = localStorage.getItem("sessionId") || '';
-    const storedSteps = localStorage.getItem("steps")
-    let steps
-    if (storedSteps) steps = JSON.parse(storedSteps);
-    else steps = {data: []}
-
     if (!(e.target instanceof HTMLElement)) return;
 
-    if (e.target.classList.contains('question-button')) {
+    if (e.target.classList.contains('button')) {
       const stepData = {
-        step: 3,
-        type: StepType.Question,
-        question: "С какими из этих проблем вы сталкиваетесь",
-        answer: e.target.innerText,
+        step: 5,
+        type: StepType.Info,
+        answer: 'next',
       }
-
-      steps.data.push(stepData)
-      localStorage.setItem("steps", JSON.stringify(steps))
-
-      const id = await stepsAction(sessionId, steps.data)
-      if (id !== sessionId) localStorage.setItem("sessionId", id)
-
-      const problemType = e.target.dataset.problemType
-      router.push(`/step/4?branch=${problemType}`);
+      await stepsAction(sessionId, stepData)
+      router.push("/checkout");
     }
   }
 

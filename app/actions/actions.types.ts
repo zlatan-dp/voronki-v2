@@ -10,3 +10,10 @@ export enum ProblemType {
   InTheDark = 'inTheDark',
   CrookedBack = 'crookedBack',
 }
+
+export type StepDataType = {
+  step: number;
+  type: StepType;
+  question?: string;
+  answer: string;
+}

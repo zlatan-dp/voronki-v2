@@ -2,7 +2,7 @@
 
 import {useRouter, useSearchParams} from "next/navigation";
 import {stepsAction} from "@/app/actions/steps.action";
-import {ProblemType, StepType} from "@/app/actions/actions.enums";
+import {ProblemType, StepType} from "@/app/actions/actions.types";
 import Image from "next/image";
 import pagePic from '../../static/img/ani_cartoon_22.png'
 
@@ -24,6 +24,12 @@ export default function StepFourPage() {
   // console.log(problem)
 
   const goToNextStep = async (e: React.MouseEvent<HTMLDivElement>) => {
+    const sessionId = localStorage.getItem("sessionId") || '';
+    const storedSteps = localStorage.getItem("steps")
+    let steps
+    if (storedSteps) steps = JSON.parse(storedSteps);
+    else steps = {data: []}
+
     if (!(e.target instanceof HTMLElement)) return;
 
     if (e.target.classList.contains('button')) {
@@ -32,31 +38,35 @@ export default function StepFourPage() {
         type: StepType.Info,
         answer: 'next',
       }
-      await stepsAction(stepData)
-      router.push("/step/5");
+
+      steps.data.push(stepData)
+      localStorage.setItem("steps", JSON.stringify(steps))
+
+      const id = await stepsAction(sessionId, steps.data)
+      if (id !== sessionId) localStorage.setItem("sessionId", id)
+
+      router.push("/landing");
     }
   }
 
   return (
       <div className="step">
 
-        {!branch || branch === ProblemType.CloseToEyes &&
-          <CloseToEyes/>
-        }
-        {branch === ProblemType.ArmsLock &&
-          <ArmsLock/>
-        }
-        {branch === ProblemType.InTheDark &&
-          <InTheDark/>
-        }
-        {branch === ProblemType.CrookedBack &&
-          <CrookedBack/>
+        {branch === ProblemType.CloseToEyes ?
+            <CloseToEyes/>
+            : branch === ProblemType.ArmsLock ?
+                <ArmsLock/>
+                : branch === ProblemType.InTheDark ?
+                    <InTheDark/>
+                    : branch === ProblemType.CrookedBack ?
+                        <CrookedBack/>
+                        : <CloseToEyes/>
         }
 
         {/*<CloseToEyes/>*/}
         {/* <ArmsLock/> */}
         {/* <InTheDark/> */}
-        <CrookedBack/>
+        {/*<CrookedBack/>*/}
 
         <div className="step-button">
           <div className="button" onClick={goToNextStep}>
