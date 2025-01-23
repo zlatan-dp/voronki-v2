@@ -7,7 +7,6 @@ import Image from "next/image";
 import pagePic from '../../static/img/ani_cartoon_18.png'
 
 import '../styles.steps.css'
-import {useState} from "react";
 import Link from "next/link";
 
 export default function StepOnePage() {

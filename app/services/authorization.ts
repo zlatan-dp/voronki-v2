@@ -1,5 +1,4 @@
 import {cookies} from "next/headers";
-import {StepDataType} from "@/app/actions/actions.types";
 
 export const getJWTToken = async (): Promise<string> => {
   const backendUrl: string | undefined = process.env.BACKEND_URL
