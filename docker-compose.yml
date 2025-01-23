@@ -10,6 +10,10 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/.next
+
+
+# docker compose up -d --build --force-recreate --remove-orphans
 
 #  docker-compose down --volumes --remove-orphans
 #  docker system prune --all --volumes  # видаляє всі незапущері образи, контейнери і вольюми

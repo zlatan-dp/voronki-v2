@@ -74,11 +74,15 @@ export const patchFunnel = async (id: string, data: StepDataType[]): Promise<str
   })
 
   if (response.status === 401) {
+    console.log(response.status)
+    console.log(response.statusText)
     const newToken = await getJWTToken()
     if (!newToken) throw new Error('unable to get token from the server')
     await patchFunnel(id, data)
   }
   if (!response.ok) {
+    console.log(response.status)
+    console.log(response.statusText)
     throw new Error(response.statusText)
   }
 

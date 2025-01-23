@@ -1,24 +1,47 @@
-# Dockerfile
-# Вибір офіційного образу Node.js
-FROM node:20-alpine
+# Встановлюємо Node.js
+FROM node:22-alpine
 
 # Встановлюємо робочу директорію
 WORKDIR /app
 
-# Копіюємо файли package.json і package-lock.json
+# Копіюємо файли проєкту
 COPY package*.json ./
+RUN npm install
 
-# Встановлюємо залежності (лише продакшн-залежності)
-RUN npm install --production
-
-# Копіюємо всі файли проекту (включаючи .next)
 COPY . .
 
-# Встановлюємо порт для додатку
+# Створюємо продакшн-збірку
+RUN npm run build
+
+# Виставляємо порт
 EXPOSE 3000
 
-# Запускаємо Next.js у production-режимі
+# Запускаємо додаток
 CMD ["npm", "start"]
+
+
+
+# Dockerfile
+# Вибір офіційного образу Node.js
+#FROM node:20-alpine
+#
+## Встановлюємо робочу директорію
+#WORKDIR /app
+#
+## Копіюємо файли package.json і package-lock.json
+#COPY package*.json ./
+#
+## Встановлюємо залежності (лише продакшн-залежності)
+#RUN npm install --production
+#
+## Копіюємо всі файли проекту (включаючи .next)
+#COPY . .
+#
+## Встановлюємо порт для додатку
+#EXPOSE 3000
+#
+## Запускаємо Next.js у production-режимі
+#CMD ["npm", "start"]
 
 
 
