@@ -11,7 +11,12 @@ export default function StepFivePage () {
   const router = useRouter();
 
   const goToNextStep = async (e: React.MouseEvent<HTMLDivElement>) => {
-    const sessionId = localStorage.getItem("sessionId") || '';
+
+    const storedSteps = localStorage.getItem("steps")
+    let steps
+    if (storedSteps) steps = JSON.parse(storedSteps);
+    else steps = {data: []}
+
     if (!(e.target instanceof HTMLElement)) return;
 
     if (e.target.classList.contains('button')) {
@@ -20,7 +25,14 @@ export default function StepFivePage () {
         type: StepType.Info,
         answer: 'next',
       }
-      await stepsAction(sessionId, stepData)
+
+      steps.data.push(stepData)
+      localStorage.setItem("steps", JSON.stringify(steps))
+
+      const sendDataToServer = await stepsAction(steps.data)
+
+      if (!sendDataToServer) console.log('Step data not sent to DB')
+
       router.push("/checkout");
     }
   }
