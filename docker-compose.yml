@@ -15,6 +15,6 @@ services:
 
 # docker compose up -d --build --force-recreate --remove-orphans
 
-#  docker-compose down --volumes --remove-orphans
+#  docker compose down --volumes --remove-orphans
 #  docker system prune --all --volumes  # видаляє всі незапущері образи, контейнери і вольюми
-#  docker-compose up --build
+#  docker compose up --build
