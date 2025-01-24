@@ -17,6 +17,8 @@ export const createFunnel = async (data: StepDataType[]): Promise<number> => {
   const backendUrl: string | undefined = process.env.BACKEND_URL
   if (!backendUrl) throw new Error('unable to get BACKEND_URL')
 
+  console.log(backendUrl)
+
   const headers = {
     'Content-Type': 'application/json',
     'accept': 'application/json',
