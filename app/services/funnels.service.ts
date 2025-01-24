@@ -1,23 +1,27 @@
 import {StepDataType} from "@/app/actions/actions.types";
-import {getJWTToken, getTokenFromCookie} from "@/app/services/authorization";
+import {
+  getJWTToken,
+  getSessionIdFromCookie,
+  getTokenFromCookie,
+  setSessionIdToCookie
+} from "@/app/services/authorization";
 
 
-export const sendFunnelData = async (id: string, data: StepDataType[]) => {
-  if (!id) {
+export const sendFunnelData = async (data: StepDataType[]) => {
+  const sessionId = await getSessionIdFromCookie()
+  if (!sessionId) {
     return await createFunnel(data)
-  } else return await patchFunnel(id, data)
+  } else return await patchFunnel(sessionId, data)
 }
 
 
 export const createFunnel = async (data: StepDataType[]): Promise<number> => {
   const token = await getTokenFromCookie()
 
-  if (!token) throw new Error('unable to get token from cookie')
+  if (!token) throw new Error('Unable to get token')
 
   const backendUrl: string | undefined = process.env.BACKEND_URL
   if (!backendUrl) throw new Error('unable to get BACKEND_URL')
-
-  console.log(backendUrl)
 
   const headers = {
     'Content-Type': 'application/json',
@@ -35,6 +39,7 @@ export const createFunnel = async (data: StepDataType[]): Promise<number> => {
   })
 
   if (response.status === 401) {
+    console.log('Starting to get JWT token - funnel.service - 44')
     const newToken = await getJWTToken()
     if (!newToken) throw new Error('unable to get token from the server')
     await createFunnel(data)
@@ -43,15 +48,19 @@ export const createFunnel = async (data: StepDataType[]): Promise<number> => {
     throw new Error(response.statusText)
   }
 
-  const sessionId = await response.json()
+  const receivedSessionId = await response.json()
 
-  console.log('=========', {sessionId})
+  if (!receivedSessionId.id) throw new Error('unable to get session id from step POST')
 
-  return sessionId.id
+  await setSessionIdToCookie(receivedSessionId.id)
+
+  console.log('=========', receivedSessionId.id)
+
+  return receivedSessionId.id
 }
 
 
-export const patchFunnel = async (id: string, data: StepDataType[]): Promise<string> => {
+export const patchFunnel = async (sessionId: string, data: StepDataType[]): Promise<string> => {
 
   console.log('starting patch')
 
@@ -67,7 +76,7 @@ export const patchFunnel = async (id: string, data: StepDataType[]): Promise<str
     // 'X-Client-Token': id,
   }
 
-  const response = await fetch(`${backendUrl}/funnels/${id}`, {
+  const response = await fetch(`${backendUrl}/funnels/${sessionId}`, {
     method: 'PATCH',
     headers: headers,
     body: JSON.stringify({
@@ -80,7 +89,7 @@ export const patchFunnel = async (id: string, data: StepDataType[]): Promise<str
     console.log(response.statusText)
     const newToken = await getJWTToken()
     if (!newToken) throw new Error('unable to get token from the server')
-    await patchFunnel(id, data)
+    await patchFunnel(sessionId, data)
   }
   if (!response.ok) {
     console.log(response.status)
@@ -88,9 +97,13 @@ export const patchFunnel = async (id: string, data: StepDataType[]): Promise<str
     throw new Error(response.statusText)
   }
 
-  const sessionId = await response.json()
+  const receivedSessionId = await response.json()
 
-  console.log('++++++++', {sessionId})
+  if (!receivedSessionId.id) throw new Error('Unable to get session id from the steps PATCH')
 
-  return sessionId.id
+  if (receivedSessionId.id !== sessionId) await setSessionIdToCookie(receivedSessionId)
+
+  console.log('++++++++', {receivedSessionId})
+
+  return receivedSessionId.id
 }

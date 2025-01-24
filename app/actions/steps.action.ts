@@ -4,13 +4,13 @@ import {StepDataType} from "@/app/actions/actions.types";
 import {sendFunnelData} from "@/app/services/funnels.service";
 
 
-export const stepsAction = async (sessionId: string, data: StepDataType): Promise<string> => {
+export const stepsAction = async (data: StepDataType): Promise<string> => {
 
   console.log('Steps Action')
   console.log({data})
 
   console.time('setFunnelData')
-  const id = await sendFunnelData(sessionId, [data]);
+  const id = await sendFunnelData([data]);
   console.timeEnd('setFunnelData')
 
   if (!id) {

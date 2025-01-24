@@ -1,5 +1,6 @@
 import exp from "constants";
 import { cookies } from "next/headers";
+import {getDateTime} from "@/app/services/common";
 
 export const getJWTToken = async (): Promise<string> => {
   const backendUrl: string | undefined = process.env.BACKEND_URL
@@ -9,8 +10,6 @@ export const getJWTToken = async (): Promise<string> => {
   if (!backendUrl) throw new Error('BACKEND_URL is required')
   if (!login) throw new Error('BACKEND_LOGIN is required')
   if (!password) throw new Error('BACKEND_PASSWORD is required')
-
-  console.log('Starting to get JWT token')
 
   const response = await fetch(`${backendUrl}/login_check`, {
     method: 'POST',
@@ -29,20 +28,19 @@ export const getJWTToken = async (): Promise<string> => {
     // console.log(response.body)
   }
 
-  const token = await response.json()
+  const receivedData = await response.json()
 
-  if (!token?.token) throw new Error('unable to get JWT token')
+  if (!receivedData?.token) throw new Error('unable to get JWT token')
 
   const cookieStore = await cookies()
-  cookieStore.set('funnelTkn', token.token, {
+  cookieStore.set('funnelTkn', receivedData.token, {
     httpOnly: true,
     secure: true,
     path: '/',
     maxAge: 60 * 60 * 24,
   })
 
-  // console.log(token)
-  return token
+  return receivedData.token
 }
 
 
@@ -52,7 +50,7 @@ export const getTokenFromCookie = async (): Promise<string> => {
   if (!token) {
     console.warn('there is no JWT token in cookie')
     const newToken = await getJWTToken()
-    if (!newToken) throw new Error('unable to get token from cookie')
+    if (!newToken) throw new Error('Unable to get token from server')
     return newToken
   }
   return token
@@ -62,7 +60,8 @@ export const getSessionIdFromCookie = async (): Promise<string> => {
   const cookieStore = await cookies()
   const sessionId = cookieStore.get('sessionId')?.value
   if (!sessionId) {
-    console.warn('there is no Session ID in cookie')
+    console.warn(getDateTime())
+    console.warn('There is no Session ID in cookie')
     return ''
   }
   return sessionId

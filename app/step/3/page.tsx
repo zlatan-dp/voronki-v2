@@ -13,7 +13,6 @@ export default function StepThreePage() {
   const router = useRouter();
 
   const goToNextStep = async (e: React.MouseEvent<HTMLDivElement>) => {
-    const sessionId = localStorage.getItem("sessionId") || '';
     const storedSteps = localStorage.getItem("steps")
     let steps
     if (storedSteps) steps = JSON.parse(storedSteps);
@@ -32,8 +31,9 @@ export default function StepThreePage() {
       steps.data.push(stepData)
       localStorage.setItem("steps", JSON.stringify(steps))
 
-      const id = await stepsAction(sessionId, steps.data)
-      if (id !== sessionId) localStorage.setItem("sessionId", id)
+      const sendDataToServer = await stepsAction(steps.data)
+
+      if (!sendDataToServer) console.log('Step data not sent to DB')
 
       const problemType = e.target.dataset.problemType
       router.push(`/step/4?branch=${problemType}`);

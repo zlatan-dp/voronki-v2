@@ -1,22 +1,19 @@
 "use client"
 
 import {useRouter} from "next/navigation";
-import {stepsAction} from "@/app/actions/steps.action";
 import {StepType} from "@/app/actions/actions.types";
 import Image from "next/image";
 import pagePic from '../../static/img/ani_cartoon_18.png'
 
 import '../styles.steps.css'
 import Link from "next/link";
-import { getSessionIdFromCookie, setSessionIdToCookie } from "@/app/services/authorization";
+import {stepsAction} from "@/app/actions/steps.action";
 
 export default function StepOnePage() {
 
   const router = useRouter();
 
   const goToNextStep = async (e: React.MouseEvent<HTMLDivElement>) => {
-    // const sessionId = localStorage.getItem("sessionId") || '';
-    const sessionId = await getSessionIdFromCookie()
     const storedSteps = localStorage.getItem("steps")
     let steps
     if (storedSteps) steps = JSON.parse(storedSteps);
@@ -35,10 +32,9 @@ export default function StepOnePage() {
       steps.data.push(stepData)
       localStorage.setItem("steps", JSON.stringify(steps))
 
-      const id = await stepsAction(sessionId, steps.data)
-      // if (id !== sessionId) localStorage.setItem("sessionId", id)
-      if (id !== sessionId) await setSessionIdToCookie(id)
+      const sendDataToServer = await stepsAction(steps.data)
 
+      if (!sendDataToServer) console.log('Step data not sent to DB')
 
       router.push("/step/2");
     }
