@@ -1,4 +1,5 @@
-import {cookies} from "next/headers";
+import exp from "constants";
+import { cookies } from "next/headers";
 
 export const getJWTToken = async (): Promise<string> => {
   const backendUrl: string | undefined = process.env.BACKEND_URL
@@ -8,6 +9,8 @@ export const getJWTToken = async (): Promise<string> => {
   if (!backendUrl) throw new Error('BACKEND_URL is required')
   if (!login) throw new Error('BACKEND_LOGIN is required')
   if (!password) throw new Error('BACKEND_PASSWORD is required')
+
+  console.log('Starting to get JWT token')
 
   const response = await fetch(`${backendUrl}/login_check`, {
     method: 'POST',
@@ -53,6 +56,26 @@ export const getTokenFromCookie = async (): Promise<string> => {
     return newToken
   }
   return token
+}
+
+export const getSessionIdFromCookie = async (): Promise<string> => {
+  const cookieStore = await cookies()
+  const sessionId = cookieStore.get('sessionId')?.value
+  if (!sessionId) {
+    console.warn('there is no Session ID in cookie')
+    return ''
+  }
+  return sessionId
+}
+
+export const setSessionIdToCookie = async (sessionId: string): Promise<void> => {
+  const cookieStore = await cookies()
+  cookieStore.set('sessionId', sessionId, {
+    httpOnly: true,
+    secure: true,
+    path: '/',
+    maxAge: 60 * 60 * 24,
+  })
 }
 
 
