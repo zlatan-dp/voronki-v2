@@ -1,3 +1,5 @@
+'use server'
+
 import { cookies } from "next/headers";
 import {getDateTime} from "@/app/services/common";
 
@@ -53,6 +55,7 @@ export const getTokenFromCookie = async (): Promise<string> => {
   if (!token) {
     console.warn('there is no JWT token in cookie')
     const newToken = await getJWTToken()
+    console.warn('new token: ', newToken)
     if (!newToken) throw new Error('Unable to get token from server')
     return newToken
   }

@@ -3,8 +3,8 @@
 // import {useRouter} from "next/navigation";
 // import {ProblemType, StepType} from "@/app/actions/actions.types";
 // import {stepsAction} from "@/app/actions/steps.action";
-// import Image from "next/image";
-// import pagePic from "@/app/static/img/landing/ani_cartoon_38.png";
+import Image from "next/image";
+import pagePicOne from "@/app/static/img/landing/kidsTV_with_blob.png";
 
 export default function StepFivePage () {
 
@@ -39,12 +39,12 @@ export default function StepFivePage () {
 
   return (
       <div className="step">
-        {/*<Image*/}
-        {/*    className={'step-three-img'}*/}
-        {/*    src={pagePic}*/}
-        {/*    alt="KIVI third step"*/}
-        {/*    priority={true}*/}
-        {/*/>*/}
+        <Image
+            className={'step-three-img'}
+            src={pagePicOne}
+            alt="KIVI third step"
+            priority={true}
+        />
         {/*<div className="step-three-spacer"></div>*/}
         {/*<h1>С какими из этих проблем вы сталкиваетесь?</h1>*/}
 
