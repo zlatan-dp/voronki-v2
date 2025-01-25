@@ -11,7 +11,8 @@ RUN npm install
 COPY . .
 
 # Створюємо продакшн-збірку
-RUN npm run build
+#RUN npm run build
+RUN npm run start
 
 # Виставляємо порт
 EXPOSE 3000
