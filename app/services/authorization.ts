@@ -2,6 +2,9 @@ import { cookies } from "next/headers";
 import {getDateTime} from "@/app/services/common";
 
 export const getJWTToken = async (): Promise<string> => {
+
+  console.log(getDateTime(), '-- starting getJWTToken');
+
   const backendUrl: string | undefined = process.env.BACKEND_URL
   const login: string | undefined = process.env.BACKEND_LOGIN
   const password: string | undefined = process.env.BACKEND_PASSWORD
