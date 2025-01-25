@@ -29,7 +29,7 @@ export const getJWTToken = async (): Promise<string> => {
 
   if (!response.ok) {
     console.log('authentication failed -- authorization.ts - 26')
-    console.log(response)
+    console.log(response.json())
     throw new Error(`${response.statusText}`)
   }
 
