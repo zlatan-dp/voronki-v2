@@ -4,12 +4,10 @@ import React from "react";
 import Image from "next/image";
 import MediaExpert from '@/app/static/img/checkout/mediaexpert.png'
 import '@/app/checkout/styles.checkout.css'
-import {useRouter} from "next/navigation";
 import {StepType} from "@/app/actions/actions.types";
 import {deleteSessionId, stepsAction} from "@/app/actions/steps.action";
 
 export default function PaymentPage() {
-  const router = useRouter();
 
   const goToPartner = async () => {
     const storedSteps = localStorage.getItem("steps")
@@ -32,7 +30,7 @@ export default function PaymentPage() {
 
     await deleteSessionId()
 
-    // router.push("https://modiaexpert.pl");
+    window.location.href = 'https://mediaexpert.pl/'
   }
 
   return (

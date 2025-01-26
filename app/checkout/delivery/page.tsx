@@ -1,7 +1,7 @@
 "use client"
 
 import '../styles.checkout.css'
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {StepType} from "@/app/actions/actions.types";
 import {stepsAction} from "@/app/actions/steps.action";
 import {useRouter} from "next/navigation";

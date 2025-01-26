@@ -1,7 +1,7 @@
 "use client"
 
 import './styles.checkout.css'
-import {useRef, useState} from "react";
+import {useState} from "react";
 import kidsTVWithFrames from "@/app/static/img/checkout/KidsTV_plus_Frames.png";
 import kidsTV from "@/app/static/img/checkout/Front32KidsTV.png";
 import Image from "next/image";
@@ -36,7 +36,6 @@ export default function CheckoutPage() {
 
   const router = useRouter();
   const [buyOptionId, setBuyOptionId] = useState<number>(1);
-  const ref = useRef<HTMLDivElement>(null);
 
   const goToNextStep = async (e: React.MouseEvent<HTMLButtonElement>) => {
 

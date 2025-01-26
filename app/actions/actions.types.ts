@@ -1,4 +1,3 @@
-import kidsTV from "@/app/static/img/checkout/Front32KidsTV.png";
 
 export enum StepType {
   Question = 'question',
