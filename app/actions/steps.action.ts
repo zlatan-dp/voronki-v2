@@ -2,6 +2,7 @@
 
 import {StepDataType} from "@/app/actions/actions.types";
 import {sendFunnelData} from "@/app/services/funnels.service";
+import {clearCookies} from "@/app/services/authorization";
 
 
 export const stepsAction = async (data: StepDataType): Promise<string> => {
@@ -23,4 +24,8 @@ export const stepsAction = async (data: StepDataType): Promise<string> => {
 export const stepsFormAction = async (formData: FormData): Promise<void> => {
   console.log('Steps Action')
   console.log({formData})
+}
+
+export const deleteSessionId = async (): Promise<void> => {
+  await clearCookies()
 }

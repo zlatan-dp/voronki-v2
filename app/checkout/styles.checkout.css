@@ -1,3 +1,180 @@
+:root {
+    --bg-page: #FEFEFE;
+    --bg-active: #FFFFFF;
+    --bg-option: #E2E2E2;
+    --border-active: rgba(10, 32, 88, 0.65);
+    --border: rgba(10, 32, 88, 0.35);
+    --checked: #26B4AD;
+    --text: #5A5A5A;
+    --text-button: #031C67;
+    --text-error: #FF0000;
+}
+
+h1 {
+    color: var(--text);
+}
+
+.checkout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--text);
+
+    & .option {
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border: 4px solid var(--border);
+        background-color: var(--bg-option);
+        border-radius: 15px;
+        cursor: pointer;
+
+        & .image {
+            width: 100%;
+            height: 9rem;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        & .title {
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+        }
+
+        & .subtitle {
+            font-size: .9rem;
+        }
+
+        & span {
+            font-weight: bold;
+        }
+
+        & .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .radio {
+                width: 1.4rem;
+                height: 1.4rem;
+                border: 3px solid var(--border);
+                background-color: var(--bg-page);
+                border-radius: 50%;
+            }
+
+            & .price {
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+        }
+
+        &.active {
+            background-color: var(--bg-active);
+            border-color: var(--border-active);
+
+            & .radio {
+                border-color: var(--checked);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: .8rem;
+                    height: .8rem;
+                    background-color: var(--checked);
+                    border-radius: 50%;
+                }
+            }
+
+            & .price {
+                color: var(--border-active);
+            }
+        }
+    }
+
+    & form {
+        margin: auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & h1 {
+            margin-bottom: 2rem;
+        }
+
+        & label {
+            font-weight: bold;
+        }
+
+        & label.checkbox {
+            display: flex;
+            gap: 1rem;
+            font-size: .7rem;
+        }
+
+        & input {
+            width: 100%;
+            margin: .5rem 0;
+            padding: 1.5rem;
+            border: none;
+            outline: none;
+            background-color: var(--bg-option);
+            border-radius: 10px;
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        & .error {
+            color: var(--text-error);
+            font-weight: normal;
+        }
+    }
+
+    & .payment {
+        margin: auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        & h1 {
+            margin: 0 auto;
+        }
+
+        & .link {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        & img {
+            width: 70%;
+            height: auto;
+        }
+    }
+}
+
+button {
+    margin: 2rem auto;
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+    color: var(--text-button);
+}
+
 .checkout-form {
     display: flex;
     flex-direction: column;

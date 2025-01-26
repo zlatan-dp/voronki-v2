@@ -16,8 +16,8 @@ export const sendFunnelData = async (data: StepDataType[]) => {
 
 
 export const createFunnel = async (data: StepDataType[]): Promise<number> => {
-  const token = await getTokenFromCookie()
 
+  const token = await getTokenFromCookie()
   if (!token) throw new Error('Unable to get token')
 
   const backendUrl: string | undefined = process.env.BACKEND_URL
@@ -65,6 +65,7 @@ export const patchFunnel = async (sessionId: string, data: StepDataType[]): Prom
   console.log('starting patch')
 
   const token = await getTokenFromCookie()
+  if (!token) throw new Error('Unable to get token')
 
   const backendUrl: string | undefined = process.env.BACKEND_URL
   if (!backendUrl) throw new Error('unable to get BACKEND_URL')
@@ -85,11 +86,10 @@ export const patchFunnel = async (sessionId: string, data: StepDataType[]): Prom
   })
 
   if (response.status === 401) {
-    console.log(response.status)
-    console.log(response.statusText)
+    console.log('Starting to get JWT token - funnel.service - 44')
     const newToken = await getJWTToken()
     if (!newToken) throw new Error('unable to get token from the server')
-    await patchFunnel(sessionId, data)
+    await createFunnel(data)
   }
   if (!response.ok) {
     console.log(response.status)
@@ -101,7 +101,7 @@ export const patchFunnel = async (sessionId: string, data: StepDataType[]): Prom
 
   if (!receivedSessionId.id) throw new Error('Unable to get session id from the steps PATCH')
 
-  if (receivedSessionId.id !== sessionId) await setSessionIdToCookie(receivedSessionId)
+  // if (receivedSessionId.id !== sessionId) await setSessionIdToCookie(receivedSessionId.id)
 
   console.log('++++++++', {receivedSessionId})
 

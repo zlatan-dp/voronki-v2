@@ -22,7 +22,7 @@
 
     & .license {
         margin-top: 1rem;
-        color: var(--header);
+        color: var(--text);
         font-size: .75rem;
         text-align: center;
         line-height: 1.2rem;
@@ -134,7 +134,7 @@
 
 .info-block {
     margin-top: 1.5rem;
-    color: var(--header);
+    color: var(--text);
     line-height: 1.5rem;
 
     & span {
@@ -145,22 +145,6 @@
 .step-button {
     margin: 2rem 0;
     display: flex;
-
-    & .button {
-        margin-left: auto;
-        padding: 1rem;
-        outline: none;
-        border: none;
-        background-color: var(--bg-button);
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        color: var(--text-label);
-        font-size: 1rem;
-        cursor: pointer;
-    }
 }
 
 .progress-bars {

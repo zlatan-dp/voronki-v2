@@ -14,15 +14,12 @@ import CloseToEyes from "@/app/step/4/CloseToEyes";
 export default function StepFourDispatcher() {
 
   const router = useRouter();
-  // const params = new URLSearchParams(window.location.search)
-  // const branch = params.get('branch')
 
-  // console.log(request)
   const searchParams = useSearchParams()
   const branch = searchParams.get('branch')
   console.log(branch)
 
-  const goToNextStep = async (e: React.MouseEvent<HTMLDivElement>) => {
+  const goToNextStep = async (e: React.MouseEvent<HTMLButtonElement>) => {
     const storedSteps = localStorage.getItem("steps")
     let steps
     if (storedSteps) steps = JSON.parse(storedSteps);
@@ -68,9 +65,9 @@ export default function StepFourDispatcher() {
         {/*<CrookedBack/>*/}
 
         <div className="step-button">
-          <div className="button" onClick={goToNextStep}>
+          <button className="button" onClick={goToNextStep}>
             Решение →
-          </div>
+          </button>
         </div>
 
         <div className="progress-bars">

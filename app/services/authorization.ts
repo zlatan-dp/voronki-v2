@@ -85,8 +85,12 @@ export const setSessionIdToCookie = async (sessionId: string): Promise<void> => 
 }
 
 
-// export const checkToken = async (): Promise<boolean> => {
-//
-// }
+export const clearCookies = async (): Promise<void> => {
+  const cookieStore = await cookies()
+  cookieStore.delete('sessionId')
+  console.log('clear cookies')
+  const id = cookieStore.get('sessionId')?.value
+  console.log(id)
+}
 
 
