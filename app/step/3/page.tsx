@@ -1,8 +1,8 @@
 "use client"
 
-import {useRouter} from "next/navigation";
-import {stepsAction} from "@/app/actions/steps.action";
-import {ProblemType, StepType} from "@/app/actions/actions.types";
+import { useRouter } from "next/navigation";
+import { stepsAction } from "@/app/actions/steps.action";
+import { ProblemType, StepType } from "@/app/actions/actions.types";
 import Image from "next/image";
 import pagePic from '../../static/img/ani_cartoon_27.png'
 
@@ -16,7 +16,7 @@ export default function StepThreePage() {
     const storedSteps = localStorage.getItem("steps")
     let steps
     if (storedSteps) steps = JSON.parse(storedSteps);
-    else steps = {data: []}
+    else steps = { data: [] }
 
     if (!(e.target instanceof HTMLElement)) return;
 
@@ -41,38 +41,38 @@ export default function StepThreePage() {
   }
 
   return (
-      <div className="step">
-        <Image
-            className={'step-three-img'}
-            src={pagePic}
-            alt="KIVI third step"
-            priority={true}
-        />
-        <div className="step-three-spacer"></div>
-        <h1>С какими из этих проблем вы сталкиваетесь?</h1>
+    <div className="step">
+      <Image
+        className={'step-three-img'}
+        src={pagePic}
+        alt="KIVI third step"
+        priority={true}
+      />
+      <div className="step-three-spacer"></div>
+      <h1>Z którymi z tych problemów się spotykasz?</h1>
 
-        <div className="question-block" onClick={goToNextStep}>
-          <div className="question-button" data-problem-type={ProblemType.CloseToEyes}>
-            Ребенок держит устройство близко к глазам
-          </div>
-          <div className="question-button" data-problem-type={ProblemType.ArmsLock}>
-            Ребенок долго держит устройство в руках
-          </div>
-          <div className="question-button" data-problem-type={ProblemType.InTheDark}>
-            Ребенок смотрит на экран в темноте
-          </div>
-          <div className="question-button" data-problem-type={ProblemType.CrookedBack}>
-            Ребенок не держит осанку
-          </div>
+      <div className="question-block" onClick={goToNextStep}>
+        <div className="question-button" data-problem-type={ProblemType.CloseToEyes}>
+          Dziecko trzyma urządzenie blisko oczu
         </div>
-
-        <div className="progress-bars">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar filled"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div className="question-button" data-problem-type={ProblemType.ArmsLock}>
+          Dziecko długo trzyma urządzenie w rękach
+        </div>
+        <div className="question-button" data-problem-type={ProblemType.InTheDark}>
+          Dziecko patrzy na ekran w ciemności
+        </div>
+        <div className="question-button" data-problem-type={ProblemType.CrookedBack}>
+          Dziecko nie trzyma postawy
         </div>
       </div>
+
+      <div className="progress-bars">
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar filled"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+    </div>
   )
 }

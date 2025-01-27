@@ -1,8 +1,8 @@
 "use client"
 
-import {useRouter} from "next/navigation";
-import {stepsAction} from "@/app/actions/steps.action";
-import {StepType} from "@/app/actions/actions.types";
+import { useRouter } from "next/navigation";
+import { stepsAction } from "@/app/actions/steps.action";
+import { StepType } from "@/app/actions/actions.types";
 import Image from "next/image";
 import pagePic from '../../static/img/ani_in_tv.png'
 
@@ -16,7 +16,7 @@ export default function StepTwoPage() {
     const storedSteps = localStorage.getItem("steps")
     let steps
     if (storedSteps) steps = JSON.parse(storedSteps);
-    else steps = {data: []}
+    else steps = { data: [] }
 
     if (!(e.target instanceof HTMLElement)) return;
 
@@ -40,38 +40,38 @@ export default function StepTwoPage() {
   }
 
   return (
-      <div className="step">
-        <Image
-            className={'step-two-img'}
-            src={pagePic}
-            alt="KIVI second step"
-            priority={true}
-        />
-        <div className="step-one-spacer"></div>
-        <h1>На чем ваш ребенок смотрит контент?</h1>
+    <div className="step">
+      <Image
+        className={'step-two-img'}
+        src={pagePic}
+        alt="KIVI second step"
+        priority={true}
+      />
+      <div className="step-one-spacer"></div>
+      <h1>Na jakim urządzeniu Twoje dziecko ogląda treści?</h1>
 
-        <div className="question-block" onClick={goToNextStep}>
-          <div className="question-button">
-            На семейном планшете
-          </div>
-          <div className="question-button">
-            На своем планшете
-          </div>
-          <div className="question-button">
-            На телефоне одного из родителей
-          </div>
-          <div className="question-button">
-            На своем телефоне
-          </div>
+      <div className="question-block" onClick={goToNextStep}>
+        <div className="question-button">
+          Na rodzinnym tablecie
         </div>
-
-        <div className="progress-bars">
-          <div className="bar"></div>
-          <div className="bar filled"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div className="question-button">
+          Na swoim tablecie
+        </div>
+        <div className="question-button">
+          Na telefonie jednego z rodziców
+        </div>
+        <div className="question-button">
+          Na swoim telefonie
         </div>
       </div>
+
+      <div className="progress-bars">
+        <div className="bar"></div>
+        <div className="bar filled"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+    </div>
   )
 }

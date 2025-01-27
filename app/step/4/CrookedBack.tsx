@@ -11,13 +11,13 @@ export default function CrookedBack () {
           priority={true}
       />
       <div className="step-four-spacer3"></div>
-      <h1>Проблемы с осанкой у ребенка</h1>
+      <h1>Zła postawa dziecka</h1>
 
       <div className="info-block" >
-      Длительное использование гаджетов в неудобной позе приводит к сутулости 
-      и искривлению позвоночника, что особенно опасно для детей, у которых 
-      сколиоз может развиваться в <span>20-30%</span> случаев при регулярном нахождении 
-      в неправильной осанке
+      Długotrwałe korzystanie z gadżetów w niewygodnej pozycji prowadzi 
+      do garbienia i deformacji kręgosłupa. Jest to szczególnie szkodliwe 
+      dla dzieci, u których przy regularnej niewłaściwej postawie 
+      rozwija się skolioza w 20-30% przypadków.
       </div>
     </>
   )

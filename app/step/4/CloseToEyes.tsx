@@ -11,12 +11,12 @@ export default function CloseToEyes () {
           priority={true}
       />
       <div className="step-four-spacer"></div>
-      <h1>Экран слишком близко к глазам</h1>
+      <h1>Ekran jest zbyt blisko oczu</h1>
 
       <div className="info-block" >
-        Использование экрана на расстоянии менее 30 см от глаз
-        увеличивает риск миопии <span>на 50-60%</span> и вызывает спазм аккомодации,
-        что может привести к необратимым изменениям зрения
+      Ekran, znajdujący się bliżej 30 cm od oczu dziecka, powoduje 
+      długotrwałe zmęczenie oczu z powodu ciągłego skupiania wzroku. 
+      Zwiększa to ryzyko rozwoju krótkowzroczności o 50-60%.
       </div>
     </>
   )
