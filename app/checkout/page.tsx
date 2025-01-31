@@ -17,7 +17,7 @@ export default function CheckoutPage() {
       price: '1000 Zł',
       title: 'Telewizor',
       model: 'KIVI KidsTV',
-      subTitle: '+ + zestaw akcesoriów',
+      subTitle: '+ zestaw akcesoriów',
       subTitleModel: 'Color Frames',
       image: kidsTVWithFrames,
       alt: "KIVI KidsTV with Frames",
