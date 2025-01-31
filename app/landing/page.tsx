@@ -44,6 +44,14 @@ export default function StepFivePage() {
     }
   }
 
+  const scrollToBottom = (event: React.MouseEvent) => {
+    event.preventDefault()
+    // if (!(e.target instanceof HTMLElement)) return
+    const target = document.getElementById('go-to-checkout-button')
+    if (!target) return
+    target.scrollIntoView({behavior: "smooth"})
+  }
+
   return (
       <div className="landing-page">
         <section>
@@ -62,8 +70,8 @@ export default function StepFivePage() {
               Wbudowana lampka nocna AlumiGlow oraz technologia ochrony przed
               niebieskim światłem LowBlue Light zmniejszają obciążenie oczu</p>
           </div>
-          <button className={'button'} onClick={goToNextStep}>Chcę zamówić <br/>KIVI KidsTV</button>
-          <Link href={'#'}>więcej o KIVI KidsTV</Link>
+          <button className={'button'} onClick={scrollToBottom}>Chcę zamówić <br/>KIVI KidsTV</button>
+          {/*<Link href={'#go-to-checkout-button'}>więcej o KIVI KidsTV</Link>*/}
         </section>
 
         <section>
@@ -171,7 +179,13 @@ export default function StepFivePage() {
         </section>
 
         <section>
-          <button className={'button'} onClick={goToNextStep}>Chcę zamówić KIVI KidsTV</button>
+          <button
+              className={'button'}
+              id={'go-to-checkout-button'}
+              onClick={goToNextStep}
+          >
+            Chcę zamówić KIVI KidsTV
+          </button>
         </section>
       </div>
   )

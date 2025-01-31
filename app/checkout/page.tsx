@@ -14,7 +14,7 @@ export default function CheckoutPage() {
   const products = [
     {
       id: 1,
-      price: '219 €',
+      price: '1000 Zł',
       title: 'Телевизор',
       model: 'KIVI KidsTV',
       subTitle: '+ набор аскессуаров',
@@ -24,7 +24,7 @@ export default function CheckoutPage() {
     },
     {
       id: 2,
-      price: '199 €',
+      price: '869 Zł',
       title: 'Телевизор',
       model: 'KIVI KidsTV',
       subTitle: '',

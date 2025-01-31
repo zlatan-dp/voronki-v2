@@ -118,8 +118,10 @@ h1 {
         }
 
         & label.checkbox {
+            height: 2rem;
             display: flex;
             gap: 1rem;
+            align-items: center;
             font-size: .7rem;
         }
 
@@ -133,6 +135,11 @@ h1 {
             border-radius: 10px;
             color: var(--text);
             font-size: 1rem;
+        }
+
+        & input[type="checkbox"] {
+            width: 2rem;
+            height: 2rem;
         }
 
         & .error {

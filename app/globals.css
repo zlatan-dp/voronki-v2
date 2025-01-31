@@ -122,6 +122,10 @@ header {
   margin: 0 auto;
   /*border: 1px solid crimson;*/
   padding: 2rem;
+
+  & a {
+    margin: 0;
+  }
 }
 
 main {

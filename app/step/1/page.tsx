@@ -65,10 +65,10 @@ export default function StepOnePage() {
 
       <div className="license">
         wybierając odpowiedź, akceptujesz nasze &nbsp;
-        <Link href={'#'}>
+        <Link href={'https://kivismart.com/pl/terms-of-use'}>
           Warunki użytkowania
         </Link> oraz &nbsp;
-        <Link href={'#'}>
+        <Link href={'https://kivismart.com/pl/privacy-statement'}>
           Politykę prywatności
         </Link>
       </div>

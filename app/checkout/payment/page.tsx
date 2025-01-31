@@ -30,7 +30,7 @@ export default function PaymentPage() {
 
     await deleteSessionId()
 
-    window.location.href = 'https://mediaexpert.pl/'
+    window.location.href = 'https://www.mediaexpert.pl/telewizory-i-rtv/telewizory/telewizor-kivi-kids-tv-32-led-android-tv?%2Fsearch%3Fquery[menu_item]=&query[querystring]=kidstv'
   }
 
   return (

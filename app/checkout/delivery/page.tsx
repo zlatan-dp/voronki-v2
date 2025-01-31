@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import {StepType} from "@/app/actions/actions.types";
 import {stepsAction} from "@/app/actions/steps.action";
 import {useRouter} from "next/navigation";
+import Link from "next/link";
 
 export default function CheckoutDelivery() {
 
@@ -149,17 +150,18 @@ export default function CheckoutDelivery() {
           </label>
           <label className={'checkbox'}>
             <input type="checkbox" name={"agree"} placeholder="Delivery Address"/>
-            By submitting this form, you confirm and consent to the processing, storage and transfer of your personal
-            data in accordance with the laws of the European Union https://gdpr-info.eu/.
-            You can contact our Customer Care team regarding any request related to our products and services (service,
-            return, warranty).
-            The personal data is collected and processed solely for the purposes stated above and to assess the quality
-            of the service.
-            If you do not fill in the required data, you will not be able to access all or part of the Customer Care
-            Services.
+            <div className="license">
+              wybierając odpowiedź, akceptujesz nasze &nbsp;
+              <Link href={'https://kivismart.com/pl/terms-of-use'}>
+                Warunki użytkowania
+              </Link> oraz &nbsp;
+              <Link href={'https://kivismart.com/pl/privacy-statement'}>
+                Politykę prywatności
+              </Link>
+            </div>
           </label>
           {errors.agree && (<div className={'error'}>{errors.agree}</div>)}
-          <button>Go to Payment</button>
+          <button>Przejdź do wyboru metody płatności i dostawy</button>
         </form>
       </div>
   )

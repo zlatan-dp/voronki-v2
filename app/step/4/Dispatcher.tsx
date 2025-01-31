@@ -66,7 +66,7 @@ export default function StepFourDispatcher() {
 
         <div className="step-button">
           <button className="button" onClick={goToNextStep}>
-            Решение →
+            Rozwiązanie →
           </button>
         </div>
 
