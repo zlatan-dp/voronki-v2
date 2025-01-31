@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -6,9 +7,9 @@ export default function Home() {
       <main className={styles.main}>
 
         <div className={styles.ctas}>
-          <a href="/step/1">
+          <Link href="/step/1">
             <button className={'center'}>Start</button>
-          </a>
+          </Link>
         </div>
       </main>
     </div>
