@@ -36,16 +36,19 @@ export default function PaymentPage() {
   return (
       <div className="checkout">
         <div className="payment">
-          <h1>Kurva przepraszam</h1>
-          <p>К сожалению, мы не можем доставить выбранный товар по указанному
-            адресу. Вы можете приобрести этот товар у нашего партнера:</p>
+          <h1>Ups... Występił problem</h1>
+          <p>Niestety nie jesteśmy w stanie dostarczyć
+            wybrany produkt pod wskazanym adresem.
+            Możesz kupić ten produkt od
+            naszego partnera:
+          </p>
           <div className={'link'} onClick={goToPartner} >
             <Image
                 src={MediaExpert}
                 alt='MediaExpert'
                 // priority={true}
             />
-            Перейти на сайт партнера
+            Przejdź do witryny partnera
           </div>
         </div>
       </div>
