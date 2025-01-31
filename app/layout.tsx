@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Zorin's voronka",
@@ -16,10 +17,10 @@ export default function RootLayout({
       <html lang="en">
       <head>
         {/* Google Analytics Script */}
-        <script
+        <Script
             async src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"
-        ></script>
-        <script
+        />
+        <Script
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
