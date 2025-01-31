@@ -10,7 +10,6 @@ import pagePicTwo from "@/app/static/img/landing/present_with_blob.png";
 import pagePicThree from "@/app/static/img/landing/night light blob.png";
 import pagePicFour from "@/app/static/img/landing/screen_with_ball.png";
 import pagePicFive from "@/app/static/img/landing/tv_corner_with_frame.png";
-import Link from "next/link";
 
 
 export default function StepFivePage() {
