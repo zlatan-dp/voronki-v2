@@ -2,7 +2,7 @@
 
 import {useRouter} from "next/navigation";
 import {StepType} from "@/app/actions/actions.types";
-import {deleteSessionId, getCurrentTime, stepsAction} from "@/app/actions/steps.action";
+import {getCurrentTime} from "@/app/actions/steps.action";
 import Image from "next/image";
 import './styles.landing.css'
 import pagePicOne from "@/app/static/img/landing/kidsTV_with_blob.png";

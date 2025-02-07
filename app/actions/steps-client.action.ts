@@ -1,6 +1,6 @@
 'use client'
 
-import {StepDataType, StepType} from "@/app/actions/actions.types";
+import {StepDataType} from "@/app/actions/actions.types";
 import {stepsAction} from "@/app/actions/steps.action";
 
 export const nextStep = async (stepData: StepDataType) => {

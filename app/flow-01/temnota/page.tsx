@@ -3,7 +3,7 @@
 import Image from "next/image";
 import pagePic from "@/app/static/img/image KIVI Quiz KidsTV/6.png";
 import '../styles.flow01.css'
-import {ProblemType, StepType} from "@/app/actions/actions.types";
+import {StepType} from "@/app/actions/actions.types";
 import {nextStep} from "@/app/actions/steps-client.action";
 import {getCurrentTime} from "@/app/actions/steps.action";
 import {useRouter} from "next/navigation";
