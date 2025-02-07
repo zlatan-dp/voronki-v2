@@ -12,6 +12,7 @@ export default function PagesDispatcher() {
   const searchParams = useSearchParams()
   const utmContent = searchParams.get("utm_content") || ''
   const banner = searchParams.get("banner") || ''
+  const campaign = searchParams.get("campaign") || ''
 
   useEffect(() => {
     const goToNextStep = async () => {
@@ -22,6 +23,7 @@ export default function PagesDispatcher() {
         answer: {
           utm_content: utmContent,
           banner: banner,
+          campaign: campaign,
         },
         time: await getCurrentTime(),
       })
@@ -31,64 +33,16 @@ export default function PagesDispatcher() {
 
 
     switch (utmContent) {
-      case 'blizko-1':
+      case 'blizko':
         router.push("/flow-01/blizko");
         break;
-      case 'blizko-2':
-        router.push("/flow-01/blizko");
-        break;
-      case 'blizko-3':
-        router.push("/flow-01/blizko");
-        break;
-      case 'blizko-4':
-        router.push("/flow-01/blizko");
-        break;
-      case 'blizko-5':
-        router.push("/flow-01/blizko");
-        break;
-      case 'motorika-1':
+      case 'motorika':
         router.push("/flow-01/motorika");
         break;
-      case 'motorika-2':
-        router.push("/flow-01/motorika");
-        break;
-      case 'motorika-3':
-        router.push("/flow-01/motorika");
-        break;
-      case 'motorika-4':
-        router.push("/flow-01/motorika");
-        break;
-      case 'motorika-5':
-        router.push("/flow-01/motorika");
-        break;
-      case 'osanka-1':
+      case 'osanka':
         router.push("/flow-01/osanka");
         break;
-      case 'osanka-2':
-        router.push("/flow-01/osanka");
-        break;
-      case 'osanka-3':
-        router.push("/flow-01/osanka");
-        break;
-      case 'osanka-4':
-        router.push("/flow-01/osanka");
-        break;
-      case 'osanka-5':
-        router.push("/flow-01/osanka");
-        break;
-      case 'temnota-1':
-        router.push("/flow-01/temnota");
-        break;
-      case 'temnota-2':
-        router.push("/flow-01/temnota");
-        break;
-      case 'temnota-3':
-        router.push("/flow-01/temnota");
-        break;
-      case 'temnota-4':
-        router.push("/flow-01/temnota");
-        break;
-      case 'temnota-5':
+      case 'temnota':
         router.push("/flow-01/temnota");
         break;
       default:

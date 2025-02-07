@@ -41,4 +41,5 @@ export type CheckoutProductType = {
 export type CampaignDataType = {
   utm_content: string;
   banner: string;
+  campaign: string;
 }
