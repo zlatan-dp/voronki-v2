@@ -4,7 +4,7 @@ import {useRouter, useSearchParams} from "next/navigation";
 import {nextStep} from "@/app/actions/steps-client.action";
 import {StepType} from "@/app/actions/actions.types";
 import {getCurrentTime} from "@/app/actions/steps.action";
-import {useEffect} from "react";
+import {Suspense, useEffect} from "react";
 
 export default function Home() {
 
@@ -98,10 +98,14 @@ export default function Home() {
 
 
   return (
-      <div className="loader">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <Suspense fallback={
+        <div>Loading...</div>
+      }>
+        <div className="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </Suspense>
   );
 }
