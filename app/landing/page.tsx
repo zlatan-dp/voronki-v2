@@ -2,7 +2,7 @@
 
 import {useRouter} from "next/navigation";
 import {StepType} from "@/app/actions/actions.types";
-import {stepsAction} from "@/app/actions/steps.action";
+import {deleteSessionId, getCurrentTime, stepsAction} from "@/app/actions/steps.action";
 import Image from "next/image";
 import './styles.landing.css'
 import pagePicOne from "@/app/static/img/landing/kidsTV_with_blob.png";
@@ -10,6 +10,8 @@ import pagePicTwo from "@/app/static/img/landing/present_with_blob.png";
 import pagePicThree from "@/app/static/img/landing/night light blob.png";
 import pagePicFour from "@/app/static/img/landing/screen_with_ball.png";
 import pagePicFive from "@/app/static/img/landing/tv_corner_with_frame.png";
+import mediaExpertImage from "@/app/static/img/landing/Media-Expert_Logo.webp";
+import {nextStep} from "@/app/actions/steps-client.action";
 
 
 export default function StepFivePage() {
@@ -17,30 +19,26 @@ export default function StepFivePage() {
   const router = useRouter();
 
   const goToNextStep = async (e: React.MouseEvent<HTMLButtonElement>) => {
-
-    const storedSteps = localStorage.getItem("steps")
-    let steps
-    if (storedSteps) steps = JSON.parse(storedSteps);
-    else steps = {data: []}
-
     if (!(e.target instanceof HTMLElement)) return;
 
-    if (e.target.classList.contains('button')) {
-      const stepData = {
-        step: 5,
-        type: StepType.Info,
-        answer: 'next',
-      }
+    const target = e.target.closest('button')?.dataset.target || '';
 
-      steps.data.push(stepData)
-      localStorage.setItem("steps", JSON.stringify(steps))
+    await nextStep({
+      step: 2,
+      type: StepType.Info,
+      question: "Landing",
+      answer: target,
+      time: await getCurrentTime(),
+    })
 
-      const sendDataToServer = await stepsAction(steps.data)
 
-      if (!sendDataToServer) console.log('Step data not sent to DB')
 
-      router.push("/checkout");
+    if (target === 'mediaexpert') {
+      // await deleteSessionId()
+      window.location.href = 'https://www.mediaexpert.pl/telewizory-i-rtv/telewizory/telewizor-kivi-kids-tv-32-led-android-tv?%2Fsearch%3Fquery[menu_item]=&query[querystring]=kidstv'
     }
+    else router.push("/checkout/delivery");
+
   }
 
   const scrollToBottom = (event: React.MouseEvent) => {
@@ -179,11 +177,29 @@ export default function StepFivePage() {
 
         <section>
           <button
-              className={'button'}
+              className={'button landing-button'}
+              onClick={goToNextStep}
+              data-target={'KIVI'}
+          >
+            Zamów KidsTV na tej stronie
+          </button>
+
+          <div className={'mediaexpert-label'}>
+            Lub zamów u naszego partnera:
+          </div>
+
+          <button
+              className={'button  landing-button'}
               id={'go-to-checkout-button'}
               onClick={goToNextStep}
+              data-target={'mediaexpert'}
           >
-            Chcę zamówić KIVI KidsTV
+            <Image
+                className={'img1'}
+                src={mediaExpertImage}
+                alt="mediaexpert"
+                priority={true}
+            />
           </button>
         </section>
       </div>

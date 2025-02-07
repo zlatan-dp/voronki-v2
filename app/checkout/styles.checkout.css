@@ -1,14 +1,14 @@
-:root {
-    --bg-page: #FEFEFE;
-    --bg-active: #FFFFFF;
-    --bg-option: #E2E2E2;
-    --border-active: rgba(10, 32, 88, 0.65);
-    --border: rgba(10, 32, 88, 0.35);
-    --checked: #26B4AD;
-    --text: #5A5A5A;
-    --text-button: #031C67;
-    --text-error: #FF0000;
-}
+/*:root {*/
+/*    --bg-page: #FEFEFE;*/
+/*    --bg-active: #FFFFFF;*/
+/*    --bg-option: #E2E2E2;*/
+/*    --border-active: rgba(10, 32, 88, 0.65);*/
+/*    --border: rgba(10, 32, 88, 0.35);*/
+/*    --checked: #26B4AD;*/
+/*    --text: #5A5A5A;*/
+/*    --text-button: #031C67;*/
+/*    --text-error: #FF0000;*/
+/*}*/
 
 h1 {
     color: var(--text);
@@ -111,10 +111,13 @@ h1 {
 
         & h1 {
             margin-bottom: 2rem;
+            color: var(--text-form-header);
+            font-weight: 600;
         }
 
         & label {
-            font-weight: bold;
+            font-weight: normal;
+            color: var(--text-label);
         }
 
         & label.checkbox {
@@ -128,7 +131,7 @@ h1 {
         & input {
             width: 100%;
             margin: .5rem 0;
-            padding: 1.5rem;
+            padding: 1rem;
             border: none;
             outline: none;
             background-color: var(--bg-option);
@@ -144,7 +147,12 @@ h1 {
 
         & .error {
             color: var(--text-error);
+            font-size: .8rem;
             font-weight: normal;
+        }
+
+        & .license a {
+            font-weight: bold;
         }
     }
 
@@ -178,8 +186,9 @@ h1 {
 button {
     margin: 2rem auto;
     padding: 1rem 4rem;
-    font-size: 1.5rem;
-    color: var(--text-button);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-label);
 }
 
 .checkout-form {

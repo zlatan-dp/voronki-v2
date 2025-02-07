@@ -3,6 +3,7 @@ export enum StepType {
   Question = 'question',
   Info = 'info',
   Checkout = 'checkout',
+  Proxy = 'proxy',
 }
 
 export enum ProblemType {
@@ -16,7 +17,8 @@ export type StepDataType = {
   step: number;
   type: StepType;
   question?: string;
-  answer: string | CheckoutDataType | CheckoutProductType;
+  answer: string | CheckoutDataType | CheckoutProductType | CampaignDataType;
+  time: string;
 }
 
 export type CheckoutDataType = {
@@ -34,4 +36,9 @@ export type CheckoutProductType = {
   model?: string,
   subTitle?: string,
   subTitleModel?: string,
+}
+
+export type CampaignDataType = {
+  utm_content: string;
+  banner: string;
 }

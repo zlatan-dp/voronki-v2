@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pagePic from "@/app/static/img/ani_cartoon_22.png";
+import pagePic from "@/app/static/img/image KIVI Quiz KidsTV/4.png";
 
 export default function CloseToEyes () {
   return(
@@ -10,7 +10,7 @@ export default function CloseToEyes () {
           alt="KIVI fourth step"
           priority={true}
       />
-      <div className="step-four-spacer"></div>
+      {/*<div className="step-four-spacer"></div>*/}
       <h1>Ekran jest zbyt blisko oczu</h1>
 
       <div className="info-block" >

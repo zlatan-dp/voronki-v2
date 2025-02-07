@@ -16,13 +16,13 @@ export default function RootLayout({
   return (
       <html lang="en">
       <head>
-        {/* Google Analytics Script */}
-        {/*<Script*/}
-        {/*    async src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"*/}
-        {/*/>*/}
         <Script
-            id="gtm-script"
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
+            src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"
+        />
+        <Script
+            id="google-analytics"
+            strategy="beforeInteractive"
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -32,14 +32,6 @@ export default function RootLayout({
             `,
             }}
         />
-        <noscript>
-          <iframe
-          src={'https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ'}
-          height='0'
-          width='0'
-          style={{display: 'none', visibility: 'hidden'}}
-          ></iframe>
-        </noscript>
       </head>
       <body>
       <header>

@@ -38,7 +38,7 @@ export default function CheckoutDelivery() {
 
     if (data.name === '') {
       setErrors(prevValues => ({
-        ...prevValues, name: 'You have to enter a name.',
+        ...prevValues, name: 'Musisz wpisać nazwę.',
       }))
     } else {
       setErrors(prevValues => ({
@@ -48,7 +48,7 @@ export default function CheckoutDelivery() {
 
     if (data.email === '') {
       setErrors(prevValues => ({
-        ...prevValues, email: 'You have to enter an email.',
+        ...prevValues, email: 'Musisz podać adres e-mail.',
       }))
     } else {
       setErrors(prevValues => ({
@@ -58,7 +58,7 @@ export default function CheckoutDelivery() {
 
     if (data.phone === '') {
       setErrors(prevValues => ({
-        ...prevValues, phone: 'You have to enter a phone number.',
+        ...prevValues, phone: 'Musisz podać numer telefonu.',
       }))
     } else {
       setErrors(prevValues => ({
@@ -68,7 +68,7 @@ export default function CheckoutDelivery() {
 
     if (data.address === '') {
       setErrors(prevValues => ({
-        ...prevValues, address: 'You have to enter an address.',
+        ...prevValues, address: 'Musisz podać adres.',
       }))
     } else {
       setErrors(prevValues => ({
@@ -78,7 +78,7 @@ export default function CheckoutDelivery() {
 
     if (data.agree !== 'on') {
       setErrors(prevValues => ({
-        ...prevValues, agree: 'You have to accept conditions'
+        ...prevValues, agree: 'Musisz zaakceptować warunki'
       }))
     } else {
       setErrors(prevValues => ({
