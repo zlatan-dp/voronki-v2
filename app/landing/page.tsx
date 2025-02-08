@@ -24,7 +24,7 @@ export default function StepFivePage() {
     const target = e.target.closest('button')?.dataset.target || '';
 
     await nextStep({
-      step: 2,
+      step: 3,
       type: StepType.Info,
       question: "Landing",
       answer: target,

@@ -10,12 +10,12 @@ import {clearCookies} from "@/app/services/authorization";
 // }
 
 
-export const stepsAction = async (data: StepDataType): Promise<string> => {
+export const stepsAction = async (data: StepDataType[]): Promise<string> => {
 
   console.log('Steps Action')
   console.log({data})
 
-  const id = await sendFunnelData([data]);
+  const id = await sendFunnelData(data);
 
   if (!id) {
     throw new Error(`SessionId not received`)

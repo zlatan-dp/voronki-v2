@@ -16,7 +16,7 @@ export default function PaymentPage() {
     else steps = {data: []}
 
     const stepData = {
-      step: 8,
+      step: 5,
       type: StepType.Checkout,
       question: 'Kurva',
       answer: 'redirect to the Partner',

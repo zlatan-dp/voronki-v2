@@ -100,7 +100,7 @@ export default function CheckoutDelivery() {
     else steps = {data: []}
 
     const stepData = {
-      step: 7,
+      step: 4,
       type: StepType.Checkout,
       question: 'Składanie zamówienia',
       answer: data,

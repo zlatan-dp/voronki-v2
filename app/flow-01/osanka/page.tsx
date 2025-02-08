@@ -15,7 +15,7 @@ export default function MotorikaPage() {
     if (!(e.target instanceof HTMLElement)) return;
 
     await nextStep({
-      step: 1,
+      step: 2,
       type: StepType.Info,
       question: "Zła postawa dziecka",
       answer: 'next',

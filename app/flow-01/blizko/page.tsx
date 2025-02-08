@@ -15,7 +15,7 @@ export default function CloseEyes() {
     if (!(e.target instanceof HTMLElement)) return;
 
     await nextStep({
-      step: 1,
+      step: 2,
       type: StepType.Info,
       question: "Ekran jest zbyt blisko oczu",
       answer: 'next',
