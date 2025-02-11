@@ -1,10 +1,12 @@
 'use client'
 
-import {useRouter, useSearchParams} from "next/navigation";
-import {nextStep} from "@/app/actions/steps-client.action";
-import {StepType} from "@/app/actions/actions.types";
-import {getCurrentTime} from "@/app/actions/steps.action";
-import {useEffect} from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { nextStep } from "@/app/actions/steps-client.action";
+import { StepType } from "@/app/actions/actions.types";
+import { getCurrentTime } from "@/app/actions/steps.action";
+import { useEffect, useLayoutEffect } from "react";
+import CloseEyes from "./blizko/page";
+import MotorikaPage from "./motorika/page";
 
 export default function PagesDispatcher() {
 
@@ -14,7 +16,7 @@ export default function PagesDispatcher() {
   const banner = searchParams.get("banner") || ''
   const campaign = searchParams.get("campaign") || ''
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const goToNextStep = async () => {
       await nextStep({
         step: 1,
@@ -29,7 +31,7 @@ export default function PagesDispatcher() {
       })
     }
     goToNextStep()
-        .catch(error => console.log(error))
+      .catch(error => console.log(error))
 
 
     switch (utmContent) {
@@ -52,6 +54,12 @@ export default function PagesDispatcher() {
 
 
   return (
-        <></>
+    <>
+      <div className="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </>
   );
 }
