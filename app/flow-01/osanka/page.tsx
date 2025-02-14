@@ -3,10 +3,10 @@
 import Image from "next/image";
 import pagePic from "@/app/static/img/image KIVI Quiz KidsTV/7.png";
 import '../styles.flow01.css'
-import {StepType} from "@/app/actions/actions.types";
-import {nextStep} from "@/app/actions/steps-client.action";
-import {getCurrentTime} from "@/app/actions/steps.action";
-import {useRouter} from "next/navigation";
+import { StepType } from "@/app/actions/actions.types";
+import { nextStep } from "@/app/actions/steps-client.action";
+import { getCurrentTime } from "@/app/actions/steps.action";
+import { useRouter } from "next/navigation";
 
 export default function MotorikaPage() {
   const router = useRouter()
@@ -26,32 +26,31 @@ export default function MotorikaPage() {
   }
 
   return (
-      <>
-        <div className="step">
+    <>
+      <div className="step">
 
-          <Image
-              className={'step-img'}
-              src={pagePic}
-              alt="straight back"
-              priority={true}
-          />
-          <div className="bottom-fixed-box">
-            <h1>Zła postawa dziecka</h1>
+        <Image
+          className={'step-img'}
+          src={pagePic}
+          alt="straight back"
+          priority={true}
+        />
+        <div className="bottom-fixed-box">
+          <h1>Zła postawa dziecka</h1>
 
-            <div className="info-block" >
-              Długotrwałe korzystanie z gadżetów w niewygodnej pozycji prowadzi
-              do garbienia i deformacji kręgosłupa. Jest to szczególnie szkodliwe
-              dla dzieci, u których przy regularnej niewłaściwej postawie rozwija
-              się skolioza w 20-30% przypadków.
-            </div>
-
-            <div className="bottom-button">
-              <button className="button" onClick={goToNextStep}>
-                Rozwiązanie →
-              </button>
-            </div>
+          <div className="info-block" >
+            Długotrwałe korzystanie z gadżetów w niewygodnej pozycji prowadzi
+            do garbienia i deformacji kręgosłupa. Jest to szczególnie szkodliwe
+            dla dzieci, u których przy regularnej niewłaściwej postawie rozwija
+            się skolioza w 20-30% przypadków.
           </div>
         </div>
-      </>
+        <div className="bottom-button fixed">
+          <button className="button" onClick={goToNextStep}>
+            Rozwiązanie →
+          </button>
+        </div>
+      </div>
+    </>
   )
 }

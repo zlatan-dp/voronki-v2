@@ -3,10 +3,10 @@
 import Image from "next/image";
 import pagePic from "@/app/static/img/image KIVI Quiz KidsTV/4.png";
 import '../styles.flow01.css'
-import {StepType} from "@/app/actions/actions.types";
-import {nextStep} from "@/app/actions/steps-client.action";
-import {getCurrentTime} from "@/app/actions/steps.action";
-import {useRouter} from "next/navigation";
+import { StepType } from "@/app/actions/actions.types";
+import { nextStep } from "@/app/actions/steps-client.action";
+import { getCurrentTime } from "@/app/actions/steps.action";
+import { useRouter } from "next/navigation";
 
 export default function CloseEyes() {
   const router = useRouter()
@@ -26,32 +26,32 @@ export default function CloseEyes() {
   }
 
   return (
-      <>
-        <div className="step">
+    <>
+      <div className="step">
 
-          <Image
-              className={'blizko-img'}
-              src={pagePic}
-              alt="KIVI fourth step"
-              priority={true}
-          />
-          <div className="bottom-fixed-box">
-            <h1>Ekran jest zbyt blisko oczu</h1>
+        <Image
+          className={'blizko-img'}
+          src={pagePic}
+          alt="KIVI fourth step"
+          priority={true}
+        />
+        <div className="bottom-fixed-box">
+          <h1>Ekran jest zbyt blisko oczu</h1>
 
-            <div className="info-block">
-              Ekran, znajdujący się bliżej 30 cm od oczu dziecka,
-              powoduje długotrwałe zmęczenie oczu z powodu ciągłego
-              skupiania wzroku. Zwiększa to ryzyko rozwoju
-              krótkowzroczności o 50-60%.
-            </div>
-
-            <div className="bottom-button">
-              <button className="button" onClick={goToNextStep}>
-                Rozwiązanie →
-              </button>
-            </div>
+          <div className="info-block">
+            Ekran, znajdujący się bliżej 30 cm od oczu dziecka,
+            powoduje długotrwałe zmęczenie oczu z powodu ciągłego
+            skupiania wzroku. Zwiększa to ryzyko rozwoju
+            krótkowzroczności o 50-60%.
           </div>
+
         </div>
-      </>
+        <div className="bottom-button fixed">
+          <button className="button" onClick={goToNextStep}>
+            Rozwiązanie →
+          </button>
+        </div>
+      </div>
+    </>
   )
 }
