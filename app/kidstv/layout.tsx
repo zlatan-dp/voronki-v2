@@ -1,7 +1,6 @@
 import type {Metadata} from "next";
 import "./styles.kidstv.css"
 import Link from "next/link";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Telewizor KIVI KidsTV",
@@ -9,14 +8,14 @@ export const metadata: Metadata = {
 };
 
 export default function KidsTVLayout({
-                                     children,
-                                   }: Readonly<{
+                                       children,
+                                     }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
       <html lang="en">
       <body>
-      {/* <header>
+      <header>
         <Link href={'https://kivismart.com/pl/tvs/32-full-hd-smart-tv-kidstv-blue'}>
           <svg width="80" height="26" viewBox="0 0 80 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -37,7 +36,7 @@ export default function KidsTVLayout({
           </svg>
         </Link>
 
-      </header> */}
+      </header>
       <main>
         {children}
       </main>

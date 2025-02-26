@@ -1,0 +1,166 @@
+[
+  {
+    "step": 1,
+    "type": "question",
+    "answer": "Do 5 lat",
+    "question": "Сколько лет вашему ребенку"
+  },
+  {
+    "step": 2,
+    "type": "question",
+    "answer": "Na rodzinnym tablecie",
+    "question": "На чем ваш ребенок смотрит контент"
+  },
+  {
+    "step": 3,
+    "type": "question",
+    "answer": "Dziecko trzyma urządzenie blisko oczu",
+    "question": "С какими из этих проблем вы сталкиваетесь"
+  },
+  {
+    "step": 2,
+    "type": "question",
+    "answer": "Na swoim telefonie",
+    "question": "На чем ваш ребенок смотрит контент"
+  },
+  {
+    "step": 3,
+    "type": "question",
+    "answer": "Dziecko nie trzyma postawy",
+    "question": "С какими из этих проблем вы сталкиваетесь"
+  },
+  {
+    "step": 4,
+    "type": "info",
+    "answer": "next"
+  },
+  {
+    "step": 1,
+    "type": "question",
+    "answer": "Do 5 lat",
+    "question": "Сколько лет вашему ребенку"
+  },
+  {
+    "step": 2,
+    "type": "question",
+    "answer": "Na rodzinnym tablecie",
+    "question": "На чем ваш ребенок смотрит контент"
+  },
+  {
+    "step": 1,
+    "type": "question",
+    "answer": "Do 5 lat",
+    "question": "Сколько лет вашему ребенку"
+  },
+  {
+    "step": 2,
+    "type": "question",
+    "answer": "Na rodzinnym tablecie",
+    "question": "На чем ваш ребенок смотрит контент"
+  },
+  {
+    "step": 3,
+    "type": "question",
+    "answer": "Dziecko trzyma urządzenie blisko oczu",
+    "question": "С какими из этих проблем вы сталкиваетесь"
+  },
+  {
+    "step": 1,
+    "type": "question",
+    "answer": "Do 5 lat",
+    "question": "Сколько лет вашему ребенку"
+  },
+  {
+    "step": 2,
+    "type": "question",
+    "answer": "Na swoim tablecie",
+    "question": "На чем ваш ребенок смотрит контент"
+  },
+  {
+    "step": 3,
+    "type": "question",
+    "answer": "Dziecko patrzy na ekran w ciemności",
+    "question": "С какими из этих проблем вы сталкиваетесь"
+  },
+  {
+    "step": 4,
+    "type": "info",
+    "answer": "next"
+  },
+  {
+    "step": 5,
+    "type": "info",
+    "answer": "next"
+  },
+  {
+    "step": 6,
+    "type": "checkout",
+    "answer": "869 Zł"
+  },
+  {
+    "step": 6,
+    "type": "checkout",
+    "answer": "1000 Zł"
+  },
+  {
+    "step": 1,
+    "type": "question",
+    "answer": "Od 9 do 12 lat",
+    "question": "Сколько лет вашему ребенку"
+  },
+  {
+    "step": 1,
+    "type": "question",
+    "answer": "Od 9 do 12 lat",
+    "question": "Сколько лет вашему ребенку"
+  },
+  {
+    "step": 2,
+    "type": "question",
+    "answer": "Na rodzinnym tablecie",
+    "question": "На чем ваш ребенок смотрит контент"
+  },
+  {
+    "step": 3,
+    "type": "question",
+    "answer": "Dziecko długo trzyma urządzenie w rękach",
+    "question": "С какими из этих проблем вы сталкиваетесь"
+  },
+  {
+    "step": 4,
+    "type": "info",
+    "answer": "next"
+  },
+  {
+    "step": 5,
+    "type": "info",
+    "answer": "next"
+  },
+  {
+    "step": 5,
+    "type": "info",
+    "answer": "next"
+  },
+  {
+    "step": 5,
+    "type": "info",
+    "answer": "next"
+  },
+  {
+    "step": 6,
+    "type": "checkout",
+    "answer": "1000 Zł"
+  },
+  {
+    "step": 7,
+    "type": "checkout",
+    "answer": {
+      "name": "1",
+      "agree": "on",
+      "email": "1",
+      "phone": "1",
+      "address": "1"
+    },
+    "question": "Składanie zamówienia"
+  }
+]
