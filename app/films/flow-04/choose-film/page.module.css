@@ -1,0 +1,89 @@
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    color: var(--white);
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.chooseWrap {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.chooseText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: var(--white);
+    padding: 0 40px 0 20px;
+}
+
+.orderWrap {
+    height: 282px;
+    border-bottom: solid 1px #ffffff25;
+    border-top: solid 1px #ffffff25;
+    overflow-y: auto;
+}
+
+.orderText {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.progressBars{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.bar {
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    opacity: 0.5;
+}
+
+.filled{
+    background: var(--accent);
+    opacity: 1;
+}
+
+/* Для Chrome, Edge, Safari */
+.orderWrap::-webkit-scrollbar {
+    width: 4px; /* Товщина скролбара */
+}
+
+.orderWrap::-webkit-scrollbar-track {
+    background: transparent; /* Прихований фон */
+}
+
+.orderWrap::-webkit-scrollbar-thumb {
+    background-color: #ffffff36; /* Синя "штука" */
+    border-radius: 4px; /* Закруглені краї */
+}
+
+/* Прибираємо стрілки прокрутки */
+.orderWrap::-webkit-scrollbar-button {
+    display: none; 
+}
+
+/* Для Firefox */
+.orderWrap {
+    scrollbar-width: thin; /* Тонкий скролбар */
+    scrollbar-color:#ffffff36 transparent; /* Синя "штука", прозорий фон */
+}
+
+.errorText {
+    margin-top: 5px;
+    color: rgb(247, 147, 147);
+    font-size: 12px;
+}

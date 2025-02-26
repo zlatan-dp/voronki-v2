@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    padding: 20px;
+    /* margin-top: 64px; */
+    margin-bottom: 40px;
+    background-image: url("/images/hero_bg.png");
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 620px;
+}
+
+.heroInfo {
+    padding: 90px 20px 20px 20px;
+    width: 147px;
+    background-image: url("/images/hero_logo_bg.svg");
+    color: var(--accent);
+    background-repeat: no-repeat;
+}
+
+.mainText {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.infoText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+}
+
+.imgWrap {
+    width: 100%;
+    height: 170px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.arrows {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 36px;
+    background-image: url('/images/hero_arrows.svg');
+}

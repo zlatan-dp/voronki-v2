@@ -1,0 +1,121 @@
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.diagonalWrap {
+    width: 101px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/diagonal-wrap.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.diagonalText,
+.countText {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    background-image: url('/images/arrow-down.svg');
+    background-repeat: no-repeat;
+    margin-left: 4px;
+}
+
+.xIcon {
+    width: 25px;
+    height: 25px;
+    background-image: url('/images/x-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.plus {
+    cursor: pointer;
+}
+
+.countWrap {
+    border: 2px solid var(--accent);
+    border-radius: 100px;
+    padding: 10px;
+    width: 118px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 107%;
+    height: auto;
+    padding: 30px;
+    border-radius: 40px 40px 0 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.dropdownItem {
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0081ff;
+    cursor: pointer;
+}
+
+.delIcon {
+    width: 12px;
+    height: 12px;
+    background-image: url('/images/close-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+
+/* Для Chrome, Edge, Safari */
+.dropdown::-webkit-scrollbar {
+    width: 8px; /* Товщина скролбара */
+}
+
+.dropdown::-webkit-scrollbar-track {
+    background: transparent; /* Прихований фон */
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+    background-color: #0081ff; /* Синя "штука" */
+    border-radius: 4px; /* Закруглені краї */
+}
+
+/* Прибираємо стрілки прокрутки */
+.dropdown::-webkit-scrollbar-button {
+    display: none; 
+}
+
+/* Для Firefox */
+.dropdown {
+    scrollbar-width: thin; /* Тонкий скролбар */
+    scrollbar-color: #0081ff transparent; /* Синя "штука", прозорий фон */
+}
+

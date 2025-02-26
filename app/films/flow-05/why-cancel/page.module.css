@@ -1,0 +1,84 @@
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.optionsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff7c;
+}
+
+.optionLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    /* padding: 5px; */
+    cursor: pointer;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--white);
+}
+
+.input {
+    border: 1px solid #e3e3e3;
+    border-radius: 24px;
+    padding: 17px 21px;
+    width: 236px;
+    height: 132px;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    resize: none;
+}
+
+.input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.radioInput {
+    display: none;
+}
+
+.customRadio {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border:  0.75px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.radioInput:checked + .customRadio::after {
+    content: "";
+    width: 13px;
+    height: 10px;
+    background-image: url('/images/checkbox.svg');
+}
+
+.errorText {
+    position: absolute;
+    bottom: -18px;
+    left: 20px;
+    color: rgb(247, 147, 147);
+    font-size: 12px;
+    margin-top: 0;
+}

@@ -1,0 +1,24 @@
+.title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.imageWrap {
+    width: 100%;
+    height: 240px;
+    background-image: url('/images/ups-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px; 
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: 40px;
+}

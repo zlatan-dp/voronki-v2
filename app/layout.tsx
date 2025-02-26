@@ -34,7 +34,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-      <header>
+      {/* <header>
         <Link href={'https://kivismart.com/pl/tvs/32-full-hd-smart-tv-kidstv-blue'}>
           <svg width="80" height="26" viewBox="0 0 80 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -55,7 +55,7 @@ export default function RootLayout({
           </svg>
         </Link>
 
-      </header>
+      </header> */}
       <main>
         {children}
       </main>
