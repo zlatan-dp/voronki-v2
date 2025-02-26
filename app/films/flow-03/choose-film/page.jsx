@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { saveAnswer, getCurrentTime } from "../../actions/saveToStorage";
+import { getCurrentTime } from "../../actions/saveToStorage";
 
 import styles from "./page.module.css";
 import classNames from "classnames";
@@ -13,6 +13,7 @@ import CloseBtn from "../../components/closeBtn/closeBtn";
 import OrderInfo from "./OrderInfo/OrderInfo";
 import TranspBtn from "../../components/transparentBtn/transparentBtn";
 import WhiteBtn from "../../components/whiteBtn/whiteBtn";
+import {nextStep} from "../../../actions/steps-client.action";
 
 export default function ChooseFilm() {
     const router = useRouter();
@@ -82,7 +83,7 @@ export default function ChooseFilm() {
 
     const goToNextStep = async () => {
         // console.log("Selected films:", selectedFilms);
-        await saveAnswer(
+        await nextStep(
             {
                 step: 2,
                 type: "question",

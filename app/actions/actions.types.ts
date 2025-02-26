@@ -15,7 +15,7 @@ export enum ProblemType {
 
 export type StepDataType = {
   step: number;
-  type: StepType;
+  type: StepType | string;
   question?: string;
   answer: string | CheckoutDataType | CheckoutProductType | CampaignDataType;
   time: string;

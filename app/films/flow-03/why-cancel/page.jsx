@@ -5,11 +5,12 @@ import styles from "./page.module.css";
 import {useRouter} from "next/navigation"
 import { useState } from "react";
 
-import { saveAnswer, getCurrentTime } from "../../actions/saveToStorage";
+import { getCurrentTime } from "../../actions/saveToStorage";
 
 import QuizWrap from "../../components/QuizWrap/QuizWrap"
 import WhiteBtn from "../../components/whiteBtn/whiteBtn";
 import TranspBtn from "../../components/transparentBtn/transparentBtn";
+import {nextStep} from "../../../actions/steps-client.action";
 
 export default function WhyCanceled() {
     const router = useRouter()
@@ -49,7 +50,7 @@ export default function WhyCanceled() {
         }
 
         // console.log("Selected reason:", finalAnswer);
-        await saveAnswer(
+        await nextStep(
             {
                 step: 6,
                 type: "question",
@@ -62,7 +63,7 @@ export default function WhyCanceled() {
     };
 
     const goToBuy = async () => {
-        await saveAnswer(
+        await nextStep(
             {
                 step: 6,
                 type: "info",

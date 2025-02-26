@@ -3,7 +3,7 @@
 const STORAGE_KEY = "quizAnswersKiviFilms"; // Унікальний ключ для localStorage
 
 // Функція отримання масиву з localStorage
-export const getStoredAnswers = () => {
+export const getStoredAnswers = async () => {
   if (typeof window === "undefined") return [[]]; // Перевіряємо, чи є доступ до window
   const storedData = localStorage.getItem(STORAGE_KEY);
   return storedData ? JSON.parse(storedData) : [[]];
@@ -18,7 +18,8 @@ export const getCurrentTime = async () => {
 export const saveAnswer = async (answer) => {
   try {
     if (!answer) return;
-    const storedData = [...getStoredAnswers(), answer];
+    const dataToSave = await getStoredAnswers();
+    const storedData = [...dataToSave, answer];
     localStorage.setItem(STORAGE_KEY, JSON.stringify(storedData));
   } catch (error) {
     console.error("Error saving answer to localStorage:", error);

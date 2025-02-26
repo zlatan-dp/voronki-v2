@@ -5,10 +5,10 @@ import { stepsAction } from "@/app/actions/steps.action";
 import { ProblemType, StepType } from "@/app/actions/actions.types";
 
 import '../styles.steps.css'
-import ArmsLock from "@/app/step/4/ArmsLock";
+import ArmsLock from "@/app/kidstv/step/4/ArmsLock";
 import InTheDark from "./InTheDark";
 import CrookedBack from "./CrookedBack";
-import CloseToEyes from "@/app/step/4/CloseToEyes";
+import CloseToEyes from "@/app/kidstv/step/4/CloseToEyes";
 
 
 export default function StepFourDispatcher() {

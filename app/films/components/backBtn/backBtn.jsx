@@ -2,9 +2,10 @@
 
 import styles from './backBtn.module.css'
 
-import { saveAnswer, getCurrentTime } from '../../actions/saveToStorage'
+import { getCurrentTime } from '../../actions/saveToStorage'
 
 import {useRouter} from "next/navigation"
+import {nextStep} from "../../../actions/steps-client.action";
 
 export default function BackBtn({step, href}) {
 
@@ -12,7 +13,7 @@ export default function BackBtn({step, href}) {
 
     const goToPreviosStep = async () => {
         if (window.history.length > 1) {
-          await saveAnswer({
+          await nextStep({
             step: step,
             type: "info",
             question: "back step",
@@ -21,7 +22,7 @@ export default function BackBtn({step, href}) {
           })
           router.back();
         } else {
-          await saveAnswer(
+          await nextStep(
             {
               step: 1,
               type: "info",

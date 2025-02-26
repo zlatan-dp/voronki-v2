@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import {useRouter} from "next/navigation"
 import { useEffect, useState } from "react";
 
-import { saveAnswer, getCurrentTime } from "../../actions/saveToStorage";
+import { getCurrentTime } from "../../actions/saveToStorage";
 
 import classNames from "classnames";
 
@@ -14,6 +14,7 @@ import CloseBtn from "../../components/closeBtn/closeBtn"
 import BackBtn from "../../components/backBtn/backBtn";
 import CountdownTimer from "./timer/Timer";
 import WhiteBtn from "../../components/whiteBtn/whiteBtn";
+import {nextStep} from "../../../actions/steps-client.action";
 
 
 export default function OrderInformation() {
@@ -62,7 +63,7 @@ export default function OrderInformation() {
     const { totalFullPrice, totalDiscountPrice } = calculateTotalPrice();
 
     const goToNextStep = async () => {
-        await saveAnswer(
+        await nextStep(
             {
                 step: 3,
                 type: "info",

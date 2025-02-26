@@ -3,7 +3,7 @@
 import {useRouter} from "next/navigation";
 import {StepType} from "@/app/actions/actions.types";
 import Image from "next/image";
-import pagePic from '../../static/img/ani_cartoon_18.png'
+import pagePic from '@/app/static/img/ani_cartoon_18.png'
 
 import '../styles.steps.css'
 import Link from "next/link";

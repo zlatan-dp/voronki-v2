@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import {useRouter} from "next/navigation"
 import { useState } from "react";
 
-import { saveAnswer, getCurrentTime } from "../../actions/saveToStorage";
+import { getCurrentTime } from "../../actions/saveToStorage";
 
 import classNames from "classnames";
 
@@ -13,6 +13,7 @@ import QuizWrap from "../../components/QuizWrap/QuizWrap"
 import CloseBtn from "../../components/closeBtn/closeBtn"
 import BackBtn from "../../components/backBtn/backBtn";
 import WhiteBtn from "../../components/whiteBtn/whiteBtn";
+import {nextStep} from "../../../actions/steps-client.action";
 
 
 export default function Information () {
@@ -48,7 +49,7 @@ export default function Information () {
     const goToNextStep = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            await saveAnswer(
+            await nextStep(
                 {
                     step: 4,
                     type: "question",

@@ -32,7 +32,7 @@ export default function Faq () {
                     <div className={styles.faqQuestionWrap} onClick={() => toggleFaq(id)}>
                         <p className={styles.faqQuestion}>{question}</p>
                         <div className={styles.faqQuestionIcon}>
-                            <Image src='./images/faq-arrow.svg'
+                            <Image src='/images/faq-arrow.svg'
                                 alt="logo" 
                                 width={24} 
                                 height={24}/>

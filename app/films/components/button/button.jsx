@@ -4,7 +4,8 @@ import styles from "./button.module.css"
 
 import {useRouter} from "next/navigation"
 
-import { saveAnswer, getCurrentTime } from "../../actions/saveToStorage"
+import { getCurrentTime } from "../../actions/saveToStorage"
+import {nextStep} from "../../../actions/steps-client.action";
 
 export default function Button ({ children, href }) {
 
@@ -12,7 +13,7 @@ export default function Button ({ children, href }) {
 
     const goToNextStep = async () => {
 
-        await saveAnswer(
+        await nextStep(
             {
                 step: 1,
                 type: "info",

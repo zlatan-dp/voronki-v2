@@ -2,16 +2,17 @@
 
 import styles from './closeBtn.module.css'
 
-import { saveAnswer, getCurrentTime} from '../../actions/saveToStorage'
+import { getCurrentTime} from '../../actions/saveToStorage'
 
 import {useRouter} from "next/navigation"
+import {nextStep} from "../../../actions/steps-client.action";
 
 export default function CloseBtn({step, href}) {
 
     const router = useRouter()
 
     const goToNextStep = async () => {
-        await saveAnswer(
+        await nextStep(
             {
                 step: step,
                 type: "info",

@@ -51,8 +51,26 @@ export default function PagesDispatcher() {
       case 'temnota':
         router.push("/flow-01/temnota");
         break;
+      case 'films_b2b':
+        router.push("/films/flow-01");
+        break;
+      case 'films_pets':
+        router.push("/films/flow-02");
+        break;
+      case 'films_fans':
+        router.push("/films/flow-03");
+        break;
+      case 'films_game':
+        router.push("/films/flow-04");
+        break;
+      case 'films_kids':
+        router.push("/films/flow-05");
+        break;
+      case 'films_premium':
+        router.push("/films/flow-06");
+        break;
       default:
-        router.push("/step/1");
+        router.push("/films/flow-01");
     }
   }, [pageEnter])
 

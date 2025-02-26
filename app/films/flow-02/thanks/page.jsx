@@ -4,16 +4,17 @@ import styles from "./page.module.css";
 
 import {useRouter} from "next/navigation"
 
-import { saveAnswer, getCurrentTime } from "../../actions/saveToStorage";
+import { getCurrentTime } from "../../actions/saveToStorage";
 
 import QuizWrap from "../../components/QuizWrap/QuizWrap"
 import WhiteBtn from "../../components/whiteBtn/whiteBtn";
+import {nextStep} from "../../../actions/steps-client.action";
 
 export default function ThanksPage () {
     const router = useRouter()
 
     const goToNextStep = async () => {
-        await saveAnswer(
+        await nextStep(
             {
                 step: 7,
                 type: "info",

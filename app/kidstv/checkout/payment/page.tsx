@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import MediaExpert from '@/app/static/img/checkout/mediaexpert.png'
-import '@/app/checkout/styles.checkout.css'
+import '@/app/kidstv/checkout/styles.checkout.css'
 import {StepType} from "@/app/actions/actions.types";
 import {deleteSessionId, stepsAction} from "@/app/actions/steps.action";
 

@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { stepsAction } from "@/app/actions/steps.action";
 import { StepType } from "@/app/actions/actions.types";
 import Image from "next/image";
-import pagePic from '../../static/img/ani_in_tv.png'
+import pagePic from '@/app/static/img/ani_in_tv.png'
 
 import '../styles.steps.css'
 
