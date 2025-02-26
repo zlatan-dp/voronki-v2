@@ -9,7 +9,7 @@ export default function TermsOfUse() {
 
     return (
         <div style={{padding: '20px', position: 'relative'}}>
-            <BackBtn step={0} href={"/flow-03"}/>
+            <BackBtn step={0} href={"/films/flow-03"}/>
             <PoliticsTitle>Rechtsinformation</PoliticsTitle>            
             <PoliticsText><b>Website, erreichbar unter <a href="https://kivismart.com/de" style={{textDecoration: "underline"}}>www.kivismart.com/de</a> (im Folgenden „Website“), ist ausschließlich für die private Nutzung bestimmt.</b></PoliticsText>
             <PoliticsText>Der Zugang zu dieser Website und ihre Nutzung unterliegen den nachstehenden „Nutzungsbedingungen der Website“ sowie den geltenden Gesetzen und/oder Vorschriften des jeweiligen Landes.</PoliticsText>

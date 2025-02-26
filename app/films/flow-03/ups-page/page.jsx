@@ -22,7 +22,7 @@ export default function UpsPage () {
                 time: await getCurrentTime(),
               }
         )
-        router.push("/flow-03")     
+        router.push("/films/flow-03")     
     }
 
     return (

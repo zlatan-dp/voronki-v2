@@ -58,7 +58,7 @@ export default function WhyCanceled() {
                 time: await getCurrentTime(),
               }
         )
-        router.push("/flow-05/thanks");
+        router.push("/films/flow-05/thanks");
     };
 
     const goToBuy = async () => {
@@ -71,7 +71,7 @@ export default function WhyCanceled() {
                 time: await getCurrentTime(),
               }
         )
-        router.push("/flow-05/choose-film");
+        router.push("/films/flow-05/choose-film");
     }
 
     return (

@@ -57,13 +57,13 @@ export default function Information () {
                     time: await getCurrentTime(),
                   }
             )
-            router.push("/flow-05/ups-page");
+            router.push("/films/flow-05/ups-page");
         }   
     }
     return (
                 <QuizWrap>
-                    <BackBtn step = {4} href={"/flow-05"}/>
-                    <CloseBtn step = {4} href={"/flow-05/why-cancel"}/>
+                    <BackBtn step = {4} href={"/films/flow-05"}/>
+                    <CloseBtn step = {4} href={"/films/flow-05/why-cancel"}/>
                     <h2 className={styles.title}>Ihre Daten</h2>
                     <div className={styles.imageWrap}></div>
                     <form className={styles.form}>

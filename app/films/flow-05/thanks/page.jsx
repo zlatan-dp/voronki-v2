@@ -22,7 +22,7 @@ export default function ThanksPage () {
                 time: await getCurrentTime(),
               }
         )
-        router.push("/flow-05")     
+        router.push("/films/flow-05")     
     }
 
     return (

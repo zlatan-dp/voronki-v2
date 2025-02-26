@@ -91,7 +91,7 @@ export default function ChooseFilm() {
                 time: await getCurrentTime(),
               }
         )
-        router.push("/flow-03/order-info");
+        router.push("/films/flow-03/order-info");
     };
 
     // Не рендеримо контент, поки не ініціалізовано клієнт
@@ -99,7 +99,7 @@ export default function ChooseFilm() {
 
     return (
         <QuizWrap>
-            <CloseBtn step = {2} href={"/flow-03/why-cancel"}/>
+            <CloseBtn step = {2} href={"/films/flow-03/why-cancel"}/>
             <h2 className={styles.title}>Welche Folie<br/>benötigen Sie?</h2>
             <div className={styles.chooseWrap}>
                 <p className={styles.chooseText}>Diagonale</p>

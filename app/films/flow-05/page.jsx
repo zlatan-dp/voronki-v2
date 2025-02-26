@@ -23,16 +23,16 @@ export default function filmsLanding() {
         <>
             <Header />
             <LandingWrap>
-                <HeroSection href={'/flow-05/choose-film'}/>
+                <HeroSection href={'/films/flow-05/choose-film'}/>
                 <AdvantageSection 
                     title={<>DU BIST<br /> GESCHÄFTS&shy;INHABER?</>}
                     bgImage={"/images/advantage_bg_4.png"}
-                    href={'/flow-05/choose-film'}/>                <FilmsInfo />
-                <Protective href={'/flow-05/choose-film'}/>
+                    href={'/films/flow-05/choose-film'}/>                <FilmsInfo />
+                <Protective href={'/films/flow-05/choose-film'}/>
                 <Realiability />
                 <Feedback />
                 <Faq />
-                <Explanation href={'/flow-05/choose-film'} flow={'flow-05'}/>
+                <Explanation href={'/films/flow-05/choose-film'} flow={'flow-05'}/>
             </LandingWrap>
             <ScrollToTop />
         </>

@@ -71,13 +71,13 @@ export default function OrderInformation() {
                 time: await getCurrentTime(),
               }
         )
-        router.push("/flow-03/information")     
+        router.push("/films/flow-03/information")     
     }
 
     return (
         <QuizWrap>
-            <BackBtn step = {3} href={"/flow-03"}/>
-            <CloseBtn step = {3} href={"/flow-03/why-cancel"}/>
+            <BackBtn step = {3} href={"/films/flow-03"}/>
+            <CloseBtn step = {3} href={"/films/flow-03/why-cancel"}/>
             <h2 className={styles.title}>Bis zum Ende der Aktion:</h2>
             <CountdownTimer />
             <div className={styles.infoSection}>                
