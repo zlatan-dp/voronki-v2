@@ -52,25 +52,25 @@ export default function PagesDispatcher() {
         router.push("/flow-01/temnota");
         break;
       case 'films_b2b':
-        router.push("/films/flow-05");
+        router.push(`/films/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
         break;
       case 'films_pets':
-        router.push("/films/flow-02");
+        router.push(`/films/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
         break;
       case 'films_fans':
-        router.push("/films/flow-06");
+        router.push(`/films/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
         break;
       case 'films_game':
-        router.push("/films/flow-04");
+        router.push(`/films/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
         break;
       case 'films_kids':
-        router.push("/films/flow-01");
+        router.push(`/films/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
         break;
       case 'films_premium':
-        router.push("/films/flow-03");
+        router.push(`/films/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
         break;
       default:
-        router.push("/films/flow-01");
+        router.push(`/films/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
     }
   }, [pageEnter])
 
