@@ -21,7 +21,7 @@ export default function PagesDispatcher() {
   useEffect(() => {
     const goToNextStep = async () => {
       await nextStep({
-        step: 1,
+        step: 0,
         type: StepType.Proxy,
         question: "Разведение по флоу",
         answer: {

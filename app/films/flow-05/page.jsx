@@ -32,7 +32,7 @@ export default function filmsLanding() {
                 <Realiability />
                 <Feedback />
                 <Faq />
-                <Explanation href={'/films/flow-05/choose-film'} flow={'flow-05'}/>
+                <Explanation href={'/films/flow-05/choose-film'} flow={'films/flow-05'}/>
             </LandingWrap>
             <ScrollToTop />
         </>

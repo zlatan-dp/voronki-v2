@@ -9,7 +9,7 @@ export default function CookieFilesPolicy() {
 
     return (
         <div style={{padding: '20px', position: 'relative'}}>
-            <BackBtn step={0} href={"/films/flow-01"}/>
+            <BackBtn step={102} href={"/films/flow-01"}/>
             <PoliticsTitle>Wie KIVI Cookies und ähnliche Technologien verwendet</PoliticsTitle>            
             <PoliticsSubTitle>1. Cookie</PoliticsSubTitle>
             <PoliticsText>Ein Cookie ist eine Textdatei, die von einem Webserver auf einem Computer oder Mobilgerät gespeichert wird, und der Inhalt eines Cookies kann nur von dem Server abgerufen und gelesen werden, der das Cookie erstellt hat. Cookies sind einzigartig für den Browser oder die mobile Anwendung, die Sie verwenden. Der Text in einem Cookie besteht oft aus Identifikatoren, Seitennamen und einigen Zahlen und Zeichen.</PoliticsText>

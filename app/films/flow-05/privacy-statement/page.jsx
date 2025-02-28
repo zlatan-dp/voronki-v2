@@ -9,7 +9,7 @@ export default function PrivacyStatement() {
 
     return (
         <div style={{padding: '20px', position: 'relative'}}>
-            <BackBtn step={0} href={"/films/flow-05"}/>
+            <BackBtn step={100} href={"/films/flow-05"}/>
             <PoliticsTitle>Datenschutzrichtlinie</PoliticsTitle>
             <PoliticsText>Diese Datenschutzrichtlinie regelt die Art und Weise, in der <b>KIVI SMART PURCHASING GmbH</b> Informationen von Nutzern der Website <a href="https://kivismart.com/de/" style={{textDecoration: "underline"}}>https://kivismart.com/de/</a> („Website“) erhebt, nutzt, speichert und offenlegt.</PoliticsText>
             <PoliticsText>Diese Datenschutzrichtlinie gilt für die Website sowie für alle Produkte und Dienstleistungen, die von <b>KIVI SMART PURCHASING GmbH</b> angeboten werden.</PoliticsText>
