@@ -52,10 +52,12 @@ export default function PagesDispatcher() {
         router.push("/flow-01/temnota");
         break;
       case 'films_b2b':
-        router.push(`/films/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
+        if (banner === 'barb2b') router.push(`/films/flow-05`)
+        else router.push('/films/flow-07')
         break;
       case 'films_pets':
-        router.push(`/films/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
+        if (banner === 'cat') router.push(`/films/flow-02`)
+        else router.push(`/films/flow-08`)
         break;
       case 'films_fans':
         router.push(`/films/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
@@ -64,7 +66,8 @@ export default function PagesDispatcher() {
         router.push(`/films/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
         break;
       case 'films_kids':
-        router.push(`/films/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
+        if (banner === 'kidsface') router.push(`/films/flow-01`)
+        else router.push(`/films/flow-09`)
         break;
       case 'films_premium':
         router.push(`/films/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`);
