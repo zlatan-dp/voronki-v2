@@ -1,0 +1,70 @@
+.container {
+    padding: 20px;
+    margin-bottom: 40px;
+    /* border-radius: 20px 20px 0 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("/images/filmsV2/easy_bg.png");
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    height: 594px;
+}
+
+.contentWrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.elementWrap {
+    position: relative;
+    height: 115px;
+}
+
+.iconWrapFirst {
+    position: absolute;
+    left: 15%;
+}
+
+.iconWrapSecond {
+    position: absolute;
+    right: 20%;
+}
+
+.iconWrapThird {
+    position: absolute;
+    left: 8%;
+}
+
+.text {
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.textFirst {
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    transform: rotate(-10deg);
+}
+
+.textSecond {
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    transform: rotate(10deg);
+}
+
+.textThird {
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+    transform: rotate(-10deg);
+}

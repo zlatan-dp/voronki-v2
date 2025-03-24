@@ -1,12 +1,12 @@
 import Script from "next/script";
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-      <html lang='en'>
+    <html lang="en">
       <head>
         <Script
             strategy="beforeInteractive"
@@ -25,9 +25,7 @@ export default function RootLayout({
             }}
         />
       </head>
-      <body>
-      {children}
-      </body>
-      </html>
+      <body>{children}</body>
+    </html>
   );
 }

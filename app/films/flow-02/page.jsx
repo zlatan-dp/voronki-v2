@@ -13,11 +13,11 @@ import ScrollToTop from "../components/upBtn/upBtn"
 import LandingWrap from "../components/LandingWrap/LandingWrap"
 
 
-import { getStoredAnswers } from "../actions/saveToStorage"
+// import { getStoredAnswers } from "../actions/saveToStorage"
 
 export default function filmsLanding() {
     
-    console.log(getStoredAnswers());
+    // console.log(getStoredAnswers());
     
     return (
         <>
