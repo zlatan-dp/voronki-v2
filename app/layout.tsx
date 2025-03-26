@@ -9,20 +9,20 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
-            strategy="beforeInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"
+          strategy="beforeInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"
         />
         <Script
-            id="google-analytics"
-            strategy="beforeInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+          id="google-analytics"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-XGEDJ12CLJ');
             `,
-            }}
+          }}
         />
         <Script
           id="hotjar"
@@ -40,7 +40,6 @@ export default function RootLayout({
             `,
           }}
         />
-        
       </head>
       <body>{children}</body>
     </html>
