@@ -96,9 +96,14 @@ export default function PagesDispatcher() {
         );
         break;
       case "family_kids":
-        router.push(
-          `/films/flow-15?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
-        );
+        if (banner === "5")
+          router.push(
+            `/films/flow-15?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          );
+        else
+          router.push(
+            `/films/flow-16?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          );
         break;
       case "pets":
         if (banner === "cats")
