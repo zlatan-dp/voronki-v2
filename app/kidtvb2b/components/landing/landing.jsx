@@ -12,6 +12,8 @@ export default function Landing() {
   const okBtn = useRef(null);
   const submitModal = useRef(null);
   const contactForm = useRef(null);
+  const btnText = useRef(null);
+  const spinner = useRef(null);
 
   const okSubmitMessage =
     "Thank you for reaching out! We’ve received your request and will be in touch shortly. We appreciate your interest and look forward to working with you.";
@@ -34,31 +36,48 @@ export default function Landing() {
     submitModal.current.classList.remove("is-hidden");
   };
 
+  const toogleSpinner = function (isLoading) {
+    if (isLoading) {
+      spinner.current.classList.add("active");
+      btnText.current.textContent = "Sending...";
+      btnText.current.disabled = true;
+    } else {
+      spinner.current.classList.remove("active");
+      btnText.current.textContent = "Send";
+      btnText.current.disabled = false;
+    }
+  };
+
   const handlerSubmit = async function (e) {
     e.preventDefault();
 
+    toogleSpinner(true);
+
     const data = {
       project: "KidsTV B2b",
-      to: ["oleksandr.shubin.kivi@gmail.com", "a.nikitin@kivismart.com"],
+      to: ["a.nikitin@kivismart.com"],
       subject: "KidsTV B2b",
       text: `Name: ${nameRef.current.value}, Email: ${emailRef.current.value}, Message: ${messageRef.current.value}`,
     };
 
     try {
       const responce = await sendEmailData(data);
-      console.log(responce);
+      //   console.log(responce);
       if (!responce) {
+        toogleSpinner(false);
         showModal(
           errorSubmitMessage,
           "/kidtvb2b/img/tv-sad-icon.svg",
           "whatsup"
         );
       } else {
+        toogleSpinner(false);
         showModal(okSubmitMessage, "/kidtvb2b/img/tv-smile-icon.svg", "ok");
         contactForm.current.reset();
       }
     } catch (error) {
       console.error(error);
+      toogleSpinner(false);
       showModal(errorSubmitMessage, "/kidtvb2b/img/tv-sad-icon.svg", "whatsup");
     }
   };
@@ -733,7 +752,11 @@ export default function Landing() {
                         By submitting this form, you confirm and consent to the
                         processing, storage and transfer of your personal data
                         in accordance with the laws of the European Union 
-                        <a className="link" href="https://gdpr-info.eu/">
+                        <a
+                          className="link"
+                          href="https://gdpr-info.eu/"
+                          target="_blank"
+                        >
                           https://gdpr-info.eu/
                         </a>
                         . You can contact our Customer Care team regarding any
@@ -751,7 +774,10 @@ export default function Landing() {
                   </div>
 
                   <button type="submit" className="submit-btn" disabled>
-                    Send
+                    <span className="button-text" ref={btnText}>
+                      Send
+                    </span>
+                    <span className="spinner" ref={spinner}></span>
                   </button>
                 </form>
               </div>

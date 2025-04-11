@@ -39,6 +39,15 @@ textarea {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Regular.ttf");
@@ -1498,6 +1507,21 @@ textarea {
               text-align: center;
               color: var(--white-color);
               cursor: not-allowed;
+
+              .spinner {
+                display: none;
+                width: 16px;
+                height: 16px;
+                border: 2px solid white;
+                border-top: 2px solid transparent;
+                border-radius: 50%;
+                margin-left: 8px;
+                animation: spin 0.6s linear infinite;
+
+                &.active {
+                  display: inline-block;
+                }
+              }
             }
 
             .submit-btn.active {

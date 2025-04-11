@@ -58,7 +58,7 @@ export const sendEmailData = async (data: EmailData): Promise<boolean> => {
     return false;
   }
 
-  console.log("=========", responseEmail);
+  //   console.log("=========", responseEmail);
 
   return true;
 };
