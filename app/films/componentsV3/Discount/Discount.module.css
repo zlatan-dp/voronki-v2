@@ -1,0 +1,49 @@
+.container {
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("/images/filmsV2/discount_bg_2.png");
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 594px;
+}
+
+.infoWrap {
+    width: 100%;
+    padding-top: 95%;
+    background-image: url("/images/filmsV2/discount_tv.png");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position-x: center;
+    background-position-y: -15px;
+}
+
+.infoTitle {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--black);
+}
+
+.infoAccent{
+    font-weight: 900;
+    color: var(--red);
+    font-size: 35px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.infoText{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--black);
+}

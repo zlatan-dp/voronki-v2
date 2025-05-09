@@ -1,0 +1,10 @@
+.closeBtn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('/images/filmsV2/back-icon.svg');
+    cursor: pointer;
+}

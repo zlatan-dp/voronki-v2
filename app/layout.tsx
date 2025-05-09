@@ -1,4 +1,12 @@
-import Script from "next/script";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin", "latin-ext", "cyrillic"],
+  weight: ["400", "500", "600", "700", "900"],
+});
+
+// import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -8,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
+        {/* <Script
           strategy="beforeInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"
         />
@@ -39,9 +47,10 @@ export default function RootLayout({
               })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
             `,
           }}
-        />
+        /> */}
       </head>
-      <body>{children}</body>
+      <body className={montserrat.variable}>{children}</body>
+      {/* <body>{children}</body> */}
     </html>
   );
 }

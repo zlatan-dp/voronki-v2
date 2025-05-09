@@ -15,10 +15,7 @@ export const sendEmailData = async (data: EmailData): Promise<boolean> => {
     return false;
   }
 
-  //   console.log(process.env.BACKEND_URL);
-
-  //   const backendUrl: string | undefined = process.env.BACKEND_URL;
-  const backendUrl: string | undefined = "https://gm.kivismart.com/api";
+  const backendUrl: string | undefined = process.env.NEXT_PUBLIC_BACKEND_URL;
   if (!backendUrl) {
     console.log("unable to get BACKEND_URL");
     return false;
@@ -57,8 +54,7 @@ export const sendEmailData = async (data: EmailData): Promise<boolean> => {
     console.log("unable to get session id from step POST");
     return false;
   }
-
-  //   console.log("=========", responseEmail);
+  // console.log("=========", responseEmail);
 
   return true;
 };

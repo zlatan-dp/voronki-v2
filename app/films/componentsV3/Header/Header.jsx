@@ -1,0 +1,18 @@
+import styles from "./Header.module.css";
+import Image from "next/image";
+
+export default function Header() {
+  return (
+    <div className={styles.container}>
+      <div className={styles.logoWrap}>
+        <Image
+          src="/images/filmsV2/kivi-logo.svg"
+          alt="logo"
+          width={74}
+          height={24}
+          priority
+        />
+      </div>
+    </div>
+  );
+}

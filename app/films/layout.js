@@ -1,11 +1,4 @@
-import { Montserrat } from "next/font/google";
 import "./styles.films.css";
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin", "latin-ext", "cyrillic"],
-  weight: ["400", "500", "600", "700", "900"],
-});
 
 export const metadata = {
   title: "KIVI protective films",
@@ -13,10 +6,5 @@ export const metadata = {
 };
 
 export default function FilmsLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={montserrat.variable}>{children}</body>
-      {/* <body>{children}</body> */}
-    </html>
-  );
+  return <div className="films-wrapper">{children}</div>;
 }

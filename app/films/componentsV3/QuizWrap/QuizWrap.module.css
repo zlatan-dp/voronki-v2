@@ -1,0 +1,14 @@
+.wrapper {
+    background: var(--black);
+    padding: 20px;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 594px;
+    position: relative;
+    border-top: 1px solid #0081ff;
+    border-radius: 20px;
+    background: #0081ff;
+    padding: 40px 20px;
+}

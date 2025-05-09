@@ -115,9 +115,6 @@ export default function PagesDispatcher() {
             `/films/flow-18?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
           );
         break;
-      case "kidtvb2b":
-        router.push(`/kidtvb2b`);
-        break;
       default:
         router.push(
           `/films/flow-11?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
