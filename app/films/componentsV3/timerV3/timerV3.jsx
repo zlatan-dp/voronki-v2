@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useCountdown } from "../../../hooks/useCountdown";
-import classNames from "classnames";
-import styles from "./Timer.module.css";
 
-export default function CountdownTimer() {
+import { useCountdown } from "../../hooks/useCountdown";
+import classNames from "classnames";
+import styles from "./timerV3.module.css";
+
+export default function CountdownTimerNew() {
   const { days, hours, minutes } = useCountdown();
   const [showColon, setShowColon] = useState(true);
   const [hasMounted, setHasMounted] = useState(false); // Track if component has mounted

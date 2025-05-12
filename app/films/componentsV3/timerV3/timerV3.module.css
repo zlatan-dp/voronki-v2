@@ -1,0 +1,46 @@
+.countdown {
+  background-color: var(--black-v3);
+  border-radius: 11px;
+  padding: 13px 21px;
+  display: flex;
+  gap: 6px;
+  font-weight: 700;
+  font-size: min(15vw, 58px);
+  line-height: 110%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.digit {
+  font-family: "Aptos", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.colon {
+  padding-bottom: 25px;
+  font-family: "Aptos", sans-serif;
+  text-align: center;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.timeWrap {
+  display: flex;
+  gap: 4px;
+}
+
+.timeText {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 110%;
+  color: var(--white);
+  opacity: 0.67;
+}
