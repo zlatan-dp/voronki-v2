@@ -1,5 +1,5 @@
 .container {
-  padding: 37px;
+  padding: 31px 37px;
   background-color: var(--black-v3);
   display: flex;
   flex-direction: column;

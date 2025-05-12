@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./Reliability.module.css";
-import Image from "next/image";
 
 import { ReliabilityData } from "./ReliabilityData";
 import SectionTitle from "../sectionTitle/sectionTitle";

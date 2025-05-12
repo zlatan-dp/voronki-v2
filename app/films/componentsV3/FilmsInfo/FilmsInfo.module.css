@@ -1,55 +1,68 @@
+.filmsContainer {
+  padding: 31px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--white);
+}
+
 .container {
-    padding: 20px;
-    margin-bottom: 40px;
-    margin-bottom: 40px;
-    border-radius: 20px 20px 0 0;
-    background-image: url("/images/filmsV2/reliability_bg.png");
-    background-color: var(--black);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    height: 594px;
-}
-
-.list {
-    margin-top: 30px;
-}
-
-.filmsInfoItem {
-    border-top: 1px solid #0081ff;
-    border-radius: 20px;
-    padding: 0 8%;
-    background: linear-gradient(180deg, #1d2431 0%, rgba(17, 17, 17, 0) 100%);
+  padding: 0 37px;
 }
 
 .infoWrap {
-    display: flex;
-    align-items: center;
-    gap: 8%;
-    height: 135px;
-}
-
-.iconWrap {
-    max-width: 96px;
-    flex-shrink: 0;
+  padding: 37px;
+  aspect-ratio: 280 / 474;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
 }
 
 .title {
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 1;
-    color: var(--accent);
+  font-weight: 700;
+  font-size: clamp(26px, 12.5vw, 47px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--white);
 }
 
 .subTitle {
-    font-size: 16px;
-    line-height: 120%;
-    color: var(--accent);
-    margin-bottom: 20px;
+  font-size: clamp(16px, 7.2vw, 27px);
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--white);
+  margin-top: 10;
+  margin-bottom: 20px;
 }
 
 .text {
-    font-size: 12px;
-    color: var(--white);
-    max-width: 145px;
+  font-size: clamp(12px, 4.5vw, 17px);
+  color: var(--white);
+  max-width: 185px;
+  line-height: 133%;
+  letter-spacing: 0.01em;
+}
+
+.slider {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.filmsContainer :global(.swiper-pagination-bullet) {
+  border-radius: 49px;
+  width: 11px;
+  height: 11px;
+  background: #000;
+  opacity: 0.1;
+  margin: 0 8px !important;
+}
+
+.filmsContainer :global(.swiper-pagination-bullet-active) {
+  background: var(--acc-v3);
+  opacity: 1;
+}
+
+.filmsContainer
+  :global(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+  bottom: -3px !important;
 }
