@@ -9,7 +9,7 @@ export default function DiscountSection({ href }) {
         <CountdownTimerNew />
         <div>
           <p className={styles.infoTitle}>Nur 10 Tage</p>
-          <p className={styles.infoAccent}>50% Rabatt</p>
+          <p className={styles.infoAccent}>−50% Rabat</p>
           <p className={styles.infoText}>
             Sichern Sie sich Ihr Angebot <br />
             bis zum 01.06!

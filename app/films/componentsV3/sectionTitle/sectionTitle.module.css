@@ -1,8 +1,34 @@
 .title {
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 110%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: var(--accent);
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.blue {
+  color: #78abff;
+}
+
+.gray {
+  color: #888;
+}
+
+.blue::after {
+  display: block;
+  content: "";
+  width: 49px;
+  height: 3px;
+  background: #78abff;
+}
+
+.gray::after {
+  display: block;
+  content: "";
+  width: 49px;
+  height: 3px;
+  background: #888;
+}
