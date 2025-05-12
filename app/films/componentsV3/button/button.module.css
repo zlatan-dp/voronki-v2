@@ -1,13 +1,26 @@
-.btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-    border-radius: 61px;
-    background-color: var(--red);
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  border-radius: 49px;
+  color: var(--black-v3);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.default {
+  background-color: var(--acc-yellow);
+}
+
+.blue {
+  background: linear-gradient(90deg, #1f70f4 0%, #0034de 100%);
+}
+
+.red {
+  background-color: var(--red);
 }

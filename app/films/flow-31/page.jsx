@@ -3,8 +3,8 @@
 import { useCurrentFlow } from "../actions/getCurrentFlow";
 
 import LandingWrap from "../componentsV3/LandingWrap/LandingWrap";
-import Header from "../componentsV3/Header/Header";
-import HeroSection from "../componentsV2/HeroSection/HeroSection";
+
+import HeroSection from "../componentsV3/HeroSection/HeroSection";
 import DiscountSection from "../componentsV3/Discount/Discount";
 import EasyInstallSection from "../componentsV3/EasyInstall/EasyInstall";
 import VideoSection from "../componentsV3/Video/Video";
@@ -25,7 +25,6 @@ export default function filmsLanding() {
 
   return (
     <>
-      <Header />
       <LandingWrap>
         <HeroSection href={`/films/${currentFlow}/choose-film`} />
         <DiscountSection href={`/films/${currentFlow}/choose-film`} />
