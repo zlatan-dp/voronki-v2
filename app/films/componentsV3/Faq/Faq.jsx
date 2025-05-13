@@ -25,7 +25,7 @@ export default function Faq({ href }) {
 
   return (
     <div className={styles.container}>
-      <SectionTitle align={"center"}>FAQ</SectionTitle>
+      <SectionTitle variant={"gray"}>FAQ</SectionTitle>
       <ul className={styles.faqList}>
         {FaqData.map(({ id, question, answer }) => (
           // <li key={id} className={`${styles.faqItem} ${openIndex === id ? styles.open : ""}`}>

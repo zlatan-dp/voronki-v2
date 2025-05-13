@@ -14,12 +14,8 @@ import Feedback from "../componentsV3/Feedback/Feedback";
 import Explanation from "../componentsV3/Explanation/Explanation";
 import ScrollToTop from "../componentsV3/upBtn/upBtn";
 
-// import { getStoredAnswers } from "../actions/saveToStorage";
-
 export default function filmsLanding() {
   const currentFlow = useCurrentFlow();
-  // console.log(currentFlow);
-  // console.log(getStoredAnswers());
 
   return (
     <>
