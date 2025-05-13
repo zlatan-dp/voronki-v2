@@ -1,69 +1,63 @@
 .feedbackContainer {
-    padding: 40px 20px;
-    background-color: var(--black);
-  }
+  padding: 32px 37px;
+  background-color: var(--black-v3);
+}
+
+.feedbackList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.feedbackWrap {
+  width: 90%;
+}
+
+.feedbackWrap:nth-child(2n) {
+  margin-left: auto;
+}
+
+.clientWrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
 
 .name {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 121%;
-    color: var(--white);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 100%;
+  color: var(--white);
 }
 
 .date {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 133%;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 8px;
 }
 
 .rating {
-    margin-top: 24px;
-    display: flex;
-    gap: 3px;
+  margin-top: 8px;
+  display: flex;
+  gap: 3px;
 }
 
 .star {
-    width: 24px;
-    height: 24px;
-    background-image: url('/images/filmsV2/feedback-star.svg');
-    background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  background-image: url("/images/filmsV2/feedback-star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    color: rgba(255, 255, 255, 0.75);
-    margin-top: 24px;
-} 
-
-.slider {
-    width: 100%;
-    padding-bottom: 40px;
-    margin-top: 40px;
-  }
-  
-  .slide {
-    border-top: 1px solid #0081ff;
-    background: linear-gradient(180deg, #1d2431 0%, #111 100%);
-    border-radius: 20px;
-    padding: 30px;
-    height: 424px;
-    min-width: 215px;
-  }
-  
-  .feedbackContainer :global(.swiper-pagination-bullet) {
-    border-radius: 8px;
-    padding: 3px 7px;
-    width: 20px;
-    height: 4px;
-    background: #0081ff;
-    opacity: 0.5;
-  }
-  
-  .feedbackContainer :global(.swiper-pagination-bullet-active) {
-    background: var(--accent);
-    opacity: 1;
-  }
+  padding-left: 18px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 15px;
+}

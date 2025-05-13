@@ -9,7 +9,6 @@ import Realiability from "../componentsV3/Reliability/Reliability";
 import FilmsInfo from "../componentsV3/FilmsInfo/FilmsInfo";
 import Protective from "../componentsV3//Protective/Protective";
 import VideoSection from "../componentsV3/Video/Video";
-
 import Faq from "../componentsV3/Faq/Faq";
 import Feedback from "../componentsV3/Feedback/Feedback";
 import Explanation from "../componentsV3/Explanation/Explanation";
@@ -31,7 +30,6 @@ export default function filmsLanding() {
         <FilmsInfo href={`/films/${currentFlow}/choose-film`} />
         <Protective href={`/films/${currentFlow}/choose-film`} />
         <VideoSection href={`/films/${currentFlow}/choose-film`} />
-
         <Faq href={`/films/${currentFlow}/choose-film`} />
         <Feedback />
         <Explanation
