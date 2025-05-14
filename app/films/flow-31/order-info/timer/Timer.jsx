@@ -6,7 +6,7 @@ import classNames from "classnames";
 import styles from "./Timer.module.css";
 
 export default function CountdownTimer() {
-  const { days, hours, minutes } = useCountdown();
+  const { days, hours, minutes } = useCountdown("2025-05-31T23:59:00");
   const [showColon, setShowColon] = useState(true);
   const [hasMounted, setHasMounted] = useState(false); // Track if component has mounted
 

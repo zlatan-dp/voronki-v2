@@ -25,7 +25,7 @@ export default function VideoSection({ href }) {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="videosection">
       <SectionTitle variant={"gray"}>Videoanleitung</SectionTitle>
       <div className={styles.videoWrap} onClick={goToNextStep}>
         <Image
