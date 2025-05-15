@@ -115,6 +115,26 @@ export default function PagesDispatcher() {
             `/films/flow-18?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
           );
         break;
+      case "parents_men":
+        router.push(
+          `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
+      case "parents_women":
+        router.push(
+          `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
+      case "pets_men":
+        router.push(
+          `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
+      case "pets_women":
+        router.push(
+          `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
           `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
