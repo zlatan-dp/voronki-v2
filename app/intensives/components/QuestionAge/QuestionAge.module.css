@@ -1,0 +1,55 @@
+.container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.questionWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.quizText {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.ageList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ageItem {
+  flex: 1 1 calc(50% - 6px);
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.imgWrap {
+  width: 100%;
+  height: auto;
+}
+
+.textWrap {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+}
+
+.textAge {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}

@@ -1,0 +1,36 @@
+.inputWrap {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: 12px;
+  border: 1px solid #0000001a;
+  cursor: pointer;
+  transition: border var(--trans-dur) var(--trans-timing-function);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent);
+  }
+}
+
+.mainText {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.description {
+  font-size: 16px;
+  color: #00000066;
+}
