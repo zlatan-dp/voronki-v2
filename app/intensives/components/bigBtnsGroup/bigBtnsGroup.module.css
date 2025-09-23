@@ -1,0 +1,24 @@
+.raitingList {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.raitingItem {
+  flex: 1 1 50%;
+}
+
+.raitingBtn {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  cursor: pointer;
+  font-size: 24px;
+  border: 1px solid #0000001a;
+  border-radius: 12px;
+}
