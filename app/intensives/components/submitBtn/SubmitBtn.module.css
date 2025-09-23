@@ -1,0 +1,14 @@
+.button {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: gray;
+    cursor: no-drop;
+  }
+}

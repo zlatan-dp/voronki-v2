@@ -8,9 +8,7 @@ import { useCurrentFlow } from "../../actions/getCurrentFlow";
 import { nextStep } from "../../../actions/steps-client.action";
 import { getCurrentTime } from "../../actions/getCurrentTime";
 
-import { FormatWorkData } from "./FormatWorkData";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
-import SingleAnswerContainer from "../../components/singleAnswerContainer/SingleAnswerContainer";
 
 export default function question20() {
   const currentFlow = useCurrentFlow();
@@ -20,7 +18,7 @@ export default function question20() {
     await nextStep({
       step: 20,
       type: "info",
-      question: "What is your current employment status?",
+      question: "Do you tend to start things and not finish them?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -31,18 +29,9 @@ export default function question20() {
   return (
     <div className={styles.container}>
       <div className={styles.questionWrap}>
-        <SectionTitle>What is your current employment status?</SectionTitle>
-        <ul className={styles.answerList}>
-          {FormatWorkData.map(({ id, img, text, description }) => (
-            <li key={id} onClick={() => goToNextStep(text)}>
-              <SingleAnswerContainer
-                img={img}
-                text={text}
-                description={description}
-              />
-            </li>
-          ))}
-        </ul>
+        <SectionTitle>
+          Do you tend to start things and not finish them?
+        </SectionTitle>
       </div>
     </div>
   );

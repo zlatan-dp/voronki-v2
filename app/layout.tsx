@@ -6,7 +6,7 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "900"],
 });
 
-import Script from "next/script";
+// import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <Script
           strategy="beforeInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"
@@ -48,7 +48,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
+      </head> */}
       <body className={montserrat.variable}>{children}</body>
     </html>
   );
