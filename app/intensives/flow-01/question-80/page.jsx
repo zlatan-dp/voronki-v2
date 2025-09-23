@@ -11,27 +11,28 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import BtnsGroup from "../../components/btnsGroup/btnsGroup";
 
-export default function question40() {
+export default function question80() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
   const goToNextStep = async (answer) => {
     await nextStep({
-      step: 40,
+      step: 80,
       type: "info",
-      question: "Do you tend to start things and not finish them?",
+      question:
+        "Do you review your week or month to see what worked and what didn’t?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-50`);
+    router.push(`/intensives/${currentFlow}/question-90`);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.questionWrap}>
         <SectionTitle>
-          Do you tend to start things and not finish them?
+          Do you review your week or month to see what worked and what didn’t?
         </SectionTitle>
         <BtnsGroup onClick={goToNextStep} />
       </div>

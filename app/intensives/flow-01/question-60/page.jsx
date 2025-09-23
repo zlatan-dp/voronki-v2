@@ -11,27 +11,29 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import BtnsGroup from "../../components/btnsGroup/btnsGroup";
 
-export default function question40() {
+export default function question60() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
   const goToNextStep = async (answer) => {
     await nextStep({
-      step: 40,
+      step: 60,
       type: "info",
-      question: "Do you tend to start things and not finish them?",
+      question:
+        "Do you use any planning techniques (like GTD, Pomodoro, or time blocking)?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-50`);
+    router.push(`/intensives/${currentFlow}/question-70`);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.questionWrap}>
         <SectionTitle>
-          Do you tend to start things and not finish them?
+          Do you use any planning techniques (like GTD, Pomodoro, or time
+          blocking)?
         </SectionTitle>
         <BtnsGroup onClick={goToNextStep} />
       </div>

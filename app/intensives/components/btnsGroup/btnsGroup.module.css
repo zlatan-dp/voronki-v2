@@ -1,0 +1,32 @@
+.raitingList {
+  display: flex;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #0000001a;
+  overflow: hidden;
+}
+
+.raitingItem {
+  flex: 1 1 20%;
+  font-size: 24px;
+
+  &:not(:last-child) {
+    border-right: 1px solid #0000001a;
+  }
+
+  &:nth-child(odd) {
+    font-size: 36px;
+  }
+}
+
+.raitingBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
