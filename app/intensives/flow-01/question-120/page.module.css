@@ -1,0 +1,89 @@
+.container {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.questionWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.answerList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.answerItem {
+  display: flex;
+}
+
+.inputWrap {
+  position: relative;
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 12px;
+  border: 1px solid #0000001a;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid gray;
+    border-radius: 4px;
+  }
+}
+
+.active {
+  border: 1px solid var(--accent);
+
+  &::after {
+    content: "✓";
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+}
+
+.mainText {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+.text {
+  font-size: 16px;
+}
