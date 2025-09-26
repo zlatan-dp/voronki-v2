@@ -11,6 +11,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import BigBtnsGroup from "../../components/bigBtnsGroup/bigBtnsGroup";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question110() {
   const currentFlow = useCurrentFlow();
@@ -19,7 +20,7 @@ export default function question110() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 110,
-      type: "info",
+      type: "question",
       question:
         "Does this book seem interesting to you? (Getting Things Done: The Art of Stress-Free Productivity)",
       answer: answer || "next",
@@ -31,6 +32,7 @@ export default function question110() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={70} to={77} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>Does this book seem interesting to you?</SectionTitle>
         <div className={styles.imgWrap}>

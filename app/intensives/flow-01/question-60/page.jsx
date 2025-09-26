@@ -10,6 +10,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import BtnsGroup from "../../components/btnsGroup/btnsGroup";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question60() {
   const currentFlow = useCurrentFlow();
@@ -18,7 +19,7 @@ export default function question60() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 60,
-      type: "info",
+      type: "question",
       question:
         "Do you use any planning techniques (like GTD, Pomodoro, or time blocking)?",
       answer: answer || "next",
@@ -30,6 +31,7 @@ export default function question60() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={35} to={42} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you use any planning techniques (like GTD, Pomodoro, or time

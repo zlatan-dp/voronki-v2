@@ -12,6 +12,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 import { ReasonData } from "./ReasonData";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import SubmitBtn from "../../components/submitBtn/SubmitBtn";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question120() {
   const currentFlow = useCurrentFlow();
@@ -37,7 +38,7 @@ export default function question120() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 120,
-      type: "info",
+      type: "question",
       question: "Do you have a specific reason for self-growth?",
       answer: answer || "next",
       time: await getCurrentTime(),
@@ -55,6 +56,7 @@ export default function question120() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={77} to={87} duration={500} />
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
           <SectionTitle>

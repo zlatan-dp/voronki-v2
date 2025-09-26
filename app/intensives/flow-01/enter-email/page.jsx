@@ -42,7 +42,7 @@ export default function enterEmail() {
       await nextStep({
         step: 150,
         type: "info",
-        question: "Achieve your goals with Headway",
+        question: "Enter your email",
         answer: email || "next",
         time: await getCurrentTime(),
       });
@@ -82,7 +82,11 @@ export default function enterEmail() {
             By continuing you indicate that you've read and agree to our Terms &
             Conditions, Privacy Policy and Subscription Policy
           </p>
-          <SubmitBtn disabled={false} onClick={goToNextStep} submit="submit">
+          <SubmitBtn
+            disabled={email === ""}
+            onClick={goToNextStep}
+            submit="submit"
+          >
             Continue
           </SubmitBtn>
         </form>

@@ -11,6 +11,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 import { GoalData } from "./GoalData";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import SingleAnswerContainer from "../../components/singleAnswerContainer/SingleAnswerContainer";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question130() {
   const currentFlow = useCurrentFlow();
@@ -19,7 +20,7 @@ export default function question130() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 130,
-      type: "info",
+      type: "question",
       question: "Choose your daily self-growth goal",
       answer: answer || "next",
       time: await getCurrentTime(),
@@ -30,6 +31,7 @@ export default function question130() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={87} to={100} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>Choose your daily self-growth goal</SectionTitle>
         <ul className={styles.answerList}>

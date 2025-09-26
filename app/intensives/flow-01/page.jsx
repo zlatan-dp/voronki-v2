@@ -2,10 +2,6 @@
 
 import QuestionAge from "../components/QuestionAge/QuestionAge";
 
-export default function filmsLanding() {
-  return (
-    <>
-      <QuestionAge />
-    </>
-  );
+export default function intensivesLanding() {
+  return <QuestionAge />;
 }

@@ -12,6 +12,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 import { CategoryData } from "./CategoryData";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import SubmitBtn from "../../components/submitBtn/SubmitBtn";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question30() {
   const currentFlow = useCurrentFlow();
@@ -37,7 +38,7 @@ export default function question30() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 30,
-      type: "info",
+      type: "question",
       question: "Choose areas you’d like to elevate",
       answer: answer || "next",
       time: await getCurrentTime(),
@@ -55,6 +56,7 @@ export default function question30() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={14} to={21} duration={500} />
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
           <SectionTitle>Choose areas you’d like to elevate</SectionTitle>

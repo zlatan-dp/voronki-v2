@@ -11,6 +11,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import BigBtnsGroup from "../../components/bigBtnsGroup/bigBtnsGroup";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question90() {
   const currentFlow = useCurrentFlow();
@@ -19,7 +20,7 @@ export default function question90() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 90,
-      type: "info",
+      type: "question",
       question:
         "Does this book seem interesting to you? (Atomic Habits An Easy & Proven Way to Build Good Habits & Break Bad Ones)",
       answer: answer || "next",
@@ -31,6 +32,7 @@ export default function question90() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={56} to={63} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>Does this book seem interesting to you?</SectionTitle>
         <div className={styles.imgWrap}>

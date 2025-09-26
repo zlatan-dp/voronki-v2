@@ -1,0 +1,24 @@
+.progressWrapper {
+  position: absolute;
+  top: 0;
+  width: 90%;
+
+  height: 6px;
+  background-color: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  width: 0;
+  transition: width 0.2s linear;
+}
+
+.progressLabel {
+  right: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}

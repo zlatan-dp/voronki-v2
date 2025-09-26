@@ -10,6 +10,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import BtnsGroup from "../../components/btnsGroup/btnsGroup";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question50() {
   const currentFlow = useCurrentFlow();
@@ -18,7 +19,7 @@ export default function question50() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 50,
-      type: "info",
+      type: "question",
       question: "Do you stay productive when you’re under stress?",
       answer: answer || "next",
       time: await getCurrentTime(),
@@ -29,6 +30,7 @@ export default function question50() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={28} to={35} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you stay productive when you’re under stress?

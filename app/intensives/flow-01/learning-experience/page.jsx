@@ -26,8 +26,7 @@ export default function learningExperience() {
     await nextStep({
       step: 140,
       type: "info",
-      question: "Your learning experience is up and running!",
-      answer: "done",
+      answer: "learning experience",
       time: await getCurrentTime(),
     });
 
@@ -43,8 +42,8 @@ export default function learningExperience() {
         </SectionTitle>
         <SequentialProgressList
           items={data}
-          duration={1500}
-          staggerDelay={1500}
+          duration={1800}
+          staggerDelay={1800}
           requireAll={true} // кнопка активна коли всі 100%
           onContinue={goToNextStep}
         />

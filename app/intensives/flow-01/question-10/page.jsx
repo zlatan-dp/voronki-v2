@@ -11,6 +11,7 @@ import { getCurrentTime } from "../../actions/getCurrentTime";
 import { GenderData } from "./GenderData";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import SingleAnswerContainer from "../../components/singleAnswerContainer/SingleAnswerContainer";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function question10() {
   const currentFlow = useCurrentFlow();
@@ -19,7 +20,7 @@ export default function question10() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 10,
-      type: "info",
+      type: "question",
       question: "Select your gender?",
       answer: answer || "next",
       time: await getCurrentTime(),
@@ -30,6 +31,7 @@ export default function question10() {
 
   return (
     <div className={styles.container}>
+      <ProgressBar from={0} to={7} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>Select your gender</SectionTitle>
         <ul className={styles.answerList}>

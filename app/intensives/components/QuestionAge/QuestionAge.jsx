@@ -20,7 +20,7 @@ export default function QuestionAge() {
   const goToNextStep = async (answer) => {
     await nextStep({
       step: 0,
-      type: "info",
+      type: "question",
       question: "what is your age?",
       answer: answer || "next",
       time: await getCurrentTime(),
