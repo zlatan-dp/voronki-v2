@@ -2,9 +2,9 @@
 
 import styles from "./page.module.css";
 
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
-import { useCurrentFlow } from "../../actions/getCurrentFlow";
+// import { useCurrentFlow } from "../../actions/getCurrentFlow";
 // import { nextStep } from "../../../actions/steps-client.action";
 // import { getCurrentTime } from "../../actions/getCurrentTime";
 
@@ -18,7 +18,8 @@ export default function enterEmail() {
     <div className={styles.container}>
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
-          <SectionTitle>Error PAGE</SectionTitle>
+          <SectionTitle>Something wrong!</SectionTitle>
+          <p>Try again later</p>
         </div>
       </div>
     </div>

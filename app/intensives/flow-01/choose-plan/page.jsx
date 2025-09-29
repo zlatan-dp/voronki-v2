@@ -10,6 +10,8 @@ import { nextStep } from "../../../actions/steps-client.action";
 import { getCurrentTime } from "../../actions/getCurrentTime";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
+import BenefitsList from "./BenefitsList/BenefitsList";
+import FaqList from "./FaqList/FaqList";
 
 import { PlanData } from "./planData";
 import SubmitBtn from "../../components/submitBtn/SubmitBtn";
@@ -89,6 +91,14 @@ export default function enterEmail() {
         <SubmitBtn disabled={!selectedPlans} onClick={handleSubmit}>
           Continue
         </SubmitBtn>
+      </div>
+      <div className={styles.benefitsWrap}>
+        <SectionTitle>What you get with Headway</SectionTitle>
+        <BenefitsList />
+      </div>
+      <div className={styles.faqWrap}>
+        <SectionTitle>We are ready to answer your questions</SectionTitle>
+        <FaqList />
       </div>
     </div>
   );

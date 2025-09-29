@@ -1,8 +1,9 @@
 .container {
   padding: 20px;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
   flex-grow: 1;
 }
 
@@ -138,4 +139,30 @@
       font-size: 12px;
     }
   }
+}
+
+.benefitsWrap {
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: rgb(230, 242, 231);
+  border: 1px solid rgba(0, 187, 119, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.faqWrap {
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: rgb(255, 237, 225);
+  border: 1px solid rgba(255, 136, 51, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
