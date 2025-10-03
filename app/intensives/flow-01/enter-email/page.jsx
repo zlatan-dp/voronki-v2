@@ -56,8 +56,8 @@ export default function enterEmail() {
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
           <SectionTitle>
-            <span className={styles.accent}>Achieve your goals</span>
-            with Headway
+            <span className={styles.accent}>Achieve your goals</span> with
+            ChatMND
           </SectionTitle>
           <p className={styles.text}>
             Enter your email to create a personal account

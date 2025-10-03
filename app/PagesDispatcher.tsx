@@ -145,6 +145,11 @@ export default function PagesDispatcher() {
           `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
+      case "quiz-01":
+        router.push(
+          `/intensives/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
           `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`

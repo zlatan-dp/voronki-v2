@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -5,32 +6,27 @@ export default function Footer() {
     <footer>
       <div className={styles.container}>
         <div className={styles.privacyWrap}>
-          <a
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={"/intensives/flow-01/terms-of-use"}
             className={styles.privacyLink}
           >
             Terms of use
-          </a>
+          </Link>
           <p className={styles.privacyDecor}>•</p>
-          <a
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={"/intensives/flow-01/privacy-policy"}
             className={styles.privacyLink}
           >
             Privacy policy
-          </a>
+          </Link>
           <p className={styles.privacyDecor}>•</p>
-          <a
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          <Link
+            href={"/intensives/flow-01/subscription-terms"}
             className={styles.privacyLink}
           >
             Subscription policy
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

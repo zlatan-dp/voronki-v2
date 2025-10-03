@@ -44,7 +44,7 @@ export default function QuestionAge() {
               onClick={() => goToNextStep(text)}
             >
               <div className={styles.imgWrap}>
-                <Image src={img} alt="logo" width={480} height={384} />
+                <Image src={img} alt="logo" width={478} height={548} />
               </div>
               <div className={styles.textWrap}>
                 <p className={styles.textAge}>{text}</p>

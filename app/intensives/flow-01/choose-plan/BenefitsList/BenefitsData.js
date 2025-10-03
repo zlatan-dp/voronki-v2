@@ -1,22 +1,18 @@
 export const BenefitsData = [
   {
     id: 1,
-    text: "2000+ nonfiction book summaries",
+    text: "100+ short intensives",
   },
   {
     id: 2,
-    text: "5000+ life-changing tips",
+    text: "300+ books summaries",
   },
   {
     id: 3,
-    text: "Habit tracking to check your progress",
+    text: "1500+ life-changing tips",
   },
   {
     id: 4,
     text: "Self-growth challenges for any goals",
-  },
-  {
-    id: 5,
-    text: "Spaced Repetition feature to memorize favorite insights",
   },
 ];

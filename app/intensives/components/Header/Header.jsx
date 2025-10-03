@@ -8,14 +8,22 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
-  const router = useRouter();
+  // const router = useRouter();
+  console.log(pathname);
 
   const questionPattern = /question-\w+/;
 
-  const isQuestionPage = questionPattern.test(pathname || "");
+  const extraPages = [
+    "/intensives/flow-01/terms-of-use",
+    "/intensives/flow-01/privacy-policy",
+    "/intensives/flow-01/subscription-terms",
+  ];
 
-  const align = isQuestionPage ? "center" : "flex-start";
-  const showBack = isQuestionPage;
+  const isQuestionPage = questionPattern.test(pathname || "");
+  const isExtraPage = extraPages.includes(pathname || "");
+
+  const align = isQuestionPage || isExtraPage ? "center" : "flex-start";
+  const showBack = isQuestionPage || isExtraPage;
 
   return (
     <header>
@@ -24,7 +32,7 @@ export default function Header() {
           align === "center" ? styles.center : styles.left
         }`}
       >
-        <p className={styles.logoText}>Logo</p>
+        <p className={styles.logoText}>ChatMND</p>
         {showBack && <BackBtn />}
       </div>
     </header>

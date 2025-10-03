@@ -18,8 +18,8 @@ export default function enterEmail() {
     <div className={styles.container}>
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
-          <SectionTitle>Something wrong!</SectionTitle>
-          <p>Try again later</p>
+          <SectionTitle>Sorry, something went wrong on our side.</SectionTitle>
+          <p>Please try again later.</p>
         </div>
       </div>
     </div>

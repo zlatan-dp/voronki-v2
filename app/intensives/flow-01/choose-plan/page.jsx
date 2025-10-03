@@ -93,7 +93,7 @@ export default function enterEmail() {
         </SubmitBtn>
       </div>
       <div className={styles.benefitsWrap}>
-        <SectionTitle>What you get with Headway</SectionTitle>
+        <SectionTitle>What you get with ChatMND</SectionTitle>
         <BenefitsList />
       </div>
       <div className={styles.faqWrap}>

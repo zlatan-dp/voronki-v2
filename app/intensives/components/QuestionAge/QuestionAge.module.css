@@ -28,6 +28,8 @@
 }
 
 .ageItem {
+  display: flex;
+  flex-direction: column;
   flex: 1 1 calc(50% - 6px);
   border-radius: 12px;
   border: 1px solid var(--accent);
@@ -38,9 +40,11 @@
 .imgWrap {
   width: 100%;
   height: auto;
+  flex-grow: 1;
 }
 
 .textWrap {
+  flex-shrink: 0;
   padding: 10px;
   display: flex;
   align-items: center;
