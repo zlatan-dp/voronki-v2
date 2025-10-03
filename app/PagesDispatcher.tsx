@@ -152,7 +152,7 @@ export default function PagesDispatcher() {
         break;
       default:
         router.push(
-          `/films/flow-31?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/intensives/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
     }
   }, [pageEnter]);
