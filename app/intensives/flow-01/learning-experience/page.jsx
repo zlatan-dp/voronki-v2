@@ -30,7 +30,7 @@ export default function learningExperience() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/enter-email`);
+    router.push(`/intensives/${currentFlow}/choose-plan`);
   };
 
   return (

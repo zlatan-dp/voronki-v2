@@ -32,7 +32,7 @@ export default function enterEmail() {
 
   const goToNextStep = async (plan) => {
     await nextStep({
-      step: 160,
+      step: 150,
       type: "info",
       question: "Choose your plan",
       answer: plan || "next",
