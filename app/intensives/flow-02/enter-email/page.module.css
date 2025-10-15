@@ -1,0 +1,87 @@
+.container {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.questionWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.text {
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-bottom: 1px solid #ffffff7c;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.input {
+  border: 1px solid #0000001a;
+  border-radius: 8px;
+  padding: 20px 24px;
+  width: 100%;
+  height: 48px;
+  background-color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black);
+}
+
+.input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  opacity: 0.5;
+}
+
+.error {
+  border-color: #af0202;
+}
+
+.errorText {
+  position: absolute;
+  bottom: -18px;
+  left: 20px;
+  color: #af0202;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.legalText {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+}

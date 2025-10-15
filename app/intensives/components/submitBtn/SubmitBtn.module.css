@@ -1,4 +1,6 @@
 .button {
+  position: sticky;
+  bottom: 8px;
   background-color: var(--accent);
   color: var(--white);
   padding: 20px;

@@ -13,7 +13,7 @@ import { useCurrentFlow } from "../../actions/getCurrentFlow";
 import { nextStep } from "../../../actions/steps-client.action";
 import { getCurrentTime } from "../../actions/getCurrentTime";
 
-export default function QuestionAge() {
+export default function QuestionAge({ question = "question-10" }) {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
@@ -26,7 +26,7 @@ export default function QuestionAge() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-10`);
+    router.push(`/intensives/${currentFlow}/${question}`);
   };
 
   return (
