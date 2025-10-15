@@ -9,7 +9,7 @@ import { usePathname, useRouter } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
   // const router = useRouter();
-  console.log(pathname);
+  // console.log(pathname);
 
   const questionPattern = /question-\w+/;
 

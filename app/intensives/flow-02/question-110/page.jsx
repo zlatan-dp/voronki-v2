@@ -27,12 +27,12 @@ export default function question110() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-120`);
+    router.push(`/intensives/${currentFlow}/question-111`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={70} to={77} duration={500} />
+      <ProgressBar from={70} to={74} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>Does this book seem interesting to you?</SectionTitle>
         <div className={styles.imgWrap}>

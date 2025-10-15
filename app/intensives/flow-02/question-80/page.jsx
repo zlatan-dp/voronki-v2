@@ -26,12 +26,12 @@ export default function question80() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-90`);
+    router.push(`/intensives/${currentFlow}/question-81`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={49} to={56} duration={500} />
+      <ProgressBar from={49} to={54} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you review your week or month to see what worked and what didn’t?
