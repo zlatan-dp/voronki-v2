@@ -30,7 +30,7 @@ export default function question40() {
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={21} to={28} duration={500} />
+      <ProgressBar from={25} to={28} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you tend to start things and not finish them?

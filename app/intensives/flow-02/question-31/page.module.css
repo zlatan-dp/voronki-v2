@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.pageWrap {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  gap: 32px;
+}
+
+.infoWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.quoteIcon {
+  width: 14px;
+}
+.authorIcon {
+  width: 101px;
+}
+
+.quoteText {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.upperText {
+  text-transform: uppercase;
+}
+
+.quoteWrap {
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.muiImage {
+  width: 100%;
+}

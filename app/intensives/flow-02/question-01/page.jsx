@@ -15,15 +15,15 @@ import SubmitBtn from "../../components/submitBtn/SubmitBtn";
 
 import ProgressBar from "../../components/progressBar/ProgressBar";
 
-export default function question10() {
+export default function question01() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
-  const goToNextStep = async (answer) => {
+  const goToNextStep = async () => {
     await nextStep({
       step: 1,
       type: "info",
-      answer: answer || "next",
+      answer: "social-proof",
       time: await getCurrentTime(),
     });
 
@@ -50,7 +50,7 @@ export default function question10() {
             </div>
 
             <p className={styles.quoteText}>
-              Headway is a bite-sized learning app for those who strive to grow
+              ChatMND is a bite-sized learning app for those who strive to grow
             </p>
             <div className={styles.authorIcon}>
               <Image

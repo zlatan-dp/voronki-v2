@@ -26,12 +26,12 @@ export default function question10() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-20`);
+    router.push(`/intensives/${currentFlow}/question-11`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={0} to={7} duration={500} />
+      <ProgressBar from={4} to={7} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>Select your gender</SectionTitle>
         <ul className={styles.answerList}>

@@ -31,7 +31,7 @@ export default function question20() {
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={7} to={14} duration={500} />
+      <ProgressBar from={11} to={14} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>What is your current employment status?</SectionTitle>
         <ul className={styles.answerList}>

@@ -2,6 +2,8 @@
 
 import styles from "./page.module.css";
 
+import Image from "next/image";
+
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
@@ -9,12 +11,12 @@ import { useCurrentFlow } from "../../actions/getCurrentFlow";
 import { nextStep } from "../../../actions/steps-client.action";
 import { getCurrentTime } from "../../actions/getCurrentTime";
 
-import { CategoryData } from "./CategoryData";
+import { PersonData } from "./personData";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import SubmitBtn from "../../components/submitBtn/SubmitBtn";
 import ProgressBar from "../../components/progressBar/ProgressBar";
 
-export default function question30() {
+export default function question35() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
@@ -29,7 +31,7 @@ export default function question30() {
   const buildAnswerPayload = (selectedIds) => {
     return selectedIds
       .map((id) => {
-        const found = CategoryData.find((c) => c.id === id);
+        const found = PersonData.find((c) => c.id === id);
         return found ? found.text : null;
       })
       .filter(Boolean);
@@ -37,14 +39,15 @@ export default function question30() {
 
   const goToNextStep = async (answer) => {
     await nextStep({
-      step: 30,
+      step: 35,
       type: "question",
-      question: "Choose areas you’d like to elevate",
+      question:
+        "Whose life principles, success, and personality inspire you the most?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-31`);
+    router.push(`/intensives/${currentFlow}/question-40`);
   };
 
   const handleSubmit = async () => {
@@ -56,14 +59,16 @@ export default function question30() {
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={14} to={21} duration={500} />
+      <ProgressBar from={24} to={26} duration={500} />
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
-          <SectionTitle>Choose areas you’d like to elevate</SectionTitle>
-          <p>The choice won’t limit your experience</p>
+          <SectionTitle>
+            Whose life principles, success, and personality inspire you the
+            most?
+          </SectionTitle>
         </div>
         <ul className={styles.answerList}>
-          {CategoryData.map(({ id, text }) => {
+          {PersonData.map(({ id, text, img }) => {
             const isActive = selectedAnswers.includes(id);
 
             return (
@@ -74,8 +79,11 @@ export default function question30() {
                   }`}
                   onClick={() => toggleSelect(id)}
                 >
-                  <span className={styles.text}>{text}</span>
+                  <div className={styles.imageWrap}>
+                    <Image src={img} alt="person" width={50} height={50} />
+                  </div>
                 </div>
+                <span className={styles.text}>{text}</span>
               </li>
             );
           })}
