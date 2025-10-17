@@ -56,15 +56,14 @@ export default function question01() {
             <p className={styles.quoteText}>
               Microlearning is the future of professional development.
             </p>
-            <p className={styles.authorText}>Forbes</p>
-            {/* <div className={styles.authorIcon}>
+            <div className={styles.authorIcon}>
               <Image
-                src="/images/intensives/q01/img-01.svg"
+                src="/images/intensives/q01/img-forbes.svg"
                 alt="author"
                 width={101}
                 height={21}
               />
-            </div> */}
+            </div>
           </div>
           <div className={styles.quoteWrap}>
             <div className={styles.quoteIcon}>
@@ -79,7 +78,14 @@ export default function question01() {
             <p className={styles.quoteText}>
               13 investors say lifelong learning is taking edtech mainstream.
             </p>
-            <p className={styles.authorText}>TechCrunch</p>
+            <div className={styles.authorIcon}>
+              <Image
+                src="/images/intensives/q01/img-tech.svg"
+                alt="author"
+                width={101}
+                height={21}
+              />
+            </div>
           </div>
         </div>
         <p className={styles.keepText}>

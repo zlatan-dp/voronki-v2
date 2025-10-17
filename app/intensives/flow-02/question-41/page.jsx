@@ -44,9 +44,7 @@ export default function question41() {
               quality={100}
             />
           </div>
-          <SectionTitle>
-            Finishing what you start is just a skill —{" "}
-          </SectionTitle>
+          <SectionTitle>Finishing what you start is just a skill</SectionTitle>
           <p className="centeredText">
             and we’ll master it together, learning how to gently inspire the
             same in others.

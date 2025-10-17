@@ -44,7 +44,7 @@ export default function question81() {
               quality={100}
             />
           </div>
-          <SectionTitle>Analysis is simple —</SectionTitle>
+          <SectionTitle>Analysis is simple</SectionTitle>
           <p className="centeredText">
             those who know how to analyze can see the truth clearly.
           </p>

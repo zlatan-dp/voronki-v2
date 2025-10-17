@@ -44,7 +44,7 @@ export default function question61() {
               quality={100}
             />
           </div>
-          <SectionTitle>Time is a resource — </SectionTitle>
+          <SectionTitle>Time is a resource</SectionTitle>
           <p className="centeredText">
             and together, we’ll learn to keep moving forward, no matter what.
           </p>

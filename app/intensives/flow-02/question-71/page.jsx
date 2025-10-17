@@ -45,7 +45,7 @@ export default function question71() {
             />
           </div>
           <SectionTitle>
-            The road to big goals is built from small steps —{" "}
+            The road to big goals is built from small steps
           </SectionTitle>
           <p className="centeredText">
             and together, we’ll learn to keep moving forward, no matter what.
