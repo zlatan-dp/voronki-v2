@@ -39,14 +39,15 @@ export default function question11() {
             <Image
               src="/images/intensives/q11/img.png"
               alt="author"
-              width={360}
-              height={223}
+              width={572}
+              height={572}
+              quality={100}
             />
           </div>
-          <SectionTitle>Yay, glad you are here!</SectionTitle>
-          <p>
-            We’ll help you with self-growth. First, let’s dive into your
-            personality and tailor your personal plan.
+          <SectionTitle>Yay, glad you’re here!</SectionTitle>
+          <p className="centeredText">
+            We’re excited to guide your growth journey.Let’s start by exploring
+            your personality — and build a plan that’s truly yours.
           </p>
         </div>
         <SubmitBtn onClick={goToNextStep}>Continue</SubmitBtn>

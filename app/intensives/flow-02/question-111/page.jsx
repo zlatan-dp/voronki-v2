@@ -21,7 +21,7 @@ export default function question111() {
   const router = useRouter();
 
   useEffect(() => {
-    document.body.style.backgroundColor = "rgb(189, 220, 245)";
+    document.body.style.backgroundColor = "#B8D8F7";
 
     return () => {
       document.body.style.backgroundColor = "";
@@ -46,19 +46,21 @@ export default function question111() {
         <div className={styles.infoWrap}>
           <div className={styles.muiImage}>
             <Image
-              src="/images/intensives/q111/img.svg"
+              src="/images/intensives/q111/img.png"
               alt="img"
-              width={360}
-              height={223}
+              width={836}
+              height={557}
+              quality={100}
             />
           </div>
           <div className={styles.decorText}>
-            <p>🔹 5M+ users in your location</p>
+            <p className="centeredText">
+              🔹 Over two million people in your area are learning right now.
+            </p>
           </div>
-          <SectionTitle>Join over 50M people</SectionTitle>
+          <SectionTitle>Join more than 50M people</SectionTitle>
           <p className={styles.text}>
-            Become part of a growing worldwide community and achieve your goals
-            with us
+            worldwide who are growing through microlearning.
           </p>
         </div>
         <SubmitBtn onClick={goToNextStep}>Continue</SubmitBtn>

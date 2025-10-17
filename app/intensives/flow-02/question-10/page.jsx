@@ -41,6 +41,7 @@ export default function question10() {
                 img={img}
                 text={text}
                 description={description}
+                quality={100}
               />
             </li>
           ))}

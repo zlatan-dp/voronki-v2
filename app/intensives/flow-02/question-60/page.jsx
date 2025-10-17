@@ -26,12 +26,12 @@ export default function question60() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-70`);
+    router.push(`/intensives/${currentFlow}/question-61`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={35} to={42} duration={500} />
+      <ProgressBar from={35} to={39} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you use any planning techniques (like GTD, Pomodoro, or time

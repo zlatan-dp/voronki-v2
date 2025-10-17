@@ -38,7 +38,11 @@ export default function question01() {
           <SectionTitle>
             <span className={styles.accent}>50+ million people</span>
           </SectionTitle>
-          <p>already use the ChatMND</p>
+          <p className="centeredText">
+            are already discovering a smarter way to learn. ChatMND turns
+            micro-moments into growth moments — simple, structured, and
+            science-backed.
+          </p>
           <div className={styles.quoteWrap}>
             <div className={styles.quoteIcon}>
               <Image
@@ -50,27 +54,37 @@ export default function question01() {
             </div>
 
             <p className={styles.quoteText}>
-              ChatMND is a bite-sized learning app for those who strive to grow
+              Microlearning is the future of professional development.
             </p>
-            <div className={styles.authorIcon}>
+            <p className={styles.authorText}>Forbes</p>
+            {/* <div className={styles.authorIcon}>
               <Image
                 src="/images/intensives/q01/img-01.svg"
                 alt="author"
                 width={101}
                 height={21}
               />
-            </div>
+            </div> */}
           </div>
-          <p className={styles.upperText}>Mentioned in</p>
-          <div className={styles.muiImage}>
-            <Image
-              src="/images/intensives/q01/img-02.svg"
-              alt="author"
-              width={326}
-              height={130}
-            />
+          <div className={styles.quoteWrap}>
+            <div className={styles.quoteIcon}>
+              <Image
+                src="/images/intensives/q01/quota.svg"
+                alt="quote"
+                width={12}
+                height={12}
+              />
+            </div>
+
+            <p className={styles.quoteText}>
+              13 investors say lifelong learning is taking edtech mainstream.
+            </p>
+            <p className={styles.authorText}>TechCrunch</p>
           </div>
         </div>
+        <p className={styles.keepText}>
+          Designed to keep your curiosity alive, one short lesson at a time.
+        </p>
         <SubmitBtn onClick={goToNextStep}>Continue</SubmitBtn>
       </div>
     </div>

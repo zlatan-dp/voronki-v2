@@ -25,12 +25,12 @@ export default function question50() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-60`);
+    router.push(`/intensives/${currentFlow}/question-51`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={28} to={35} duration={500} />
+      <ProgressBar from={28} to={31} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you stay productive when you’re under stress?

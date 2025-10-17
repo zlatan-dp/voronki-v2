@@ -23,7 +23,7 @@ export default function question81() {
     await nextStep({
       step: 81,
       type: "info",
-      answer: "It’s okay",
+      answer: "Analysis is simple",
       time: await getCurrentTime(),
     });
 
@@ -37,19 +37,16 @@ export default function question81() {
         <div className={styles.infoWrap}>
           <div className={styles.muiImage}>
             <Image
-              src="/images/intensives/q81/img.svg"
+              src="/images/intensives/q81/img1.png"
               alt="img"
-              width={296}
-              height={192}
+              width={384}
+              height={384}
+              quality={100}
             />
           </div>
-          <SectionTitle>
-            It’s okay to doubt your skills if you make a mistake
-          </SectionTitle>
-          <p>
-            Mistakes are unavoidable when you're trying to achieve something
-            meaningful. What's important here is the right attitude, so your
-            recommendations will also target this, too.
+          <SectionTitle>Analysis is simple —</SectionTitle>
+          <p className="centeredText">
+            those who know how to analyze can see the truth clearly.
           </p>
         </div>
         <SubmitBtn onClick={goToNextStep}>Continue</SubmitBtn>

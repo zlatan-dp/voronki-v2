@@ -56,7 +56,7 @@ export default function question30() {
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={14} to={21} duration={500} />
+      <ProgressBar from={14} to={17} duration={500} />
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
           <SectionTitle>Choose areas you’d like to elevate</SectionTitle>

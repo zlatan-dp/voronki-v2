@@ -25,12 +25,12 @@ export default function question40() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-50`);
+    router.push(`/intensives/${currentFlow}/question-41`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={26} to={28} duration={500} />
+      <ProgressBar from={21} to={25} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you tend to start things and not finish them?

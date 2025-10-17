@@ -59,7 +59,7 @@ export default function question35() {
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={24} to={26} duration={500} />
+      <ProgressBar from={19} to={21} duration={500} />
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
           <SectionTitle>
@@ -80,7 +80,13 @@ export default function question35() {
                   onClick={() => toggleSelect(id)}
                 >
                   <div className={styles.imageWrap}>
-                    <Image src={img} alt="person" width={50} height={50} />
+                    <Image
+                      src={img}
+                      alt="person"
+                      width={200}
+                      height={200}
+                      quality={100}
+                    />
                   </div>
                 </div>
                 <span className={styles.text}>{text}</span>

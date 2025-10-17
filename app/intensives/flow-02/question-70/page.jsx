@@ -25,12 +25,12 @@ export default function question70() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-80`);
+    router.push(`/intensives/${currentFlow}/question-71`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={42} to={49} duration={500} />
+      <ProgressBar from={42} to={45} duration={500} />
       <div className={styles.questionWrap}>
         <SectionTitle>
           Do you have long-term goals (a year or more)?

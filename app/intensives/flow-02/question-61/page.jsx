@@ -15,39 +15,38 @@ import SubmitBtn from "../../components/submitBtn/SubmitBtn";
 
 import ProgressBar from "../../components/progressBar/ProgressBar";
 
-export default function question31() {
+export default function question61() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
   const goToNextStep = async () => {
     await nextStep({
-      step: 31,
+      step: 61,
       type: "info",
-      answer: "15 min learn",
+      answer: "Time is a resource",
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/question-35`);
+    router.push(`/intensives/${currentFlow}/question-70`);
   };
 
   return (
     <div className={styles.container}>
-      <ProgressBar from={17} to={19} duration={500} />
+      <ProgressBar from={39} to={42} duration={500} />
       <div className={styles.pageWrap}>
         <div className={styles.infoWrap}>
           <div className={styles.muiImage}>
             <Image
-              src="/images/intensives/q31/img.png"
-              alt="author"
-              width={360}
-              height={223}
+              src="/images/intensives/q61/img1.png"
+              alt="img"
+              width={572}
+              height={572}
               quality={100}
             />
           </div>
-          <SectionTitle>Big ideas. Small steps. Real growth.</SectionTitle>
+          <SectionTitle>Time is a resource — </SectionTitle>
           <p className="centeredText">
-            Learn and improve your life skills in just 15 minutes a day,and make
-            every minute count by putting your knowledge to work.
+            and together, we’ll learn to keep moving forward, no matter what.
           </p>
         </div>
         <SubmitBtn onClick={goToNextStep}>Continue</SubmitBtn>

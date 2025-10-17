@@ -1,7 +1,7 @@
 :root {
   --white: #ffffff;
   --black: #111111;
-  --bg-color: #fff8f4;
+  --bg-color: #fff8f5;
   --accent: #0066ff;
 
   --trans-dur: 300ms;
@@ -54,4 +54,8 @@ img {
 p {
   font-size: 16px;
   line-height: 1.2;
+}
+
+.centeredText {
+  text-align: center;
 }
