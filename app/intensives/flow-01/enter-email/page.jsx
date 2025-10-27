@@ -5,8 +5,6 @@ import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import classNames from "classnames";
-
 import { useCurrentFlow } from "../../actions/getCurrentFlow";
 import { nextStep } from "../../../actions/steps-client.action";
 import { getCurrentTime } from "../../actions/getCurrentTime";
@@ -69,9 +67,7 @@ export default function enterEmail() {
             <input
               type="email"
               placeholder="E-Mail"
-              className={classNames(styles.input, {
-                [styles.error]: errors.email,
-              })}
+              className={`${styles.input} ${errors.email ? styles.error : ""}`}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
