@@ -30,6 +30,16 @@
   opacity: 0;
 }
 
+.enterFromRight {
+  transform: translateX(120%) rotate(8deg);
+  opacity: 0;
+}
+
+.enterFromLeft {
+  transform: translateX(-120%) rotate(-8deg);
+  opacity: 0;
+}
+
 .description {
   font-size: 14px;
   line-height: 1.4;

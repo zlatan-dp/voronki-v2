@@ -44,8 +44,14 @@ export default function intensivesQuiz() {
     setSwipeClass(direction === "left" ? styles.swipeLeft : styles.swipeRight);
 
     setTimeout(() => {
-      setSwipeClass("");
+      const enterClass =
+        direction === "left" ? styles.enterFromRight : styles.enterFromLeft;
       setIndex((i) => i + 1);
+      setSwipeClass(enterClass);
+
+      requestAnimationFrame(() => {
+        setSwipeClass("");
+      });
     }, 400);
   };
 
@@ -68,7 +74,7 @@ export default function intensivesQuiz() {
   }
 
   return (
-    <div {...handlers} className={styles.container}>
+    <div key={index} {...handlers} className={styles.container}>
       <div className={`${styles.questionWrap} ${swipeClass}`}>
         <SectionTitle>{quizData[index].question}</SectionTitle>
         {quizData[index].description && (
