@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.pageWrap {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  gap: 32px;
+}
+
+.infoWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.text {
+  text-align: center;
+}
+
+.decorText {
+  padding: 6px;
+  border-radius: 6px;
+  background-color: var(--white);
+}
+
+.muiImage {
+  width: 100%;
+  margin-bottom: auto;
+}

@@ -39,9 +39,9 @@ export default function intensivesQuiz() {
 
     console.log(`Question: ${currentQuestion.question}, Answer: ${answer}`);
 
-    await goToNextStep(answer);
-
     setSwipeClass(direction === "left" ? styles.swipeLeft : styles.swipeRight);
+
+    await goToNextStep(answer); // додати лоадер або прибрати асинхронність
 
     setTimeout(() => {
       const enterClass =

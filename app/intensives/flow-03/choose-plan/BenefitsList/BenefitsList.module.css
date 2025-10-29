@@ -1,0 +1,17 @@
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefitsItem {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+
+  &::before {
+    content: "⭐️";
+    font-size: 18px;
+  }
+}

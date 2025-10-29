@@ -1,0 +1,168 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.questionWrap {
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.planList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputWrap {
+  position: relative;
+  width: 100%;
+  padding: 12px 14px 12px 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: 12px;
+  border: 1px solid #0000001a;
+  cursor: pointer;
+  transition: border var(--trans-dur) var(--trans-timing-function);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent);
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #0000004b;
+    border-radius: 50%;
+  }
+
+  .durationWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .duration {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .totalPrice {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 16px;
+    }
+  }
+
+  .priceDayWrap {
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+
+    .currency {
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .price {
+      font-size: 56px;
+      color: rgba(0, 0, 0, 0.4);
+      line-height: 1;
+    }
+
+    .priceDay {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+
+      .cents {
+        font-size: 16px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      .perDay {
+        font-size: 8px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.4);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.active {
+    border: 1px solid var(--accent);
+    background-color: #4467f127;
+
+    .price {
+      color: var(--black);
+    }
+
+    &::before {
+      content: "✓";
+      color: var(--white);
+      background-color: var(--accent);
+      border: 1px solid var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+}
+
+.benefitsWrap {
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: rgb(230, 242, 231);
+  border: 1px solid rgba(0, 187, 119, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.faqWrap {
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: rgb(255, 237, 225);
+  border: 1px solid rgba(255, 136, 51, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}

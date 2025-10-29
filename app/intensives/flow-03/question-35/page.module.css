@@ -1,0 +1,86 @@
+.container {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.questionWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.answerList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: auto;
+}
+
+.answerItem {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 calc(33% - 10px);
+}
+
+.inputWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  border: 1px solid #0000001a;
+  cursor: pointer;
+  /* transition: border var(--trans-dur) var(--trans-timing-function); */
+}
+
+.active {
+  border: 1px solid var(--accent);
+
+  &::after {
+    content: "✓";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: var(--white);
+  }
+}
+
+.imageWrap {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text {
+  font-size: 12px;
+  text-align: center;
+}
