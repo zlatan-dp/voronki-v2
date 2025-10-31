@@ -18,14 +18,22 @@ export default function question03() {
   const router = useRouter();
 
   const goToNextStep = async () => {
+    const firstAnswer = +localStorage.getItem("ChatMNDhowYouWantToLearn");
+
     await nextStep({
       step: 3,
       type: "info",
-      answer: "telegram",
+      answer: "next",
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/error-page`);
+    if (firstAnswer === 1) {
+      router.push(`/intensives/${currentFlow}/error-page`);
+    }
+
+    if (firstAnswer === 2) {
+      router.push(`/intensives/${currentFlow}/question-08`);
+    }
   };
 
   return (
@@ -41,13 +49,8 @@ export default function question03() {
               quality={100}
             />
           </div>
-          <SectionTitle>Instruction for telegram</SectionTitle>
-          <ol className={styles.instructionList}>
-            <li>Do this</li>
-            <li>Do this</li>
-            <li>Do this</li>
-            <li>Do this</li>
-          </ol>
+          <SectionTitle>Wonderful choice!</SectionTitle>
+          <p>You can always change the way you learn.</p>
         </div>
         <SubmitBtn onClick={goToNextStep}>Continue</SubmitBtn>
       </div>

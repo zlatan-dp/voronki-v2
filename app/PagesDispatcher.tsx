@@ -46,6 +46,11 @@ export default function PagesDispatcher() {
           `/intensives/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
+      case "quiz-03":
+        router.push(
+          `/intensives/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
           `/intensives/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`

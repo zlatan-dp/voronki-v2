@@ -16,7 +16,7 @@ export default function FirstPage() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
-  const goToNextStep = async (id, answer) => {
+  const goToNextStep = async (answer) => {
     await nextStep({
       step: 2,
       type: "question",
@@ -25,21 +25,7 @@ export default function FirstPage() {
       time: await getCurrentTime(),
     });
 
-    if (id === 1) {
-      router.push(`/intensives/${currentFlow}/question-03`);
-    }
-
-    if (id === 2) {
-      router.push(`/intensives/${currentFlow}/question-04`);
-    }
-
-    if (id === 3) {
-      router.push(`/intensives/${currentFlow}/question-05`);
-    }
-
-    if (id === 4) {
-      router.push(`/intensives/${currentFlow}/question-06`);
-    }
+    router.push(`/intensives/${currentFlow}/question-03`);
   };
 
   return (
@@ -48,7 +34,7 @@ export default function FirstPage() {
         <SectionTitle>What study program are you interested in?</SectionTitle>
         <ul className={styles.answerList}>
           {StudyData.map(({ id, img, text }) => (
-            <li key={id} onClick={() => goToNextStep(id, text)}>
+            <li key={id} onClick={() => goToNextStep(text)}>
               <SingleAnswerContainer img={img} text={text} />
             </li>
           ))}

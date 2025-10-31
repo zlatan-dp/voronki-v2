@@ -6,17 +6,21 @@ import BackBtn from "../backBtn/backBtn";
 
 import { usePathname, useRouter } from "next/navigation";
 
+import { useCurrentFlow } from "../../actions/getCurrentFlow";
+
 export default function Header() {
   const pathname = usePathname();
+  const currentFlow = useCurrentFlow();
   // const router = useRouter();
   // console.log(pathname);
 
   const questionPattern = /question-\w+/;
 
   const extraPages = [
-    "/intensives/flow-01/terms-of-use",
-    "/intensives/flow-01/privacy-policy",
-    "/intensives/flow-01/subscription-terms",
+    `/intensives/${currentFlow}/terms-of-use`,
+    `/intensives/${currentFlow}/privacy-policy`,
+    `/intensives/${currentFlow}/subscription-terms`,
+    `/intensives/${currentFlow}/cookie-policy`,
   ];
 
   const isQuestionPage = questionPattern.test(pathname || "");

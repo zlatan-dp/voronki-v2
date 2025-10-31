@@ -1,8 +1,8 @@
 export const StudyData = [
   {
     id: 1,
-    img: "📩",
-    text: "Telegram",
+    img: "📲",
+    text: "App",
   },
   {
     id: 2,
@@ -11,9 +11,10 @@ export const StudyData = [
   },
   {
     id: 3,
-    img: "📲",
-    text: "App",
+    img: "📩",
+    text: "Telegram",
   },
+
   {
     id: 4,
     img: "💻",
