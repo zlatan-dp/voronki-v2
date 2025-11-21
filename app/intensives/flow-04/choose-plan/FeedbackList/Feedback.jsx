@@ -39,7 +39,7 @@ export default function FeedbackList() {
                       alt="photo"
                       width={50}
                       height={50}
-                      quality={90}
+                      quality={100}
                     />
                   </div>
                   <p className={styles.fnicknameText}>{nickname}</p>

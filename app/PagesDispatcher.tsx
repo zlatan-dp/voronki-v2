@@ -51,9 +51,14 @@ export default function PagesDispatcher() {
           `/intensives/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
+      case "quiz-04":
+        router.push(
+          `/intensives/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
-          `/intensives/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/intensives/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
     }
   }, [pageEnter]);

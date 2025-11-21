@@ -9,7 +9,7 @@ export default function AppList() {
       <h3 className={styles.blockTitle}>People love the ChatMND app</h3>
       <p>
         Become a member of our global community of{" "}
-        <span className={styles.accent}>50+ million people</span>
+        <span className={styles.accent}>400k+ people</span>
       </p>
       <div className={styles.appsWrap}>
         <div className={styles.appsItem}>
