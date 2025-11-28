@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 import SectionTitle from "../sectionTitle/sectionTitle";
 import SubmitBtn from "../submitBtn/SubmitBtn";
-import QuestionWrap from "../questionWrap /questionWrap";
+import QuestionWrap from "../questionWrap/questionWrap";
 import Container from "../container/container";
 
 import { useCurrentFlow } from "../../actions/getCurrentFlow";
@@ -26,7 +26,7 @@ export default function WelcomePage({ question = "question-10" }) {
       time: await getCurrentTime(),
     });
 
-    router.push(`/intensives/${currentFlow}/${question}`);
+    router.push(`/sprints/${currentFlow}/${question}`);
   };
 
   return (
@@ -41,7 +41,7 @@ export default function WelcomePage({ question = "question-10" }) {
           Answer a few short questions and we'll build your personalized
           starting point.
         </p>
-        <SubmitBtn>Start Quiz</SubmitBtn>
+        <SubmitBtn onClick={goToNextStep}>Start Quiz</SubmitBtn>
       </QuestionWrap>
     </Container>
   );
