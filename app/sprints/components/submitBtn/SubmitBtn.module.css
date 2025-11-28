@@ -1,0 +1,21 @@
+.button {
+  position: sticky;
+  bottom: 8px;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 16px 30px;
+  border-radius: 14px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--trans-dur) var(--trans-timing-function);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    background-color: gray;
+    cursor: no-drop;
+  }
+}

@@ -1,11 +1,5 @@
 "use client";
 
-import Header from "./components/Header/Header";
-
 export default function intensivesLanding() {
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <h2>ChatMND Intencives</h2>;
 }

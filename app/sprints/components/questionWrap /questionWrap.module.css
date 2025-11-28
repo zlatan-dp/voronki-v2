@@ -1,0 +1,10 @@
+.questionWrap {
+  background-color: var(--white);
+  padding: min(12.2vw, 48px);
+  border-radius: min(6.1vw, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
