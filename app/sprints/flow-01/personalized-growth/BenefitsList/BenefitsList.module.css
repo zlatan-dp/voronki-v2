@@ -1,0 +1,42 @@
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefitsItem {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+
+  &::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-image: url("/images/sprints/done_icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+  }
+}
+
+.benefitsText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--black-light);
+}
+
+.benefitsComment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #1f2937;
+}
+
+.bold {
+  font-weight: 600;
+}

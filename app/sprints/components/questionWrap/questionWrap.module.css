@@ -1,4 +1,5 @@
 .questionWrap {
+  width: 100%;
   background-color: var(--white);
   padding: min(12.2vw, 48px);
   border-radius: min(6.1vw, 24px);
@@ -7,4 +8,5 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }

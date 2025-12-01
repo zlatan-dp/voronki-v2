@@ -1,0 +1,56 @@
+export const FeedbackData = [
+  {
+    id: 1,
+    text: "Honestly, I wasn't expecting an app to change how I think so much. I've been using ChatMND for three months. Just building a few small habits has given me a clarity I genuinely never had until now.",
+    img: "/images/intensives/choose-plan/feedback-01.png",
+    nickname: "@inn.marine",
+  },
+  {
+    id: 2,
+    text: "I get overwhelmed by information really easily, and ChatMND finally made learning feel simple again. No extra noise — just the things that actually help and make sense in real life.",
+    img: "/images/intensives/choose-plan/feedback-02.png",
+    nickname: "@andrew_m88",
+  },
+  {
+    id: 3,
+    text: "I used to open books, get excited, and then drop them halfway. ChatMND helped me finally stay consistent with personal growth. Small focused lessons made the process feel achievable for the first time.",
+    img: "/images/intensives/choose-plan/feedback-03.png",
+    nickname: "@helgascrow",
+  },
+  {
+    id: 4,
+    text: "I have no idea how they manage it, but every short lesson is a huge 'aha!' moment. The ideas are so sharp and useful that I find myself reading them twice. It’s probably the most useful learning format I’ve tried.",
+    img: "/images/intensives/choose-plan/feedback-04.png",
+    nickname: "@tomtkwr_",
+  },
+  {
+    id: 5,
+    text: "I have a demanding job, and long courses simply don’t fit my reality. For the first time, I found a format I can genuinely stay consistent with — and it’s helped me learn in a way that feels focused, structured, and surprisingly deep.",
+    img: "/images/intensives/choose-plan/feedback-05.png",
+    nickname: "@ellakn",
+  },
+  {
+    id: 6,
+    text: "The mindset intensives hit differently. I became calmer, more self-aware, and more in control of my reactions. It feels like mental training, but without the overwhelm.",
+    img: "/images/intensives/choose-plan/feedback-06.png",
+    nickname: "@taylorphoto",
+  },
+  {
+    id: 7,
+    text: "I applied one idea from ChatMND to my work week, and it helped me solve a problem I'd been procrastinating on for months. It’s crazy how such small inputs lead to big shifts.",
+    img: "/images/intensives/choose-plan/feedback-07.png",
+    nickname: "@thl.mark",
+  },
+  {
+    id: 8,
+    text: "The biggest surprise was how relevant the content is to everything I do. It hits career, relationships, mindset, health—it all feels useful. I finally feel like I'm getting better at life, period.",
+    img: "/images/intensives/choose-plan/feedback-08.png",
+    nickname: "@lialia.fj",
+  },
+  {
+    id: 9,
+    text: "ChatMND gives me simple, clear ideas that genuinely help me stay focused and motivated. I’m not trying to ‘transform myself’, but I do feel more organized and in control of my routines.",
+    img: "/images/intensives/choose-plan/feedback-10.png",
+    nickname: "@m0nclaire",
+  },
+];

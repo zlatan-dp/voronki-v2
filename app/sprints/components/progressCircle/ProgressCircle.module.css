@@ -1,0 +1,32 @@
+.circleWrap {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.svgWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.track {
+  stroke: #6366f130;
+  stroke-width: 3;
+}
+
+.progress {
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.percentText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent);
+}

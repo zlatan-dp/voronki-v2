@@ -1,0 +1,181 @@
+.planList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputWrap {
+  position: relative;
+  width: 100%;
+  padding: 24px 14px 24px 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: var(--white); */
+  border-radius: 12px;
+  border: 1px solid #0000001a;
+  cursor: pointer;
+  transition: border var(--trans-dur) var(--trans-timing-function);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent);
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #0000004b;
+    border-radius: 50%;
+  }
+
+  .durationWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .durationSave {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .duration {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .save {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px;
+      border-radius: 4px;
+      background-color: rgb(230, 233, 245);
+      color: var(--accent);
+    }
+
+    .totalPrice {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 14px;
+    }
+
+    .totalPriceLine {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 14px;
+      text-decoration: line-through;
+    }
+
+    .arrow {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 10px;
+    }
+
+    .discountPriceWrap {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+  }
+
+  .priceDayWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+
+    .currency {
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .priceDay {
+      display: flex;
+      gap: 2px;
+      align-items: flex-start;
+    }
+
+    .perDayPrice {
+      font-size: 24px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .perDay {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &.active {
+    border: 1px solid var(--accent);
+    background-color: #4467f127;
+
+    .perDayPrice,
+    .currency {
+      color: var(--black);
+    }
+
+    .save {
+      background-color: var(--accent);
+      color: var(--white);
+    }
+
+    &::before {
+      content: "✓";
+      color: var(--white);
+      background-color: var(--accent);
+      border: 1px solid var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+}
+
+.dark {
+  .inputWrap {
+    border: 1px solid #ffffff33;
+
+    .duration {
+      color: var(--white);
+    }
+
+    .save {
+      background-color: rgb(27, 58, 78);
+    }
+
+    .totalPrice,
+    .arrow,
+    .totalPriceLine,
+    .currency,
+    .perDayPrice,
+    .perDay {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    &.active {
+      border: 1px solid var(--accent);
+      background-color: #4467f127;
+
+      .perDayPrice,
+      .currency {
+        color: var(--white);
+      }
+
+      .save {
+        background-color: var(--accent);
+        color: var(--white);
+      }
+    }
+  }
+}

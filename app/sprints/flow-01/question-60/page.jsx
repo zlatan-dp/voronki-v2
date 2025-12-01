@@ -27,7 +27,7 @@ export default function question60() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/sprints/${currentFlow}/learning-experience`);
+    router.push(`/sprints/${currentFlow}/analyzyng-answers`);
   };
 
   return (
