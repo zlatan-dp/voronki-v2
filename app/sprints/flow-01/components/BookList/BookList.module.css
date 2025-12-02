@@ -5,29 +5,52 @@
   align-items: flex-start;
   justify-content: center;
   gap: 24px;
-  padding: 24px;
+  padding: 24px 0;
+}
+
+.recommendedWrap {
+  width: 100%;
+  padding: 11px 23px;
+  border-radius: 50px;
+  background: var(--green-bg);
+}
+
+.recommendedText {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #10b981;
+}
+
+.categoryWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.categoryText {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--black);
 }
 
 .bookskWrap {
   width: 100%;
-  min-height: 360px;
   padding: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.feedbackText {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 133%;
-  letter-spacing: 0.02em;
-  color: #1f2937;
-}
-
 .imgWrap {
-  /* width: min(23vw, 100px); */
+  width: 100%;
 }
 
 .titleWrap {
@@ -38,7 +61,7 @@
 
 .titleText {
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(10px, 3.4vw, 14px);
   line-height: 150%;
   letter-spacing: -0.02em;
   text-align: center;
@@ -47,7 +70,7 @@
 
 .slider {
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: min(5vw, 20px);
 }
 
 .slider :global(.swiper-pagination) {

@@ -15,7 +15,6 @@ export default function BookList() {
 
   useEffect(() => {
     const stored = localStorage.getItem("ChatMNDBookSet");
-    console.log(stored);
 
     const q40Answer = stored ? Number(stored) : null;
 
@@ -25,20 +24,19 @@ export default function BookList() {
     }
   }, []);
 
-  console.log(books);
-
   return (
     <div className={styles.booksListWrap}>
-      <div>
-        <p>Your 5-book set for </p>
-        <p>{books?.category}</p>
+      <div className={styles.recommendedWrap}>
+        <p className={styles.recommendedText}>✓ Recommended for You</p>
+      </div>
+
+      <div className={styles.categoryWrap}>
+        <p className={styles.categoryText}>Your 5-book set for </p>
+        <p className={styles.categoryText}>{books?.category}</p>
       </div>
       <Swiper
-        modules={[Pagination]}
-        // modules={[Autoplay, Pagination]}
-        slidesPerView={1.3}
-        // spaceBetween={15}
-        // centeredSlides={true}
+        modules={[Autoplay, Pagination]}
+        slidesPerView={1.5}
         pagination={{ clickable: true }}
         autoplay={{
           delay: 3500,
@@ -55,8 +53,8 @@ export default function BookList() {
                   <Image
                     src={img}
                     alt="photo"
-                    width={195}
-                    height={300}
+                    width={249}
+                    height={372}
                     quality={100}
                   />
                 </div>
