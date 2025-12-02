@@ -15,7 +15,16 @@
   }
 
   &:disabled {
-    background-color: gray;
+    background-color: #6365f176;
     cursor: no-drop;
   }
+}
+
+.whiteBtn {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.wideBtn {
+  width: 100%;
 }

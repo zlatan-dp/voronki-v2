@@ -5,7 +5,6 @@ import styles from "./Header.module.css";
 import BackBtn from "../backBtn/backBtn";
 
 import { usePathname, useRouter } from "next/navigation";
-
 import { useCurrentFlow } from "../../actions/getCurrentFlow";
 
 export default function Header() {

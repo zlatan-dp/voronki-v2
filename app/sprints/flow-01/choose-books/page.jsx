@@ -16,6 +16,7 @@ import FeedbackList from "../components/FeedbackList/Feedback";
 
 import Container from "../../components/container/container";
 import SpecialOffer from "../components/specialOffer/specialOffer";
+import BookList from "../components/BookList/BookList";
 
 export default function personalizedGrowth() {
   const currentFlow = useCurrentFlow();
@@ -40,6 +41,7 @@ export default function personalizedGrowth() {
 
   return (
     <Container>
+      <BookList />
       <BenefitsList />
       <SpecialOffer />
       <FeedbackList />
