@@ -24,7 +24,7 @@ export default function analyzyngAnswers() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/sprints/${currentFlow}/personalized-growth`);
+    router.push(`/sprints/${currentFlow}/paywall`);
   };
 
   return (

@@ -18,7 +18,8 @@
   stroke: var(--accent);
   stroke-width: 3;
   stroke-linecap: round;
-  transition: stroke-dashoffset 0.1s linear;
+  transition: none;
+  /* transition: stroke-dashoffset 0.1s linear; */
 }
 
 .percentText {

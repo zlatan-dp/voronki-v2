@@ -4,7 +4,7 @@
   --black-light: #364153;
   --gray: #e5e7eb;
   --accent: #6366f1;
-  --green-bg: #10b9811f;
+  --green-bg: color-mix(in srgb, #10b981 12%, white);
 
   --trans-dur: 300ms;
   --trans-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -22,12 +22,13 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   color: var(--black);
-  background: #fff
+  background: rgba(139, 141, 241, 0.1);
+  /* background: #fff
     linear-gradient(
       135deg,
       rgba(99, 102, 241, 0.03) 0%,
       rgba(79, 70, 229, 0.08) 100%
-    );
+    ); */
   font-family: var(--font-inter), sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;

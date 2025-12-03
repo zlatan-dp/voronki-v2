@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 import { TimerProvider } from "./actions/useTimerContext";
+import { PlanSelectionProvider } from "./actions/planSelectionContext";
 
 export const metadata = {
   title: "ChatMND",
@@ -13,11 +14,13 @@ export const metadata = {
 export default function SprintsLayout({ children }) {
   return (
     <>
-      <TimerProvider initialSeconds={30}>
-        <Header />
-        <>{children}</>
-        <Footer />
-      </TimerProvider>
+      <PlanSelectionProvider>
+        <TimerProvider initialSeconds={720}>
+          <Header />
+          <>{children}</>
+          <Footer />
+        </TimerProvider>
+      </PlanSelectionProvider>
     </>
   );
 }

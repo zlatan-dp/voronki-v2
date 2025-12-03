@@ -1,10 +1,31 @@
 import styles from "./specialOffer.module.css";
 
+import { useRouter } from "next/navigation";
+
+import { useCurrentFlow } from "../../../actions/getCurrentFlow";
+import { nextStep } from "../../../../actions/steps-client.action";
+import { getCurrentTime } from "../../../actions/getCurrentTime";
+
 import { useTimer } from "../../../actions/useTimerContext";
 import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
-export default function SpecialOffer() {
+export default function SpecialOffer({ page = "page", step = 99 }) {
   const { minutes, seconds } = useTimer();
+
+  const currentFlow = useCurrentFlow();
+  const router = useRouter();
+
+  const goToNextStep = async () => {
+    await nextStep({
+      step: step,
+      type: "info",
+      question: page,
+      answer: "Special Offer click",
+      time: await getCurrentTime(),
+    });
+
+    router.push(`/sprints/${currentFlow}/error-page`);
+  };
 
   return (
     <div className={styles.offerWrap}>
@@ -26,7 +47,7 @@ export default function SpecialOffer() {
         <p className={styles.infoText}>
           You can cancel anytime — no questions asked.
         </p>
-        <SubmitBtn color={"white"} wide={"wide"}>
+        <SubmitBtn onClick={goToNextStep} color={"white"} wide={"wide"}>
           Start your TRIAL now
         </SubmitBtn>
       </div>

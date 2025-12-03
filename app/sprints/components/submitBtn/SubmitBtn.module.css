@@ -1,6 +1,6 @@
 .button {
-  position: sticky;
-  bottom: 8px;
+  /* position: sticky; */
+  /* bottom: 8px; */
   background-color: var(--accent);
   color: var(--white);
   padding: 16px 30px;
@@ -11,7 +11,7 @@
   transition: transform var(--trans-dur) var(--trans-timing-function);
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
   }
 
   &:disabled {

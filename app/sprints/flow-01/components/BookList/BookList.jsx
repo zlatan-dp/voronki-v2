@@ -24,6 +24,8 @@ export default function BookList() {
     }
   }, []);
 
+  // console.log(books);
+
   return (
     <div className={styles.booksListWrap}>
       <div className={styles.recommendedWrap}>
@@ -34,39 +36,42 @@ export default function BookList() {
         <p className={styles.categoryText}>Your 5-book set for </p>
         <p className={styles.categoryText}>{books?.category}</p>
       </div>
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        slidesPerView={1.5}
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        className={styles.slider}
-      >
-        {books?.books.map(({ id, title, author, img }) => {
-          return (
-            <SwiperSlide key={id}>
-              <div className={styles.bookskWrap}>
-                <div className={styles.imgWrap}>
-                  <Image
-                    src={img}
-                    alt="photo"
-                    width={249}
-                    height={372}
-                    quality={100}
-                  />
+      {books && (
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={1.4}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className={styles.slider}
+        >
+          {books?.books.map(({ id, title, author, img }) => {
+            return (
+              <SwiperSlide key={id}>
+                <div className={styles.bookskWrap}>
+                  <div className={styles.imgWrap}>
+                    <Image
+                      src={img}
+                      alt="photo"
+                      width={249}
+                      height={372}
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                  <div className={styles.titleWrap}>
+                    <p className={styles.titleText}>{title}</p>
+                    <p className={styles.titleText}>{author}</p>
+                  </div>
                 </div>
-                <div className={styles.titleWrap}>
-                  <p className={styles.titleText}>{title}</p>
-                  <p className={styles.titleText}>{author}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      )}
     </div>
   );
 }

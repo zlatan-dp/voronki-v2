@@ -10,9 +10,9 @@ export default function SubmitBtn({
 }) {
   return (
     <button
-      className={`${styles.button} ${color === "white" && styles.whiteBtn} ${
-        wide === "wide" && styles.wideBtn
-      }`}
+      className={`${styles.button} ${
+        color === "white" ? styles.whiteBtn : ""
+      } ${wide === "wide" ? styles.wideBtn : ""}`}
       disabled={disabled}
       onClick={onClick}
       type={submit}
