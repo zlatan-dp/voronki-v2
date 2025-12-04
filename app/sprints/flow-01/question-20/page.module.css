@@ -1,6 +1,7 @@
 .questionText {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 150%;
+  font-weight: 600;
 }
 
 .answerList {

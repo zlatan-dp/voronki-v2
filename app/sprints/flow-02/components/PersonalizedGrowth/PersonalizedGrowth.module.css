@@ -1,0 +1,62 @@
+.text {
+  font-size: 16px;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.boldText {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.graphikWrap {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom: 1px solid var(--black-light);
+  background: linear-gradient(to top, var(--white) 50%, #6365f124 50%);
+}
+
+.onYourOwn {
+  flex: 1 1 calc(50% - 8px);
+  background-color: #6b7280;
+  padding: 12px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.withChat {
+  flex: 1 1 calc(50% - 8px);
+  background-color: var(--accent);
+  padding: 12px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  box-shadow: -11px 8px 19px 0px rgba(0, 0, 0, 0.26);
+}
+
+.blockTitle {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.graphikList {
+  padding-left: 16px;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.listText {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+}

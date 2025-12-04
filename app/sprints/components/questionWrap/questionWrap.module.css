@@ -5,8 +5,11 @@
   border-radius: min(6.1vw, 24px);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 32px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.alignCenter {
+  align-items: center;
 }
