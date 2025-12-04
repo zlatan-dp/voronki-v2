@@ -26,7 +26,7 @@ export default function FeedbackList() {
           disableOnInteraction: false,
         }}
         loop={true}
-        className={styles.slider}
+        className={styles.feedbackSlider}
       >
         {FeedbackData.map(({ id, text, img, nickname }) => {
           return (

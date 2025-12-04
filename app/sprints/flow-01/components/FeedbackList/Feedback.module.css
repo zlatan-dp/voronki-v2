@@ -41,12 +41,12 @@
   color: #1f2937;
 }
 
-.slider {
+.feedbackSlider {
   width: 100%;
   padding-bottom: 50px;
 }
 
-.slider :global(.swiper-pagination) {
+.feedbackSlider :global(.swiper-pagination) {
   width: 95%;
   position: absolute;
   transform: translateX(-50%);
@@ -58,7 +58,7 @@
   background: #f3f4f6;
 }
 
-.slider :global(.swiper-pagination-bullet) {
+.feedbackSlider :global(.swiper-pagination-bullet) {
   border-radius: 8px;
   height: 8px;
   background: transparent;
@@ -66,7 +66,7 @@
   flex: 1 1;
 }
 
-.slider :global(.swiper-pagination-bullet-active) {
+.feedbackSlider :global(.swiper-pagination-bullet-active) {
   background: var(--accent);
   width: 20px;
   height: 8px;

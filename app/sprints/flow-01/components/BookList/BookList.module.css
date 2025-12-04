@@ -68,12 +68,12 @@
   color: var(--black-light);
 }
 
-.slider {
+.booksListWrap .bookSlider {
   width: 100%;
   padding-bottom: min(5vw, 20px);
 }
 
-.slider :global(.swiper-pagination) {
+.booksListWrap .bookSlider :global(.swiper-pagination) {
   width: 95%;
   position: absolute;
   transform: translateX(-50%);
@@ -85,7 +85,7 @@
   background: #f3f4f6;
 }
 
-.slider :global(.swiper-pagination-bullet) {
+.booksListWrap .bookSlider :global(.swiper-pagination-bullet) {
   border-radius: 8px;
   height: 8px;
   background: transparent;
@@ -93,7 +93,7 @@
   flex: 1 1;
 }
 
-.slider :global(.swiper-pagination-bullet-active) {
+.booksListWrap .bookSlider :global(.swiper-pagination-bullet-active) {
   background: var(--accent);
   width: 20px;
   height: 8px;

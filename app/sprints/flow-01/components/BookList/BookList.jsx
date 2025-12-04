@@ -46,7 +46,7 @@ export default function BookList() {
             disableOnInteraction: false,
           }}
           loop={true}
-          className={styles.slider}
+          className={styles.bookSlider}
         >
           {books?.books.map(({ id, title, author, img }) => {
             return (
