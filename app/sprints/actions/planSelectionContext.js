@@ -4,8 +4,8 @@ import { createContext, useContext, useState } from "react";
 
 const PlanSelectionContext = createContext();
 
-export function PlanSelectionProvider({ children }) {
-  const [selectedPlanId, setSelectedPlanId] = useState(null);
+export function PlanSelectionProvider({ defaultPlan = 1, children }) {
+  const [selectedPlanId, setSelectedPlanId] = useState(defaultPlan);
 
   return (
     <PlanSelectionContext.Provider

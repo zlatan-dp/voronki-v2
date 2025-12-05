@@ -5,6 +5,8 @@ import { nextStep } from "../../../../actions/steps-client.action";
 import { getCurrentTime } from "../../../actions/getCurrentTime";
 import { usePlanSelection } from "../../../actions/planSelectionContext";
 
+import { useTimer } from "../../../actions/useTimerContext";
+
 import BlockWrap from "../../../components/blockWrap/blockWrap";
 import SectionTitle from "../../../components/sectionTitle/sectionTitle";
 import PlanList from "./PlanList/PlanList";
@@ -16,7 +18,12 @@ export default function ChoosePlanComponent({ page, step }) {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
+  const { timerActive } = useTimer();
+
   const { selectedPlanId, setSelectedPlanId } = usePlanSelection();
+
+  const btnActive =
+    Boolean(selectedPlanId) && !(selectedPlanId === 1 && !timerActive);
 
   const planPayload = (id) => {
     const plan = PlanData.find((p) => p.id === id);
@@ -54,11 +61,7 @@ export default function ChoosePlanComponent({ page, step }) {
         selectedId={selectedPlanId}
         onSelect={setSelectedPlanId}
       />
-      <SubmitBtn
-        disabled={!selectedPlanId}
-        onClick={handleSubmit}
-        wide={"wide"}
-      >
+      <SubmitBtn disabled={!btnActive} onClick={handleSubmit} wide={"wide"}>
         Continue
       </SubmitBtn>
     </BlockWrap>
