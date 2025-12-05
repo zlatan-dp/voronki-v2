@@ -32,7 +32,7 @@ export default function analyzyngAnswers() {
       <QuestionWrap alignItems={"center"}>
         <ProgressCircle duration={4000} onComplete={goToNextStep} />
         <p className={styles.textAnalyzing}>Analyzing your answers…</p>
-        <p className={styles.text}>Creating your micro-learning path…</p>
+        <p className={styles.text}>Shaping your growth path…</p>
       </QuestionWrap>
     </Container>
   );

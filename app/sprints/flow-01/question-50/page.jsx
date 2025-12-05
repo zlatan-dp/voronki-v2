@@ -22,7 +22,7 @@ export default function question50() {
     await nextStep({
       step: 50,
       type: "question",
-      question: "When does self-development feel most doable for you?",
+      question: "Personal growth feels more achievable to me when…",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -33,7 +33,7 @@ export default function question50() {
   return (
     <Container>
       <ProgressBar
-        from={66}
+        from={67}
         to={83}
         duration={500}
         currentStep={5}
@@ -41,7 +41,7 @@ export default function question50() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          When does self-development feel most doable for you?
+          Personal growth feels more achievable to me when…
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (

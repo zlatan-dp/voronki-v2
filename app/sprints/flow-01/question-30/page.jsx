@@ -22,7 +22,7 @@ export default function question30() {
     await nextStep({
       step: 30,
       type: "question",
-      question: "Which statement feels closest to you right now?",
+      question: "Which description feels most true for you right now?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -33,7 +33,7 @@ export default function question30() {
   return (
     <Container>
       <ProgressBar
-        from={32}
+        from={33}
         to={50}
         duration={500}
         currentStep={3}
@@ -41,7 +41,7 @@ export default function question30() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Which statement feels closest to you right now?
+          Which description feels most true for you right now?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (

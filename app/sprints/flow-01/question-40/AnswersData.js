@@ -1,11 +1,11 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "Focus & mental clarity",
+    text: "Focus & clarity",
   },
   {
     id: 2,
-    text: "Confidence & inner balance",
+    text: "Confidence & balance",
   },
   {
     id: 3,
@@ -13,7 +13,7 @@ export const AnswersData = [
   },
   {
     id: 4,
-    text: "Emotional stability & calm",
+    text: "Emotional calm",
   },
   {
     id: 5,

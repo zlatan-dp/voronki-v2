@@ -1,18 +1,18 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "Learning something practical",
+    text: "Practical learning",
   },
   {
     id: 2,
-    text: "Building a positive habit",
+    text: "Building a habit",
   },
   {
     id: 3,
-    text: "Improving mental clarity",
+    text: "Clear my mind",
   },
   {
     id: 4,
-    text: "Deepening self-awareness",
+    text: "Deepen self-awareness",
   },
 ];

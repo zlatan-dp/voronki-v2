@@ -24,7 +24,7 @@ export default function question40() {
     await nextStep({
       step: 40,
       type: "question",
-      question: "Which area would you love to strengthen right now?",
+      question: "Which area do you want to strengthen at this moment?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -36,14 +36,14 @@ export default function question40() {
     <Container>
       <ProgressBar
         from={50}
-        to={66}
+        to={67}
         duration={500}
         currentStep={4}
         totalSteps={6}
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Which area would you love to strengthen right now?
+          Which area do you want to strengthen at this moment?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (

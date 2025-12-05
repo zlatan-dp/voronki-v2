@@ -34,12 +34,11 @@ export default function WelcomePage({ question = "question-10" }) {
       <QuestionWrap>
         <SectionTitle>Welcome to ChatMND</SectionTitle>
         <p className={styles.welcomeText}>
-          We create 5–7 day sprints (7 minutes/day) designed to help you grow
-          without stress or overwhelm.
+          Our 5–7 day courses take just 7 minutes a day and are designed to help
+          you reduce stress at your pace
         </p>
         <p className={styles.welcomeText}>
-          Answer a few short questions and we'll build your personalized
-          starting point.
+          Answer a few brief questions to receive a personalized set of courses
         </p>
         <SubmitBtn onClick={goToNextStep}>Start Quiz</SubmitBtn>
       </QuestionWrap>

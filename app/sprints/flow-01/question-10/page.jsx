@@ -22,7 +22,8 @@ export default function question10() {
     await nextStep({
       step: 10,
       type: "question",
-      question: "What would you love to feel more of in your everyday life?",
+      question:
+        "What would you like to experience more of in your day-to-day life?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -34,14 +35,14 @@ export default function question10() {
     <Container>
       <ProgressBar
         from={0}
-        to={16}
+        to={17}
         duration={500}
         currentStep={1}
         totalSteps={6}
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          What would you love to feel more of in your everyday life?
+          What would you like to experience more of in your day-to-day life?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (

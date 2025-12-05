@@ -46,10 +46,16 @@ export default function PersonalizedGrowth() {
         </div>
       </div>
       <p className={styles.text}>
-        We have selected <span className={styles.bold}>5 books</span> that are{" "}
-        <span className={styles.bold}>most recommended</span> for you based on
-        your responses. You can read them on your own or absorb the material
-        much more effectively with ChatMind App
+        We’ve selected <span className={styles.bold}>five books</span> that
+        match your responses.
+      </p>
+      <p className={styles.text}>
+        Reading full books can be long, tedious, and easy to give up. With
+        ChatMind app, all the{" "}
+        <span className={styles.bold}>
+          key insights are distilled into daily 7-minute micro-courses
+        </span>{" "}
+        – simple, practical, and easy to stick with.
       </p>
       <ChoosePlanComponent page={"choose plan from paywall"} step={80} />
       <p className={styles.actionText}>

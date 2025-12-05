@@ -1,18 +1,18 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "When it fits naturally into my day",
+    text: "It fits my routine",
   },
   {
     id: 2,
-    text: "When it takes little time and brings results",
+    text: "it’s quick and effective",
   },
   {
     id: 3,
-    text: "When I don't have to reorganize my life",
+    text: "it doesn’t require big changes",
   },
   {
     id: 4,
-    text: "When I see progress quickly",
+    text: "I see progress early",
   },
 ];

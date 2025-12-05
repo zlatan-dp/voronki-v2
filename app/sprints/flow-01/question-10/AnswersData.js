@@ -1,18 +1,18 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "Calm",
+    text: "More calm",
   },
   {
     id: 2,
-    text: "Focus",
+    text: "Better focus",
   },
   {
     id: 3,
-    text: "Confidence",
+    text: "Greater confidence",
   },
   {
     id: 4,
-    text: "A sense of progress",
+    text: "A steady sense of progress",
   },
 ];

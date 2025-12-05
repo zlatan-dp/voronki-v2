@@ -1,18 +1,18 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "A clear step-by-step plan",
+    text: "a step-by-step plan",
   },
   {
     id: 2,
-    text: "Gentle daily prompts",
+    text: "gentle daily nudges",
   },
   {
     id: 3,
-    text: "Practical insights from great books",
+    text: "practical insights from books",
   },
   {
     id: 4,
-    text: "A mix of everything — but simple",
+    text: "a simple mix of all three",
   },
 ];

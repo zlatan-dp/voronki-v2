@@ -23,7 +23,7 @@ export default function question20() {
       step: 20,
       type: "question",
       question:
-        "If you had just 7 extra minutes a day, how would you ideally use them?",
+        "If you had just 7 extra minutes a day, how would you want to spend them?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -34,15 +34,16 @@ export default function question20() {
   return (
     <Container>
       <ProgressBar
-        from={16}
-        to={32}
+        from={17}
+        to={33}
         duration={500}
         currentStep={2}
         totalSteps={6}
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          If you had just 7 extra minutes a day, how would you ideally use them?
+          If you had just 7 extra minutes a day, how would you want to spend
+          them?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (
