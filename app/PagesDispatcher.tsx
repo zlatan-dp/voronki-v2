@@ -56,9 +56,14 @@ export default function PagesDispatcher() {
           `/intensives/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
+      case "selfgrowth":
+        router.push(
+          `/sprints/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
-          `/intensives/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
     }
   }, [pageEnter]);
