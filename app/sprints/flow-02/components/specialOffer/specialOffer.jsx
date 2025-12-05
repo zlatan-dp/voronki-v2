@@ -36,10 +36,12 @@ export default function SpecialOffer({ page = "page", step = 99 }) {
         </p>
       </div>
       <div className={styles.contentWrap}>
+        <h3 className={styles.title}>Try your personalized 7-day Sprint</h3>
+
         <p className={styles.dollarText}>$1</p>
         <p className={styles.infoText}>
-          Get immediate access to any sprint: 7-day program, daily actions, real
-          results.
+          Get simple daily guidance, a clear plan, and small actions that help
+          you feel more focused and grounded.
         </p>
         <p className={styles.infoText}>
           After 7 days, your subscription renews at $9.98/month.

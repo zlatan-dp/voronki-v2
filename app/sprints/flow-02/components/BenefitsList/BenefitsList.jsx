@@ -16,9 +16,12 @@ export default function BenefitsList() {
         ))}
       </ul>
       <p className={styles.benefitsComment}>
-        In ~ 1 month, <span className={styles.bold}>5 sprints </span>= the
-        practical equivalent of 5 books — but with{" "}
-        <span className={styles.bold}>real habits,</span> not just information.
+        In ~ 1 month, <span className={styles.bold}>5 sprints </span>guide you
+        from knowing the steps to{" "}
+        <span className={styles.bold}>
+          building a routine that feels manageable every day.
+        </span>
+        .
       </p>
     </BlockWrap>
   );

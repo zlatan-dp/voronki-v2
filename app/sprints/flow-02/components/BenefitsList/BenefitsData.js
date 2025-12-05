@@ -5,19 +5,19 @@ export const BenefitsData = [
   },
   {
     id: 2,
-    text: "daily actionable tasks",
+    text: "A clear step-by-step plan you can follow",
   },
   {
     id: 3,
-    text: "7 minu tes/day",
+    text: "7 minutes/day",
   },
   {
     id: 4,
-    text: "Messenger-friendly format",
+    text: "Daily guidance that helps you stay centered",
   },
   {
     id: 5,
-    text: "No fluff, no overwhelm",
+    text: "Light, simple actions you can actually do",
   },
   {
     id: 6,
@@ -25,6 +25,6 @@ export const BenefitsData = [
   },
   {
     id: 7,
-    text: "Real progress without reshaping your schedule",
+    text: "A routine you don’t have to “push through”",
   },
 ];

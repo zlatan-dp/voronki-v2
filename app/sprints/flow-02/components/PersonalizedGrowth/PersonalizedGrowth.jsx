@@ -3,6 +3,9 @@ import SectionTitle from "../../../components/sectionTitle/sectionTitle";
 import styles from "./PersonalizedGrowth.module.css";
 
 import { useRouter } from "next/navigation";
+import { useTimer } from "../../../actions/useTimerContext";
+
+import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
 import { useCurrentFlow } from "../../../actions/getCurrentFlow";
 import { nextStep } from "../../../../actions/steps-client.action";
@@ -11,6 +14,8 @@ import { getCurrentTime } from "../../../actions/getCurrentTime";
 export default function PersonalizedGrowth() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
+
+  const { minutes, seconds, timerActive } = useTimer();
 
   const goToNextStep = async () => {
     await nextStep({
@@ -57,6 +62,25 @@ export default function PersonalizedGrowth() {
         You don’t need to push harder — just let this support meet you where you
         are.
       </p>
+      {timerActive && (
+        <div className={styles.offerWrap}>
+          <div className={styles.contentWrap}>
+            <p className={styles.infoText}>7 min/day</p>
+            <p className={styles.infoText}>1 month</p>
+            <p className={styles.infoText}>$10</p>
+            <SubmitBtn onClick={goToNextStep} color={"white"} wide={"wide"}>
+              <span className={styles.btnSmallText}>Start your </span>
+              <br /> <span className={styles.btnBigText}>1$ TRIAL</span>
+            </SubmitBtn>
+          </div>
+          <div className={styles.timerWrap}>
+            <p className={styles.headerText}>
+              {String(minutes).padStart(2, "0")}:
+              {String(seconds).padStart(2, "0")}
+            </p>
+          </div>
+        </div>
+      )}
     </BlockWrap>
   );
 }
