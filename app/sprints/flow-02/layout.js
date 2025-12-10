@@ -4,7 +4,7 @@ import { TimerProvider } from "../actions/useTimerContext";
 export default function Flow02Layout({ children }) {
   return (
     // <PlanSelectionProvider>
-    <TimerProvider initialSeconds={720}>{children}</TimerProvider>
+    <TimerProvider initialSeconds={600}>{children}</TimerProvider>
     // </PlanSelectionProvider>
   );
 }

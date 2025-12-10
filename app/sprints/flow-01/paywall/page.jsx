@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+
 import { useTimer } from "../../actions/useTimerContext";
 
 import BenefitsList from "../components/BenefitsList/BenefitsList";
@@ -13,6 +15,11 @@ import PersonalizedGrowth from "../components/PersonalizedGrowth/PersonalizedGro
 
 export default function Paywall() {
   const { timerActive } = useTimer();
+  const { startTimer } = useTimer();
+
+  useEffect(() => {
+    startTimer();
+  }, []);
 
   return (
     <Container>

@@ -9,7 +9,16 @@ import Container from "../../components/container/container";
 import SpecialOffer from "../components/specialOffer/specialOffer";
 import PersonalizedGrowth from "../components/PersonalizedGrowth/PersonalizedGrowth";
 
+import { useTimer } from "../../actions/useTimerContext";
+import { useEffect } from "react";
+
 export default function Paywall() {
+  const { startTimer } = useTimer();
+
+  useEffect(() => {
+    startTimer();
+  }, []);
+
   return (
     <Container>
       <PersonalizedGrowth />
