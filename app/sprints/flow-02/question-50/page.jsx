@@ -22,7 +22,7 @@ export default function question50() {
     await nextStep({
       step: 50,
       type: "question",
-      question: "So you feel mentally foggy or spaces out?",
+      question: "Do you feel mentally foggy or spaced out?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -41,7 +41,7 @@ export default function question50() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          So you feel mentally foggy or spaces out?
+          Do you feel mentally foggy or spaced out?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (

@@ -22,7 +22,8 @@ export default function question20() {
     await nextStep({
       step: 20,
       type: "question",
-      question: "Do you find it hard to relax even when you have time?",
+      question:
+        "Do you have daily habits that help you stay emotionally balanced?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -41,7 +42,7 @@ export default function question20() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Do you find it hard to relax even when you have time?
+          Do you have daily habits that help you stay emotionally balanced?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (

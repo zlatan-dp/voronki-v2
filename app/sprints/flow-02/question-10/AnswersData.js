@@ -1,22 +1,18 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "I can’t fall asleep easily",
+    text: "25 - 34",
   },
   {
     id: 2,
-    text: "I wake up during the night",
+    text: "35 - 44",
   },
   {
     id: 3,
-    text: "I get enough sleep, but still feel tired",
+    text: "45 - 54",
   },
   {
     id: 4,
-    text: "My sleep schedule is irregular",
-  },
-  {
-    id: 5,
-    text: "My sleep is good, but I have other concerns",
+    text: "55+",
   },
 ];

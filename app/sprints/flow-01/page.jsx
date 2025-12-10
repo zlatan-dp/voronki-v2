@@ -1,6 +1,4 @@
-"use client";
-
-import WelcomePage from "../components/WelcomePage/WelcomePage";
+import WelcomePage from "./components/WelcomePage/WelcomePage";
 
 export default function sprintsLanding() {
   return <WelcomePage />;

@@ -1,15 +1,15 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "Spending quality time with family",
+    text: "Family time",
   },
   {
     id: 2,
-    text: "Engaging in hobbies or interests",
+    text: "Hobbies & interests",
   },
   {
     id: 3,
-    text: "Exercising or being active",
+    text: "Exercises & moving",
   },
   {
     id: 4,
@@ -17,6 +17,6 @@ export const AnswersData = [
   },
   {
     id: 5,
-    text: "Enjoying quiet moments alone",
+    text: "Quiet alone time",
   },
 ];

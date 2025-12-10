@@ -36,7 +36,7 @@ export default function Header() {
           align === "center" ? styles.center : styles.left
         }`}
       >
-        <p className={styles.logoText}>ChatMND</p>
+        <p className={styles.logoText}>ChatMind</p>
         {showBack && <BackBtn />}
       </div>
     </header>

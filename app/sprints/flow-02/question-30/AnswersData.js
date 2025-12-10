@@ -1,18 +1,18 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "Often – things pile up faster than I expect",
+    text: "Often overwhelmed",
   },
   {
     id: 2,
-    text: "Sometimes – I keep up, but it takes effort",
+    text: "Sometimes effort",
   },
   {
     id: 3,
-    text: "Occasionally – depends on the day",
+    text: "Occasionally varies",
   },
   {
     id: 4,
-    text: "Rarely - I usually stay on top of things",
+    text: "Rarely struggling",
   },
 ];

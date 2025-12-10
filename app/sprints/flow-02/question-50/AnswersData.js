@@ -5,7 +5,7 @@ export const AnswersData = [
   },
   {
     id: 2,
-    text: "A few times a week",
+    text: "A few times per week",
   },
   {
     id: 3,

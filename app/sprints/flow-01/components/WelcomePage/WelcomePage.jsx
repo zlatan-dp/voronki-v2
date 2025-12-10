@@ -4,14 +4,14 @@ import styles from "./WelcomePage.module.css";
 
 import { useRouter } from "next/navigation";
 
-import SectionTitle from "../sectionTitle/sectionTitle";
-import SubmitBtn from "../submitBtn/SubmitBtn";
-import QuestionWrap from "../questionWrap/questionWrap";
-import Container from "../container/container";
+import SectionTitle from "../../../components/sectionTitle/sectionTitle";
+import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
+import QuestionWrap from "../../../components/questionWrap/questionWrap";
+import Container from "../../../components/container/container";
 
-import { useCurrentFlow } from "../../actions/getCurrentFlow";
-import { nextStep } from "../../../actions/steps-client.action";
-import { getCurrentTime } from "../../actions/getCurrentTime";
+import { useCurrentFlow } from "../../../actions/getCurrentFlow";
+import { nextStep } from "../../../../actions/steps-client.action";
+import { getCurrentTime } from "../../../actions/getCurrentTime";
 
 export default function WelcomePage({ question = "question-10" }) {
   const currentFlow = useCurrentFlow();
@@ -31,8 +31,8 @@ export default function WelcomePage({ question = "question-10" }) {
 
   return (
     <Container>
-      <QuestionWrap>
-        <SectionTitle>Welcome to ChatMND</SectionTitle>
+      <QuestionWrap alignItems={"center"}>
+        <SectionTitle>Welcome to ChatMind</SectionTitle>
         <p className={styles.welcomeText}>
           Our 5–7 day courses take just 7 minutes a day and are designed to help
           you reduce stress at your pace

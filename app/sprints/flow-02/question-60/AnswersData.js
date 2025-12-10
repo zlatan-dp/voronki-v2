@@ -1,18 +1,18 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "Definitely – a clear plan would really support me",
+    text: "Definitely – would really help",
   },
   {
     id: 2,
-    text: "Mostly – having some direction would keep me on track",
+    text: "Mostly – keeps me on track",
   },
   {
     id: 3,
-    text: "Somewhat – small daily guidance would make things easier",
+    text: "Somewhat – small guidance helps",
   },
   {
     id: 4,
-    text: "I’m okay on my own – this works for me right now",
+    text: "Fine – I manage myself",
   },
 ];

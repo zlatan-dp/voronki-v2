@@ -36,7 +36,10 @@ export default function SpecialOffer({ page = "page", step = 99 }) {
         </p>
       </div>
       <div className={styles.contentWrap}>
-        <h3 className={styles.title}>Try your personalized 7-day Sprint</h3>
+        <h3 className={styles.title}>
+          Your personalized <br />
+          3-day Trial
+        </h3>
 
         <p className={styles.dollarText}>$1</p>
         <p className={styles.infoText}>
@@ -44,7 +47,7 @@ export default function SpecialOffer({ page = "page", step = 99 }) {
           you feel more focused and grounded.
         </p>
         <p className={styles.infoText}>
-          After 7 days, your subscription renews at $9.98/month.
+          After 3 days, your subscription renews at $9.97/month.
         </p>
         <p className={styles.infoText}>
           You can cancel anytime — no questions asked.

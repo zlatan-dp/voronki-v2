@@ -9,7 +9,7 @@ export const BenefitsData = [
   },
   {
     id: 3,
-    text: "7 minutes/day",
+    text: "10 minutes/day",
   },
   {
     id: 4,

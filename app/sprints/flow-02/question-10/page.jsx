@@ -22,7 +22,7 @@ export default function question10() {
     await nextStep({
       step: 10,
       type: "question",
-      question: "How’s your sleep lately?",
+      question: "How old are you?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -40,7 +40,7 @@ export default function question10() {
         totalSteps={6}
       />
       <QuestionWrap>
-        <p className={styles.questionText}>How’s your sleep lately?</p>
+        <p className={styles.questionText}>How old are you?</p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (
             <li key={id} onClick={() => goToNextStep(text)}>

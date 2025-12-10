@@ -24,7 +24,7 @@ export default function question40() {
     await nextStep({
       step: 40,
       type: "question",
-      question: "What activities energize you the most?",
+      question: "What energizes you most?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -42,9 +42,7 @@ export default function question40() {
         totalSteps={6}
       />
       <QuestionWrap>
-        <p className={styles.questionText}>
-          What activities energize you the most?
-        </p>
+        <p className={styles.questionText}>What energizes you most?</p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (
             <li key={id} onClick={() => goToNextStep(id, text)}>

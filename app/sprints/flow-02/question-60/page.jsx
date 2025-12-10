@@ -22,8 +22,7 @@ export default function question60() {
     await nextStep({
       step: 60,
       type: "question",
-      question:
-        "Would simple step-by-step plan make your daily progress feel easier right now?",
+      question: "Would a simple step-by-step plan make daily progress easier?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -42,8 +41,7 @@ export default function question60() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Would simple step-by-step plan make your daily progress feel easier
-          right now?
+          Would a simple step-by-step plan make daily progress easier?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text }) => (
