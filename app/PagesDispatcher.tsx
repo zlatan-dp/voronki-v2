@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { nextStep } from "@/app/actions/steps-client.action";
 import { StepType } from "@/app/actions/actions.types";
-import { getCurrentTime } from "@/app/actions/steps.action";
+import { getCurrentTime } from "@/app/utils/getCurrentTime";
 import { useState, useEffect } from "react";
 
 export default function PagesDispatcher() {

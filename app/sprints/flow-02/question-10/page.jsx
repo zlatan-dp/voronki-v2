@@ -20,7 +20,7 @@ export default function question10() {
 
   const goToNextStep = async (answer) => {
     await nextStep({
-      step: 10,
+      step: 2,
       type: "question",
       question: "How old are you?",
       answer: answer || "next",

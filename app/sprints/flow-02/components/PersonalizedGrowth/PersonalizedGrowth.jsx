@@ -19,7 +19,7 @@ export default function PersonalizedGrowth() {
 
   const goToNextStep = async () => {
     await nextStep({
-      step: 80,
+      step: 9,
       type: "info",
       question: "Your personal plan is ready",
       answer: "Start your 3-day $1 TRIAL",

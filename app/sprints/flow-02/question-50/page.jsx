@@ -20,7 +20,7 @@ export default function question50() {
 
   const goToNextStep = async (answer) => {
     await nextStep({
-      step: 50,
+      step: 6,
       type: "question",
       question: "Do you feel mentally foggy or spaced out?",
       answer: answer || "next",

@@ -22,7 +22,7 @@ export default function question40() {
     localStorage.setItem("ChatMindBookSet", id);
 
     await nextStep({
-      step: 40,
+      step: 5,
       type: "question",
       question: "What energizes you most?",
       answer: answer || "next",

@@ -18,7 +18,7 @@ export default function analyzyngAnswers() {
 
   const goToNextStep = async () => {
     await nextStep({
-      step: 70,
+      step: 8,
       type: "info",
       answer: "Analyzyng Answers",
       time: await getCurrentTime(),

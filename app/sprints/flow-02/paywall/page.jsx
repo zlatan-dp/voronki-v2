@@ -23,10 +23,10 @@ export default function Paywall() {
     <Container>
       <PersonalizedGrowth />
       <BenefitsList />
-      <SpecialOffer page={"from paywall"} step={80} />
+      <SpecialOffer page={"from paywall"} step={9} />
       <FeedbackList />
       <FaqList />
-      <SpecialOffer page={"from paywall"} step={80} />
+      <SpecialOffer page={"from paywall"} step={9} />
     </Container>
   );
 }

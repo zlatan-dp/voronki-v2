@@ -20,7 +20,7 @@ export default function question30() {
 
   const goToNextStep = async (answer) => {
     await nextStep({
-      step: 30,
+      step: 4,
       type: "question",
       question:
         "How difficult is it for you to stay on top of your daily tasks?",

@@ -18,7 +18,7 @@ export default function WelcomePage({ question = "question-10" }) {
 
   const goToNextStep = async () => {
     await nextStep({
-      step: 0,
+      step: 1,
       type: "info",
       question: "WelcomePage",
       answer: "start quiz",
@@ -36,10 +36,6 @@ export default function WelcomePage({ question = "question-10" }) {
           <span className={styles.accented}>life loses its spark</span>. And
           you’re ready to get it back
         </h2>
-        <p className={styles.welcomeText}>
-          Find out how to get back to a vibrant, meaningful life and try daily
-          exercises tailored for those who want to find joy in every day.
-        </p>
         <p className={styles.welcomeText}>
           Explore how to reconnect with a more vibrant, meaningful life – and
           try simple daily practices designed for people who want to bring back
