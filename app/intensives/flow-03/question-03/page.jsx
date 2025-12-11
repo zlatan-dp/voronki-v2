@@ -18,7 +18,7 @@ export default function question03() {
   const router = useRouter();
 
   const goToNextStep = async () => {
-    const firstAnswer = +localStorage.getItem("ChatMNDhowYouWantToLearn");
+    const firstAnswer = +localStorage.getItem("ChatMindhowYouWantToLearn");
 
     await nextStep({
       step: 3,

@@ -39,7 +39,7 @@ export default function question09() {
             <span className={styles.accent}>50+ million people</span>
           </SectionTitle>
           <p className="centeredText">
-            are already discovering a smarter way to learn. ChatMND turns
+            are already discovering a smarter way to learn. ChatMind turns
             micro-moments into growth moments — simple, structured, and
             science-backed.
           </p>

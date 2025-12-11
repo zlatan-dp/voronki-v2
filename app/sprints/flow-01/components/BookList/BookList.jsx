@@ -14,7 +14,7 @@ export default function BookList() {
   const [books, setBooks] = useState(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem("ChatMNDBookSet");
+    const stored = localStorage.getItem("ChatMindBookSet");
 
     const q40Answer = stored ? Number(stored) : null;
 

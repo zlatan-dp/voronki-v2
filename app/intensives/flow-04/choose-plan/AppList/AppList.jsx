@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function AppList() {
   return (
     <div className={styles.appWrap}>
-      <h3 className={styles.blockTitle}>People love the ChatMND app</h3>
+      <h3 className={styles.blockTitle}>People love the ChatMind app</h3>
       <p>
         Become a member of our global community of{" "}
         <span className={styles.accent}>400k+ people</span>

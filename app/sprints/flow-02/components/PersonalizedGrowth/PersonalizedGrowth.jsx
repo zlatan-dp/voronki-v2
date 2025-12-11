@@ -47,7 +47,7 @@ export default function PersonalizedGrowth() {
           </ul>
         </div>
         <div className={styles.withChat}>
-          <p className={styles.blockTitle}>With ChatMND</p>
+          <p className={styles.blockTitle}>With ChatMind</p>
           <ul className={styles.graphikList}>
             <li className={styles.listText}>clear</li>
             <li className={styles.listText}>simple</li>

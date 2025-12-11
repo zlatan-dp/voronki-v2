@@ -7,13 +7,13 @@ export default function CookiePolicy() {
   const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
-    const accepted = document.cookie.includes("chatMNDsprintCookies=true");
-    const rejected = document.cookie.includes("chatMNDsprintCookies=false");
+    const accepted = document.cookie.includes("ChatMindsprintCookies=true");
+    const rejected = document.cookie.includes("ChatMindsprintCookies=false");
     if (accepted || rejected) setShowPopup(false);
   }, []);
 
   const handleAcceptCookie = () => {
-    document.cookie = "chatMNDsprintCookies=true; path=/; max-age=31536000";
+    document.cookie = "ChatMindsprintCookies=true; path=/; max-age=31536000";
     setShowPopup(false);
   };
 
@@ -22,7 +22,7 @@ export default function CookiePolicy() {
       const name = cookie.split("=")[0].trim();
       document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
     });
-    document.cookie = "chatMNDsprintCookies=false; path=/; max-age=31536000";
+    document.cookie = "ChatMindsprintCookies=false; path=/; max-age=31536000";
     setShowPopup(false);
   };
 
@@ -32,7 +32,7 @@ export default function CookiePolicy() {
         <h3>Cookie Policy</h3>
         <p>
           This Cookie Policy (the “Policy”) explains what cookies are, what
-          types of cookies are placed on your device when you visit ChatMND and
+          types of cookies are placed on your device when you visit ChatMind and
           how we use them. This policy also governs our use of similar
           technologies, including web beacons.
         </p>
@@ -49,12 +49,12 @@ export default function CookiePolicy() {
           originated, the “lifetime” of the cookie and a randomly generated
           unique number or similar identifier. A cookie also may contain
           information about your device, such as user settings, browsing history
-          and activities conducted while using ChatMND.
+          and activities conducted while using ChatMind.
         </p>
         <h4>There are different types of cookies:</h4>
         <p className={styles.bold}>Session cookies</p>
         <p>
-          Session cookies expire at the end of your browser session. ChatMND
+          Session cookies expire at the end of your browser session. ChatMind
           uses these cookies to help you use our website more efficiently, by
           allowing us to learn more about how you use our website during one
           single browser session.
@@ -88,7 +88,7 @@ export default function CookiePolicy() {
         <p>
           Google Analytics is a Google service that uses cookies and other data
           collection technologies to collect information about your use of
-          ChatMND in order to report website trends. You can opt out of Google
+          ChatMind in order to report website trends. You can opt out of Google
           Analytics by visiting www.google.com/settings/ads or by downloading
           the Google Analytics opt-out browser add-on at
           https://tools.google.com/dlpage/gaoptout.
@@ -110,9 +110,9 @@ export default function CookiePolicy() {
         </p>
         <p>
           We do not permit any of the above service providers to collect any of
-          your personal data on ChatMND to utilize for their own purposes. These
-          service providers are subject to confidentiality agreements with us
-          and/or other legal restrictions on their use or collection of any
+          your personal data on ChatMind to utilize for their own purposes.
+          These service providers are subject to confidentiality agreements with
+          us and/or other legal restrictions on their use or collection of any
           personal information. Third-party cookies are covered by the
           third-parties’ privacy policies. Therefore, should you have any
           questions regarding use of the cookies by third parties, please
@@ -130,7 +130,7 @@ export default function CookiePolicy() {
         <p>
           Web beacons are graphic images (also known as “pixel tags”) that
           contain a unique identifier enabling us to recognize when someone has
-          visited ChatMND or opened an e-mail that we or our service provider
+          visited ChatMind or opened an e-mail that we or our service provider
           have sent them.
         </p>
         <p className={styles.bold}>Software development kits (SDKs)</p>
@@ -147,7 +147,7 @@ export default function CookiePolicy() {
         </p>
         <p className={styles.bold}>Why do we need cookies?</p>
         <p>
-          When you visit or interact with ChatMND, we or our service providers
+          When you visit or interact with ChatMind, we or our service providers
           may use cookies, web beacons, and other similar technologies in order
           to learn more about your interactions with our Service. The
           utilization of these technologies can help us provide you with a
@@ -156,7 +156,7 @@ export default function CookiePolicy() {
         <h4>How we use cookies</h4>
         <p>
           Cookies play an important role in helping us provide a personal,
-          effective and safe environment on ChatMND.
+          effective and safe environment on ChatMind.
         </p>
         <p>
           As we make improvements to our website, our use of cookies may vary.
@@ -171,11 +171,11 @@ export default function CookiePolicy() {
           <li>
             Security - we use cookies to enable and support our security
             features, and to help us detect malicious activity, monitor for and
-            detect potentially harmful or illegal use of ChatMND.
+            detect potentially harmful or illegal use of ChatMind.
           </li>
           <li>
             Analytics and Research - these cookies help us understand how
-            ChatMND is being used and to help us customize, improve, and
+            ChatMind is being used and to help us customize, improve, and
             research our features and services.
           </li>
           <li>

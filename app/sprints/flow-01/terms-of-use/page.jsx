@@ -9,8 +9,8 @@ export default function TermsOfUse() {
           Please review carefully these Terms and Conditions of Use (“Terms”)
           before using the services offered by KIVI SMART PURCHISING Kft (reg.
           No. 01-09-345540) with registered office at Aradi u. 8, 1062,
-          Budapest, Hungary (also “ChatMND”, “we”, “us”). These Terms constitute
-          a legally binding agreement between ChatMND and you, which regulates
+          Budapest, Hungary (also “ChatMind”, “we”, “us”). These Terms constitute
+          a legally binding agreement between ChatMind and you, which regulates
           your use of the website located at{" "}
           <a
             href="https://promo.mndchat.com/"
@@ -43,7 +43,7 @@ export default function TermsOfUse() {
         <p>
           IMPORTANT NOTICE REGARDING ARBITRATION FOR U.S. CUSTOMERS: WHEN YOU
           AGREE TO THESE TERMS YOU ARE AGREEING (WITH LIMITED EXCEPTION) TO
-          RESOLVE ANY DISPUTE BETWEEN YOU AND CHATMND THROUGH BINDING,
+          RESOLVE ANY DISPUTE BETWEEN YOU AND ChatMind THROUGH BINDING,
           INDIVIDUAL ARBITRATION RATHER THAN IN COURT. PLEASE REVIEW CAREFULLY
           SECTION 13 “MANDATORY BINDING ARBITRATION AND CLASS ACTION WAIVER”
           BELOW FOR DETAILS REGARDING ARBITRATION.
@@ -56,7 +56,7 @@ export default function TermsOfUse() {
         <h4>1. General Terms</h4>
         <p>
           1.1 These Terms establish a legally binding contractual relationship
-          between you and ChatMND. For this reason, PLEASE READ THE TERMS
+          between you and ChatMind. For this reason, PLEASE READ THE TERMS
           CAREFULLY BEFORE USING THE SERVICES.
         </p>
         <p>
@@ -116,7 +116,7 @@ export default function TermsOfUse() {
           information about yourself as prompted by the registration form.
         </p>
         <p>
-          3.2 If you register Profile, you represent and warrant to ChatMND
+          3.2 If you register Profile, you represent and warrant to ChatMind
           that: (i) all required registration information you submit is truthful
           and accurate; (ii) you will maintain the accuracy of such information;
           and (iii) your use of the Services does not violate any applicable law
@@ -126,7 +126,7 @@ export default function TermsOfUse() {
         </p>
         <p>
           3.3 The Services is not intended to be used by individuals under age
-          of 16. You hereby represent and warrant to ChatMND that you meet the
+          of 16. You hereby represent and warrant to ChatMind that you meet the
           foregoing qualification. All users who are minors in the jurisdiction
           in which they reside (generally under the age of 18) must have the
           permission of, and be directly supervised by, their parent or guardian
@@ -144,12 +144,12 @@ export default function TermsOfUse() {
           Profile login information and are fully responsible for all activities
           that occur under your Profile. You agree to immediately notify us of
           any unauthorized use, or suspected unauthorized use of your Profile or
-          any other breach of security. ChatMND cannot and will not be liable
+          any other breach of security. ChatMind cannot and will not be liable
           for any loss or damage arising from your failure to comply with the
           above requirements.
         </p>
         <p>
-          3.6 By using the Services, you agree to receive from ChatMND certain
+          3.6 By using the Services, you agree to receive from ChatMind certain
           communications, such as updates on the Services, a periodic e-mail
           newsletter, or a push notification. You can opt-out of non-essential
           communications by unsubscribing from the email letter or by adjusting
@@ -178,7 +178,7 @@ export default function TermsOfUse() {
           or our liability. You acknowledge that a variety of our actions may
           impair or prevent you from accessing the Services at certain times
           and/or in the same way, for limited periods or permanently, and agree
-          that ChatMND has no responsibility or liability as a result of any
+          that ChatMind has no responsibility or liability as a result of any
           such actions or results, including, without limitation, for the
           deletion of, or failure to make available to you, any content or
           services.
@@ -198,7 +198,7 @@ export default function TermsOfUse() {
           duration, or their timeliness. If any Additional Features are
           described as “permanent,” “lifetime,” “one-time” (in the case of
           availability for an indefinite time after purchase) or using similar
-          terms, this means they will remain available until ChatMND ceases to
+          terms, this means they will remain available until ChatMind ceases to
           commercially offer them. You acknowledge and agree that such
           “permanent,” “lifetime,” “one-time” (in the case of availability for
           an indefinite time after purchase) or similarly described Additional
@@ -215,7 +215,7 @@ export default function TermsOfUse() {
         </p>
         <p>
           4.6 We have no obligation to provide you with customer support of any
-          kind. However, ChatMND may provide you with customer support from time
+          kind. However, ChatMind may provide you with customer support from time
           to time, at its sole discretion.
         </p>
         <h4>5. Intellectual Property, User Content</h4>
@@ -223,11 +223,11 @@ export default function TermsOfUse() {
           5.1. You acknowledge that all the text, images, marks, logos,
           compilations (meaning the collection, arrangement and assembly of
           information), data, other content, software and materials displayed on
-          the Services or used by ChatMND, excluding any User Content (as
-          defined below), is proprietary to ChatMND or to third parties.
+          the Services or used by ChatMind, excluding any User Content (as
+          defined below), is proprietary to ChatMind or to third parties.
         </p>
         <p>
-          5.2 ChatMND expressly reserves all rights, including all intellectual
+          5.2 ChatMind expressly reserves all rights, including all intellectual
           property rights, in all of the foregoing, and except as expressly
           permitted by these Terms, any use, redistribution, sale,
           decompilation, reverse engineering, disassembly, translation or other
@@ -241,19 +241,19 @@ export default function TermsOfUse() {
           ("User Content") remain your intellectual property, and we do not
           claim any ownership of the copyright or other proprietary rights in
           such registration information and the User Content. Notwithstanding
-          the foregoing, you agree that ChatMND may retain copies of all
+          the foregoing, you agree that ChatMind may retain copies of all
           registration information and the User Content and use such information
           and the User Content as reasonably necessary for or incidental to its
           operation of the Services and as described in these Terms and the
           Privacy Policy.
         </p>
         <p>
-          5.4 You grant ChatMND the non-exclusive, worldwide, transferable,
+          5.4 You grant ChatMind the non-exclusive, worldwide, transferable,
           perpetual, irrevocable right to publish, distribute, publicly display
           and perform the User Content in connection with the Services.
         </p>
         <p>
-          5.5 Subject to these Terms, ChatMND grants you a non-transferable,
+          5.5 Subject to these Terms, ChatMind grants you a non-transferable,
           non-exclusive, license (without the right to sublicense) to (i) use
           the Services solely for your personal, non-commercial purposes; (ii)
           install and use the App solely on your own handheld mobile device and
@@ -279,7 +279,7 @@ export default function TermsOfUse() {
           6.3 The Services may contain links to third party websites or
           resources and advertisements for third parties (collectively,
           "Third-Party Ads"). Such Third-Party Ads are not under the control of
-          ChatMND and we are not responsible for any Third-Party Ads. ChatMND
+          ChatMind and we are not responsible for any Third-Party Ads. ChatMind
           provides these Third-Party Ads only as a convenience and does not
           review, approve, monitor, endorse, warrant, or make any
           representations with respect to Third-Party Ads. Advertisements and
@@ -302,7 +302,7 @@ export default function TermsOfUse() {
           suitability, or quality of any User Content, and we assume no
           responsibility for any User Content. Your interactions with other
           Services users are solely between you and such user. You agree that
-          ChatMND will not be responsible for any loss or damage incurred as the
+          ChatMind will not be responsible for any loss or damage incurred as the
           result of any such interactions. If there is a dispute between you and
           any Services user, we are under no obligation to become involved.
         </p>
@@ -323,7 +323,7 @@ export default function TermsOfUse() {
           Content outside site (together or separately the “Purchase”).
         </p>
         <p>
-          You make the Purchase directly from ChatMND or through the App Store.
+          You make the Purchase directly from ChatMind or through the App Store.
           We may offer alternative payment methods to users of the Apple App
           Store located in the United States. If you are eligible, you may
           complete your purchase outside of the Apple App Store through payment
@@ -337,7 +337,7 @@ export default function TermsOfUse() {
           your transaction will be processed by a third-party payment provider,
           and not by the Apple App Store;{" "}
         </p>
-        <p>ChatMND’s Subscription Policy will apply to your Purchase; </p>
+        <p>ChatMind’s Subscription Policy will apply to your Purchase; </p>
         <p>
           all subscription-related inquiries will be handled directly by us;{" "}
         </p>
@@ -347,7 +347,7 @@ export default function TermsOfUse() {
         </p>
         <p>
           to avoid being charged for the next subscription period, you must
-          cancel your subscription in advance through your ChatMND account.
+          cancel your subscription in advance through your ChatMind account.
         </p>
         <p>
           We reserve the right to modify or discontinue alternative payment
@@ -414,13 +414,13 @@ export default function TermsOfUse() {
           for this purpose.
         </p>
         <p>
-          7.8 You agree that the Purchase is final, that ChatMND will not refund
+          7.8 You agree that the Purchase is final, that ChatMind will not refund
           any transaction once it has been made and that the Purchase cannot be
           canceled. When you make the Purchase, you acknowledge and agree that
           all Purchases are non-refundable or exchangeable. Notwithstanding
-          anything to the contrary in the foregoing, ChatMND will provide
+          anything to the contrary in the foregoing, ChatMind will provide
           refunds and/or Purchase cancellations in cases and to the extent
-          required by mandatory provisions of the applicable law. ChatMND may
+          required by mandatory provisions of the applicable law. ChatMind may
           also provide refunds at its own discretion and subject to our policies
           that may be published from time to time.
         </p>
@@ -443,7 +443,7 @@ export default function TermsOfUse() {
           7.9. Depending on the payment method selected at checkout, additional
           taxes or fees may apply. Any such amounts are charged directly to the
           user by the payment processor and are not collected or retained by
-          ChatMND.
+          ChatMind.
         </p>
         <h4>8. User Representations and Restrictions</h4>
         <p>8.1. By using the Services, you represent and warrant that:</p>
@@ -558,7 +558,7 @@ export default function TermsOfUse() {
         <p>r. otherwise infringe these Terms.</p>
         <h4>9. Indemnification</h4>
         <p>
-          You hereby agree to indemnify and hold ChatMND, any of its officers,
+          You hereby agree to indemnify and hold ChatMind, any of its officers,
           directors, employees and agents and its affiliated and related
           entities, harmless from and against any claims, disputes, costs,
           losses, liabilities, damages, expenses and judgments of any and every
@@ -582,7 +582,7 @@ export default function TermsOfUse() {
         </p>
         <h4>11. Limitation of Liability</h4>
         <p>
-          TO THE MAXIMUM EXTENT PERMITTED BY LAW, NEITHER CHATMND NOR ITS
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, NEITHER ChatMind NOR ITS
           SERVICE PROVIDERS INVOLVED IN CREATING, PRODUCING, OR DELIVERING THE
           SERVICES WILL BE LIABLE FOR ANY INCIDENTAL, SPECIAL, EXEMPLARY OR
           CONSEQUENTIAL DAMAGES, OR DAMAGES FOR LOST PROFITS, LOST REVENUES,
@@ -592,26 +592,26 @@ export default function TermsOfUse() {
           THESE TERMS OR FROM THE USE OF OR INABILITY TO USE THE SERVICES,
           WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE),
           PRODUCT LIABILITY OR ANY OTHER LEGAL THEORY, AND WHETHER OR NOT
-          CHATMND OR ITS SERVICE PROVIDERS HAVE BEEN INFORMED OF THE POSSIBILITY
+          ChatMind OR ITS SERVICE PROVIDERS HAVE BEEN INFORMED OF THE POSSIBILITY
           OF SUCH DAMAGE, EVEN IF A LIMITED REMEDY SET FORTH HEREIN IS FOUND TO
           HAVE FAILED OF ITS ESSENTIAL PURPOSE.
         </p>
         <p>
           TO THE MAXIMUM EXTENT PERMITTED BY THE LAW OF THE APPLICABLE
-          JURISDICTION, IN NO EVENT WILL CHATMND’S TOTAL LIABILITY ARISING OUT
+          JURISDICTION, IN NO EVENT WILL ChatMind’S TOTAL LIABILITY ARISING OUT
           OF OR IN CONNECTION WITH THESE TERMS OR FROM THE USE OF OR INABILITY
           TO USE THE SERVICES EXCEED THE AMOUNTS YOU HAVE PAID OR ARE PAYABLE BY
-          YOU TO CHATMND FOR USE OF THE SERVICES OR ONE HUNDRED DOLLARS ($100),
-          IF YOU HAVE NOT HAD ANY PAYMENT OBLIGATIONS TO CHATMND AS APPLICABLE.
+          YOU TO ChatMind FOR USE OF THE SERVICES OR ONE HUNDRED DOLLARS ($100),
+          IF YOU HAVE NOT HAD ANY PAYMENT OBLIGATIONS TO ChatMind AS APPLICABLE.
         </p>
         <p>
           THE EXCLUSIONS AND LIMITATIONS OF DAMAGES SET FORTH ABOVE ARE
-          FUNDAMENTAL ELEMENTS OF THE BASIS OF THE BARGAIN BETWEEN CHATMND AND
+          FUNDAMENTAL ELEMENTS OF THE BASIS OF THE BARGAIN BETWEEN ChatMind AND
           YOU.
         </p>
         <h4>12. International Use</h4>
         <p>
-          ChatMND makes no representation that the Services are accessible,
+          ChatMind makes no representation that the Services are accessible,
           appropriate or legally available for use in your jurisdiction, and
           accessing and using the Services is prohibited from territories where
           doing so would be illegal. You access the Services at your own
@@ -619,15 +619,15 @@ export default function TermsOfUse() {
         </p>
         <h4>13. Mandatory Binding Arbitration and Class Action Waiver</h4>
         <p>
-          13.1 Mandatory Arbitration of Disputes. You and ChatMND agree that any
+          13.1 Mandatory Arbitration of Disputes. You and ChatMind agree that any
           dispute, claim or controversy arising out of or relating to these
           Terms or the breach, termination, enforcement, interpretation or
           validity thereof or the use of the Services (collectively, “Disputes”)
           will be resolved solely by binding, individual arbitration and not in
           a class, representative or consolidated action or proceeding. You and
-          ChatMND agree that the U.S. Federal Arbitration Act governs the
+          ChatMind agree that the U.S. Federal Arbitration Act governs the
           interpretation and enforcement of these Terms, and that you and
-          ChatMND are each waiving the right to a trial by jury or to
+          ChatMind are each waiving the right to a trial by jury or to
           participate in a class action. This arbitration provision shall
           survive termination of these Terms.
         </p>
@@ -680,7 +680,7 @@ export default function TermsOfUse() {
           individual claims in arbitration.
         </p>
         <p>
-          13.6 Class Action Waiver. YOU AND CHATMND AGREE THAT EACH MAY BRING
+          13.6 Class Action Waiver. YOU AND ChatMind AGREE THAT EACH MAY BRING
           CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND
           NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR
           REPRESENTATIVE PROCEEDING. Further, if the parties’ Dispute is
@@ -722,7 +722,7 @@ export default function TermsOfUse() {
           >
             http://ec.europa.eu/odr
           </a>{" "}
-          . Other than as set out in the Terms, ChatMND does not participate in
+          . Other than as set out in the Terms, ChatMind does not participate in
           any alternative dispute resolution scheme.
         </p>
         <p>
@@ -730,10 +730,10 @@ export default function TermsOfUse() {
           competent court of your country of habitual residence if this country
           of habitual residence is an EU Member State, which courts are – with
           the exclusion of any other court - competent to settle any of such a
-          dispute. ChatMND shall bring any dispute which may arise under these
+          dispute. ChatMind shall bring any dispute which may arise under these
           Terms to the competent court of your country of habitual residence.
           You agree that the Services, Terms, and any dispute between you and
-          ChatMND shall be governed in all respects by laws of the republic of
+          ChatMind shall be governed in all respects by laws of the republic of
           Cyprus, without regard to choice of law provisions.
         </p>
         <h4>15. Miscellaneous</h4>
@@ -741,7 +741,7 @@ export default function TermsOfUse() {
           15.1 No delay or omission by us in exercising any of our rights
           occurring upon any noncompliance or default by you with respect to
           these Terms will impair any such right or be construed to be a waiver
-          thereof, and a waiver by ChatMND of any of the covenants, conditions
+          thereof, and a waiver by ChatMind of any of the covenants, conditions
           or agreements to be performed by you will not be construed to be a
           waiver of any succeeding breach thereof or of any other covenant,
           condition or agreement hereof contained.
@@ -755,7 +755,7 @@ export default function TermsOfUse() {
         </p>
         <p>
           15.3 Except as otherwise expressly provided herein, these Terms set
-          forth the entire agreement between you and ChatMND regarding its
+          forth the entire agreement between you and ChatMind regarding its
           subject matter, and supersede all prior promises, agreements or
           representations, whether written or oral, regarding such subject
           matter.
@@ -767,7 +767,7 @@ export default function TermsOfUse() {
           consent to any such assignment and transfer. You confirm that placing
           on the Services of a version of these Terms indicating another person
           as a party to these Terms shall constitute valid notice to you of the
-          transfer of ChatMND's rights and obligations under these Terms (unless
+          transfer of ChatMind's rights and obligations under these Terms (unless
           otherwise is expressly indicated).
         </p>
         <p>
@@ -791,9 +791,9 @@ export default function TermsOfUse() {
           INITIATED OR COMPLETED THROUGH THE SERVICE.
         </p>
         <p>
-          15.6 In no event shall ChatMND be liable for any failure to comply
+          15.6 In no event shall ChatMind be liable for any failure to comply
           with these Terms to the extent that such failure arises from factors
-          outside ChatMND's reasonable control.
+          outside ChatMind's reasonable control.
         </p>
         <h4>16. Contact</h4>
         <p>

@@ -55,7 +55,7 @@ export default function enterEmail() {
         <div className={styles.titleWrap}>
           <SectionTitle>
             <span className={styles.accent}>Achieve your goals</span> with
-            ChatMND
+            ChatMind
           </SectionTitle>
           <p className={styles.text}>
             Enter your email to create a personal account

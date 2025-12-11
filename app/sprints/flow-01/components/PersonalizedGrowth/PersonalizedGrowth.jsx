@@ -42,7 +42,7 @@ export default function PersonalizedGrowth() {
             <p className={styles.reachGoalsText}>reach</p>
             <p className={styles.reachGoalsText}>goals</p>
           </div>
-          <p className={styles.reachGoalsTitlle}>With ChatMND</p>
+          <p className={styles.reachGoalsTitlle}>With ChatMind</p>
         </div>
       </div>
       <p className={styles.text}>
@@ -51,7 +51,7 @@ export default function PersonalizedGrowth() {
       </p>
       <p className={styles.text}>
         Reading full books can be long, tedious, and easy to give up. With
-        ChatMND app, all the{" "}
+        ChatMind app, all the{" "}
         <span className={styles.bold}>
           key insights are distilled into daily 7-minute micro-courses
         </span>{" "}

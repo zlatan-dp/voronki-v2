@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
   return (
     <div className={styles.container}>
       <div className={styles.politicsWrap}>
-        <h3>ChatMND</h3>
+        <h3>ChatMind</h3>
         <p>
           In order to use the services, we will ask you to enter information
           about your reading preferences, name, email. We also automatically

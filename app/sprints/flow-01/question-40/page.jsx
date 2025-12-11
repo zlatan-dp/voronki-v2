@@ -19,7 +19,7 @@ export default function question40() {
   const router = useRouter();
 
   const goToNextStep = async (id, answer) => {
-    localStorage.setItem("ChatMNDBookSet", id);
+    localStorage.setItem("ChatMindBookSet", id);
 
     await nextStep({
       step: 40,

@@ -2,21 +2,21 @@ export const FeedbackData = [
   {
     id: 1,
     raiting: 100,
-    text: "Honestly, I wasn't expecting an app to change how I think so much. I've been using ChatMND for three months. Just building a few small habits has given me a clarity I genuinely never had until now.",
+    text: "Honestly, I wasn't expecting an app to change how I think so much. I've been using ChatMind for three months. Just building a few small habits has given me a clarity I genuinely never had until now.",
     img: "/images/intensives/choose-plan/feedback-01.png",
     nickname: "@inn.marine",
   },
   {
     id: 2,
     raiting: 100,
-    text: "I get overwhelmed by information really easily, and ChatMND finally made learning feel simple again. No extra noise — just the things that actually help and make sense in real life.",
+    text: "I get overwhelmed by information really easily, and ChatMind finally made learning feel simple again. No extra noise — just the things that actually help and make sense in real life.",
     img: "/images/intensives/choose-plan/feedback-02.png",
     nickname: "@andrew_m88",
   },
   {
     id: 3,
     raiting: 100,
-    text: "I used to open books, get excited, and then drop them halfway. ChatMND helped me finally stay consistent with personal growth. Small focused lessons made the process feel achievable for the first time.",
+    text: "I used to open books, get excited, and then drop them halfway. ChatMind helped me finally stay consistent with personal growth. Small focused lessons made the process feel achievable for the first time.",
     img: "/images/intensives/choose-plan/feedback-03.png",
     nickname: "@helgascrow",
   },
@@ -44,7 +44,7 @@ export const FeedbackData = [
   {
     id: 7,
     raiting: 100,
-    text: "I applied one idea from ChatMND to my work week, and it helped me solve a problem I'd been procrastinating on for months. It’s crazy how such small inputs lead to big shifts.",
+    text: "I applied one idea from ChatMind to my work week, and it helped me solve a problem I'd been procrastinating on for months. It’s crazy how such small inputs lead to big shifts.",
     img: "/images/intensives/choose-plan/feedback-07.png",
     nickname: "@thl.mark",
   },
@@ -58,7 +58,7 @@ export const FeedbackData = [
   {
     id: 9,
     raiting: 100,
-    text: "ChatMND gives me simple, clear ideas that genuinely help me stay focused and motivated. I’m not trying to ‘transform myself’, but I do feel more organized and in control of my routines.",
+    text: "ChatMind gives me simple, clear ideas that genuinely help me stay focused and motivated. I’m not trying to ‘transform myself’, but I do feel more organized and in control of my routines.",
     img: "/images/intensives/choose-plan/feedback-10.png",
     nickname: "@m0nclaire",
   },

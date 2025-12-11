@@ -11,7 +11,7 @@ export default function WyThisBooks() {
   const [books, setBooks] = useState(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem("ChatMNDBookSet");
+    const stored = localStorage.getItem("ChatMindBookSet");
 
     const q40Answer = stored ? Number(stored) : null;
 

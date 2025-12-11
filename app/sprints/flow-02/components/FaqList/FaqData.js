@@ -20,7 +20,7 @@ export const FaqData = [
     id: 4,
     question: "Is this a course?",
     answer:
-      "Not in the traditional sense. ChatMND is a micro-learning experience: short lessons, practical steps, and zero overwhelm.",
+      "Not in the traditional sense. ChatMind is a micro-learning experience: short lessons, practical steps, and zero overwhelm.",
   },
   {
     id: 5,
@@ -73,6 +73,6 @@ export const FaqData = [
     id: 10,
     question: "Is this a replacement for therapy?",
     answer:
-      "No. If you’re going through something heavy, professional support can help.  ChatMND is here as a light daily companion, not medical care.",
+      "No. If you’re going through something heavy, professional support can help.  ChatMind is here as a light daily companion, not medical care.",
   },
 ];

@@ -5,7 +5,7 @@ import { BenefitsData } from "./BenefitsData";
 export default function BenefitsList() {
   return (
     <div className={styles.benefitsWrap}>
-      <h3 className={styles.blockTitle}>What you get with ChatMND</h3>
+      <h3 className={styles.blockTitle}>What you get with ChatMind</h3>
       <ul className={styles.benefitsList}>
         {BenefitsData.map(({ id, text }) => (
           <li className={styles.benefitsItem} key={id}>

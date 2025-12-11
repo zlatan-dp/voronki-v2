@@ -1,9 +1,9 @@
 export const FaqData = [
   {
     id: 1,
-    question: "Why do I need the ChatMND?",
+    question: "Why do I need the ChatMind?",
     answer:
-      "In ChatMND we have condensed all the knowledge of the world’s best researches and authors into short intensives, broken down into brief lessons that can be completed throughout the day. ChatMND will help you grow on the go, learn something new every  day, and achieve your goals.",
+      "In ChatMind we have condensed all the knowledge of the world’s best researches and authors into short intensives, broken down into brief lessons that can be completed throughout the day. ChatMind will help you grow on the go, learn something new every  day, and achieve your goals.",
   },
   {
     id: 2,

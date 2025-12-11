@@ -17,7 +17,7 @@ export default function FirstPage() {
   const router = useRouter();
 
   const goToNextStep = async (id, answer) => {
-    localStorage.setItem("ChatMNDhowYouWantToLearn", id);
+    localStorage.setItem("ChatMindhowYouWantToLearn", id);
 
     await nextStep({
       step: 1,

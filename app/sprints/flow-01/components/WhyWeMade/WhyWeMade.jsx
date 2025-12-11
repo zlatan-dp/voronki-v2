@@ -5,7 +5,7 @@ import styles from "./WhyWeMade.module.css";
 export default function WhyWeMade() {
   return (
     <BlockWrap bg={"green"} padding={"big"}>
-      <SectionTitle>Thats Why We Made ChatMND</SectionTitle>
+      <SectionTitle>Thats Why We Made ChatMind</SectionTitle>
       <p className={styles.text}>
         We took the <span className={styles.bold}>most impactful ideas</span>—
         from these books and turned them into{" "}
