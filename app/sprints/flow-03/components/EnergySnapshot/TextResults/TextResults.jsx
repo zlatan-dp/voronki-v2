@@ -1,14 +1,17 @@
+import { useEffect, useState } from "react";
 import { getQuizAnswers } from "../../../../actions/quizStorage";
 import styles from "./TextResults.module.css";
 
 export default function TextResalts() {
-  // const [totalPoints, set]
+  const [totalPoints, setTotalPoints] = useState(null);
 
-  const answers = getQuizAnswers();
-  const totalPoint = Object.values(answers).reduce(
-    (sum, value) => sum + value,
-    0
-  );
+  useEffect(() => {
+    const answers = getQuizAnswers();
+    const sum = Object.values(answers).reduce((a, b) => a + b, 0);
+    setTotalPoints(sum);
+  }, []);
+
+  if (totalPoints === null) return null;
 
   const resultText = (points) => {
     if (points < 5) {
@@ -60,5 +63,5 @@ export default function TextResalts() {
     );
   };
 
-  return <>{resultText(totalPoint)}</>;
+  return <>{resultText(totalPoints)}</>;
 }

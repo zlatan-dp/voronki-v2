@@ -46,7 +46,7 @@ export default function enterEmail() {
         time: await getCurrentTime(),
       });
 
-      fbq("track", "CompleteRegistration");
+      await fbq("track", "CompleteRegistration");
 
       router.push(`/sprints/${currentFlow}/thanks`);
     }
