@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useCurrentFlow } from "../../actions/getCurrentFlow";
 import { nextStep } from "../../../actions/steps-client.action";
 import { getCurrentTime } from "../../actions/getCurrentTime";
+import { clearQuizAnswers } from "../../actions/quizStorage";
 
 import SubmitBtn from "../../components/submitBtn/SubmitBtn";
 import BlockWrap from "../../components/blockWrap/blockWrap";
@@ -39,7 +40,7 @@ export default function enterEmail() {
 
     if (validateEmail()) {
       await nextStep({
-        step: 100,
+        step: 10,
         type: "info",
         question: "Enter your email",
         answer: email || "next",
@@ -47,6 +48,8 @@ export default function enterEmail() {
       });
 
       await fbq("track", "CompleteRegistration");
+
+      clearQuizAnswers();
 
       router.push(`/sprints/${currentFlow}/thanks`);
     }

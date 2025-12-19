@@ -66,9 +66,14 @@ export default function PagesDispatcher() {
           `/sprints/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
+      case "fatigue":
+        router.push(
+          `/sprints/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
-          `/sprints/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
     }
   }, [pageEnter]);

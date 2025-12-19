@@ -14,7 +14,7 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "900"],
 });
 
-// import Script from "next/script";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* <Script
+        <Script
           strategy="beforeInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XGEDJ12CLJ"
         />
@@ -39,8 +39,7 @@ export default function RootLayout({
               gtag('config', 'G-XGEDJ12CLJ');
             `,
           }}
-        /> 
-        */}
+        />
       </head>
       <body className={`${montserrat.variable} ${inter.variable}`}>
         <FacebookPixel />
