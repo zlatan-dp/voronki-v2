@@ -1,0 +1,29 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.politicsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.politicsWrap h3 {
+  text-transform: uppercase;
+}
+
+.politicsWrap h4 {
+  text-transform: uppercase;
+}
+
+.politicsWrap a:hover {
+  color: var(--accent);
+}
+
+.politicsWrap .underline {
+  text-decoration: underline;
+}

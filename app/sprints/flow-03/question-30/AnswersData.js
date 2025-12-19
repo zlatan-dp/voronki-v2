@@ -1,0 +1,17 @@
+export const AnswersData = [
+  {
+    id: 1,
+    text: "Never",
+    points: 0,
+  },
+  {
+    id: 2,
+    text: "Rarely",
+    points: 1,
+  },
+  {
+    id: 3,
+    text: "Always",
+    points: 2,
+  },
+];
