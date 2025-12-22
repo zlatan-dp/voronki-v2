@@ -1,7 +1,7 @@
 const STORAGE_KEY = "ChatMind:sprint03";
 
 export const getQuizAnswers = () => {
-  if (typeof window === "underfined") return {};
+  if (typeof window === "undefined") return {};
 
   const data = localStorage.getItem(STORAGE_KEY);
 
@@ -9,7 +9,7 @@ export const getQuizAnswers = () => {
 };
 
 export const saveQuizAnswer = (step, points) => {
-  if (typeof window === "underfined") return;
+  if (typeof window === "undefined") return;
 
   const currentAnswers = getQuizAnswers();
 
