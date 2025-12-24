@@ -5,6 +5,7 @@ import { nextStep } from "@/app/actions/steps-client.action";
 import { StepType } from "@/app/actions/actions.types";
 import { getCurrentTime } from "@/app/utils/getCurrentTime";
 import { useState, useEffect } from "react";
+// import { getSessionIdFromCookie } from "./services/authorization";
 
 export default function PagesDispatcher() {
   const router = useRouter();
@@ -16,7 +17,10 @@ export default function PagesDispatcher() {
   const campaign = searchParams.get("campaign") || "";
 
   useEffect(() => {
+    // localStorage.removeItem("ChatMindQuizData");
     const goToNextStep = async () => {
+      // const sessionId = await getSessionIdFromCookie();
+      // console.log(sessionId);
       await nextStep({
         step: 0,
         type: StepType.Proxy,
@@ -68,12 +72,12 @@ export default function PagesDispatcher() {
         break;
       case "fatigue":
         router.push(
-          `/sprints/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
       default:
         router.push(
-          `/sprints/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
     }
   }, [pageEnter]);
