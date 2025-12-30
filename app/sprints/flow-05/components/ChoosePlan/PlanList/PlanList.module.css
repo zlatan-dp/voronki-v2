@@ -1,0 +1,119 @@
+.planList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputWrap {
+  position: relative;
+  width: 100%;
+  padding: 24px 14px 24px 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: var(--white); */
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  transition: border var(--trans-dur) var(--trans-timing-function);
+
+  &:hover,
+  &:focus {
+    border: 2px solid var(--accent);
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #0000004b;
+    border-radius: 50%;
+  }
+
+  .durationWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .duration {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .priceWithTimer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .totalPrice {
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    .specialTimer {
+      font-weight: 700;
+      color: rgba(255, 0, 0, 1);
+    }
+  }
+
+  .priceDayWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+
+    .currency {
+      font-size: 16px;
+      font-weight: 700;
+      color: #6b7280;
+    }
+
+    .priceDay {
+      display: flex;
+      gap: 2px;
+      align-items: flex-start;
+    }
+
+    .perDayPrice {
+      font-size: 24px;
+      font-weight: 600;
+      color: #6b7280;
+    }
+
+    .perDay {
+      font-size: 12px;
+      font-weight: 500;
+      color: #6b7280;
+    }
+  }
+
+  &.active {
+    border: 2px solid var(--accent);
+    background-color: #4467f127;
+
+    .perDayPrice,
+    .currency {
+      color: var(--black);
+    }
+
+    &::before {
+      content: "✓";
+      color: var(--white);
+      background-color: var(--accent);
+      border: 1px solid var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+}

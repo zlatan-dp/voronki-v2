@@ -1,0 +1,14 @@
+.welcomeTitle {
+  font-size: 20px;
+  text-align: center;
+  color: var(--black);
+  line-height: 162%;
+  letter-spacing: -0.02em;
+}
+
+.welcomeText {
+  font-size: 20px;
+  color: var(--black-light);
+  line-height: 162%;
+  letter-spacing: -0.02em;
+}

@@ -77,7 +77,7 @@ export default function PagesDispatcher() {
         break;
       default:
         router.push(
-          `/sprints/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
     }
   }, [pageEnter]);
