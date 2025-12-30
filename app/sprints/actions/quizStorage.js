@@ -1,25 +1,27 @@
-const STORAGE_KEY = "ChatMind:sprint03";
+const getQuizStorageKey = (flow) => `ChatMind:${flow}`;
 
-export const getQuizAnswers = () => {
+export const getQuizAnswers = (flow) => {
   if (typeof window === "undefined") return {};
 
-  const data = localStorage.getItem(STORAGE_KEY);
+  const key = getQuizStorageKey(flow);
+  const data = localStorage.getItem(key);
 
   return data ? JSON.parse(data) : {};
 };
 
-export const saveQuizAnswer = (step, points) => {
+export const saveQuizAnswer = (flow, step, points) => {
   if (typeof window === "undefined") return;
 
-  const currentAnswers = getQuizAnswers();
+  const key = getQuizStorageKey(flow);
+  const currentAnswers = getQuizAnswers(flow);
 
   currentAnswers[step] = points;
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(currentAnswers));
+  localStorage.setItem(key, JSON.stringify(currentAnswers));
 };
 
-export const clearQuizAnswers = () => {
+export const clearQuizAnswers = (flow) => {
   if (typeof window === "undefined") return;
 
-  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(getQuizStorageKey(flow));
 };

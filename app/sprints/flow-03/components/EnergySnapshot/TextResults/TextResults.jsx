@@ -2,11 +2,15 @@ import { useEffect, useState } from "react";
 import { getQuizAnswers } from "../../../../actions/quizStorage";
 import styles from "./TextResults.module.css";
 
+import { useCurrentFlow } from "../../../../actions/getCurrentFlow";
+
 export default function TextResalts() {
   const [totalPoints, setTotalPoints] = useState(null);
 
+  const currentFlow = useCurrentFlow();
+
   useEffect(() => {
-    const answers = getQuizAnswers();
+    const answers = getQuizAnswers(currentFlow);
     const sum = Object.values(answers).reduce((a, b) => a + b, 0);
     setTotalPoints(sum);
   }, []);

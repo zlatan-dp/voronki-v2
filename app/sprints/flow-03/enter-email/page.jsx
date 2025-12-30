@@ -49,7 +49,7 @@ export default function enterEmail() {
 
       await fbq("track", "CompleteRegistration");
 
-      clearQuizAnswers();
+      clearQuizAnswers(currentFlow);
 
       router.push(`/sprints/${currentFlow}/thanks`);
     }

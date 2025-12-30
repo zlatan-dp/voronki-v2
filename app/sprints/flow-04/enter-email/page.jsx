@@ -47,7 +47,7 @@ export default function enterEmail() {
         time: await getCurrentTime(),
       });
 
-      clearQuizAnswers();
+      clearQuizAnswers(currentFlow);
 
       router.push(`/sprints/${currentFlow}/thanks`);
     }

@@ -6,6 +6,7 @@ import { useCurrentFlow } from "../../../actions/getCurrentFlow";
 import { nextStep } from "../../../../actions/steps-client.action";
 import { getCurrentTime } from "../../../actions/getCurrentTime";
 import { usePlanSelection } from "../../../actions/planSelectionContext";
+import { clearQuizAnswers } from "../../../actions/quizStorage.js";
 
 import { useTimer } from "../../../actions/useTimerContext";
 
@@ -44,6 +45,8 @@ export default function ChoosePlanComponent() {
       answer: plan || "next",
       time: await getCurrentTime(),
     });
+
+    clearQuizAnswers(currentFlow);
 
     router.push(`/sprints/${currentFlow}/error-page`);
   };

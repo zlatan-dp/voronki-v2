@@ -20,7 +20,7 @@ export default function question60() {
   const router = useRouter();
 
   const goToNextStep = async (answer, points) => {
-    saveQuizAnswer("question6", points);
+    saveQuizAnswer(currentFlow, "question6", points);
 
     await nextStep({
       step: 7,
