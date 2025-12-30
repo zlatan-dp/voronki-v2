@@ -5,7 +5,7 @@ import { nextStep } from "@/app/actions/steps-client.action";
 import { StepType } from "@/app/actions/actions.types";
 import { getCurrentTime } from "@/app/utils/getCurrentTime";
 import { useState, useEffect } from "react";
-// import { getSessionIdFromCookie } from "./services/authorization";
+import { getSessionIdFromCookie } from "./services/authorization";
 
 export default function PagesDispatcher() {
   const router = useRouter();
@@ -17,10 +17,10 @@ export default function PagesDispatcher() {
   const campaign = searchParams.get("campaign") || "";
 
   useEffect(() => {
-    // localStorage.removeItem("ChatMindQuizData");
     const goToNextStep = async () => {
-      // const sessionId = await getSessionIdFromCookie();
+      const sessionId = await getSessionIdFromCookie();
       // console.log(sessionId);
+      if (!sessionId) localStorage.removeItem("ChatMindQuizData");
       await nextStep({
         step: 0,
         type: StepType.Proxy,
