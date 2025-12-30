@@ -75,6 +75,11 @@ export default function PagesDispatcher() {
           `/sprints/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
+      case "fatiguewpw":
+        router.push(
+          `/sprints/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
           `/sprints/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`

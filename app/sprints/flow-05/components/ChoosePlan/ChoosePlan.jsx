@@ -54,7 +54,7 @@ export default function ChoosePlanComponent() {
   const handleSubmit = async () => {
     if (!selectedPlanId) return;
 
-    await fbq("track", "AddToCart");
+    // await fbq("track", "AddToCart");
 
     const payload = planPayload(selectedPlanId);
     await goToNextStep(payload);
@@ -75,13 +75,11 @@ export default function ChoosePlanComponent() {
         You can cancel your
         <br /> subscription at any time
       </p>
-      {timerActive && (
-        <p className={styles.discountedText}>
-          Discounted price applies to your first subscription. Your subscription
-          will automatically renew at full price of $9.98 per month at the end
-          of the chosen subscription period until you cancel in your account.
-        </p>
-      )}
+      <p className={styles.discountedText}>
+        Discounted price applies to your first subscription. Your subscription
+        will automatically renew at full price of $9.98 per month at the end of
+        the chosen subscription period until you cancel in your account.
+      </p>
     </BlockWrap>
   );
 }
