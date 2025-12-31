@@ -1,15 +1,15 @@
 export const BenefitsData = [
   {
     id: 1,
-    text: "Your personalized program of 5 mini-courses",
+    text: "A personalized program built from 5 short mini-courses",
   },
   {
     id: 2,
-    text: "Daily check-ins on your emotional state and recommendations to improve it",
+    text: "Simple daily check-ins with tailored insights to support your emotional balance",
   },
   {
     id: 3,
-    text: "Access to 52 mini-courses (5–7 days each) designed to help you build healthy habits and essential life skills",
+    text: "Full access to 52 mini-courses designed to build healthy habits and essential life skills – just 10 minutes a day, for 5-7 days per course",
   },
   {
     id: 4,
@@ -17,22 +17,18 @@ export const BenefitsData = [
   },
   {
     id: 5,
-    text: "10 minutes/day",
-  },
-  {
-    id: 6,
     text: "Daily guidance that helps you stay centered",
   },
   {
-    id: 7,
+    id: 6,
     text: "Light, simple actions you can actually do",
   },
   {
-    id: 8,
+    id: 7,
     text: "Practical daily tasks that turn insights into habits",
   },
   {
-    id: 9,
+    id: 8,
     text: "A routine you don’t have to “push through”",
   },
 ];

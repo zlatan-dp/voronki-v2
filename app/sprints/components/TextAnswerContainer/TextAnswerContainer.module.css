@@ -10,10 +10,27 @@
   cursor: pointer;
   transition: border var(--trans-dur) var(--trans-timing-function);
 
-  &:hover,
+  /* &:hover,
   &:focus {
     border: 2px solid var(--accent);
+  } */
+}
+
+/* hover ТІЛЬКИ для десктопів (миша / трекпад) */
+@media (hover: hover) and (pointer: fine) {
+  .inputWrap:hover {
+    border: 2px solid var(--accent);
   }
+}
+
+/* focus — залишаємо для accessibility (клавіатура) */
+.inputWrap:focus-visible {
+  border: 2px solid var(--accent);
+}
+
+/* tap-ефект для мобільних */
+.inputWrap:active {
+  border: 2px solid var(--accent);
 }
 
 .mainText {

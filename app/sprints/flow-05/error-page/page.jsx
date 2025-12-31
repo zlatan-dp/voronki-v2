@@ -9,7 +9,9 @@ export default function enterEmail() {
     <div className={styles.container}>
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
-          <SectionTitle>Sorry, something went wrong on our side.</SectionTitle>
+          <SectionTitle ta="center">
+            Sorry, something went wrong on our side.
+          </SectionTitle>
           <p>Please try again later.</p>
         </div>
       </div>

@@ -18,12 +18,6 @@ export const FaqData = [
   },
   {
     id: 4,
-    question: "Is this a course?",
-    answer:
-      "Not in the traditional sense. ChatMind is a micro-learning experience: short lessons, practical steps, and zero overwhelm.",
-  },
-  {
-    id: 5,
     question: "What exactly will I get?",
     answer: (
       <>
@@ -48,31 +42,31 @@ export const FaqData = [
     ),
   },
   {
-    id: 6,
+    id: 5,
     question: "Will this actually help me stay consistent?",
     answer:
       "Yes — that’s the whole point. The steps are small, clear, and easy to follow, so consistency finally feels doable (not overwhelming).",
   },
   {
-    id: 7,
+    id: 6,
     question: "Can I cancel anytime?",
     answer:
       "You’re always in control. Pause or cancel your plan at any moment — zero hassle, zero commitment.",
   },
   {
-    id: 8,
+    id: 7,
     question: "Do I need any experience or previous knowledge?",
     answer:
       "No. Everything is beginner-friendly and designed for real life — not for experts.",
   },
   {
-    id: 9,
+    id: 8,
     question: "What if I’m feeling really low right now?",
     answer:
       "You’re welcome here. The sprints aren’t medical treatment, but they offer gentle structure and small daily steps that can make things feel more manageable. No pressure — just support.",
   },
   {
-    id: 10,
+    id: 9,
     question: "Is this a replacement for therapy?",
     answer:
       "No. If you’re going through something heavy, professional support can help.  ChatMind is here as a light daily companion, not medical care.",

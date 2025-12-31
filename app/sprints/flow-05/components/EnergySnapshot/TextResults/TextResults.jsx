@@ -41,22 +41,21 @@ export default function TextResults() {
         <>
           <p className={styles.subtitle}>Low fatigue</p>
           <p className={styles.text}>
-            You’re in a great place — balanced and energized! Keep that momentum
-            going with our 5-week mini-course program.
+            You’re in a great place – balanced and energized.
+            <br />
+            Let’s help you keep it that way.
           </p>
           <p className={styles.text}>
-            In just 10 minutes a day, you’ll build simple habits and daily
-            rituals that help you stay balanced, recharge easily, and avoid
-            burnout.
+            Our 5-week mini-course program takes just 10 minutes a day and helps
+            you build simple habits and daily rituals to stay balanced, recharge
+            easily, and protect your energy long term.
           </p>
 
           <SubmitBtn onClick={goToNextStep} wide={"wide"}>
             <span className={styles.btnText}>Start today</span>
           </SubmitBtn>
 
-          <p className={styles.text}>
-            and make lasting energy your everyday state!
-          </p>
+          <p className={styles.text}>and keep your energy consistently high.</p>
         </>
       );
     }
@@ -65,23 +64,22 @@ export default function TextResults() {
         <>
           <p className={styles.subtitle}>Moderate fatigue</p>
           <p className={styles.text}>
-            Your energy may feel inconsistent right now, especially on busy or
+            Your energy may feel inconsistent right now – especially on busy or
             stressful days.
+            <br /> That’s often a sign your routine, sleep, or stress patterns
+            need a small reset.
           </p>
           <p className={styles.text}>
-            Taking a closer look at your daily routine, sleep, and stress
-            patterns can make a meaningful difference.
-            <br />
-            Our 5-week program of short, practical mini-courses will help you
-            quickly regain steady energy, build daily habits for balance, and
-            protect yourself from chronic fatigue.
+            Our 5-week program of short, practical mini-courses helps you
+            restore steady energy, build supportive daily habits, and reduce the
+            risk of long-term fatigue – in just 10 minutes a day.
           </p>
           <SubmitBtn onClick={goToNextStep} wide={"wide"}>
             <span className={styles.btnText}>Start today</span>
           </SubmitBtn>
           <p className={styles.text}>
-            Just 10 minutes a day can make a big difference - feel consistently
-            energized again and make lasting energy your everyday state!
+            Just 10 minutes a day can make a real difference – feel energized
+            day after day.
           </p>
         </>
       );
@@ -89,22 +87,26 @@ export default function TextResults() {
     return (
       <>
         <p className={styles.subtitle}>High fatigue</p>
-        <p className={styles.text}>You are experiencing high fatigue.</p>
-        <p className={styles.boldText}>
-          We strongly recommend consulting a healthcare professional to rule out
-          underlying medical conditions.
+        <p className={styles.text}>
+          It sounds like you’re experiencing significant fatigue.
+          <br />
+          <span className={styles.boldText}>
+            {" "}
+            We recommend consulting a healthcare professional to rule out any
+            underlying medical conditions.
+          </span>
         </p>
         <p className={styles.text}>
-          In addition, our 5-week program of short, practical mini-courses
-          offers gentle, practical practices to support your recovery and daily
-          energy.
+          Alongside that, our 5-week program of short, gentle mini-courses can
+          support your recovery with simple daily practices designed to help you
+          restore energy and feel more stable day by day.
         </p>
         <SubmitBtn onClick={goToNextStep} wide={"wide"}>
           <span className={styles.btnText}>Start today</span>
         </SubmitBtn>
         <p className={styles.text}>
-          Just 10 minutes a day can make a big difference - feel consistently
-          energized again and make lasting energy your everyday state!
+          Just 10 minutes a day can make a real difference – feel energized day
+          after day.
         </p>
       </>
     );
