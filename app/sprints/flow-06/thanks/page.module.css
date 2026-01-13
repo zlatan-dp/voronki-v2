@@ -1,0 +1,13 @@
+.boldText {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black-light);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 18px;
+  color: var(--black-light);
+  line-height: 173%;
+}

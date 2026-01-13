@@ -1,3 +1,5 @@
+// point answers
+
 const getQuizStorageKey = (flow) => `ChatMind:${flow}`;
 
 export const getQuizAnswers = (flow) => {
@@ -24,4 +26,24 @@ export const clearQuizAnswers = (flow) => {
   if (typeof window === "undefined") return;
 
   localStorage.removeItem(getQuizStorageKey(flow));
+};
+
+// branch
+
+export const setFlowBranch = (flow, branch) => {
+  if (typeof window === "undefined") return;
+
+  localStorage.setItem(`ChatMind:${flow}:branch`, branch);
+};
+
+export const getFlowBranch = (flow) => {
+  if (typeof window === "undefined") return;
+
+  return localStorage.getItem(`ChatMind:${flow}:branch`);
+};
+
+export const clearFlowBranch = (flow) => {
+  if (typeof window === "undefined") return;
+
+  localStorage.removeItem(`ChatMind:${flow}:branch`);
 };
