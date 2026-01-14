@@ -14,7 +14,7 @@ export const FaqData = [
     id: 3,
     question: "Is this a course?",
     answer:
-      "No. There are no long lessons, no modules, no homework. You get small, guided steps in your messenger — something you can actually follow, even on tired days.",
+      "No. There are no long lessons, no modules, no homework. You get small, guided steps in the ChatMind App — something you can actually follow.",
   },
   {
     id: 4,
@@ -24,13 +24,11 @@ export const FaqData = [
         <span>You’ll receive:</span>
         <br />
         <br />
-        <span>
-          • Short 7-day course, suitable for both text and audio formats
-        </span>
+        <span>• Short guides in both text and audio formats</span>
         <br />
         <span>• A simple step-by-step plan</span>
         <br />
-        <span>• Daily guidance in your messenger</span>
+        <span>• Daily guidance in the ChatMind App</span>
         <br />
         <span>
           • Light, doable actions that help you feel more grounded and organized
