@@ -55,7 +55,7 @@ export default function ChoosePlanComponent() {
   const handleSubmit = async () => {
     if (!selectedPlanId) return;
 
-    // await fbq("track", "AddToCart");
+    await fbq("track", "AddToCart");
 
     const payload = planPayload(selectedPlanId);
     await goToNextStep(payload);

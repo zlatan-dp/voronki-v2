@@ -80,9 +80,14 @@ export default function PagesDispatcher() {
           `/sprints/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
         break;
+      case "fatiguePersPlan":
+        router.push(
+          `/sprints/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+        );
+        break;
       default:
         router.push(
-          `/sprints/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
         );
     }
   }, [pageEnter]);
