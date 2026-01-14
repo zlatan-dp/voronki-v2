@@ -43,22 +43,22 @@ export default function TextResults() {
             🌿 “Good energy base — <br />
             time for quality recharge”
           </p>
-          <p className={styles.text}>
-            You’re in a great place – balanced and energized.
-            <br />
-            Let’s help you keep it that way.
-          </p>
-          <p className={styles.text}>
-            Our 5-week mini-course program takes just 10 minutes a day and helps
-            you build simple habits and daily rituals to stay balanced, recharge
-            easily, and protect your energy long term.
-          </p>
-
-          <SubmitBtn onClick={goToNextStep} wide={"wide"}>
-            <span className={styles.btnText}>Start today</span>
-          </SubmitBtn>
-
-          <p className={styles.text}>and keep your energy consistently high.</p>
+          <div className={styles.textWrap}>
+            <p className={styles.text}>Start these 3 habits TODAY:</p>
+            <p className={styles.text}>
+              • 15-min morning sunlight — open curtains immediately after waking
+            </p>
+            <p className={styles.text}>
+              • 1 hydration reminder — keep water bottle visible all day
+            </p>
+            <p className={styles.text}>
+              • 3 deep breaths before stressful moments
+            </p>
+            <p className={styles.text}>
+              ChatMind Premium shows exact timing, breathing techniques, and
+              progress tracking
+            </p>
+          </div>
         </>
       );
     }
@@ -68,24 +68,22 @@ export default function TextResults() {
           <p className={styles.subtitle}>
             ⚠️ “Exhaustion signals appearing — time for recovery”
           </p>
-          <p className={styles.text}>
-            Your energy may feel inconsistent right now – especially on busy or
-            stressful days.
-            <br /> That’s often a sign your routine, sleep, or stress patterns
-            need a small reset.
-          </p>
-          <p className={styles.text}>
-            Our 5-week program of short, practical mini-courses helps you
-            restore steady energy, build supportive daily habits, and reduce the
-            risk of long-term fatigue – in just 10 minutes a day.
-          </p>
-          <SubmitBtn onClick={goToNextStep} wide={"wide"}>
-            <span className={styles.btnText}>Start today</span>
-          </SubmitBtn>
-          <p className={styles.text}>
-            Just 10 minutes a day can make a real difference – feel energized
-            day after day.
-          </p>
+          <div className={styles.textWrap}>
+            <p className={styles.text}>Start these 3 habits TODAY:</p>
+            <p className={styles.text}>
+              • Power-down ritual — 30 min before bed: no screens, dim lights
+            </p>
+            <p className={styles.text}>
+              • 2-min stretch breaks — every 90 min of work
+            </p>
+            <p className={styles.text}>
+              • “3 wins” evening — write 3 good moments before sleep
+            </p>
+            <p className={styles.text}>
+              ChatMind Premium creates your personal daily schedule + shows
+              exact timing techniques and progress tracking
+            </p>
+          </div>
         </>
       );
     }
@@ -94,30 +92,31 @@ export default function TextResults() {
         <p className={styles.subtitle}>
           🚨 “Chronic fatigue zone — needs systematic recovery”
         </p>
-        <p className={styles.text}>
-          It sounds like you’re experiencing significant fatigue.
-          <br />
-          <span className={styles.boldText}>
-            {" "}
-            We recommend consulting a healthcare professional to rule out any
-            underlying medical conditions.
-          </span>
-        </p>
-        <p className={styles.text}>
-          Alongside that, our 5-week program of short, gentle mini-courses can
-          support your recovery with simple daily practices designed to help you
-          restore energy and feel more stable day by day.
-        </p>
-        <SubmitBtn onClick={goToNextStep} wide={"wide"}>
-          <span className={styles.btnText}>Start today</span>
-        </SubmitBtn>
-        <p className={styles.text}>
-          Just 10 minutes a day can make a real difference – feel energized day
-          after day.
-        </p>
+        <div className={styles.textWrap}>
+          <p className={styles.text}>Start these 3 habits TODAY:</p>
+          <p className={styles.text}>
+            • “Energy audit” — track what drains vs gives energy for 3 days
+          </p>
+          <p className={styles.text}>
+            • 15-min “brain dump” — write all worries each evening
+          </p>
+          <p className={styles.text}>
+            • Micro-walks — 5 min every 2 hours (set phone alarms)
+          </p>
+          <p className={styles.text}>
+            ChatMind Premium builds your 7-day recovery protocol step-by-step
+          </p>
+        </div>
       </>
     );
   };
 
-  return <>{resultText(totalPoints)}</>;
+  return (
+    <>
+      {resultText(totalPoints)}
+      <SubmitBtn onClick={goToNextStep} wide={"wide"}>
+        <span className={styles.btnText}>Start today</span>
+      </SubmitBtn>
+    </>
+  );
 }
