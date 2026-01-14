@@ -15,6 +15,7 @@ import { clearQuizAnswers } from "../../actions/quizStorage";
 import SubmitBtn from "../../components/submitBtn/SubmitBtn";
 import BlockWrap from "../../components/blockWrap/blockWrap";
 import Container from "../../components/container/container";
+import SectionTitle from "../../components/sectionTitle/sectionTitle";
 
 export default function enterEmail() {
   const currentFlow = useCurrentFlow();
@@ -43,7 +44,7 @@ export default function enterEmail() {
 
     if (validateEmail()) {
       await nextStep({
-        step: 10,
+        step: 18,
         type: "info",
         question: "Enter your email",
         answer: email || "next",
@@ -58,7 +59,11 @@ export default function enterEmail() {
 
   return (
     <Container>
-      <BlockWrap>
+      <SectionTitle ta={"center"}>
+        Your
+        <br /> Personalized Recovery Program is Ready!
+      </SectionTitle>
+      <BlockWrap padding={"small"}>
         <p className={styles.text}>
           Enter your email address to receive your personalized offer and
           step-by-step instructions on how to get your micro-learning plan.

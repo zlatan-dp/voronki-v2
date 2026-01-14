@@ -16,7 +16,7 @@ export default function BenefitsList() {
         ))}
       </ul>
       <p className={styles.benefitsComment}>
-        <span className={styles.bold}>Our micro-cources </span>
+        <span className={styles.bold}>ChatMind App </span>
         guide you from knowing the steps to{" "}
         <span className={styles.bold}>
           building a routine that feels manageable every day.

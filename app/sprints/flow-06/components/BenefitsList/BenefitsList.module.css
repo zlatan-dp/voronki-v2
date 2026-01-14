@@ -7,7 +7,7 @@
 .benefitsItem {
   display: flex;
   gap: 12px;
-  align-items: center;
+  /* align-items: center; */
   font-size: 14px;
 
   &::before {

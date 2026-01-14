@@ -12,6 +12,7 @@ import Container from "../../components/container/container";
 import ChoosePlanComponent from "../components/ChoosePlan/ChoosePlan";
 
 import { useTimer } from "../../actions/useTimerContext";
+import PlanInfo from "../components/PlanInfo/PlanInfo";
 
 export default function Paywall() {
   const { startTimer } = useTimer();
@@ -23,6 +24,7 @@ export default function Paywall() {
   return (
     <Container>
       <ChoosePlanComponent />
+      <PlanInfo />
       <BenefitsList />
       <FeedbackList />
       <FaqList />
