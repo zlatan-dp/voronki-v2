@@ -40,7 +40,7 @@ export default function ChoosePlanComponent() {
 
   const goToNextStep = async (plan) => {
     await nextStep({
-      step: 11,
+      step: 19,
       type: "info",
       question: "choose your plan",
       answer: plan || "next",
