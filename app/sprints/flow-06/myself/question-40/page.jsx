@@ -26,7 +26,7 @@ export default function question40() {
       step: 6,
       type: "question",
       question:
-        "How often do you feel muscle or joint pain without any clear reason?",
+        "Do you notice muscle or joint aches that seem to come up without a specific reason?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,7 +45,8 @@ export default function question40() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          How often do you feel muscle or joint pain without any clear reason?
+          Do you notice muscle or joint aches that seem to come up without a
+          specific reason?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

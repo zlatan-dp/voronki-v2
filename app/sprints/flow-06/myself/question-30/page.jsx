@@ -26,7 +26,7 @@ export default function question30() {
       step: 5,
       type: "question",
       question:
-        "Are you having trouble focusing, remembering things, or thinking clearly (you know, “brain fog”)?",
+        "Do you find it hard to focus, remember things, or think clearly?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +45,7 @@ export default function question30() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Are you having trouble focusing, remembering things, or thinking
-          clearly (you know, “brain fog”)?
+          Do you find it hard to focus, remember things, or think clearly?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

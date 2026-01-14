@@ -20,7 +20,7 @@ export default function question85() {
     await nextStep({
       step: 13,
       type: "info",
-      question: "Balance and Rest",
+      question: "Smart adaptation",
       answer: "next",
       time: await getCurrentTime(),
     });
@@ -36,10 +36,10 @@ export default function question85() {
   return (
     <Container>
       <InfoPage
-        title={"Balance and Rest"}
+        title={"Smart adaptation"}
         image={"page85.png"}
         text={
-          "☀️ ChatMind will prepare personal “recovery rituals” to noticeably improve well-being in just 7 days."
+          "🔊  ChatMind learns your patterns – which sensory triggers matter most, what recovery techniques work fastest for you – so every recommendation gets more precise week by week."
         }
         next={goToNextStep}
       />

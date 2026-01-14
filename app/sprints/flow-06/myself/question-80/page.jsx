@@ -26,7 +26,7 @@ export default function question80() {
       step: 12,
       type: "question",
       question:
-        "Have you noticed you’re more sensitive to light, sounds, smells, or certain foods?",
+        "Are you more sensitive than usual to light, sound, smell, or certain foods?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +45,8 @@ export default function question80() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Have you noticed you’re more sensitive to light, sounds, smells, or
-          certain foods?
+          Are you more sensitive than usual to light, sound, smell, or certain
+          foods?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

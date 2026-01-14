@@ -25,8 +25,7 @@ export default function question60() {
     await nextStep({
       step: 9,
       type: "question",
-      question:
-        "Is your sleep off—like not feeling refreshed, insomnia, or feeling super sleepy during the day?",
+      question: "Does your sleep leave you feeling refreshed and restored?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +44,7 @@ export default function question60() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Is your sleep off—like not feeling refreshed, insomnia, or feeling
-          super sleepy during the day?
+          Does your sleep leave you feeling refreshed and restored?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

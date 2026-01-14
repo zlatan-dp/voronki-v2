@@ -26,7 +26,7 @@ export default function question100() {
       step: 15,
       type: "question",
       question:
-        "Has fatigue been messing with your productivity or daily routine for over 6 months?",
+        "Has fatigue interfered with your work, hobbies, or daily responsibilities for 6 months or longer?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +45,8 @@ export default function question100() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Has fatigue been messing with your productivity or daily routine for
-          over 6 months?
+          Has fatigue interfered with your work, hobbies, or daily
+          responsibilities for 6 months or longer?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

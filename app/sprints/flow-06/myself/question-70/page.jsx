@@ -26,7 +26,7 @@ export default function question70() {
       step: 11,
       type: "question",
       question:
-        "How often do you feel dizzy when standing up from sitting or lying down?",
+        "How often do you feel lightheaded or dizzy right after standing up?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +45,7 @@ export default function question70() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          How often do you feel dizzy when standing up from sitting or lying
-          down?
+          How often do you feel lightheaded or dizzy right after standing up?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

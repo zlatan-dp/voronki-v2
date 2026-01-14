@@ -25,8 +25,7 @@ export default function question90() {
     await nextStep({
       step: 14,
       type: "question",
-      question:
-        "How often do you feel emotionally drained or cynical about work/life?",
+      question: "Do you often feel emotionally drained by your daily demands?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,7 +44,7 @@ export default function question90() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          How often do you feel emotionally drained or cynical about work/life?
+          Do you often feel emotionally drained by your daily demands?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

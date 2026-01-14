@@ -1,17 +1,17 @@
 export const AnswersData = [
   {
     id: 1,
-    text: "Nope",
+    text: "No",
     points: 1,
   },
   {
     id: 2,
-    text: "A bit",
+    text: "A little",
     points: 2,
   },
   {
     id: 3,
-    text: "Definitely",
+    text: "Yes",
     points: 3,
   },
 ];

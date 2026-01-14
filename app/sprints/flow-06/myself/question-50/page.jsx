@@ -26,7 +26,7 @@ export default function question50() {
       step: 8,
       type: "question",
       question:
-        "Do you get headaches, sore throat, or tender lymph nodes from time to time?",
+        "How often do you experience headaches, sore throat, or swollen lymph nodes?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +45,8 @@ export default function question50() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Do you get headaches, sore throat, or tender lymph nodes from time to
-          time?
+          How often do you experience headaches, sore throat, or swollen lymph
+          nodes?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

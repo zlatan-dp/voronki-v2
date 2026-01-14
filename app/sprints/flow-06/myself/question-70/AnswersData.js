@@ -6,12 +6,12 @@ export const AnswersData = [
   },
   {
     id: 2,
-    text: "Sometimes",
+    text: "Occasionally",
     points: 2,
   },
   {
     id: 3,
-    text: "Often",
+    text: "Frequently",
     points: 3,
   },
 ];

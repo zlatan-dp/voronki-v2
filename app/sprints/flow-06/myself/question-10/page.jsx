@@ -25,8 +25,7 @@ export default function question10() {
     await nextStep({
       step: 2,
       type: "question",
-      question:
-        "How often do you feel that lingering tiredness that just won’t go away, even after sleep or rest?",
+      question: "Do you find yourself struggling with energy through the day?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +44,7 @@ export default function question10() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          How often do you feel that lingering tiredness that just won’t go
-          away, even after sleep or rest?
+          Do you find yourself struggling with energy through the day?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

@@ -25,8 +25,7 @@ export default function question20() {
     await nextStep({
       step: 3,
       type: "question",
-      question:
-        "Do your symptoms get worse after physical or mental effort (like that post-exertional malaise thing)?",
+      question: "Does physical or mental effort make your symptoms worse?",
       answer: answer || "next",
       time: await getCurrentTime(),
     });
@@ -45,8 +44,7 @@ export default function question20() {
       />
       <QuestionWrap>
         <p className={styles.questionText}>
-          Do your symptoms get worse after physical or mental effort (like that
-          post-exertional malaise thing)?
+          Does physical or mental effort make your symptoms worse?
         </p>
         <ul className={styles.answerList}>
           {AnswersData.map(({ id, text, points }) => (

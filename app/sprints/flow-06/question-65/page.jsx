@@ -20,7 +20,7 @@ export default function question65() {
     await nextStep({
       step: 10,
       type: "info",
-      question: "Social and Physical Well-being",
+      question: "The sleep-energy connection",
       answer: "next",
       time: await getCurrentTime(),
     });
@@ -38,13 +38,19 @@ export default function question65() {
       <InfoPage
         title={
           <>
-            Social and <br />
-            Physical Well-being
+            The sleep-energy
+            <br />
+            connection
           </>
         }
         image={"page65.png"}
         text={
-          "🏃‍♀️ We’ll create personalized micro-movement habits to gradually restore body tone — no exhausting workouts."
+          <>
+            😴 Better sleep isn't just hours — it's quality.
+            <br />
+            ChatMind guides you through light timing, rhythm optimization, and
+            movement that help you actually wake refreshed.
+          </>
         }
         next={goToNextStep}
       />

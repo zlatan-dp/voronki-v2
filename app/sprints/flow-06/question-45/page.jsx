@@ -20,7 +20,7 @@ export default function question45() {
     await nextStep({
       step: 7,
       type: "info",
-      question: "Mood and Focus",
+      question: "High-performers understand",
       answer: "next",
       time: await getCurrentTime(),
     });
@@ -36,10 +36,10 @@ export default function question45() {
   return (
     <Container>
       <InfoPage
-        title={"Mood and Focus"}
+        title={"High-performers understand"}
         image={"page45.png"}
         text={
-          "🌱 Every emotion tells something. We’ll help understand how emotional background affects energy — and how to harmonize it."
+          "🏆  Quality recovery isn't luck. ChatMind app shows patterns that medical checkups miss – because it's designed for real-world energy management."
         }
         next={goToNextStep}
       />

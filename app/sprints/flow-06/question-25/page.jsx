@@ -20,7 +20,7 @@ export default function question25() {
     await nextStep({
       step: 4,
       type: "info",
-      question: "Daily Energy",
+      question: "Personal coaching",
       answer: "next",
       time: await getCurrentTime(),
     });
@@ -36,10 +36,10 @@ export default function question25() {
   return (
     <Container>
       <InfoPage
-        title={"Daily Energy"}
+        title={"Personal coaching"}
         image={"page25.png"}
         text={
-          "⚡ We analyze daily energy cycles to suggest when to plan rest and avoid “energy crashes.”"
+          "⚡️ ChatMind creates the exact pacing strategy a professional coach would – tailored just for you."
         }
         next={goToNextStep}
       />
