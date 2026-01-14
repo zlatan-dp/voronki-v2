@@ -36,7 +36,7 @@ export default function TextResults() {
   if (totalPoints === null) return null;
 
   const resultText = (points) => {
-    if (points < 160) {
+    if (points < 16) {
       return (
         <>
           <p className={styles.subtitle}>
