@@ -4,11 +4,19 @@
   line-height: 150%;
 }
 
-.boldText {
+.boldSmallText {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.actionText {
   font-size: 22px;
   font-weight: 700;
   color: var(--black-light);
   line-height: 150%;
+  text-align: center;
 }
 
 .textWrap {

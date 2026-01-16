@@ -1,53 +1,117 @@
 import styles from "./PlanList.module.css";
 
 import { useTimer } from "../../../../actions/useTimerContext";
+import Image from "next/image";
 
-export default function PlanList({
-  plans = [],
-  selectedId,
-  onSelect,
-  theme = "light",
-}) {
+export default function PlanList({ plans = [], selectedId, onSelect }) {
   const { minutes, seconds, timerActive } = useTimer();
   return (
-    <ul className={`${styles.planList} ${theme === "dark" && styles.dark} `}>
-      {plans.map(({ id, duration, days, totalPrice, currency }) => {
-        if (id === 1 && !timerActive) return null;
+    <ul className={styles.planList}>
+      {plans.map(
+        ({
+          id,
+          duration,
+          durationInfo,
+          days,
+          totalPrice,
+          currency,
+          priceInfo,
+          packageText,
+          packages,
+        }) => {
+          if (id === 1 && !timerActive) return null;
 
-        const isActive = selectedId === id;
-        const perDay = (totalPrice / days).toFixed(2);
-        return (
-          <li key={id}>
-            <div
-              className={`${styles.inputWrap} ${isActive ? styles.active : ""}`}
-              onClick={() => onSelect(id)}
-            >
-              <div className={styles.durationWrap}>
-                <p className={styles.duration}>{duration}</p>
-                <div className={styles.priceWithTimer}>
-                  <p className={styles.totalPrice}>
-                    {currency}
-                    {totalPrice.toFixed(2)}
-                  </p>
-                  {timerActive && id === 1 && (
-                    <span className={styles.specialTimer}>
-                      {String(minutes).padStart(2, "0")}:
-                      {String(seconds).padStart(2, "0")}
-                    </span>
+          const isActive = selectedId === id;
+          const perDay = (totalPrice / days).toFixed(2);
+          const [dollars, cents] = perDay.split(".");
+
+          return (
+            <li key={id}>
+              <div
+                className={`${styles.inputWrap} ${
+                  isActive ? styles.active : ""
+                }`}
+                onClick={() => onSelect(id)}
+              >
+                <div className={styles.priceInfoWrap}>
+                  <div className={styles.durationWrap}>
+                    <p className={styles.duration}>{duration}</p>
+                    {durationInfo && (
+                      <p className={styles.durationInfo}>{durationInfo}</p>
+                    )}
+                    <div className={styles.priceWithTimer}>
+                      <p className={styles.totalPrice}>
+                        {currency}
+                        {totalPrice.toFixed(2)}
+                        <br />
+                        {priceInfo && (
+                          <span className={styles.priceInfo}>{priceInfo}</span>
+                        )}
+                      </p>
+                      {/* {timerActive && id === 1 && (
+                        <span className={styles.specialTimer}>
+                          {String(minutes).padStart(2, "0")}:
+                          {String(seconds).padStart(2, "0")}
+                        </span>
+                      )} */}
+                    </div>
+                  </div>
+                  <div className={styles.priceDayWrapWithTimer}>
+                    <div className={styles.priceDayWrap}>
+                      <p className={styles.currency}>{currency}</p>
+                      <p className={styles.price}>{dollars}</p>
+                      <div className={styles.priceDay}>
+                        <p className={styles.cents}>{cents}</p>
+                        <p className={styles.perDay}>
+                          per
+                          <br />
+                          day
+                        </p>
+                      </div>
+                    </div>
+                    {timerActive && id === 1 && (
+                      <span className={styles.specialTimer}>
+                        {String(minutes).padStart(2, "0")}:
+                        {String(seconds).padStart(2, "0")}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className={styles.packageWrap}>
+                  {packageText && (
+                    <p className={styles.packageText}>{packageText}</p>
+                  )}
+                  {packages && (
+                    <ul className={styles.packageList}>
+                      {packages.map(({ id, img, title, description }) => {
+                        return (
+                          <li key={id} className={styles.packageItem}>
+                            <div className={styles.packageImg}>
+                              <Image
+                                src={img}
+                                alt="logo"
+                                width={34}
+                                height={24}
+                                quality={100}
+                              />
+                            </div>
+                            <div className={styles.packageTextWrap}>
+                              <p className={styles.packageTitle}>{title}</p>
+                              <p className={styles.packageText}>
+                                {description}
+                              </p>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   )}
                 </div>
               </div>
-              <div className={styles.priceDayWrap}>
-                <div className={styles.priceDay}>
-                  <p className={styles.currency}>{currency}</p>
-                  <p className={styles.perDayPrice}>{perDay}</p>
-                </div>
-                <p className={styles.perDay}>per day</p>
-              </div>
-            </div>
-          </li>
-        );
-      })}
+            </li>
+          );
+        }
+      )}
     </ul>
   );
 }

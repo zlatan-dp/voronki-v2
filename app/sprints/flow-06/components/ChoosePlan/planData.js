@@ -1,10 +1,40 @@
 export const PlanData = [
   {
     id: 1,
-    duration: "1 week trial",
-    days: 7,
-    totalPrice: 1.0,
+    // duration: "1 week trial",
+    duration: "All-in-one",
+    durationInfo: "Maximum Growth Bundle",
+    days: 30,
+    totalPrice: 24.75,
     currency: "$",
+    priceInfo: "first month",
+    packageText: "Complete self-improvement suite in one package:",
+    packages: [
+      {
+        id: 1,
+        img: "/images/sprints/package/headway.png",
+        title: "Headway",
+        description: "Book summaries for fast learning",
+      },
+      {
+        id: 2,
+        img: "/images/sprints/package/ninja-fit.png",
+        title: "Ninja Fit",
+        description: "Workouts and body movement  ",
+      },
+      {
+        id: 3,
+        img: "/images/sprints/package/nanohabits.png",
+        title: "Nanohabits",
+        description: "Micro-habits for any life area  ",
+      },
+      {
+        id: 4,
+        img: "/images/sprints/package/chatmind.png",
+        title: "ChatMind",
+        description: "Emotional recovery + mental rituals ",
+      },
+    ],
   },
   {
     id: 2,
@@ -12,6 +42,14 @@ export const PlanData = [
     days: 30,
     totalPrice: 9.98,
     currency: "$",
+    packages: [
+      {
+        id: 4,
+        img: "/images/sprints/package/chatmind.png",
+        title: "ChatMind",
+        description: "Emotional recovery + mental rituals ",
+      },
+    ],
   },
   {
     id: 3,
@@ -19,6 +57,14 @@ export const PlanData = [
     days: 91,
     totalPrice: 23.94,
     currency: "$",
+    packages: [
+      {
+        id: 4,
+        img: "/images/sprints/package/chatmind.png",
+        title: "ChatMind",
+        description: "Emotional recovery + mental rituals ",
+      },
+    ],
   },
   {
     id: 4,
@@ -26,5 +72,13 @@ export const PlanData = [
     days: 365,
     totalPrice: 76.65,
     currency: "$",
+    packages: [
+      {
+        id: 4,
+        img: "/images/sprints/package/chatmind.png",
+        title: "ChatMind",
+        description: "Emotional recovery + mental rituals ",
+      },
+    ],
   },
 ];

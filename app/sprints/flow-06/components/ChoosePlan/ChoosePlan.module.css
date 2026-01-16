@@ -6,9 +6,11 @@
 
 .boldText {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--black-light);
   line-height: 150%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .infoSmallBoldText {
