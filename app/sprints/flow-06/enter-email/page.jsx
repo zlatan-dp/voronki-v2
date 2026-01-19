@@ -22,7 +22,7 @@ export default function enterEmail() {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
-  const [agreePolicy, setAgreePolicy] = useState(false);
+  const [agreePolicy, setAgreePolicy] = useState(true);
   const [errors, setErrors] = useState({});
 
   const validateEmail = () => {
@@ -65,8 +65,8 @@ export default function enterEmail() {
       </SectionTitle>
       <BlockWrap padding={"small"}>
         <p className={styles.text}>
-          Enter your email address to receive your personalized offer and
-          step-by-step instructions on how to get your micro-learning plan.
+          Enter your email address to receive your personalized offer and create
+          your personal account.
         </p>
 
         <form className={styles.form}>
@@ -82,7 +82,7 @@ export default function enterEmail() {
             {errors.email && <p className={styles.errorText}>{errors.email}</p>}
           </div>
 
-          <div className={styles.checkboxContainerWrap}>
+          {/* <div className={styles.checkboxContainerWrap}>
             <label className={styles.checkboxContainer}>
               <input type="checkbox" id="mailNews" />
               <span className={styles.checkboxCustom}></span>
@@ -91,7 +91,7 @@ export default function enterEmail() {
                 email
               </span>
             </label>
-          </div>
+          </div> */}
 
           <div className={styles.checkboxContainerWrap}>
             <label className={styles.checkboxContainer}>
