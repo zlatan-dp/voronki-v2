@@ -73,7 +73,8 @@ export default function ChoosePlanComponent() {
       </p>
       <p className={styles.text}>
         We've created your personalized rituals, daily prompts, and micro-habits
-        to gradually relieve tension, restore energy, and bring mental clarity.{" "}
+        to gradually relieve tension, restore energy, and bring mental
+        clarity.{" "}
       </p>
       {/* <SectionTitle>Unlock Full Program Now</SectionTitle> */}
       <SectionTitle ta={"center"}>Choose Your Plan</SectionTitle>
@@ -108,7 +109,7 @@ export default function ChoosePlanComponent() {
       <p className={styles.discountedText}>
         Discounted price applies to your first subscription. Your subscription
         will automatically renew at full price of{" "}
-        {selectedPlanId === 1 ? "$29.99" : "$14.99"} per month at the end of the
+        {selectedPlanId === 4 ? "$14.99" : "$9.99"} per month at the end of the
         chosen subscription period until you cancel in your account.
       </p>
     </BlockWrap>

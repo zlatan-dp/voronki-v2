@@ -65,8 +65,7 @@ export default function enterEmail() {
       </SectionTitle>
       <BlockWrap padding={"small"}>
         <p className={styles.text}>
-          Enter your email address to receive your personalized offer and create
-          your personal account.
+          Enter your email address to create your personal account.
         </p>
 
         <form className={styles.form}>

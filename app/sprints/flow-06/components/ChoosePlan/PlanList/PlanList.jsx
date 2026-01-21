@@ -110,7 +110,7 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
               </div>
             </li>
           );
-        }
+        },
       )}
     </ul>
   );

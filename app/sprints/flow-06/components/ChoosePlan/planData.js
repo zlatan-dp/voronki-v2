@@ -1,11 +1,56 @@
 export const PlanData = [
   {
+    id: 2,
+    duration: "1 month",
+    days: 30,
+    totalPrice: 6.98,
+    currency: "$",
+    packages: [
+      {
+        id: 4,
+        img: "/images/sprints/package/chatmind.png",
+        title: "ChatMind",
+        description: "Emotional recovery + mental rituals ",
+      },
+    ],
+  },
+  {
+    id: 3,
+    duration: "3 months",
+    days: 91,
+    totalPrice: 17.38,
+    currency: "$",
+    packages: [
+      {
+        id: 4,
+        img: "/images/sprints/package/chatmind.png",
+        title: "ChatMind",
+        description: "Emotional recovery + mental rituals ",
+      },
+    ],
+  },
+  {
+    id: 4,
+    duration: "12 months",
+    days: 365,
+    totalPrice: 59.47,
+    currency: "$",
+    packages: [
+      {
+        id: 4,
+        img: "/images/sprints/package/chatmind.png",
+        title: "ChatMind",
+        description: "Emotional recovery + mental rituals ",
+      },
+    ],
+  },
+  {
     id: 1,
     // duration: "1 week trial",
     duration: "All-in-one",
     durationInfo: "Maximum Growth Bundle",
     days: 30,
-    totalPrice: 24.75,
+    totalPrice: 9.98,
     currency: "$",
     priceInfo: "first month",
     packageText: "Complete self-improvement suite in one package:",
@@ -28,51 +73,6 @@ export const PlanData = [
         title: "Nanohabits",
         description: "Micro-habits for any life area  ",
       },
-      {
-        id: 4,
-        img: "/images/sprints/package/chatmind.png",
-        title: "ChatMind",
-        description: "Emotional recovery + mental rituals ",
-      },
-    ],
-  },
-  {
-    id: 2,
-    duration: "1 month",
-    days: 30,
-    totalPrice: 9.98,
-    currency: "$",
-    packages: [
-      {
-        id: 4,
-        img: "/images/sprints/package/chatmind.png",
-        title: "ChatMind",
-        description: "Emotional recovery + mental rituals ",
-      },
-    ],
-  },
-  {
-    id: 3,
-    duration: "3 months",
-    days: 91,
-    totalPrice: 23.94,
-    currency: "$",
-    packages: [
-      {
-        id: 4,
-        img: "/images/sprints/package/chatmind.png",
-        title: "ChatMind",
-        description: "Emotional recovery + mental rituals ",
-      },
-    ],
-  },
-  {
-    id: 4,
-    duration: "12 months",
-    days: 365,
-    totalPrice: 76.65,
-    currency: "$",
-    packages: [
       {
         id: 4,
         img: "/images/sprints/package/chatmind.png",
