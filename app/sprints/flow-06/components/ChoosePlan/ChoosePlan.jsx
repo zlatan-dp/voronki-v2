@@ -109,7 +109,7 @@ export default function ChoosePlanComponent() {
       <p className={styles.discountedText}>
         Discounted price applies to your first subscription. Your subscription
         will automatically renew at full price of{" "}
-        {selectedPlanId === 4 ? "$14.99" : "$9.99"} per month at the end of the
+        {selectedPlanId === 1 ? "$14.99" : "$9.99"} per month at the end of the
         chosen subscription period until you cancel in your account.
       </p>
     </BlockWrap>
