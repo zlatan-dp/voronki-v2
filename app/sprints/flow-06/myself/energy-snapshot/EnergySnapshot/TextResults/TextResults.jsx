@@ -55,8 +55,8 @@ export default function TextResults() {
               • 3 deep breaths before stressful moments
             </p>
             <p className={styles.text}>
-              ChatMind Premium shows exact timing, breathing techniques, and
-              progress tracking
+              ChatMind shows exact timing, breathing techniques, and progress
+              tracking
             </p>
           </div>
         </>
@@ -80,8 +80,8 @@ export default function TextResults() {
               • “3 wins” evening — write 3 good moments before sleep
             </p>
             <p className={styles.text}>
-              ChatMind Premium creates your personal daily schedule + shows
-              exact timing techniques and progress tracking
+              ChatMind creates your personal daily schedule + shows exact timing
+              techniques and progress tracking
             </p>
           </div>
         </>
@@ -104,7 +104,7 @@ export default function TextResults() {
             • Micro-walks — 5 min every 2 hours (set phone alarms)
           </p>
           <p className={styles.text}>
-            ChatMind Premium builds your 7-day recovery protocol step-by-step
+            ChatMind builds your 7-day recovery protocol step-by-step
           </p>
         </div>
       </>
