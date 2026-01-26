@@ -48,12 +48,12 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
                           <span className={styles.priceInfo}>{priceInfo}</span>
                         )}
                       </p>
-                      {/* {timerActive && id === 1 && (
+                      {timerActive && id === 1 && (
                         <span className={styles.specialTimer}>
                           {String(minutes).padStart(2, "0")}:
                           {String(seconds).padStart(2, "0")}
                         </span>
-                      )} */}
+                      )}
                     </div>
                   </div>
                   <div className={styles.priceDayWrapWithTimer}>
@@ -69,19 +69,20 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
                         </p>
                       </div>
                     </div>
-                    {timerActive && id === 1 && (
+                    {/* {timerActive && id === 1 && (
                       <span className={styles.specialTimer}>
                         {String(minutes).padStart(2, "0")}:
                         {String(seconds).padStart(2, "0")}
                       </span>
-                    )}
+                    )} */}
                   </div>
                 </div>
-                <div className={styles.packageWrap}>
-                  {packageText && (
-                    <p className={styles.packageText}>{packageText}</p>
-                  )}
-                  {packages && (
+
+                {packages && (
+                  <div className={styles.packageWrap}>
+                    {packageText && (
+                      <p className={styles.packageText}>{packageText}</p>
+                    )}
                     <ul className={styles.packageList}>
                       {packages.map(({ id, img, title, description }) => {
                         return (
@@ -105,8 +106,8 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
                         );
                       })}
                     </ul>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </li>
           );

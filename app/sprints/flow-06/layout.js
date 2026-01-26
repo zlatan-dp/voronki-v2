@@ -3,7 +3,7 @@ import { TimerProvider } from "../actions/useTimerContext";
 
 export default function Flow06Layout({ children }) {
   return (
-    <PlanSelectionProvider defaultPlan={2}>
+    <PlanSelectionProvider defaultPlan={1}>
       <TimerProvider>{children}</TimerProvider>
     </PlanSelectionProvider>
   );
