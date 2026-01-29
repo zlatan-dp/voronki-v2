@@ -5,11 +5,15 @@ import Image from "next/image";
 
 export default function PlanList({ plans = [], selectedId, onSelect }) {
   const { minutes, seconds, timerActive } = useTimer();
+
+  if (timerActive === null) return null;
+
   return (
     <ul className={styles.planList}>
       {plans.map(
         ({
           id,
+          type,
           duration,
           durationInfo,
           days,
@@ -19,7 +23,8 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
           packageText,
           packages,
         }) => {
-          if (id === 1 && !timerActive) return null;
+          if (type === "usual" && timerActive) return null;
+          if (type === "special" && !timerActive) return null;
 
           const isActive = selectedId === id;
           const perDay = (totalPrice / days).toFixed(2);
@@ -69,12 +74,12 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
                         </p>
                       </div>
                     </div>
-                    {/* {timerActive && id === 1 && (
+                    {timerActive && id === 2 && (
                       <span className={styles.specialTimer}>
                         {String(minutes).padStart(2, "0")}:
                         {String(seconds).padStart(2, "0")}
                       </span>
-                    )} */}
+                    )}
                   </div>
                 </div>
 

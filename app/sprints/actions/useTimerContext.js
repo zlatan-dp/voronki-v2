@@ -6,7 +6,7 @@ const TimerContext = createContext(null);
 
 export function TimerProvider({ initialSeconds = 600, children }) {
   const [secondLeft, setSecondLeft] = useState(initialSeconds);
-  const [timerActive, setTimerActive] = useState(false);
+  const [timerActive, setTimerActive] = useState(null);
   const intervalRef = useRef(null);
 
   // Запуск таймера
