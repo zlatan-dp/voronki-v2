@@ -16,7 +16,9 @@ export const PlanData = [
     totalPrice: 4.99,
     currency: "$",
     priceInfo: "first month",
-    packageText: "Complete self-improvement suite in one package:",
+    safeTitle: "Save $50+ per month",
+    safeText: "with complete self-improvement bundle",
+    // packageText: "Complete self-improvement suite in one package:",
     packages: [
       {
         id: 1,

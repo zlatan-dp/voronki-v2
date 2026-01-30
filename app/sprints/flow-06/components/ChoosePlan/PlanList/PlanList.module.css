@@ -149,12 +149,12 @@
 
       .packageItem {
         display: flex;
-        gap: 10px;
+        gap: 8px;
         align-items: center;
 
         .packageImg {
           flex-shrink: 0;
-          width: 34px;
+          width: 32px;
         }
         .packageTextWrap {
           display: flex;
@@ -169,6 +169,23 @@
           }
         }
       }
+    }
+  }
+
+  .safeInfo {
+    padding: 8px clamp(34px, 9.5vw, 38px);
+    .safeTitle {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--accent);
+    }
+
+    .safeText {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 140%;
+      color: var(--accent);
     }
   }
 

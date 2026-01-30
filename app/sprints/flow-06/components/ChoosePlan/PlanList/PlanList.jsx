@@ -20,6 +20,8 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
           totalPrice,
           currency,
           priceInfo,
+          safeTitle,
+          safeText,
           packageText,
           packages,
         }) => {
@@ -82,6 +84,13 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
                     )}
                   </div>
                 </div>
+
+                {safeTitle && (
+                  <div className={styles.safeInfo}>
+                    <p className={styles.safeTitle}>{safeTitle}</p>
+                    <p className={styles.safeText}>{safeText}</p>
+                  </div>
+                )}
 
                 {packages && (
                   <div className={styles.packageWrap}>
