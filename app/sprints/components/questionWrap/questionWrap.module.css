@@ -1,7 +1,7 @@
 .questionWrap {
   width: 100%;
   background-color: var(--white);
-  padding: min(12.2vw, 48px);
+  padding: min(8vw, 32px);
   border-radius: min(6.1vw, 24px);
   display: flex;
   flex-direction: column;

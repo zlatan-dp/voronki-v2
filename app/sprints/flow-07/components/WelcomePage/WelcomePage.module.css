@@ -1,0 +1,16 @@
+.welcomeTextHeader {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black-light);
+  line-height: 150%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcomeText {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--black-light);
+  line-height: 150%;
+  padding: 0 24px;
+}

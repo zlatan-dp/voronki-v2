@@ -1,0 +1,99 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.politicsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.politicsWrap h3 {
+  text-transform: uppercase;
+}
+
+.politicsWrap h4 {
+  text-transform: uppercase;
+}
+
+.politicsWrap a:hover {
+  color: var(--accent);
+}
+
+.politicsWrap .underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.politicsWrap ul {
+  padding-left: 24px;
+  list-style: circle;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.politicsWrap table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.politicsWrap tr {
+  border-bottom: 1px solid #000;
+}
+
+.politicsWrap th,
+.politicsWrap td {
+  padding: 10px;
+}
+
+.politicsWrap th:not(:last-child) {
+  border-right: 1px solid #000;
+}
+
+.politicsWrap td:not(:last-child) {
+  border-right: 1px solid #000;
+}
+
+.popup {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* max-width: 400px; */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--white);
+  padding: 16px 24px;
+  box-shadow: 0 -1px 10px 0 #acabab4d;
+}
+
+.btnsWrap {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.rejectBtn {
+  background: #fff0;
+  border: 2px solid #1863dc;
+  padding: 8px 27px;
+  color: #1863dc;
+  cursor: pointer;
+}
+
+.acceptBtn {
+  background: #1863dc;
+  border: 2px solid #1863dc;
+  padding: 8px 27px;
+  color: #ffffff;
+  cursor: pointer;
+}
