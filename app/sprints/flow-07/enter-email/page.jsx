@@ -53,7 +53,7 @@ export default function enterEmail() {
 
       clearQuizAnswers(currentFlow);
 
-      router.push(`/sprints/${currentFlow}/paywall`);
+      router.push(`/sprints/${currentFlow}/sleep-energy`);
     }
   };
 
@@ -65,7 +65,8 @@ export default function enterEmail() {
       </SectionTitle>
       <BlockWrap padding={"small"}>
         <p className={styles.text}>
-          Enter your email address to create your personal account.
+          Enter your email address to receive your personalized offer and
+          step-by-step instructions on how to get your micro-learning plan.
         </p>
 
         <form className={styles.form}>
@@ -81,7 +82,7 @@ export default function enterEmail() {
             {errors.email && <p className={styles.errorText}>{errors.email}</p>}
           </div>
 
-          {/* <div className={styles.checkboxContainerWrap}>
+          <div className={styles.checkboxContainerWrap}>
             <label className={styles.checkboxContainer}>
               <input type="checkbox" id="mailNews" />
               <span className={styles.checkboxCustom}></span>
@@ -90,7 +91,7 @@ export default function enterEmail() {
                 email
               </span>
             </label>
-          </div> */}
+          </div>
 
           <div className={styles.checkboxContainerWrap}>
             <label className={styles.checkboxContainer}>
