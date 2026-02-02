@@ -13,7 +13,7 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
       {plans.map(
         ({
           id,
-          type,
+          // type,
           duration,
           durationInfo,
           days,
@@ -25,8 +25,9 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
           packageText,
           packages,
         }) => {
-          if (type === "usual" && timerActive) return null;
-          if (type === "special" && !timerActive) return null;
+          // if (type === "usual" && timerActive) return null;
+          // if (type === "special" && !timerActive) return null;
+          if (id === 1 && !timerActive) return null;
 
           const isActive = selectedId === id;
           const perDay = (totalPrice / days).toFixed(2);
@@ -76,12 +77,12 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
                         </p>
                       </div>
                     </div>
-                    {timerActive && id === 2 && (
+                    {/* {timerActive && id === 2 && (
                       <span className={styles.specialTimer}>
                         {String(minutes).padStart(2, "0")}:
                         {String(seconds).padStart(2, "0")}
                       </span>
-                    )}
+                    )} */}
                   </div>
                 </div>
 

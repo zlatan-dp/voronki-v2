@@ -15,7 +15,7 @@ import SectionTitle from "../../../components/sectionTitle/sectionTitle";
 import PlanList from "./PlanList/PlanList";
 import PayIconsList from "./PayIconList/PayIconList";
 
-import { PlanData } from "./planDataMix";
+import { PlanData } from "./planData";
 import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
 export default function ChoosePlanComponent() {
@@ -27,9 +27,8 @@ export default function ChoosePlanComponent() {
   const { selectedPlanId, setSelectedPlanId } = usePlanSelection();
 
   const btnActive =
-    Boolean(selectedPlanId) &&
-    !(selectedPlanId === 1 && !timerActive) &&
-    !(selectedPlanId === 2 && !timerActive);
+    Boolean(selectedPlanId) && !(selectedPlanId === 1 && !timerActive);
+  //&& !(selectedPlanId === 2 && !timerActive);
 
   const planPayload = (id) => {
     const plan = PlanData.find((p) => p.id === id);
@@ -108,17 +107,17 @@ export default function ChoosePlanComponent() {
         You can cancel your
         <br /> subscription at any time
       </p>
-      {/* <p className={styles.discountedText}>
+      <p className={styles.discountedText}>
         Discounted price applies to your first subscription. Your subscription
         will automatically renew at full price of "$9.99" per month at the end
         of the chosen subscription period until you cancel in your account.
-      </p> */}
-      <p className={styles.discountedText}>
+      </p>
+      {/* <p className={styles.discountedText}>
         Discounted price applies to your first subscription. Your subscription
         will automatically renew at full price of
         {selectedPlanId === 2 ? "$14.99" : "$9.99"} per month at the end of the
         chosen subscription period until you cancel in your account.
-      </p>
+      </p> */}
     </BlockWrap>
   );
 }
