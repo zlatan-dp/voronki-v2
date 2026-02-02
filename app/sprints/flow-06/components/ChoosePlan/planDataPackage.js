@@ -64,7 +64,7 @@ export const PlanData = [
         id: 2,
         img: "/images/sprints/package/ninja-fit.png",
         title: "Ninja Fit",
-        description: "Workouts and body movement  ",
+        description: "Workouts and body movement",
       },
       {
         id: 3,

@@ -1,3 +1,9 @@
+.packageWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .text {
   font-size: 18px;
   color: var(--black-light);
@@ -13,6 +19,57 @@
   margin: 0 auto;
 }
 
+.specialPriceWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+
+  .dollarsText {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .centsText {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    align-self: start;
+  }
+
+  .monthText {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+}
+
+.specialTimer {
+  margin: 0 auto;
+  font-weight: 700;
+  color: rgba(255, 0, 0, 1);
+}
+
+.priceInfoWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .mainText {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .secondaryText {
+    font-size: 10px;
+    font-style: italic;
+    color: #747474;
+  }
+}
+
 .infoSmallBoldText {
   font-weight: 700;
   font-size: 14px;
@@ -25,6 +82,10 @@
   font-size: 11px;
   line-height: 1.3;
   color: #686262;
+
+  .greenText {
+    color: #00bb77;
+  }
 }
 
 .paySafeWrap {

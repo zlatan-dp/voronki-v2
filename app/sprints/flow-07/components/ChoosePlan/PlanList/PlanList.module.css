@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 16px;
+  background-color: #4467f127;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
 }
 
 .inputWrap {
@@ -10,179 +14,58 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 18px 14px 18px 14px;
+  padding: 12px 16px;
+  background-color: var(--white);
+  box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+
   border-radius: 12px;
-  border: 2px solid #e5e7eb;
-  cursor: pointer;
   transition: border var(--trans-dur) var(--trans-timing-function);
 
-  &:hover,
-  &:focus {
-    border: 2px solid var(--accent);
-  }
-
-  .priceInfoWrap {
+  .mainWrap {
     display: flex;
     align-items: center;
     gap: min(4vw, 17px);
 
-    &::before {
-      content: "";
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      width: 18px;
-      height: 18px;
-      border: 2px solid #0000004b;
-      border-radius: 50%;
-    }
-
-    .durationWrap {
+    .packageInfoWrap {
       display: flex;
       flex-direction: column;
       gap: 6px;
 
-      .duration {
-        font-size: 20px;
-        font-weight: 700;
-      }
-
-      .durationInfo {
-        font-size: 12px;
-        max-width: 110px;
-      }
-
-      .priceWithTimer {
-        width: 100%;
+      .packageTitleWrap {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-
-      .totalPrice {
-        color: #6b7280;
-        font-size: 20px;
-        line-height: 0.8;
-      }
-
-      .priceInfo {
-        font-size: 14px;
-      }
-
-      .specialTimer {
-        font-weight: 700;
-        color: rgba(255, 0, 0, 1);
-      }
-    }
-
-    .priceDayWrapWithTimer {
-      display: flex;
-      gap: 4px;
-      flex-direction: column;
-      align-items: center;
-      margin-left: auto;
-
-      .specialTimer {
-        font-weight: 700;
-        color: rgba(255, 0, 0, 1);
-        font-style: 16px;
-      }
-    }
-    .priceDayWrap {
-      display: flex;
-      gap: 4px;
-      align-items: flex-start;
-
-      .currency {
-        font-size: 20px;
-        font-weight: 500;
-        color: rgba(0, 0, 0, 0.4);
-      }
-
-      .price {
-        font-size: 56px;
-        color: rgba(0, 0, 0, 0.4);
-        line-height: 1;
-        font-weight: 400;
-      }
-
-      .priceDay {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        align-items: center;
-
-        .cents {
-          font-size: 14px;
-          font-weight: 500;
-          color: rgba(0, 0, 0, 0.4);
-        }
-
-        .perDay {
-          font-size: 8px;
-          font-weight: 700;
-          color: rgba(0, 0, 0, 0.4);
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
-
-  .packageWrap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    .packageText {
-      font-size: 14px;
-      color: rgba(74, 76, 189, 1);
-      line-height: 140%;
-    }
-
-    .packageList {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      .packageItem {
-        display: flex;
-        gap: 10px;
-        align-items: center;
+        gap: 6px;
 
         .packageImg {
           flex-shrink: 0;
           width: 34px;
         }
-        .packageTextWrap {
-          display: flex;
-          flex-direction: column;
-          gap: 2px;
 
-          .packageTitle {
-            font-size: 14px;
-            color: rgba(74, 76, 189, 1);
-            line-height: 100%;
-            font-weight: 700;
-          }
+        .packageTitle {
+          font-size: 20px;
+          font-weight: 700;
+          color: var(--accent);
         }
+      }
+
+      .packageDescription {
+        font-size: 12px;
+        color: var(--accent);
       }
     }
   }
+  .infoList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 24px;
 
-  &.active {
-    border: 2px solid var(--accent);
-    background-color: #4467f127;
-
-    .priceInfoWrap::before {
-      content: "✓";
-      color: var(--white);
-      background-color: var(--accent);
-      border: 1px solid var(--accent);
-      font-weight: 700;
-      font-size: 12px;
+    .infoItem {
+      .infoText {
+        font-size: 12px;
+        color: var(--accent);
+        line-height: 150%;
+      }
     }
   }
 }
