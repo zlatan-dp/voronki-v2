@@ -16,7 +16,7 @@ import PayIconsList from "./PayIconList/PayIconList";
 import { PlanData } from "./planData";
 import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
-export default function ChoosePlanComponent() {
+export default function ChoosePlanComponent({ showTitle = true }) {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
@@ -43,15 +43,20 @@ export default function ChoosePlanComponent() {
   return (
     <>
       <div className={styles.packageWrap}>
-        <SectionTitle ta={"center"}>
-          Your 30‑Day
-          <br /> Sharper Mind Plan
-        </SectionTitle>
-        <p className={styles.text}>
-          Let's make your brain work for you, not against you. <br />
-          No more foggy mornings or endless distractions – just quick wins to
-          think clearer and get stuff done.
-        </p>
+        {showTitle && (
+          <>
+            <SectionTitle ta={"center"}>
+              Your 30‑Day
+              <br /> Sharper Mind Plan
+            </SectionTitle>
+            <p className={styles.text}>
+              Let's make your brain work for you, not against you. <br />
+              No more foggy mornings or endless distractions – just quick wins
+              to think clearer and get stuff done.
+            </p>
+          </>
+        )}
+
         <SectionTitle ta={"center"}>Here's your daily toolkit</SectionTitle>
         <PlanList plans={PlanData} />
       </div>

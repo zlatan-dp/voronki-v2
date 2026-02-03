@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     gap: min(4vw, 17px);
+    cursor: pointer;
 
     .packageInfoWrap {
       display: flex;
@@ -53,12 +54,31 @@
         color: var(--accent);
       }
     }
+    .packageIconWrap {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+    }
+
+    .packageIcon {
+      transform: rotate(0deg);
+      transition: transform 0.9s ease;
+    }
   }
+
   .infoList {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 0 24px;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease,
+      margin-top 0.3s ease;
 
     .infoItem {
       .infoText {
@@ -67,5 +87,15 @@
         line-height: 150%;
       }
     }
+  }
+
+  &.open .infoList {
+    max-height: 1000px;
+    margin-top: 16px;
+    opacity: 1;
+  }
+
+  &.open .packageIcon {
+    transform: rotate(180deg);
   }
 }

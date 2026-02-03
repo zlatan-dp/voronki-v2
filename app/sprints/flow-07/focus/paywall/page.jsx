@@ -28,7 +28,7 @@ export default function Paywall() {
       <BenefitsList />
       <FeedbackList />
       <FaqList />
-      <ChoosePlanComponent />
+      <ChoosePlanComponent showTitle={false} />
     </Container>
   );
 }
