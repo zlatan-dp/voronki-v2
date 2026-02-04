@@ -29,7 +29,7 @@ export default function Paywall() {
     <Container>
       <ChoosePlanComponent branch={branch} />
       <PlanInfo />
-      <BenefitsList />
+      <BenefitsList branch={branch} />
       <FeedbackList />
       <FaqList />
       <ChoosePlanComponent showTitle={false} branch={branch} />
