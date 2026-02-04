@@ -31,6 +31,18 @@ export default function ChoosePlanComponent({
   const copy = CopyData[branch];
   console.log(branch);
 
+  const branchPlans = {
+    focus: [1, 2, 3],
+    habits: [2, 3, 4],
+    stress: [1, 2, 3],
+    shape: [2, 3, 4],
+    universal: [1, 2, 3, 4],
+  };
+
+  const plansIds = branchPlans[branch];
+
+  const flteredPlanData = PlanData.filter((plan) => plansIds.includes(plan.id));
+
   const goToNextStep = async () => {
     await nextStep({
       step: 18,
@@ -63,7 +75,7 @@ export default function ChoosePlanComponent({
         )}
 
         <SectionTitle ta={"center"}>{copy.packageTitle}</SectionTitle>
-        <PlanList plans={PlanData} />
+        <PlanList plans={flteredPlanData} />
       </div>
       <BlockWrap padding={"small"}>
         <SectionTitle ta={"center"}>Your bundle special price:</SectionTitle>
