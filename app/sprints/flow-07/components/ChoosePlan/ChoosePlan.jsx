@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./ChoosePlan.module.css";
 
 import { useRouter } from "next/navigation";

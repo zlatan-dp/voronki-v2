@@ -11,7 +11,11 @@ import { FeedbackData } from "./FeedbackData";
 import BlockWrap from "../../../components/blockWrap/blockWrap";
 import SectionTitle from "../../../components/sectionTitle/sectionTitle";
 
-export default function FeedbackList() {
+export default function FeedbackList({ branch = "universal" }) {
+  const filteredFeedbackData = FeedbackData.filter(
+    (item) => item.forBranch === branch || item.forBranch === "all",
+  );
+
   return (
     <BlockWrap>
       <SectionTitle>Feedback From Our Members</SectionTitle>
@@ -28,7 +32,7 @@ export default function FeedbackList() {
         loop={true}
         className={styles.feedbackSlider}
       >
-        {FeedbackData.map(({ id, text, img, nickname }) => {
+        {filteredFeedbackData.map(({ id, text, img, nickname }) => {
           return (
             <SwiperSlide key={id}>
               <div className={styles.feedbackWrap}>

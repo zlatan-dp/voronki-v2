@@ -1,6 +1,6 @@
 .feedbackWrap {
   width: 100%;
-  min-height: 360px;
+  min-height: 300px;
   padding: 24px;
   border-radius: 12px;
   background-color: var(--green-bg);
@@ -21,7 +21,7 @@
 .nicknameWrap {
   display: flex;
   align-items: flex-end;
-  gap: 24px;
+  gap: min(6vw, 24px);
   margin-bottom: 24px;
 }
 
