@@ -13,9 +13,13 @@ import ChoosePlanComponent from "../../components/ChoosePlan/ChoosePlan";
 
 import { useTimer } from "../../../actions/useTimerContext";
 import PlanInfo from "../../components/PlanInfo/PlanInfo";
+import { getFlowBranch } from "../../../actions/quizStorage";
+import { useCurrentFlow } from "../../../actions/getCurrentFlow";
 
 export default function Paywall() {
   const { startTimer } = useTimer();
+  const currentFlow = useCurrentFlow();
+  const branch = getFlowBranch(currentFlow);
 
   useEffect(() => {
     startTimer();
@@ -23,12 +27,12 @@ export default function Paywall() {
 
   return (
     <Container>
-      <ChoosePlanComponent />
+      <ChoosePlanComponent branch={branch} />
       <PlanInfo />
       <BenefitsList />
       <FeedbackList />
       <FaqList />
-      <ChoosePlanComponent showTitle={false} />
+      <ChoosePlanComponent showTitle={false} branch={branch} />
     </Container>
   );
 }

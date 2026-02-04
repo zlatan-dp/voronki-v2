@@ -14,13 +14,20 @@ import PlanList from "./PlanList/PlanList";
 import PayIconsList from "./PayIconList/PayIconList";
 
 import { PlanData } from "./planData";
+import { CopyData } from "./copyData";
 import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
-export default function ChoosePlanComponent({ showTitle = true }) {
+export default function ChoosePlanComponent({
+  showTitle = true,
+  branch = "universal",
+}) {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
   const { minutes, seconds, timerActive } = useTimer();
+
+  const copy = CopyData[branch];
+  console.log(branch);
 
   const goToNextStep = async () => {
     await nextStep({
@@ -47,24 +54,20 @@ export default function ChoosePlanComponent({ showTitle = true }) {
           <>
             <SectionTitle ta={"center"}>
               Your 30‑Day
-              <br /> Sharper Mind Plan
+              <br /> {copy.title}
             </SectionTitle>
-            <p className={styles.text}>
-              Let's make your brain work for you, not against you. <br />
-              No more foggy mornings or endless distractions – just quick wins
-              to think clearer and get stuff done.
-            </p>
+            <p className={styles.text}>{copy.heroText}</p>
           </>
         )}
 
-        <SectionTitle ta={"center"}>Here's your daily toolkit</SectionTitle>
+        <SectionTitle ta={"center"}>{copy.packageTitle}</SectionTitle>
         <PlanList plans={PlanData} />
       </div>
       <BlockWrap padding={"small"}>
         <SectionTitle ta={"center"}>Your bundle special price:</SectionTitle>
         <div className={styles.specialPriceWrap}>
-          <p className={styles.dollarsText}>$14</p>
-          <p className={styles.centsText}>99</p>
+          <p className={styles.dollarsText}>{copy.dollarsText}</p>
+          <p className={styles.centsText}>{copy.centsText}</p>
           <p className={styles.monthText}>/month</p>
         </div>
         {timerActive && (
@@ -81,7 +84,7 @@ export default function ChoosePlanComponent({ showTitle = true }) {
           <p className={styles.secondaryText}>Actual avg. pricing may vary.</p>
         </div>
         <SubmitBtn onClick={handleSubmit} wide={"wide"}>
-          👉🏻 Grab it now 👈🏻
+          {copy.btnText}
         </SubmitBtn>
         <PayIconsList />
         <div className={styles.paySafeWrap}>
@@ -104,11 +107,12 @@ export default function ChoosePlanComponent({ showTitle = true }) {
           <br /> subscription at any time
         </p>
         <p className={styles.discountedText}>
-          The $9.99 is the discounted price and applies to your first month of
-          subscription. The subscription will automatically renew at full price
-          of <span className={styles.greenText}>$9.99</span> per month at the
-          end of the first month promotional period, and will continue to renew
-          until you cancel in your account.
+          The {copy.fullPrice} is the discounted price and applies to your first
+          month of subscription. The subscription will automatically renew at
+          full price of 
+          <span className={styles.greenText}>{copy.fullPrice}</span> per
+          month at the end of the first month promotional period, and will
+          continue to renew until you cancel in your account.
         </p>
       </BlockWrap>
     </>
