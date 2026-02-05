@@ -27,7 +27,7 @@ export default function question50() {
       time: await getCurrentTime(),
     });
 
-    router.push(`/sprints/${currentFlow}/question-55`);
+    router.push(`/sprints/${currentFlow}/habits/question-60`);
   };
 
   return (

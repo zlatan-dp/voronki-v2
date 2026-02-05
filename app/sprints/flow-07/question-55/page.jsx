@@ -36,10 +36,10 @@ export default function question55() {
   return (
     <Container>
       <InfoPage
-        title={"Personal coaching"}
-        image={"page25.png"}
+        title={"Smart adaptation"}
+        image={"page55.png"}
         text={
-          "⚡️ ChatMind creates the exact pacing strategy a professional coach would – tailored just for you."
+          "🔊  ChatMind learns your patterns – which sensory triggers matter most, what recovery techniques work fastest for you – so every recommendation gets more precise week by week."
         }
         next={goToNextStep}
       />

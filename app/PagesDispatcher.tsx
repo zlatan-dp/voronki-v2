@@ -42,52 +42,57 @@ export default function PagesDispatcher() {
     switch (utmContent) {
       case "quiz-01":
         router.push(
-          `/intensives/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/intensives/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "quiz-02":
         router.push(
-          `/intensives/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/intensives/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "quiz-03":
         router.push(
-          `/intensives/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/intensives/flow-03?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "quiz-04":
         router.push(
-          `/intensives/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/intensives/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "selfgrowth":
         router.push(
-          `/sprints/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "dprssn":
         router.push(
-          `/sprints/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-02?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "fatigue":
         router.push(
-          `/sprints/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-04?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "fatiguewpw":
         router.push(
-          `/sprints/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-05?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       case "fatiguePersPlan":
         router.push(
-          `/sprints/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
+        );
+        break;
+      case "digitalPackPersPlan":
+        router.push(
+          `/sprints/flow-07?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
       default:
         router.push(
-          `/sprints/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`
+          `/sprints/flow-07?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
     }
   }, [pageEnter]);

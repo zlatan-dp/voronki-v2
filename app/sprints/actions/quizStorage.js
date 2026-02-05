@@ -37,9 +37,10 @@ export const setFlowBranch = (flow, branch) => {
 };
 
 export const getFlowBranch = (flow) => {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined") return undefined;
 
-  return localStorage.getItem(`ChatMind:${flow}:branch`);
+  const value = localStorage.getItem(`ChatMind:${flow}:branch`);
+  return value === null ? undefined : value;
 };
 
 export const clearFlowBranch = (flow) => {

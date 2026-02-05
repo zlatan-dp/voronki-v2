@@ -29,7 +29,7 @@ export default function ChoosePlanComponent({
   const { minutes, seconds, timerActive } = useTimer();
 
   const copy = CopyData[branch];
-  console.log(branch);
+  // console.log(branch);
 
   const branchPlans = {
     focus: [1, 2, 3],
@@ -56,7 +56,7 @@ export default function ChoosePlanComponent({
   };
 
   const handleSubmit = async () => {
-    // await fbq("track", "AddToCart");
+    await fbq("track", "AddToCart");
 
     await goToNextStep();
   };
@@ -80,7 +80,12 @@ export default function ChoosePlanComponent({
       <BlockWrap padding={"small"}>
         <SectionTitle ta={"center"}>Your bundle special price:</SectionTitle>
         <div className={styles.specialPriceWrap}>
-          <p className={styles.dollarsText}>{copy.dollarsText}</p>
+          {timerActive ? (
+            <p className={styles.dollarsText}>{copy.dollarsText}</p>
+          ) : (
+            <p className={styles.dollarsText}>{copy.fullDollarsText}</p>
+          )}
+
           <p className={styles.centsText}>{copy.centsText}</p>
           <p className={styles.monthText}>/month</p>
         </div>
@@ -120,14 +125,15 @@ export default function ChoosePlanComponent({
           You can cancel your
           <br /> subscription at any time
         </p>
-        <p className={styles.discountedText}>
-          The {copy.fullPrice} is the discounted price and applies to your first
-          month of subscription. The subscription will automatically renew at
-          full price of 
-          <span className={styles.greenText}>{copy.fullPrice}</span> per
-          month at the end of the first month promotional period, and will
-          continue to renew until you cancel in your account.
-        </p>
+        {timerActive && (
+          <p className={styles.discountedText}>
+            Discounted price applies to your first subscription. The
+            subscription will automatically renew at full price of 
+            <span className={styles.greenText}>{copy.fullPrice}</span> per
+            month at the end of the first month promotional period, and will
+            continue to renew until you cancel in your account.
+          </p>
+        )}
       </BlockWrap>
     </>
   );
