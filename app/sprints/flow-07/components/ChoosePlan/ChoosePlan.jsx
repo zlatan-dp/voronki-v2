@@ -56,7 +56,7 @@ export default function ChoosePlanComponent({
   };
 
   const handleSubmit = async () => {
-    await fbq("track", "AddToCart");
+    // await fbq("track", "AddToCart");
 
     await goToNextStep();
   };
