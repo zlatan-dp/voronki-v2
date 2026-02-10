@@ -1,0 +1,49 @@
+.text {
+  font-size: 18px;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.boldText {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black-light);
+  line-height: 150%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.infoSmallBoldText {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.discountedText {
+  font-size: 11px;
+  line-height: 1.3;
+  color: #686262;
+}
+
+.paySafeWrap {
+  margin: 0 auto;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  background-color: #00bb770d;
+  border-radius: 8px;
+}
+
+.paySafeText {
+  font-size: 14px;
+  color: #00bb77;
+}
+
+.paySafeIcon {
+  fill: #00bb77;
+  width: 24px;
+}

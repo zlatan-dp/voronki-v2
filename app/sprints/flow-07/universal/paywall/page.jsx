@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import BenefitsList from "../../components/BenefitsList/BenefitsList";
 import FaqList from "../../components/FaqList/FaqList";
@@ -19,11 +19,17 @@ import { useCurrentFlow } from "../../../actions/getCurrentFlow";
 export default function Paywall() {
   const { startTimer } = useTimer();
   const currentFlow = useCurrentFlow();
-  const branch = getFlowBranch(currentFlow);
+
+  const [branch, setBranch] = useState("universal");
 
   useEffect(() => {
     startTimer();
   }, []);
+
+  useEffect(() => {
+    const b = getFlowBranch(currentFlow);
+    if (b) setBranch(b);
+  }, [currentFlow]);
 
   return (
     <Container>

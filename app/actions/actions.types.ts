@@ -47,3 +47,10 @@ export type CampaignDataType = {
   banner: string;
   campaign: string;
 };
+
+export type PayDataType = {
+  tariff_ulid: string;
+  user_email: string;
+  url_return: string;
+  url_cancel: string;
+};

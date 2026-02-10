@@ -1,0 +1,27 @@
+.welcomeTextWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.welcomeTextHeader {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black-light);
+  line-height: 150%;
+  margin: 0 auto;
+}
+
+.welcomeText {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.answerList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
