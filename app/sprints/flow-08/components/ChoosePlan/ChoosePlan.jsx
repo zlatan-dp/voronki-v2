@@ -1,15 +1,20 @@
 import styles from "./ChoosePlan.module.css";
 
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import { useCurrentFlow } from "../../../actions/getCurrentFlow";
+import { useTimer } from "../../../actions/useTimerContext";
 import { nextStep } from "../../../../actions/steps-client.action";
 import { getCurrentTime } from "../../../actions/getCurrentTime";
 import { usePlanSelection } from "../../../actions/planSelectionContext";
 import { clearQuizAnswers } from "../../../actions/quizStorage.js";
-import { mndchatPing, mndchatPay } from "../../../../actions/steps.action";
-
-import { useTimer } from "../../../actions/useTimerContext";
+import {
+  mndchatPing,
+  mndchatPay,
+  mndchatSubscription,
+} from "../../../../actions/steps.action";
+import { mapSubscriptionsToPlan } from "../../../actions/subscriptionMapper.js";
 
 import BlockWrap from "../../../components/blockWrap/blockWrap";
 import SectionTitle from "../../../components/sectionTitle/sectionTitle";
@@ -23,16 +28,37 @@ export default function ChoosePlanComponent() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
+  const [subsPlans, setSubsPlans] = useState([]);
   const { timerActive } = useTimer();
-
   const { selectedPlanId, setSelectedPlanId } = usePlanSelection();
+  const selectedPlan = subsPlans.find((p) => p.id === selectedPlanId);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadSubscription = async () => {
+      const res = await mndchatSubscription();
+
+      if (!res?.ok) {
+        console.error(res.message);
+        setSubsPlans([]);
+        setLoading(false);
+        return;
+      }
+
+      const mapped = mapSubscriptionsToPlan(res.data.data);
+      setSubsPlans(mapped);
+      setLoading(false);
+    };
+
+    loadSubscription();
+  }, []);
 
   const btnActive =
-    Boolean(selectedPlanId) && !(selectedPlanId === 1 && !timerActive);
-  //&& !(selectedPlanId === 2 && !timerActive);
+    Boolean(selectedPlanId) &&
+    selectedPlan &&
+    !(selectedPlanId === 1 && !timerActive);
 
-  const planPayload = (id) => {
-    const plan = PlanData.find((p) => p.id === id);
+  const planPayload = (plan) => {
     if (!plan) return null;
 
     return {
@@ -52,21 +78,22 @@ export default function ChoosePlanComponent() {
     // router.push(`/sprints/${currentFlow}/error-page`);
     const ping = await mndchatPing();
     console.log("ping:", ping);
+    console.log(subsPlans);
 
-    const payment = await mndchatPay({
-      tariff_ulid: "01KGNAXVPQCTD5WRR0S15BV6EY",
-      user_email: "test1@mail.com",
-      url_return: "http://site.com/pay_ok",
-      url_cancel: "http://site.com/pay_not",
-    });
-    console.log("payment:", payment);
+    // const payment = await mndchatPay({
+    //   tariff_ulid: "01KGNAXVPQCTD5WRR0S15BV6EY",
+    //   user_email: "test1@mail.com",
+    //   url_return: "http://site.com/pay_ok",
+    //   url_cancel: "http://site.com/pay_not",
+    // });
+    // console.log("payment:", payment);
 
-    if (!payment.ok) {
-      router.push(
-        `/sprints/${currentFlow}/error-page?msg=${encodeURIComponent(payment.message)}`,
-        // `/sprints/${currentFlow}/error-page`,
-      );
-    }
+    // if (!payment.ok) {
+    //   router.push(
+    //     `/sprints/${currentFlow}/error-page?msg=${encodeURIComponent(payment.message)}`,
+    //     // `/sprints/${currentFlow}/error-page`,
+    //   );
+    // }
   };
 
   const handleSubmit = async () => {
@@ -74,16 +101,12 @@ export default function ChoosePlanComponent() {
 
     // await fbq("track", "AddToCart");
 
-    const payload = planPayload(selectedPlanId);
+    const payload = planPayload(selectedPlan);
     await goToNextStep(payload);
   };
 
   return (
     <BlockWrap padding={"small"}>
-      {/* <p className={styles.text}>✅ You’ve got your first 3 habits!</p> */}
-      {/* <p className={styles.boldText}>
-        Want the FULL 30-day ChatMind Recovery System?
-      </p> */}
       <p className={styles.boldText}>
         Your Recovery Program
         <br /> is Ready 💛
@@ -93,13 +116,19 @@ export default function ChoosePlanComponent() {
         to gradually relieve tension, restore energy, and bring mental
         clarity.{" "}
       </p>
-      {/* <SectionTitle>Unlock Full Program Now</SectionTitle> */}
       <SectionTitle ta={"center"}>Choose Your Plan</SectionTitle>
-      <PlanList
-        plans={PlanData}
-        selectedId={selectedPlanId}
-        onSelect={setSelectedPlanId}
-      />
+      {loading ? (
+        <p className={styles.text}>Loading...</p>
+      ) : subsPlans.length === 0 ? (
+        <p className={styles.text}>No available plans...</p>
+      ) : (
+        <PlanList
+          plans={subsPlans}
+          selectedId={selectedPlanId}
+          onSelect={setSelectedPlanId}
+        />
+      )}
+
       <SubmitBtn disabled={!btnActive} onClick={handleSubmit} wide={"wide"}>
         Continue
       </SubmitBtn>
@@ -123,17 +152,14 @@ export default function ChoosePlanComponent() {
         You can cancel your
         <br /> subscription at any time
       </p>
-      <p className={styles.discountedText}>
-        Discounted price applies to your first subscription. Your subscription
-        will automatically renew at full price of "$9.99" per month at the end
-        of the chosen subscription period until you cancel in your account.
-      </p>
-      {/* <p className={styles.discountedText}>
-        Discounted price applies to your first subscription. Your subscription
-        will automatically renew at full price of
-        {selectedPlanId === 2 ? "$14.99" : "$9.99"} per month at the end of the
-        chosen subscription period until you cancel in your account.
-      </p> */}
+      {selectedPlan && (
+        <p className={styles.discountedText}>
+          Discounted price applies to your first subscription. Your subscription
+          will automatically renew at full price of "{selectedPlan.currency}
+          {selectedPlan.priceRenew}" per {selectedPlan.periodType} at the end of
+          the chosen subscription period until you cancel in your account.
+        </p>
+      )}
     </BlockWrap>
   );
 }

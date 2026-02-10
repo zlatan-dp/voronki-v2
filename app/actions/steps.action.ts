@@ -53,3 +53,8 @@ export async function mndchatPay(requestBody: PayDataType) {
 
   return response;
 }
+
+export async function mndchatSubscription() {
+  const response = await mndchatFetch("/subscriptions");
+  return response;
+}
