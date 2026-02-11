@@ -3,6 +3,7 @@ import styles from "./ChoosePlan.module.css";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import { useUser } from "../../../actions/userContext.js";
 import { useCurrentFlow } from "../../../actions/getCurrentFlow";
 import { useTimer } from "../../../actions/useTimerContext";
 import { nextStep } from "../../../../actions/steps-client.action";
@@ -10,7 +11,7 @@ import { getCurrentTime } from "../../../actions/getCurrentTime";
 import { usePlanSelection } from "../../../actions/planSelectionContext";
 import { clearQuizAnswers } from "../../../actions/quizStorage.js";
 import {
-  mndchatPing,
+  // mndchatPing,
   mndchatPay,
   mndchatSubscription,
 } from "../../../../actions/steps.action";
@@ -21,14 +22,16 @@ import SectionTitle from "../../../components/sectionTitle/sectionTitle";
 import PlanList from "./PlanList/PlanList";
 import PayIconsList from "./PayIconList/PayIconList";
 
-import { PlanData } from "./planData";
 import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
 export default function ChoosePlanComponent() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
+  const { userEmail } = useUser();
+
   const [subsPlans, setSubsPlans] = useState([]);
+  const [submitting, setSubmitting] = useState(false);
   const { timerActive } = useTimer();
   const { selectedPlanId, setSelectedPlanId } = usePlanSelection();
   const selectedPlan = subsPlans.find((p) => p.id === selectedPlanId);
@@ -67,42 +70,51 @@ export default function ChoosePlanComponent() {
   };
 
   const goToNextStep = async (plan) => {
-    // await nextStep({
-    //   step: 19,
-    //   type: "info",
-    //   question: "choose your plan",
-    //   answer: plan || "next",
-    //   time: await getCurrentTime(),
-    // });
-    // clearQuizAnswers(currentFlow);
-    // router.push(`/sprints/${currentFlow}/error-page`);
-    const ping = await mndchatPing();
-    console.log("ping:", ping);
-    console.log(subsPlans);
+    const baseUrl = window.location.origin;
 
-    // const payment = await mndchatPay({
-    //   tariff_ulid: "01KGNAXVPQCTD5WRR0S15BV6EY",
-    //   user_email: "test1@mail.com",
-    //   url_return: "http://site.com/pay_ok",
-    //   url_cancel: "http://site.com/pay_not",
-    // });
-    // console.log("payment:", payment);
+    await nextStep({
+      step: 19,
+      type: "info",
+      question: "choose your plan",
+      answer: plan || "next",
+      time: await getCurrentTime(),
+    });
 
-    // if (!payment.ok) {
-    //   router.push(
-    //     `/sprints/${currentFlow}/error-page?msg=${encodeURIComponent(payment.message)}`,
-    //     // `/sprints/${currentFlow}/error-page`,
-    //   );
-    // }
+    clearQuizAnswers(currentFlow);
+
+    // const ping = await mndchatPing();
+    // console.log("ping:", ping);
+
+    const payment = await mndchatPay({
+      tariff_ulid: selectedPlan.ulid,
+      user_email: userEmail,
+      url_return: `${baseUrl}/sprints/${currentFlow}/pay-ok`,
+      url_cancel: `${baseUrl}/sprints/${currentFlow}/pay-error`,
+    });
+
+    // console.log("payment:", payment.data.data);
+
+    if (!payment?.data?.data?.redirect_url) {
+      router.push(
+        `/sprints/${currentFlow}/error-page?msg=${encodeURIComponent(payment?.message || "Payment initialization failed")}`,
+      );
+      return;
+    }
+
+    router.push(payment.data.data.redirect_url);
   };
 
   const handleSubmit = async () => {
-    if (!selectedPlanId) return;
+    if (!selectedPlanId || submitting) return;
+    setSubmitting(true);
 
-    // await fbq("track", "AddToCart");
-
-    const payload = planPayload(selectedPlan);
-    await goToNextStep(payload);
+    try {
+      // await fbq("track", "AddToCart");
+      const payload = planPayload(selectedPlan);
+      await goToNextStep(payload);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -129,7 +141,11 @@ export default function ChoosePlanComponent() {
         />
       )}
 
-      <SubmitBtn disabled={!btnActive} onClick={handleSubmit} wide={"wide"}>
+      <SubmitBtn
+        disabled={!btnActive || submitting}
+        onClick={handleSubmit}
+        wide={"wide"}
+      >
         Continue
       </SubmitBtn>
       <PayIconsList />

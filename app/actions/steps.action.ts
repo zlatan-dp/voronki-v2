@@ -46,6 +46,8 @@ export async function mndchatPing() {
 }
 
 export async function mndchatPay(requestBody: PayDataType) {
+  console.log(requestBody);
+
   const response = await mndchatFetch("/subscriptions/buy", {
     method: "POST",
     body: JSON.stringify(requestBody),

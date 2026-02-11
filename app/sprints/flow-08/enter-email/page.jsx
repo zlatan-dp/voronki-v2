@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useUser } from "../../actions/userContext";
 
 import { useCurrentFlow } from "../../actions/getCurrentFlow";
 import { nextStep } from "../../../actions/steps-client.action";
@@ -20,6 +21,7 @@ import SectionTitle from "../../components/sectionTitle/sectionTitle";
 export default function enterEmail() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
+  const { setUserEmail } = useUser();
 
   const [email, setEmail] = useState("");
   const [agreePolicy, setAgreePolicy] = useState(true);
@@ -43,6 +45,7 @@ export default function enterEmail() {
     e.preventDefault();
 
     if (validateEmail()) {
+      setUserEmail(email);
       await nextStep({
         step: 18,
         type: "info",

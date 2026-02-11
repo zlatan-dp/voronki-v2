@@ -13,7 +13,6 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
       {plans.map(
         ({
           id,
-          // type,
           duration,
           durationInfo,
           days,
@@ -25,8 +24,6 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
           packageText,
           packages,
         }) => {
-          // if (type === "usual" && timerActive) return null;
-          // if (type === "special" && !timerActive) return null;
           if (id === 1 && !timerActive) return null;
 
           const isActive = selectedId === id;

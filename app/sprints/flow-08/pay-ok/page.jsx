@@ -1,7 +1,5 @@
 "use client";
 
-// import { Suspense } from "react";
-
 import styles from "./page.module.css";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
@@ -11,18 +9,14 @@ export default function enterEmail() {
   // const params = useSearchParams();
   // const message = params.get("msg");
   return (
-    // <Suspense>
     <div className={styles.container}>
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
-          <SectionTitle ta="center">
-            Sorry, something went wrong on our side.
-          </SectionTitle>
+          <SectionTitle ta="center">Pay OK.</SectionTitle>
           {/* {message && <p>{message}</p>} */}
-          <p>Please try again later.</p>
+          <p>okay</p>
         </div>
       </div>
     </div>
-    // </Suspense>
   );
 }
