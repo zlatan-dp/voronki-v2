@@ -7,9 +7,11 @@ export default function SubmitBtn({
   submit = "button",
   color = "",
   wide = "",
+  id,
 }) {
   return (
     <button
+      id={id}
       className={`${styles.button} ${
         color === "white" ? styles.whiteBtn : ""
       } ${wide === "wide" ? styles.wideBtn : ""}`}

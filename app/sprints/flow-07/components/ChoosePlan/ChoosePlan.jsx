@@ -47,7 +47,7 @@ export default function ChoosePlanComponent({
     await nextStep({
       step: 18,
       type: "info",
-      question: "choose your plan",
+      question: "paywall page",
       answer: "pay btn click",
       time: await getCurrentTime(),
     });
@@ -56,7 +56,7 @@ export default function ChoosePlanComponent({
   };
 
   const handleSubmit = async () => {
-    // await fbq("track", "AddToCart");
+    await fbq("track", "AddToCart");
 
     await goToNextStep();
   };
@@ -102,7 +102,7 @@ export default function ChoosePlanComponent({
           </p>
           <p className={styles.secondaryText}>Actual avg. pricing may vary.</p>
         </div>
-        <SubmitBtn onClick={handleSubmit} wide={"wide"}>
+        <SubmitBtn onClick={handleSubmit} wide={"wide"} id={"add-to-cart"}>
           {copy.btnText}
         </SubmitBtn>
         <PayIconsList />
