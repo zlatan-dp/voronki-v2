@@ -34,8 +34,8 @@ export default function question85() {
           <>
             🏆 Quality recovery isn't luck.
             <br />
-            ChatMind app shows patterns that medical checkups miss – because
-            it's designed for real-world energy management
+            ChatMind app tracks patterns in your daily life that are easy to
+            miss – because it's designed for real-world energy management.
           </>
         }
         next={goToNextStep}

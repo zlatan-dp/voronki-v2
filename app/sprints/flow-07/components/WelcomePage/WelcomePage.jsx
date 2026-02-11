@@ -34,7 +34,7 @@ export default function WelcomePage({ question = "question-10" }) {
         <p className={styles.welcomeTextHeader}>
           What’s
           <br />
-          the №1 upgrade you want in the next 30 days?
+          the #1 upgrade you want in the next 30 days?
         </p>
         <p className={styles.welcomeText}>
           Take a quick quiz to build your personalized 30-day mind & body plan —
