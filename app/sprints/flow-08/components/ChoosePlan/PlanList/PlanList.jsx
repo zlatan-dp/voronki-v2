@@ -13,7 +13,8 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
       {plans.map(
         ({
           id,
-          duration,
+          planName,
+          // duration,
           durationInfo,
           days,
           totalPrice,
@@ -40,7 +41,7 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
               >
                 <div className={styles.priceInfoWrap}>
                   <div className={styles.durationWrap}>
-                    <p className={styles.duration}>{duration}</p>
+                    <p className={styles.duration}>{planName}</p>
                     {durationInfo && (
                       <p className={styles.durationInfo}>{durationInfo}</p>
                     )}

@@ -8,7 +8,6 @@ import { useCurrentFlow } from "../../../actions/getCurrentFlow";
 import { useTimer } from "../../../actions/useTimerContext";
 import { nextStep } from "../../../../actions/steps-client.action";
 import { getCurrentTime } from "../../../actions/getCurrentTime";
-import { usePlanSelection } from "../../../actions/planSelectionContext";
 import { clearQuizAnswers } from "../../../actions/quizStorage.js";
 import {
   // mndchatPing,
@@ -33,7 +32,7 @@ export default function ChoosePlanComponent() {
   const [subsPlans, setSubsPlans] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const { timerActive } = useTimer();
-  const { selectedPlanId, setSelectedPlanId } = usePlanSelection();
+  const [selectedPlanId, setSelectedPlanId] = useState(1);
   const selectedPlan = subsPlans.find((p) => p.id === selectedPlanId);
   const [loading, setLoading] = useState(true);
 
@@ -47,6 +46,8 @@ export default function ChoosePlanComponent() {
         setLoading(false);
         return;
       }
+
+      console.log(res.data.data);
 
       const mapped = mapSubscriptionsToPlan(res.data.data);
       setSubsPlans(mapped);
@@ -65,7 +66,7 @@ export default function ChoosePlanComponent() {
     if (!plan) return null;
 
     return {
-      duration: plan.duration,
+      planName: plan.planName,
     };
   };
 
@@ -92,12 +93,14 @@ export default function ChoosePlanComponent() {
       url_cancel: `${baseUrl}/sprints/${currentFlow}/pay-error`,
     });
 
-    // console.log("payment:", payment.data.data);
+    console.log("payment:", payment);
 
     if (!payment?.data?.data?.redirect_url) {
-      router.push(
-        `/sprints/${currentFlow}/error-page?msg=${encodeURIComponent(payment?.message || "Payment initialization failed")}`,
+      sessionStorage.setItem(
+        "chatmnd-error-msg",
+        payment?.message || "Payment initialization failed",
       );
+      router.push(`/sprints/${currentFlow}/error-page`);
       return;
     }
 

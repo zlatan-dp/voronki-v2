@@ -1,28 +1,32 @@
 "use client";
 
-// import { Suspense } from "react";
-
 import styles from "./page.module.css";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
-// import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export default function enterEmail() {
-  // const params = useSearchParams();
-  // const message = params.get("msg");
+export default function errorPage() {
+  const [message, setMessage] = useState(null);
+
+  useEffect(() => {
+    const msg = sessionStorage.getItem("chatmnd-error-msg");
+    if (msg) {
+      setMessage(msg);
+      setTimeout(() => sessionStorage.removeItem("chatmnd-error-msg"), 100);
+    }
+  }, []);
+
   return (
-    // <Suspense>
     <div className={styles.container}>
       <div className={styles.questionWrap}>
         <div className={styles.titleWrap}>
           <SectionTitle ta="center">
             Sorry, something went wrong on our side.
           </SectionTitle>
-          {/* {message && <p>{message}</p>} */}
+          {message && <p>{message}</p>}
           <p>Please try again later.</p>
         </div>
       </div>
     </div>
-    // </Suspense>
   );
 }

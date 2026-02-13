@@ -19,6 +19,7 @@ export const mapSubscriptionsToPlan = (apiData) => {
     return {
       id: index + 1,
       ulid: item.ulid,
+      planName: item.name,
       duration,
       days,
       totalPrice: Number(item.price),
