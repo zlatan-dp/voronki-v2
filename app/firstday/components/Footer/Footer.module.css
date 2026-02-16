@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0px;
+  margin-top: auto;
+}
+
+.privacyWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.privacyLink {
+  font-size: 12px;
+  color: #00000066;
+}
+
+.privacyLinkUnderline {
+  text-decoration: underline;
+  font-size: 12px;
+  color: #00000066;
+}
+
+.privacyDecor {
+  font-size: 14px;
+  color: #00000066;
+}

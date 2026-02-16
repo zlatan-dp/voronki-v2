@@ -1,0 +1,32 @@
+.button {
+  /* position: sticky; */
+  /* bottom: 8px; */
+  /* width: fit-content;
+  margin: 0 auto; */
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 16px 30px;
+  border-radius: 14px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--trans-dur) var(--trans-timing-function);
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &:disabled {
+    background-color: #6365f176;
+    cursor: no-drop;
+  }
+}
+
+.whiteBtn {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.wideBtn {
+  width: 100%;
+}

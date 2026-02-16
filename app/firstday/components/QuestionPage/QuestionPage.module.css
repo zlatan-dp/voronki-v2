@@ -1,0 +1,22 @@
+.questionPageWrap {
+  /* padding-top: 68px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.questionText {
+  font-size: 18px;
+  line-height: 180%;
+  white-space: pre-line;
+  font-weight: 600;
+}
+
+.answerList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

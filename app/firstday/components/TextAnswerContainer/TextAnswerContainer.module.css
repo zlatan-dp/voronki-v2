@@ -1,0 +1,17 @@
+.inputWrap {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 14px;
+  border: 2px solid var(--accent);
+  cursor: pointer;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--accent);
+}
