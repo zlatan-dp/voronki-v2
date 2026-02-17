@@ -10,7 +10,7 @@ export default function QuestionPage({ data, next }) {
       <p className={styles.questionText}>{data.text}</p>
       <ul className={styles.answerList}>
         {data.answers.map(({ id, answer }) => (
-          <li key={id} onClick={() => next(answer)}>
+          <li key={id} onClick={() => next(answer, id)}>
             <TextAnswerContainer text={answer} />
           </li>
         ))}

@@ -1,6 +1,7 @@
 export enum StepType {
   Question = "question",
   Info = "info",
+  TextArea = "textarea",
   Checkout = "checkout",
   Proxy = "proxy",
 }

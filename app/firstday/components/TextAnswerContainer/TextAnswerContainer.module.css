@@ -14,4 +14,5 @@
   font-size: 18px;
   line-height: 150%;
   color: var(--accent);
+  white-space: pre-line;
 }

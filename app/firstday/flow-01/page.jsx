@@ -11,6 +11,7 @@ import { useCurrentFlow } from "../actions/getCurrentFlow";
 
 import InfoPage from "../components/InfoPage/InfoPage";
 import QuestionPage from "../components/QuestionPage/QuestionPage";
+import TextAreaPage from "../components/TextAreaPage/TextAreaPage.jsx";
 import Container from "../components/container/container.jsx";
 import ProgressBar from "../components/progressBar/ProgressBar.jsx";
 
@@ -18,6 +19,7 @@ export default function firstDayLanding() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
   const [stepIndex, setStepIndex] = useState(0);
+  const [lastAnswerId, setLastAnswerId] = useState(null);
 
   const quizStep = quizSteps[stepIndex];
   const totalSteps = quizSteps.length;
@@ -25,10 +27,16 @@ export default function firstDayLanding() {
   const previousPercent = (stepIndex / totalSteps) * 100;
   const currentPercent = (currentStepNumber / totalSteps) * 100;
 
-  console.log("quizStep:", quizStep);
+  // console.log("quizStep:", quizStep);
+  // console.log("lastAnswerId:", lastAnswerId);
 
-  const goToNextStep = async (answer = "next") => {
+  const goToNextStep = async (answer = "next", id) => {
     const isLastStep = stepIndex === totalSteps - 1;
+
+    if (quizStep.type === "question") {
+      setLastAnswerId(id);
+    }
+
     await nextStep({
       step: currentStepNumber,
       type: quizStep.type,
@@ -70,10 +78,17 @@ export default function firstDayLanding() {
         // totalSteps={totalSteps}
       />
       {quizStep.type === "info" && (
-        <InfoPage data={quizStep} next={goToNextStep} />
+        <InfoPage
+          data={quizStep}
+          next={goToNextStep}
+          lastAnswerId={lastAnswerId}
+        />
       )}
       {quizStep.type === "question" && (
         <QuestionPage data={quizStep} next={goToNextStep} />
+      )}
+      {quizStep.type === "textarea" && (
+        <TextAreaPage data={quizStep} next={goToNextStep} />
       )}
     </Container>
   );
