@@ -268,7 +268,7 @@ export const quizSteps = [
     id: 26,
     type: "info",
     title: "One Step = Tomorrow’s Confidence",
-    image: "One-Step-Tomorrow’s.png",
+    image: "One-Step-Tomorrows.png",
     text: "Tiny step today = confidence tomorrow. You’re training heart in courage. Fear shrinks, you expand. Every micro-brave = city-proof strength brick.",
     buttonText: "Building strength",
   },
