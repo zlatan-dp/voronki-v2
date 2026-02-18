@@ -23,8 +23,8 @@ export default function errorPage() {
           <SectionTitle ta="center">
             Sorry, something went wrong on our side.
           </SectionTitle>
-          {message && <p>{message}</p>}
-          <p>Please try again later.</p>
+          {message && <p className={styles.infoText}>{message}</p>}
+          <p className={styles.infoText}>Please try again later.</p>
         </div>
       </div>
     </div>

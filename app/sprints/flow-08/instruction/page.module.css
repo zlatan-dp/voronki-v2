@@ -1,0 +1,74 @@
+.infoPageWrap {
+  /* padding-top: 68px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.infoTextWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.infoTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.infoText {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.decorWrap {
+  width: 90%;
+  padding: 20px;
+  background-color: rgba(238, 255, 218, 1);
+  border: 2px solid rgba(124, 174, 107, 1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.decorTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black-light);
+  line-height: 150%;
+  font-style: italic;
+}
+
+.decorText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black-light);
+  line-height: 150%;
+  font-style: italic;
+}
+
+.infoContactsWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.infoContactsText {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-light);
+  line-height: 150%;
+  text-align: center;
+}
+
+.accented {
+  font-weight: 700;
+  color: var(--accent);
+}

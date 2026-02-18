@@ -1,11 +1,16 @@
 "use client";
 
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext, useState, useEffect } from "react";
 
 const UserContext = createContext(null);
 
 export function UserProvider({ children }) {
   const [userEmail, setUserEmail] = useState(null);
+
+  useEffect(() => {
+    const storedEmail = localStorage.getItem("ChatMindSprint:email");
+    if (storedEmail) setUserEmail(storedEmail);
+  }, []);
 
   return (
     <UserContext.Provider value={{ userEmail, setUserEmail }}>

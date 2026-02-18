@@ -1,24 +1,35 @@
-.container {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-.questionWrap {
-  width: 100%;
+.infoPageWrap {
+  /* padding-top: 68px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 32px;
 }
 
-.titleWrap {
+.imageWrap {
+  width: 260px;
+}
+
+.infoTextWrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+  gap: 6px;
+}
+
+.infoText {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.secondaryText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black-light);
+  line-height: 150%;
+}
+
+.accented {
+  color: var(--accent);
 }

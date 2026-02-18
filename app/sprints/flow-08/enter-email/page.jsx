@@ -46,6 +46,8 @@ export default function enterEmail() {
 
     if (validateEmail()) {
       setUserEmail(email);
+      localStorage.setItem("ChatMindSprint:email", email);
+
       await nextStep({
         step: 18,
         type: "info",
