@@ -4,14 +4,16 @@
 
 .text {
   font-size: 18px;
+  font-weight: 600;
   color: var(--black-light);
-  line-height: 173%;
+  line-height: 180%;
 }
 
 .form {
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 24px;
   border-bottom: 1px solid #ffffff7c;
 }

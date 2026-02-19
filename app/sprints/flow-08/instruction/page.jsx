@@ -10,7 +10,7 @@ import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import Container from "../../components/container/container";
 import SubmitBtn from "../../components/submitBtn/SubmitBtn";
 
-export default function payOk() {
+export default function instruction() {
   const router = useRouter();
 
   const goToNextStep = async () => {

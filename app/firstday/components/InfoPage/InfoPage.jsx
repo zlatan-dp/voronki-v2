@@ -20,7 +20,7 @@ export default function InfoPage({ data, next, lastAnswerId }) {
         />
       </div>
       <p className={styles.infoText}>{dataToShow.text}</p>
-      <SubmitBtn wide={"wide"} onClick={() => next()}>
+      <SubmitBtn wide={"wide"} mTop={"auto"} onClick={() => next()}>
         {dataToShow.buttonText}
       </SubmitBtn>
     </div>

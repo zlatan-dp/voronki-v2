@@ -10,14 +10,16 @@
   --trans-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html {
+html,
+body {
   height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100dvh;
+  /* height: 100%; */
   max-width: 400px;
   overflow-x: hidden;
   margin: 0 auto;
