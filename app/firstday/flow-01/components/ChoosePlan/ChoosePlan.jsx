@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 import { useUser } from "../../../actions/userContext.js";
 import { useCurrentFlow } from "../../../actions/getCurrentFlow";
-
 import { nextStep } from "../../../../actions/steps-client.action";
 import { getCurrentTime } from "../../../actions/getCurrentTime";
 
@@ -18,9 +17,7 @@ import { mapSubscriptionsToPlan } from "../../../actions/subscriptionMapper.js";
 
 import BlockWrap from "../../../components/blockWrap/blockWrap";
 import SectionTitle from "../../../components/sectionTitle/sectionTitle";
-import PlanList from "./PlanList/PlanList";
 import PayIconsList from "./PayIconList/PayIconList";
-
 import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
 export default function ChoosePlanComponent() {
@@ -32,9 +29,15 @@ export default function ChoosePlanComponent() {
   const [subsPlans, setSubsPlans] = useState([]);
   const [submitting, setSubmitting] = useState(false);
 
-  const [selectedPlanId, setSelectedPlanId] = useState(1);
+  // const [selectedPlanId, setSelectedPlanId] = useState(1);
+  const selectedPlanId = 2;
   const selectedPlan = subsPlans.find((p) => p.id === selectedPlanId);
   const [loading, setLoading] = useState(true);
+
+  const [dollars, cents] = selectedPlan?.totalPrice?.toFixed(2).split(".") ?? [
+    "0",
+    "00",
+  ];
 
   useEffect(() => {
     const loadSubscription = async () => {
@@ -71,7 +74,7 @@ export default function ChoosePlanComponent() {
     const baseUrl = window.location.origin;
 
     await nextStep({
-      step: 19,
+      step: 102,
       type: "info",
       question: "choose your plan",
       answer: plan || "next",
@@ -84,8 +87,8 @@ export default function ChoosePlanComponent() {
     const payment = await mndchatPay({
       tariff_ulid: selectedPlan.ulid,
       user_email: userEmail,
-      url_return: `${baseUrl}/sprints/${currentFlow}/pay-ok`,
-      url_cancel: `${baseUrl}/sprints/${currentFlow}/pay-error`,
+      url_return: `${baseUrl}/firstday/${currentFlow}/pay-ok`,
+      url_cancel: `${baseUrl}/firstday/${currentFlow}/pay-error`,
     });
 
     console.log("payment:", payment);
@@ -95,7 +98,7 @@ export default function ChoosePlanComponent() {
         "chatmnd-error-msg",
         payment?.message || "Payment initialization failed",
       );
-      router.push(`/sprints/${currentFlow}/error-page`);
+      router.push(`/firstday/${currentFlow}/error-page`);
       return;
     }
 
@@ -117,26 +120,31 @@ export default function ChoosePlanComponent() {
 
   return (
     <BlockWrap padding={"small"}>
-      <p className={styles.boldText}>
-        Your Recovery Program
-        <br /> is Ready 💛
-      </p>
-      <p className={styles.text}>
-        We've created your personalized rituals, daily prompts, and micro-habits
-        to gradually relieve tension, restore energy, and bring mental
-        clarity.{" "}
-      </p>
-      <SectionTitle ta={"center"}>Choose Your Plan</SectionTitle>
+      <SectionTitle ta={"center"}>First month just </SectionTitle>
       {loading ? (
         <p className={styles.text}>Loading...</p>
-      ) : subsPlans.length === 0 ? (
+      ) : !selectedPlan ? (
         <p className={styles.text}>No available plans...</p>
       ) : (
-        <PlanList
-          plans={subsPlans}
-          selectedId={selectedPlanId}
-          onSelect={setSelectedPlanId}
-        />
+        <>
+          <div className={styles.planWrap}>
+            <div className={styles.planPriceWrap}>
+              <span className={styles.planDollars}>
+                {selectedPlan.currency}
+                {dollars}
+              </span>
+
+              <span className={styles.planCents}>{cents}</span>
+            </div>
+            <p className={styles.planThenPrice}>
+              Then: {selectedPlan.currency}
+              {selectedPlan.priceRenew.toFixed(2)}/{selectedPlan.periodType}
+            </p>
+            <p className={styles.planCancel}>
+              You can cancel your <br /> subscription at any time
+            </p>
+          </div>
+        </>
       )}
 
       <SubmitBtn
@@ -144,7 +152,7 @@ export default function ChoosePlanComponent() {
         onClick={handleSubmit}
         wide={"wide"}
       >
-        Continue
+        Unlock Full Journey
       </SubmitBtn>
       <PayIconsList />
       <div className={styles.paySafeWrap}>
@@ -162,18 +170,6 @@ export default function ChoosePlanComponent() {
         </svg>
         <p className={styles.paySafeText}>Pay safe & secure</p>
       </div>
-      <p className={styles.infoSmallBoldText}>
-        You can cancel your
-        <br /> subscription at any time
-      </p>
-      {selectedPlan && (
-        <p className={styles.discountedText}>
-          Discounted price applies to your first subscription. Your subscription
-          will automatically renew at full price of "{selectedPlan.currency}
-          {selectedPlan.priceRenew}" per {selectedPlan.periodType} at the end of
-          the chosen subscription period until you cancel in your account.
-        </p>
-      )}
     </BlockWrap>
   );
 }

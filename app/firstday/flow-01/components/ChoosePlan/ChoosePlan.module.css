@@ -4,6 +4,52 @@
   line-height: 150%;
 }
 
+.planWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.planPriceWrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.planDollars {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 133%;
+  color: var(--accent);
+}
+
+.planCents {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 133%;
+  color: var(--accent);
+  padding-top: 2px;
+}
+
+.planThenPrice {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--black-light);
+}
+
+.planCancel {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
 .boldText {
   font-size: 18px;
   font-weight: 700;

@@ -1,7 +1,7 @@
 export const mapSubscriptionsToPlan = (apiData) => {
   if (!Array.isArray(apiData)) return [];
 
-  return apiData.map((item, index) => {
+  return apiData.map((item) => {
     let days = 0;
 
     if (item.period_type === "day") {
@@ -17,7 +17,7 @@ export const mapSubscriptionsToPlan = (apiData) => {
     const duration = `${item.period} ${item.period_type}${item.period > 1 ? "s" : ""}`;
 
     return {
-      id: index + 1,
+      id: item.id,
       ulid: item.ulid,
       planName: item.name,
       duration,
