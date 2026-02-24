@@ -49,6 +49,10 @@ export default function instruction() {
           </p>
         </div>
 
+        <SubmitBtn wide={"wide"} onClick={goToNextStep}>
+          Install ChatMind
+        </SubmitBtn>
+
         <div className={styles.infoTextWrap}>
           <p className={styles.infoTitle}>Step 2: Sign In</p>
           <p className={styles.infoText}>
@@ -62,13 +66,41 @@ export default function instruction() {
         </div>
 
         <div className={styles.infoTextWrap}>
-          <p className={styles.infoTitle}>Step 3: Get Started</p>
+          <p className={styles.infoTitle}>
+            Step 3: Start practicing your daily skills
+          </p>
+          <p className={styles.infoText}>
+            Ready to shine?
+            <br />
+            We’ve prepared 5 mini-courses based on the S.H.I.N.E. program to
+            help you recharge and fight exhaustion.
+            <br />
+            Here’s your recommended path:
+          </p>
         </div>
 
+        <ol className={styles.infoList}>
+          <li className={styles.infoListItem}>
+            God Mode: How to Wake Up Refreshed in 6 Hours (Without the Morning
+            Crankiness)
+          </li>
+          <li className={styles.infoListItem}>
+            Hormone Reset: Why Cortisol and Thyroid Issues are Stealing Your
+            Youth
+          </li>
+          <li className={styles.infoListItem}>
+            Hidden Enemies: Stop Getting Sick and Clear the "Brain Fog" by
+            Boosting Your Immunity
+          </li>
+          <li className={styles.infoListItem}>
+            Fuel for Life: Eat to Glow, Not Just to Survive
+          </li>
+          <li className={styles.infoListItem}>
+            Energy in Motion: Movement that Heals (Without the Workout Burnout)
+          </li>
+        </ol>
+
         <p className={styles.infoText}>Ready? Tap Open ChatMind</p>
-        <SubmitBtn wide={"wide"} onClick={goToNextStep}>
-          Install ChatMind
-        </SubmitBtn>
 
         <div className={styles.infoContactsWrap}>
           <p className={styles.infoContactsText}>Need help?</p>
