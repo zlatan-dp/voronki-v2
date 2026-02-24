@@ -8,7 +8,7 @@ export function UserProvider({ children }) {
   const [userEmail, setUserEmail] = useState(null);
 
   useEffect(() => {
-    const storedEmail = localStorage.getItem("ChatMindSprint:email");
+    const storedEmail = localStorage.getItem("ChatMindFirstDay:email");
     if (storedEmail) setUserEmail(storedEmail);
   }, []);
 

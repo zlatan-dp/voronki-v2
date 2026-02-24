@@ -40,3 +40,8 @@
   height: 115px;
   resize: none;
 }
+
+.textarea:focus {
+  border: 2px solid var(--accent);
+  outline: none;
+}

@@ -95,7 +95,7 @@ export default function ChoosePlanComponent() {
 
     if (!payment?.data?.data?.redirect_url) {
       sessionStorage.setItem(
-        "chatmnd-error-msg",
+        "chatmnd-error-firstday",
         payment?.message || "Payment initialization failed",
       );
       router.push(`/firstday/${currentFlow}/error-page`);
