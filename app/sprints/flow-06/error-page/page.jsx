@@ -3,8 +3,19 @@
 import styles from "./page.module.css";
 
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
+import { useEffect, useState } from "react";
 
-export default function enterEmail() {
+export default function errorPage() {
+  const [message, setMessage] = useState(null);
+
+  useEffect(() => {
+    const msg = sessionStorage.getItem("chatmnd-error-msg");
+    if (msg) {
+      setMessage(msg);
+      setTimeout(() => sessionStorage.removeItem("chatmnd-error-msg"), 100);
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.questionWrap}>
@@ -12,7 +23,8 @@ export default function enterEmail() {
           <SectionTitle ta="center">
             Sorry, something went wrong on our side.
           </SectionTitle>
-          <p>Please try again later.</p>
+          {message && <p className={styles.infoText}>{message}</p>}
+          <p className={styles.infoText}>Please try again later.</p>
         </div>
       </div>
     </div>

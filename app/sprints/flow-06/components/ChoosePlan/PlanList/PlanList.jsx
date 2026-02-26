@@ -13,8 +13,8 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
       {plans.map(
         ({
           id,
-          // type,
-          duration,
+          planName,
+          // duration,
           durationInfo,
           days,
           totalPrice,
@@ -25,8 +25,6 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
           packageText,
           packages,
         }) => {
-          // if (type === "usual" && timerActive) return null;
-          // if (type === "special" && !timerActive) return null;
           if (id === 1 && !timerActive) return null;
 
           const isActive = selectedId === id;
@@ -43,7 +41,7 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
               >
                 <div className={styles.priceInfoWrap}>
                   <div className={styles.durationWrap}>
-                    <p className={styles.duration}>{duration}</p>
+                    <p className={styles.duration}>{planName}</p>
                     {durationInfo && (
                       <p className={styles.durationInfo}>{durationInfo}</p>
                     )}

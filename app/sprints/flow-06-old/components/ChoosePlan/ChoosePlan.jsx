@@ -1,78 +1,45 @@
 import styles from "./ChoosePlan.module.css";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 
-import { useUser } from "../../../actions/userContext.js";
 import { useCurrentFlow } from "../../../actions/getCurrentFlow";
-import { useTimer } from "../../../actions/useTimerContext";
 import { nextStep } from "../../../../actions/steps-client.action";
 import { getCurrentTime } from "../../../actions/getCurrentTime";
+import { usePlanSelection } from "../../../actions/planSelectionContext";
 import { clearQuizAnswers } from "../../../actions/quizStorage.js";
-import {
-  // mndchatPing,
-  mndchatPay,
-  mndchatSubscription,
-} from "../../../../actions/steps.action";
-import { mapSubscriptionsToPlan } from "../../../actions/subscriptionMapper.js";
+
+import { useTimer } from "../../../actions/useTimerContext";
 
 import BlockWrap from "../../../components/blockWrap/blockWrap";
 import SectionTitle from "../../../components/sectionTitle/sectionTitle";
 import PlanList from "./PlanList/PlanList";
 import PayIconsList from "./PayIconList/PayIconList";
 
+import { PlanData } from "./planData";
 import SubmitBtn from "../../../components/submitBtn/SubmitBtn";
 
 export default function ChoosePlanComponent() {
   const currentFlow = useCurrentFlow();
   const router = useRouter();
 
-  const { userEmail } = useUser();
-
-  const [subsPlans, setSubsPlans] = useState([]);
-  const [submitting, setSubmitting] = useState(false);
   const { timerActive } = useTimer();
-  const [selectedPlanId, setSelectedPlanId] = useState(1);
-  const selectedPlan = subsPlans.find((p) => p.id === selectedPlanId);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const loadSubscription = async () => {
-      const res = await mndchatSubscription();
-
-      if (!res?.ok) {
-        console.error(res.message);
-        setSubsPlans([]);
-        setLoading(false);
-        return;
-      }
-
-      console.log(res.data.data);
-
-      const mapped = mapSubscriptionsToPlan(res.data.data);
-      setSubsPlans(mapped);
-      setLoading(false);
-    };
-
-    loadSubscription();
-  }, []);
+  const { selectedPlanId, setSelectedPlanId } = usePlanSelection();
 
   const btnActive =
-    Boolean(selectedPlanId) &&
-    selectedPlan &&
-    !(selectedPlanId === 1 && !timerActive);
+    Boolean(selectedPlanId) && !(selectedPlanId === 1 && !timerActive);
+  //&& !(selectedPlanId === 2 && !timerActive);
 
-  const planPayload = (plan) => {
+  const planPayload = (id) => {
+    const plan = PlanData.find((p) => p.id === id);
     if (!plan) return null;
 
     return {
-      planName: plan.planName,
+      duration: plan.duration,
     };
   };
 
   const goToNextStep = async (plan) => {
-    const baseUrl = window.location.origin;
-
     await nextStep({
       step: 19,
       type: "info",
@@ -83,45 +50,24 @@ export default function ChoosePlanComponent() {
 
     clearQuizAnswers(currentFlow);
 
-    // const ping = await mndchatPing();
-    // console.log("ping:", ping);
-
-    const payment = await mndchatPay({
-      tariff_ulid: selectedPlan.ulid,
-      user_email: userEmail,
-      url_return: `${baseUrl}/sprints/${currentFlow}/pay-ok`,
-      url_cancel: `${baseUrl}/sprints/${currentFlow}/pay-error`,
-    });
-
-    console.log("payment:", payment);
-
-    if (!payment?.data?.data?.redirect_url) {
-      sessionStorage.setItem(
-        "chatmnd-error-msg",
-        payment?.message || "Payment initialization failed",
-      );
-      router.push(`/sprints/${currentFlow}/error-page`);
-      return;
-    }
-
-    router.push(payment.data.data.redirect_url);
+    router.push(`/sprints/${currentFlow}/error-page`);
   };
 
   const handleSubmit = async () => {
-    if (!selectedPlanId || submitting) return;
-    setSubmitting(true);
+    if (!selectedPlanId) return;
 
-    try {
-      // await fbq("track", "AddToCart");
-      const payload = planPayload(selectedPlan);
-      await goToNextStep(payload);
-    } finally {
-      setSubmitting(false);
-    }
+    await fbq("track", "AddToCart");
+
+    const payload = planPayload(selectedPlanId);
+    await goToNextStep(payload);
   };
 
   return (
     <BlockWrap padding={"small"}>
+      {/* <p className={styles.text}>✅ You’ve got your first 3 habits!</p> */}
+      {/* <p className={styles.boldText}>
+        Want the FULL 30-day ChatMind Recovery System?
+      </p> */}
       <p className={styles.boldText}>
         Your Recovery Program
         <br /> is Ready 💛
@@ -131,24 +77,14 @@ export default function ChoosePlanComponent() {
         to gradually relieve tension, restore energy, and bring mental
         clarity.{" "}
       </p>
+      {/* <SectionTitle>Unlock Full Program Now</SectionTitle> */}
       <SectionTitle ta={"center"}>Choose Your Plan</SectionTitle>
-      {loading ? (
-        <p className={styles.text}>Loading...</p>
-      ) : subsPlans.length === 0 ? (
-        <p className={styles.text}>No available plans...</p>
-      ) : (
-        <PlanList
-          plans={subsPlans}
-          selectedId={selectedPlanId}
-          onSelect={setSelectedPlanId}
-        />
-      )}
-
-      <SubmitBtn
-        disabled={!btnActive || submitting}
-        onClick={handleSubmit}
-        wide={"wide"}
-      >
+      <PlanList
+        plans={PlanData}
+        selectedId={selectedPlanId}
+        onSelect={setSelectedPlanId}
+      />
+      <SubmitBtn disabled={!btnActive} onClick={handleSubmit} wide={"wide"}>
         Continue
       </SubmitBtn>
       <PayIconsList />
@@ -171,14 +107,17 @@ export default function ChoosePlanComponent() {
         You can cancel your
         <br /> subscription at any time
       </p>
-      {selectedPlan && (
-        <p className={styles.discountedText}>
-          Discounted price applies to your first subscription. Your subscription
-          will automatically renew at full price of "{selectedPlan.currency}
-          {selectedPlan.priceRenew}" per {selectedPlan.periodType} at the end of
-          the chosen subscription period until you cancel in your account.
-        </p>
-      )}
+      <p className={styles.discountedText}>
+        Discounted price applies to your first subscription. Your subscription
+        will automatically renew at full price of "$9.99" per month at the end
+        of the chosen subscription period until you cancel in your account.
+      </p>
+      {/* <p className={styles.discountedText}>
+        Discounted price applies to your first subscription. Your subscription
+        will automatically renew at full price of
+        {selectedPlanId === 2 ? "$14.99" : "$9.99"} per month at the end of the
+        chosen subscription period until you cancel in your account.
+      </p> */}
     </BlockWrap>
   );
 }

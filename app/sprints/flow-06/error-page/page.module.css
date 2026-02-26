@@ -22,3 +22,7 @@
   justify-content: center;
   gap: 16px;
 }
+
+.infoText {
+  text-align: center;
+}
