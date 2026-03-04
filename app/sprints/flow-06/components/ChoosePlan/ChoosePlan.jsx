@@ -38,7 +38,9 @@ export default function ChoosePlanComponent() {
 
   useEffect(() => {
     const loadSubscription = async () => {
-      const res = await mndchatSubscription("fatiguepersplan");
+      const res = await mndchatSubscription(
+        "fatiguePersPlan".toLocaleLowerCase(),
+      );
 
       if (!res?.ok) {
         console.error(res.message);

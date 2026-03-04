@@ -29,9 +29,7 @@ export default function ChoosePlanComponent() {
   const [subsPlans, setSubsPlans] = useState([]);
   const [submitting, setSubmitting] = useState(false);
 
-  // const [selectedPlanId, setSelectedPlanId] = useState(1);
-  const selectedPlanId = 2;
-  const selectedPlan = subsPlans.find((p) => p.id === selectedPlanId);
+  const selectedPlan = subsPlans[0];
   const [loading, setLoading] = useState(true);
 
   const [dollars, cents] = selectedPlan?.totalPrice?.toFixed(2).split(".") ?? [
@@ -41,7 +39,9 @@ export default function ChoosePlanComponent() {
 
   useEffect(() => {
     const loadSubscription = async () => {
-      const res = await mndchatSubscription();
+      const res = await mndchatSubscription(
+        "the-winners-law".toLocaleLowerCase(),
+      );
 
       if (!res?.ok) {
         console.error(res.message);
@@ -60,7 +60,7 @@ export default function ChoosePlanComponent() {
     loadSubscription();
   }, []);
 
-  const btnActive = Boolean(selectedPlanId) && selectedPlan;
+  const btnActive = Boolean(selectedPlan);
 
   const planPayload = (plan) => {
     if (!plan) return null;
@@ -106,7 +106,7 @@ export default function ChoosePlanComponent() {
   };
 
   const handleSubmit = async () => {
-    if (!selectedPlanId || submitting) return;
+    if (submitting) return;
     setSubmitting(true);
 
     try {
@@ -120,7 +120,7 @@ export default function ChoosePlanComponent() {
 
   return (
     <BlockWrap padding={"small"}>
-      <SectionTitle ta={"center"}>First month just </SectionTitle>
+      <SectionTitle ta={"center"}>First month just</SectionTitle>
       {loading ? (
         <p className={styles.text}>Loading...</p>
       ) : !selectedPlan ? (
@@ -138,7 +138,8 @@ export default function ChoosePlanComponent() {
             </div>
             <p className={styles.planThenPrice}>
               Then: {selectedPlan.currency}
-              {selectedPlan.priceRenew.toFixed(2)}/{selectedPlan.periodType}
+              {/* {selectedPlan.priceRenew.toFixed(2)}/{selectedPlan.periodType} */}
+              {selectedPlan.priceRenew.toFixed(2)}/month
             </p>
             <p className={styles.planCancel}>
               You can cancel your <br /> subscription at any time

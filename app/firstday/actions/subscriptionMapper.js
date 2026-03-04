@@ -6,6 +6,8 @@ export const mapSubscriptionsToPlan = (apiData) => {
 
     if (item.period_type === "day") {
       days = item.period;
+    } else if (item.period_type === "week") {
+      days = item.period * 7;
     } else if (item.period_type === "month") {
       days = item.period * 30;
     } else if (item.period_type === "year") {

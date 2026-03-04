@@ -90,9 +90,14 @@ export default function PagesDispatcher() {
           `/sprints/flow-07?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
         break;
+      case "the-winners-law":
+        router.push(
+          `/firstday/flow-01?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
+        );
+        break;
       default:
         router.push(
-          `/sprints/flow-07?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
+          `/sprints/flow-06?utm_content=${utmContent}&banner=${banner}&campaign=${campaign}`,
         );
     }
   }, [pageEnter]);
