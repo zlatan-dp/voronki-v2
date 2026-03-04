@@ -74,12 +74,7 @@ export async function mndchatSubscription(
   const query = params.toString();
   const endpoint = query ? `/subscriptions?${query}` : "/subscriptions";
 
-  console.log("endpoint: ", endpoint);
+  // console.log("endpoint: ", endpoint);
 
-  const res = await mndchatFetch(endpoint);
-
-  console.log("res: ", res);
-
-  return res;
-  // return await mndchatFetch(endpoint);
+  return await mndchatFetch(endpoint);
 }
