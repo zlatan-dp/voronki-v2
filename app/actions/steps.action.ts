@@ -56,7 +56,30 @@ export async function mndchatPay(requestBody: PayDataType) {
   return response;
 }
 
-export async function mndchatSubscription() {
-  const response = await mndchatFetch("/subscriptions");
-  return response;
+export async function mndchatSubscription(
+  tags: string | string[] = "",
+  tagsOr: boolean = false,
+) {
+  const params = new URLSearchParams();
+
+  if (tags && (!Array.isArray(tags) || tags.length > 0)) {
+    const tagString = Array.isArray(tags) ? tags.join(",") : tags;
+    params.append("tags", tagString);
+  }
+
+  if (tagsOr === true) {
+    params.append("tags_or", "true");
+  }
+
+  const query = params.toString();
+  const endpoint = query ? `/subscriptions?${query}` : "/subscriptions";
+
+  console.log("endpoint: ", endpoint);
+
+  const res = await mndchatFetch(endpoint);
+
+  console.log("res: ", res);
+
+  return res;
+  // return await mndchatFetch(endpoint);
 }

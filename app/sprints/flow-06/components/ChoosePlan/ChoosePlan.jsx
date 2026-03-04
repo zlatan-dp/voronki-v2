@@ -38,7 +38,7 @@ export default function ChoosePlanComponent() {
 
   useEffect(() => {
     const loadSubscription = async () => {
-      const res = await mndchatSubscription();
+      const res = await mndchatSubscription("fatiguepersplan");
 
       if (!res?.ok) {
         console.error(res.message);
@@ -47,7 +47,7 @@ export default function ChoosePlanComponent() {
         return;
       }
 
-      console.log(res.data.data);
+      // console.log(res.data.data);
 
       const mapped = mapSubscriptionsToPlan(res.data.data);
       setSubsPlans(mapped);
@@ -111,7 +111,7 @@ export default function ChoosePlanComponent() {
     if (!selectedPlanId || submitting) return;
     setSubmitting(true);
 
-    await fbq("track", "AddToCart");
+    // await fbq("track", "AddToCart");
 
     try {
       // await fbq("track", "AddToCart");
