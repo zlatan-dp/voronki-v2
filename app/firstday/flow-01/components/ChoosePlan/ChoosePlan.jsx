@@ -37,7 +37,9 @@ export default function ChoosePlanComponent() {
     "00",
   ];
 
-  const INTENSIVE__ID = Number(process.env.NEXT_PUBLIC_INTENSIVE_ID);
+  const INTENSIVE__ID = Number(
+    process.env.NEXT_PUBLIC_WINNERS_LAW_INTENSIVE_ID,
+  );
 
   useEffect(() => {
     const loadSubscription = async () => {
@@ -131,13 +133,15 @@ export default function ChoosePlanComponent() {
 
   return (
     <BlockWrap padding={"small"}>
-      <SectionTitle ta={"center"}>First month just</SectionTitle>
       {loading ? (
         <p className={styles.text}>Loading...</p>
       ) : !selectedPlan ? (
         <p className={styles.text}>No available plans...</p>
       ) : (
         <>
+          <SectionTitle ta={"center"}>
+            First {selectedPlan.periodType} just
+          </SectionTitle>
           <div className={styles.planWrap}>
             <div className={styles.planPriceWrap}>
               <span className={styles.planDollars}>
@@ -149,8 +153,9 @@ export default function ChoosePlanComponent() {
             </div>
             <p className={styles.planThenPrice}>
               Then: {selectedPlan.currency}
-              {/* {selectedPlan.priceRenew.toFixed(2)}/{selectedPlan.periodType} */}
-              {selectedPlan.priceRenew.toFixed(2)}/month
+              {selectedPlan.priceRenew.toFixed(2)}/
+              {selectedPlan.periodTypeRenew}
+              {/* {selectedPlan.priceRenew.toFixed(2)}/month */}
             </p>
             <p className={styles.planCancel}>
               You can cancel your <br /> subscription at any time

@@ -26,8 +26,9 @@ export const mapSubscriptionsToPlan = (apiData) => {
       days,
       totalPrice: Number(item.price),
       currency: item.currency?.symbol || "$",
+      periodType: item.period_type,
       priceRenew: Number(item.price_renew),
-      periodType: item.period_type_renew,
+      periodTypeRenew: item.period_type_renew,
     };
   });
 };
