@@ -122,8 +122,9 @@ export default function ChoosePlanComponent() {
     if (submitting) return;
     setSubmitting(true);
 
+    await fbq("track", "AddToCart");
+
     try {
-      // await fbq("track", "AddToCart");
       const payload = planPayload(selectedPlan);
       await goToNextStep(payload);
     } finally {
