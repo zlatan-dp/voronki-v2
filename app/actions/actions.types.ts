@@ -49,9 +49,18 @@ export type CampaignDataType = {
   campaign: string;
 };
 
+export type FreeIntensivesType = {
+  intensive_id: number;
+  day: number;
+  block: number;
+  message: number;
+  started: boolean;
+};
+
 export type PayDataType = {
   tariff_ulid: string;
   user_email: string;
   url_return: string;
   url_cancel: string;
+  free_intensives?: FreeIntensivesType[];
 };

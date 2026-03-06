@@ -37,6 +37,8 @@ export default function ChoosePlanComponent() {
     "00",
   ];
 
+  const INTENSIVE__ID = Number(process.env.NEXT_PUBLIC_INTENSIVE_ID);
+
   useEffect(() => {
     const loadSubscription = async () => {
       const res = await mndchatSubscription(
@@ -89,6 +91,15 @@ export default function ChoosePlanComponent() {
       user_email: userEmail,
       url_return: `${baseUrl}/firstday/${currentFlow}/pay-ok`,
       url_cancel: `${baseUrl}/firstday/${currentFlow}/pay-error`,
+      free_intensives: [
+        {
+          intensive_id: INTENSIVE__ID,
+          day: 2,
+          block: 1,
+          message: 1,
+          started: true,
+        },
+      ],
     });
 
     console.log("payment:", payment);
