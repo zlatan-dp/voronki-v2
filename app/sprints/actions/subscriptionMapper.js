@@ -18,13 +18,15 @@ export const mapSubscriptionsToPlan = (apiData) => {
 
     const duration = `${item.period} ${item.period_type}${item.period > 1 ? "s" : ""}`;
 
+    const totalPrice = item.trial ? 0 : Number(item.price);
+
     return {
       id: index + 1,
       ulid: item.ulid,
       planName: item.name,
       duration,
       days,
-      totalPrice: Number(item.price),
+      totalPrice,
       currency: item.currency?.symbol || "$",
       priceRenew: Number(item.price_renew),
       periodType: item.period_type_renew,

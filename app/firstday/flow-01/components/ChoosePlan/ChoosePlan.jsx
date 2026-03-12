@@ -54,7 +54,7 @@ export default function ChoosePlanComponent() {
         return;
       }
 
-      console.log(res.data.data);
+      // console.log(res.data.data);
 
       const mapped = mapSubscriptionsToPlan(res.data.data);
       setSubsPlans(mapped);
@@ -104,7 +104,7 @@ export default function ChoosePlanComponent() {
       ],
     });
 
-    console.log("payment:", payment);
+    // console.log("payment:", payment);
 
     if (!payment?.data?.data?.redirect_url) {
       sessionStorage.setItem(

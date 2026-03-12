@@ -95,7 +95,7 @@ export default function ChoosePlanComponent() {
       url_cancel: `${baseUrl}/sprints/${currentFlow}/pay-error`,
     });
 
-    console.log("payment:", payment);
+    // console.log("payment:", payment);
 
     if (!payment?.data?.data?.redirect_url) {
       sessionStorage.setItem(

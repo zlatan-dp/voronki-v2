@@ -45,22 +45,26 @@ export default function PlanList({ plans = [], selectedId, onSelect }) {
                     {durationInfo && (
                       <p className={styles.durationInfo}>{durationInfo}</p>
                     )}
-                    <div className={styles.priceWithTimer}>
-                      <p className={styles.totalPrice}>
-                        {currency}
-                        {totalPrice.toFixed(2)}
-                        <br />
-                        {priceInfo && (
-                          <span className={styles.priceInfo}>{priceInfo}</span>
+                    {totalPrice > 0 && (
+                      <div className={styles.priceWithTimer}>
+                        <p className={styles.totalPrice}>
+                          {currency}
+                          {totalPrice.toFixed(2)}
+                          <br />
+                          {priceInfo && (
+                            <span className={styles.priceInfo}>
+                              {priceInfo}
+                            </span>
+                          )}
+                        </p>
+                        {timerActive && id === 1 && (
+                          <span className={styles.specialTimer}>
+                            {String(minutes).padStart(2, "0")}:
+                            {String(seconds).padStart(2, "0")}
+                          </span>
                         )}
-                      </p>
-                      {timerActive && id === 1 && (
-                        <span className={styles.specialTimer}>
-                          {String(minutes).padStart(2, "0")}:
-                          {String(seconds).padStart(2, "0")}
-                        </span>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
                   <div className={styles.priceDayWrapWithTimer}>
                     <div className={styles.priceDayWrap}>
